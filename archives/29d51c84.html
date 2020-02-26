@@ -26,22 +26,20 @@
     var CONFIG = {"hostname":"www.wwyyqblog.work","root":"/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Hexo 搭建博客之优化指南1.看懂站点配置文件package.json 应用程序的信息。EJS, Stylus 和 Markdown renderer 已默认安装，您可以自由移除。 scaffolds 模版 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。 Hexo的模板是指在新建的文章文件中默认填充的内容。例如，如果您修改scaffold&#x2F;post.md中的Front-">
+  <meta name="description" content="Front-matterFront-matter 是文件最上方以 --- 分隔的区域，用于指定个别文件的变量，举例来说： 1234---title: Hello Worlddate: 2013&#x2F;7&#x2F;13 20:46:25---  以下是预先定义的参数，您可在模板中使用这些参数值并加以利用。    参数 描述 默认值    layout 布局    title 标题 文章的文件名   date 建立">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 搭建博客优化指南">
-<meta property="og:url" content="https://www.wwyyqblog.work/archives/275cc748.html">
+<meta property="og:title" content="Front-matter">
+<meta property="og:url" content="https://www.wwyyqblog.work/archives/29d51c84.html">
 <meta property="og:site_name" content="ycy-ww">
-<meta property="og:description" content="Hexo 搭建博客之优化指南1.看懂站点配置文件package.json 应用程序的信息。EJS, Stylus 和 Markdown renderer 已默认安装，您可以自由移除。 scaffolds 模版 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。 Hexo的模板是指在新建的文章文件中默认填充的内容。例如，如果您修改scaffold&#x2F;post.md中的Front-">
+<meta property="og:description" content="Front-matterFront-matter 是文件最上方以 --- 分隔的区域，用于指定个别文件的变量，举例来说： 1234---title: Hello Worlddate: 2013&#x2F;7&#x2F;13 20:46:25---  以下是预先定义的参数，您可在模板中使用这些参数值并加以利用。    参数 描述 默认值    layout 布局    title 标题 文章的文件名   date 建立">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.wwyyqblog.work/images/mylogo.png">
-<meta property="article:published_time" content="2020-02-26T12:42:45.981Z">
-<meta property="article:modified_time" content="2020-02-26T12:42:45.981Z">
+<meta property="article:published_time" content="2020-02-26T16:00:19.401Z">
+<meta property="article:modified_time" content="2020-02-26T16:00:19.401Z">
 <meta property="article:author" content="ycy-ww">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.wwyyqblog.work/images/mylogo.png">
 
-<link rel="canonical" href="https://www.wwyyqblog.work/archives/275cc748.html">
+<link rel="canonical" href="https://www.wwyyqblog.work/archives/29d51c84.html">
 
 
 <script id="page-configurations">
@@ -53,7 +51,7 @@
   };
 </script>
 
-  <title>Hexo 搭建博客优化指南 | ycy-ww</title>
+  <title>Front-matter | ycy-ww</title>
   
 
 
@@ -202,7 +200,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/275cc748.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/29d51c84.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -215,7 +213,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          Hexo 搭建博客优化指南
+          Front-matter
         </h2>
 
         <div class="post-meta">
@@ -225,7 +223,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-02-26 20:42:45" itemprop="dateCreated datePublished" datetime="2020-02-26T20:42:45+08:00">2020-02-26</time>
+              <time title="创建时间：2020-02-27 00:00:19" itemprop="dateCreated datePublished" datetime="2020-02-27T00:00:19+08:00">2020-02-27</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -253,8 +251,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/275cc748.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/275cc748.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/29d51c84.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/29d51c84.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -271,23 +269,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Hexo-搭建博客之优化指南"><a href="#Hexo-搭建博客之优化指南" class="headerlink" title="Hexo 搭建博客之优化指南"></a>Hexo 搭建博客之优化指南</h1><h2 id="1-看懂站点配置文件"><a href="#1-看懂站点配置文件" class="headerlink" title="1.看懂站点配置文件"></a>1.看懂站点配置文件</h2><p><strong>package.json</strong></p>
-<p>应用程序的信息。<a href="https://ejs.co/" target="_blank" rel="external nofollow noopener noreferrer">EJS</a>, <a href="http://learnboost.github.io/stylus/" target="_blank" rel="external nofollow noopener noreferrer">Stylus</a> 和 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="external nofollow noopener noreferrer">Markdown</a> renderer 已默认安装，您可以自由移除。</p>
-<p><strong>scaffolds</strong></p>
-<p><a href="https://hexo.io/zh-cn/docs/writing" target="_blank" rel="external nofollow noopener noreferrer">模版</a> 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</p>
-<p>Hexo的模板是指在新建的文章文件中默认填充的内容。例如，如果您修改scaffold/post.md中的Front-matter内容，那么每次新建一篇文章时都会包含这个修改。</p>
-<p><strong>source</strong></p>
-<p>资源文件夹是存放用户资源的地方。除 <code>_posts</code> 文件夹之外，开头命名为 <code>_</code> (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 <code>public</code> 文件夹，而其他文件会被拷贝过去。</p>
-<blockquote>
-<p><strong>网站存放在子目录</strong></p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>如果您的网站存放在子目录中，例如 <code>http://yoursite.com/blog</code>，则请将您的 <code>url</code> 设为     <code>http://yoursite.com/blog</code> 并把 <code>root</code> 设为 <code>/blog/</code>。</p>
-</blockquote>
-</blockquote>
-<hr>
-<p><strong>目录</strong></p>
+        <h1 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h1><p>Front-matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量，举例来说：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hello</span> <span class="string">World</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2013</span><span class="string">/7/13</span> <span class="number">20</span><span class="string">:46:25</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p>以下是预先定义的参数，您可在模板中使用这些参数值并加以利用。</p>
 <table>
 <thead>
 <tr>
@@ -297,292 +282,87 @@
 </tr>
 </thead>
 <tbody><tr>
-<td align="left"><code>source_dir</code></td>
-<td align="left">资源文件夹，这个文件夹用来存放内容。</td>
-<td align="left"><code>source</code></td>
+<td align="left"><code>layout</code></td>
+<td align="left">布局</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="left"><code>public_dir</code></td>
-<td align="left">公共文件夹，这个文件夹用于存放生成的站点文件。</td>
-<td align="left"><code>public</code></td>
+<td align="left"><code>title</code></td>
+<td align="left">标题</td>
+<td align="left">文章的文件名</td>
 </tr>
 <tr>
-<td align="left"><code>tag_dir</code></td>
-<td align="left">标签文件夹</td>
+<td align="left"><code>date</code></td>
+<td align="left">建立日期</td>
+<td align="left">文件建立日期</td>
+</tr>
+<tr>
+<td align="left"><code>updated</code></td>
+<td align="left">更新日期</td>
+<td align="left">文件更新日期</td>
+</tr>
+<tr>
+<td align="left"><code>comments</code></td>
+<td align="left">开启文章的评论功能</td>
+<td align="left">true</td>
+</tr>
+<tr>
 <td align="left"><code>tags</code></td>
+<td align="left">标签（不适用于分页）</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="left"><code>archive_dir</code></td>
-<td align="left">归档文件夹</td>
-<td align="left"><code>archives</code></td>
-</tr>
-<tr>
-<td align="left"><code>category_dir</code></td>
-<td align="left">分类文件夹</td>
 <td align="left"><code>categories</code></td>
-</tr>
-<tr>
-<td align="left"><code>code_dir</code></td>
-<td align="left">Include code 文件夹，<code>source_dir</code> 下的子目录</td>
-<td align="left"><code>downloads/code</code></td>
-</tr>
-<tr>
-<td align="left"><code>i18n_dir</code></td>
-<td align="left">国际化（i18n）文件夹</td>
-<td align="left"><code>:lang</code></td>
-</tr>
-<tr>
-<td align="left"><code>skip_render</code></td>
-<td align="left">跳过指定文件的渲染。匹配到的文件将会被不做改动地复制到 <code>public</code> 目录中。您可使用 <a href="https://github.com/micromatch/micromatch#extended-globbing" target="_blank" rel="external nofollow noopener noreferrer">glob 表达式</a>来匹配路径。</td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<p><strong>文章</strong></p>
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-<th align="left">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>new_post_name</code></td>
-<td align="left">新文章的文件名称</td>
-<td align="left">:title.md</td>
-</tr>
-<tr>
-<td align="left"><code>default_layout</code></td>
-<td align="left">预设布局</td>
-<td align="left">post</td>
-</tr>
-<tr>
-<td align="left"><code>auto_spacing</code></td>
-<td align="left">在中文和英文之间加入空格</td>
-<td align="left">false</td>
-</tr>
-<tr>
-<td align="left"><code>titlecase</code></td>
-<td align="left">把标题转换为 title case</td>
-<td align="left">false</td>
-</tr>
-<tr>
-<td align="left"><code>external_link</code></td>
-<td align="left">在新标签中打开链接</td>
-<td align="left">true</td>
-</tr>
-<tr>
-<td align="left"><code>external_link.enable</code></td>
-<td align="left">在新标签中打开链接</td>
-<td align="left"><code>true</code></td>
-</tr>
-<tr>
-<td align="left"><code>external_link.field</code></td>
-<td align="left">对整个网站（<code>site</code>）生效或仅对文章（<code>post</code>）生效</td>
-<td align="left"><code>site</code></td>
-</tr>
-<tr>
-<td align="left"><code>external_link.exclude</code></td>
-<td align="left">需要排除的域名。主域名和子域名如 <code>www</code> 需分别配置</td>
-<td align="left"><code>[]</code></td>
-</tr>
-<tr>
-<td align="left"><code>filename_case</code></td>
-<td align="left">把文件名称转换为 (1) 小写或 (2) 大写</td>
-<td align="left">0</td>
-</tr>
-<tr>
-<td align="left"><code>render_drafts</code></td>
-<td align="left">显示草稿</td>
-<td align="left">false</td>
-</tr>
-<tr>
-<td align="left"><code>post_asset_folder</code></td>
-<td align="left">启动 <a href="https://hexo.io/zh-cn/docs/asset-folders" target="_blank" rel="external nofollow noopener noreferrer">Asset 文件夹</a></td>
-<td align="left">false</td>
-</tr>
-<tr>
-<td align="left"><code>relative_link</code></td>
-<td align="left">把链接改为与根目录的相对位址</td>
-<td align="left">false</td>
-</tr>
-<tr>
-<td align="left"><code>future</code></td>
-<td align="left">显示未来的文章</td>
-<td align="left">true</td>
-</tr>
-<tr>
-<td align="left"><code>highlight</code></td>
-<td align="left">代码块的设置</td>
+<td align="left">分类（不适用于分页）</td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left"><code>highlight.enable</code></td>
-<td align="left">开启代码块高亮</td>
-<td align="left"><code>true</code></td>
-</tr>
-<tr>
-<td align="left"><code>highlight.auto_detect</code></td>
-<td align="left">如果未指定语言，则启用自动检测</td>
-<td align="left"><code>false</code></td>
-</tr>
-<tr>
-<td align="left"><code>highlight.line_number</code></td>
-<td align="left">显示行数 <em>Enabling this option will also enable wrap option</em></td>
-<td align="left"><code>true</code></td>
-</tr>
-<tr>
-<td align="left"><code>highlight.tab_replace</code></td>
-<td align="left">用 n 个空格替换 tabs；如果值为空，则不会替换 tabs</td>
-<td align="left"><code>&#39;&#39;</code></td>
-</tr>
-<tr>
-<td align="left"><code>highlight.wrap</code></td>
-<td align="left">Wrap the code block in <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank" rel="external nofollow noopener noreferrer">``</a></td>
-<td align="left"><code>true</code></td>
-</tr>
-<tr>
-<td align="left"><code>highlight.hljs</code></td>
-<td align="left">Use the <code>hljs-*</code> prefix for CSS classes</td>
-<td align="left"><code>false</code></td>
-</tr>
-</tbody></table>
-<a id="more"></a>
-
-<p><strong>分类 &amp; 标签</strong></p>
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-<th align="left">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>default_category</code></td>
-<td align="left">默认分类</td>
-<td align="left"><code>uncategorized</code></td>
-</tr>
-<tr>
-<td align="left"><code>category_map</code></td>
-<td align="left">分类别名</td>
+<td align="left"><code>permalink</code></td>
+<td align="left">覆盖文章网址</td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left"><code>tag_map</code></td>
-<td align="left">标签别名</td>
+<td align="left"><code>keywords</code></td>
+<td align="left">仅用于 meta 标签和 Open Graph 的关键词（不推荐使用）</td>
 <td align="left"></td>
 </tr>
 </tbody></table>
-<p><strong>日期 / 时间格式</strong></p>
-<p>Hexo 使用 <a href="http://momentjs.com/" target="_blank" rel="external nofollow noopener noreferrer">Moment.js</a> 来解析和显示时间。</p>
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-<th align="left">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>date_format</code></td>
-<td align="left">日期格式</td>
-<td align="left"><code>YYYY-MM-DD</code></td>
-</tr>
-<tr>
-<td align="left"><code>time_format</code></td>
-<td align="left">时间格式</td>
-<td align="left"><code>HH:mm:ss</code></td>
-</tr>
-<tr>
-<td align="left"><code>use_date_for_updated</code></td>
-<td align="left">启用以后，如果 Front Matter 中没有指定 <code>updated</code>， <a href="https://hexo.io/zh-cn/docs/variables#页面变量" target="_blank" rel="external nofollow noopener noreferrer"><code>post.updated</code></a> 将会使用 <code>date</code> 的值而不是文件的创建时间。在 Git 工作流中这个选项会很有用</td>
-<td align="left"><code>true</code></td>
-</tr>
-</tbody></table>
-<p><strong>分页</strong></p>
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-<th align="left">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>per_page</code></td>
-<td align="left">每页显示的文章量 (0 = 关闭分页功能)</td>
-<td align="left"><code>10</code></td>
-</tr>
-<tr>
-<td align="left"><code>pagination_dir</code></td>
-<td align="left">分页目录</td>
-<td align="left"><code>page</code></td>
-</tr>
-</tbody></table>
-<p><strong>扩展</strong></p>
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>theme</code></td>
-<td align="left">当前主题名称。值为<code>false</code>时禁用主题</td>
-</tr>
-<tr>
-<td align="left"><code>theme_config</code></td>
-<td align="left">主题的配置文件。在这里放置的配置会覆盖主题目录下的 <code>_config.yml</code> 中的配置</td>
-</tr>
-<tr>
-<td align="left"><code>deploy</code></td>
-<td align="left">部署部分的设置</td>
-</tr>
-<tr>
-<td align="left"><code>meta_generator</code></td>
-<td align="left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta#属性" target="_blank" rel="external nofollow noopener noreferrer">Meta generator</a> 标签。 值为 <code>false</code> 时 Hexo 不会在头部插入该标签</td>
-</tr>
-</tbody></table>
-<p><strong>包括或不包括目录和文件</strong></p>
-<p>在 Hexo 配置文件中，通过设置 include/exclude 可以让 Hexo 进行处理或忽略某些目录和文件夹。你可以使用 <a href="https://github.com/isaacs/minimatch" target="_blank" rel="external nofollow noopener noreferrer">glob 表达式</a> 对目录和文件进行匹配。</p>
-<p><code>include</code> and <code>exclude</code> options only apply to the <code>source/</code> folder, whereas <code>ignore</code> option applies to all folders.</p>
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>include</code></td>
-<td align="left">Hexo 默认会忽略隐藏文件和文件夹（包括名称以下划线和 <code>.</code> 开头的文件和文件夹，Hexo 的 <code>_posts</code> 和 <code>_data</code> 等目录除外）。通过设置此字段将使 Hexo 处理他们并将它们复制到 <code>source</code> 目录下。</td>
-</tr>
-<tr>
-<td align="left"><code>exclude</code></td>
-<td align="left">Hexo 会忽略这些文件和目录</td>
-</tr>
-<tr>
-<td align="left"><code>ignore</code></td>
-<td align="left">Ignore files/folders</td>
-</tr>
-</tbody></table>
-<p>列表中的每一项都必须用单引号或双引号包裹起来。</p>
-<p><strong>使用代替配置文件</strong></p>
-<p>可以在 hexo-cli 中使用 <code>--config</code> 参数来指定自定义配置文件的路径。你可以使用一个 YAML 或 JSON 文件的路径，也可以使用逗号分隔（无空格）的多个 YAML 或 JSON 文件的路径。例如：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># use 'custom.yml' in place of '_config.yml'</span></span><br><span class="line">$ hexo<span class="built_in"> server </span>--config custom.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># use 'custom.yml' &amp; 'custom2.json', prioritizing 'custom3.yml', then 'custom2.json'</span></span><br><span class="line">$ hexo generate --config custom.yml,custom2.json,custom3.yml</span><br></pre></td></tr></table></figure>
+<p><strong>分类和标签</strong></p>
+<p>只有文章支持分类和标签，您可以在 Front-matter 中设置。在其他系统中，分类和标签听起来很接近，但是在 Hexo 中两者有着明显的差别：分类具有顺序性和层次性，也就是说 <code>Foo, Bar</code> 不等于 <code>Bar, Foo</code>；而标签没有顺序和层次。</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">categories:</span><br><span class="line">- Diary</span><br><span class="line"><span class="keyword">tags:</span></span><br><span class="line">- PS3</span><br><span class="line">- Games</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>分类方法的分歧</p>
+<blockquote>
+<p>如果您有过使用 WordPress 的经验，就很容易误解 Hexo 的分类方式。WordPress 支持对一篇文章设置多个分类，而且这些分类可以是同级的，也可以是父子分类。但是 Hexo 不支持指定多个同级分类。下面的指定方法：</p>
+</blockquote>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">categories:</span>  - Diary  - Life</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>会使分类<code>Life</code>成为<code>Diary</code>的子分类，而不是并列分类。因此，有必要为您的文章选择尽可能准确的分类。</p>
+</blockquote>
+<blockquote>
+<p>如果你需要为文章添加多个分类，可以尝试以下 list 中的方法。</p>
+</blockquote>
+<figure class="highlight ldif"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">categories</span>: </span><br><span class="line"><span class="literal">- [Diary, PlayStation]</span></span><br><span class="line"><span class="literal">- [Diary, Games]</span></span><br><span class="line"><span class="literal">- [Life]</span></span><br></pre></td></tr></table></figure>
 
 
 
-<p>当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个 <code>_multiconfig.yml</code>。如果遇到重复的配置，排在后面的文件的配置会覆盖排在前面的文件的配置。这个原则适用于任意数量、任意深度的 YAML 和 JSON 文件。</p>
-<p>例如，使用 <code>--options</code> 指定了两个自定义配置文件：</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">generate</span> --<span class="keyword">config</span> custom<span class="variable">.yml</span>,custom2<span class="variable">.json</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>此时这篇文章同时包括三个分类： <code>PlayStation</code> 和 <code>Games</code> 分别都是父分类 <code>Diary</code> 的子分类，同时 <code>Life</code> 是一个没有子分类的分类。</p>
+</blockquote>
+</blockquote>
+<p><strong>JSON Front-matter</strong></p>
+<p>除了 YAML 外，你也可以使用 JSON 来编写 Front-matter，只要将 <code>---</code> 代换成 <code>;;;</code> 即可。</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"title"</span>: <span class="string">"Hello World"</span>,</span><br><span class="line"><span class="string">"date"</span>: <span class="string">"2013/7/13 20:46:25"</span></span><br><span class="line"><span class="comment">;;;</span></span><br></pre></td></tr></table></figure>
 
-<p>如果 <code>custom.yml</code> 中指定了 <code>foo: bar</code>，在 <code>custom2.json</code>中指定了 <code>&quot;foo&quot;: &quot;dinosaur&quot;</code>，那么在 <code>_multiconfig.yml</code> 中你会得到 <code>foo: dinosaur</code>。</p>
+
+
+
+
 <hr>
 <p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
-<p><img src="/images/mylogo.png" alt="logo"></p>
+<p><img src alt="logo"></p>
 
     </div>
 
@@ -641,13 +421,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/archives/96be88e3.html" rel="prev" title="Markdown教程">
-      <i class="fa fa-chevron-left"></i> Markdown教程
+    <a href="/archives/f9cb768.html" rel="prev" title="写作">
+      <i class="fa fa-chevron-left"></i> 写作
     </a></div>
-      <div class="post-nav-item">
-    <a href="/archives/81ac8ad8.html" rel="next" title="2.指令">
-      2.指令 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -729,7 +506,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-搭建博客之优化指南"><span class="nav-number">1.</span> <span class="nav-text">Hexo 搭建博客之优化指南</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-看懂站点配置文件"><span class="nav-number">1.1.</span> <span class="nav-text">1.看懂站点配置文件</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Front-matter"><span class="nav-number">1.</span> <span class="nav-text">Front-matter</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -904,7 +681,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'blog_review',
       owner       : 'ycy-ww',
       admin       : ['ycy-ww'],
-      id          : 'f08bc533522dcd8ab448a910554839d1',
+      id          : '59b0a67187add6f1fd80fafbd8165e82',
         language: 'en',
       distractionFreeMode: true
     });
