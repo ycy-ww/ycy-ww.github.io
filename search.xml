@@ -1,6 +1,316 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo 搭建博客优化指南</title>
+    <url>/archives/275cc748.html</url>
+    <content><![CDATA[<h1 id="hexo-搭建博客之优化指南"><a href="#hexo-搭建博客之优化指南" class="headerlink" title="hexo 搭建博客之优化指南"></a>hexo 搭建博客之优化指南</h1><h2 id="1-看懂站点配置文件"><a href="#1-看懂站点配置文件" class="headerlink" title="1.看懂站点配置文件"></a>1.看懂站点配置文件</h2><p>应用程序的信息。<a href="https://ejs.co/" target="_blank" rel="external nofollow noopener noreferrer">EJS</a>, <a href="http://learnboost.github.io/stylus/" target="_blank" rel="external nofollow noopener noreferrer">Stylus</a> 和 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="external nofollow noopener noreferrer">Markdown</a> renderer 已默认安装，您可以自由移除。</p>
+<p><strong>scaffolds</strong></p>
+<p><a href="https://hexo.io/zh-cn/docs/writing" target="_blank" rel="external nofollow noopener noreferrer">模版</a> 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</p>
+<p>Hexo的模板是指在新建的文章文件中默认填充的内容。例如，如果您修改scaffold/post.md中的Front-matter内容，那么每次新建一篇文章时都会包含这个修改。</p>
+<p><strong>source</strong></p>
+<p>资源文件夹是存放用户资源的地方。除 <code>_posts</code> 文件夹之外，开头命名为 <code>_</code> (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 <code>public</code> 文件夹，而其他文件会被拷贝过去。</p>
+<p><strong>网站存放在子目录</strong></p>
+<p>如果您的网站存放在子目录中，例如 <code>http://yoursite.com/blog</code>，则请将您的 <code>url</code> 设为 <code>http://yoursite.com/blog</code> 并把 <code>root</code> 设为 <code>/blog/</code>。</p>
+<hr>
+<p><strong>目录</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>source_dir</code></td>
+<td align="left">资源文件夹，这个文件夹用来存放内容。</td>
+<td align="left"><code>source</code></td>
+</tr>
+<tr>
+<td align="left"><code>public_dir</code></td>
+<td align="left">公共文件夹，这个文件夹用于存放生成的站点文件。</td>
+<td align="left"><code>public</code></td>
+</tr>
+<tr>
+<td align="left"><code>tag_dir</code></td>
+<td align="left">标签文件夹</td>
+<td align="left"><code>tags</code></td>
+</tr>
+<tr>
+<td align="left"><code>archive_dir</code></td>
+<td align="left">归档文件夹</td>
+<td align="left"><code>archives</code></td>
+</tr>
+<tr>
+<td align="left"><code>category_dir</code></td>
+<td align="left">分类文件夹</td>
+<td align="left"><code>categories</code></td>
+</tr>
+<tr>
+<td align="left"><code>code_dir</code></td>
+<td align="left">Include code 文件夹，<code>source_dir</code> 下的子目录</td>
+<td align="left"><code>downloads/code</code></td>
+</tr>
+<tr>
+<td align="left"><code>i18n_dir</code></td>
+<td align="left">国际化（i18n）文件夹</td>
+<td align="left"><code>:lang</code></td>
+</tr>
+<tr>
+<td align="left"><code>skip_render</code></td>
+<td align="left">跳过指定文件的渲染。匹配到的文件将会被不做改动地复制到 <code>public</code> 目录中。您可使用 <a href="https://github.com/micromatch/micromatch#extended-globbing" target="_blank" rel="external nofollow noopener noreferrer">glob 表达式</a>来匹配路径。</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<p><strong>文章</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>new_post_name</code></td>
+<td align="left">新文章的文件名称</td>
+<td align="left">:title.md</td>
+</tr>
+<tr>
+<td align="left"><code>default_layout</code></td>
+<td align="left">预设布局</td>
+<td align="left">post</td>
+</tr>
+<tr>
+<td align="left"><code>auto_spacing</code></td>
+<td align="left">在中文和英文之间加入空格</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left"><code>titlecase</code></td>
+<td align="left">把标题转换为 title case</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left"><code>external_link</code></td>
+<td align="left">在新标签中打开链接</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left"><code>external_link.enable</code></td>
+<td align="left">在新标签中打开链接</td>
+<td align="left"><code>true</code></td>
+</tr>
+<tr>
+<td align="left"><code>external_link.field</code></td>
+<td align="left">对整个网站（<code>site</code>）生效或仅对文章（<code>post</code>）生效</td>
+<td align="left"><code>site</code></td>
+</tr>
+<tr>
+<td align="left"><code>external_link.exclude</code></td>
+<td align="left">需要排除的域名。主域名和子域名如 <code>www</code> 需分别配置</td>
+<td align="left"><code>[]</code></td>
+</tr>
+<tr>
+<td align="left"><code>filename_case</code></td>
+<td align="left">把文件名称转换为 (1) 小写或 (2) 大写</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left"><code>render_drafts</code></td>
+<td align="left">显示草稿</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left"><code>post_asset_folder</code></td>
+<td align="left">启动 <a href="https://hexo.io/zh-cn/docs/asset-folders" target="_blank" rel="external nofollow noopener noreferrer">Asset 文件夹</a></td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left"><code>relative_link</code></td>
+<td align="left">把链接改为与根目录的相对位址</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left"><code>future</code></td>
+<td align="left">显示未来的文章</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left"><code>highlight</code></td>
+<td align="left">代码块的设置</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>highlight.enable</code></td>
+<td align="left">开启代码块高亮</td>
+<td align="left"><code>true</code></td>
+</tr>
+<tr>
+<td align="left"><code>highlight.auto_detect</code></td>
+<td align="left">如果未指定语言，则启用自动检测</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>highlight.line_number</code></td>
+<td align="left">显示行数 <em>Enabling this option will also enable wrap option</em></td>
+<td align="left"><code>true</code></td>
+</tr>
+<tr>
+<td align="left"><code>highlight.tab_replace</code></td>
+<td align="left">用 n 个空格替换 tabs；如果值为空，则不会替换 tabs</td>
+<td align="left"><code>&#39;&#39;</code></td>
+</tr>
+<tr>
+<td align="left"><code>highlight.wrap</code></td>
+<td align="left">Wrap the code block in <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank" rel="external nofollow noopener noreferrer">``</a></td>
+<td align="left"><code>true</code></td>
+</tr>
+<tr>
+<td align="left"><code>highlight.hljs</code></td>
+<td align="left">Use the <code>hljs-*</code> prefix for CSS classes</td>
+<td align="left"><code>false</code></td>
+</tr>
+</tbody></table>
+<a id="more"></a>
+
+<p><strong>分类 &amp; 标签</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>default_category</code></td>
+<td align="left">默认分类</td>
+<td align="left"><code>uncategorized</code></td>
+</tr>
+<tr>
+<td align="left"><code>category_map</code></td>
+<td align="left">分类别名</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>tag_map</code></td>
+<td align="left">标签别名</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<p><strong>日期 / 时间格式</strong></p>
+<p>Hexo 使用 <a href="http://momentjs.com/" target="_blank" rel="external nofollow noopener noreferrer">Moment.js</a> 来解析和显示时间。</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>date_format</code></td>
+<td align="left">日期格式</td>
+<td align="left"><code>YYYY-MM-DD</code></td>
+</tr>
+<tr>
+<td align="left"><code>time_format</code></td>
+<td align="left">时间格式</td>
+<td align="left"><code>HH:mm:ss</code></td>
+</tr>
+<tr>
+<td align="left"><code>use_date_for_updated</code></td>
+<td align="left">启用以后，如果 Front Matter 中没有指定 <code>updated</code>， <a href="https://hexo.io/zh-cn/docs/variables#页面变量" target="_blank" rel="external nofollow noopener noreferrer"><code>post.updated</code></a> 将会使用 <code>date</code> 的值而不是文件的创建时间。在 Git 工作流中这个选项会很有用</td>
+<td align="left"><code>true</code></td>
+</tr>
+</tbody></table>
+<p><strong>分页</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>per_page</code></td>
+<td align="left">每页显示的文章量 (0 = 关闭分页功能)</td>
+<td align="left"><code>10</code></td>
+</tr>
+<tr>
+<td align="left"><code>pagination_dir</code></td>
+<td align="left">分页目录</td>
+<td align="left"><code>page</code></td>
+</tr>
+</tbody></table>
+<p><strong>扩展</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>theme</code></td>
+<td align="left">当前主题名称。值为<code>false</code>时禁用主题</td>
+</tr>
+<tr>
+<td align="left"><code>theme_config</code></td>
+<td align="left">主题的配置文件。在这里放置的配置会覆盖主题目录下的 <code>_config.yml</code> 中的配置</td>
+</tr>
+<tr>
+<td align="left"><code>deploy</code></td>
+<td align="left">部署部分的设置</td>
+</tr>
+<tr>
+<td align="left"><code>meta_generator</code></td>
+<td align="left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta#属性" target="_blank" rel="external nofollow noopener noreferrer">Meta generator</a> 标签。 值为 <code>false</code> 时 Hexo 不会在头部插入该标签</td>
+</tr>
+</tbody></table>
+<p><strong>包括或不包括目录和文件</strong></p>
+<p>在 Hexo 配置文件中，通过设置 include/exclude 可以让 Hexo 进行处理或忽略某些目录和文件夹。你可以使用 <a href="https://github.com/isaacs/minimatch" target="_blank" rel="external nofollow noopener noreferrer">glob 表达式</a> 对目录和文件进行匹配。</p>
+<p><code>include</code> and <code>exclude</code> options only apply to the <code>source/</code> folder, whereas <code>ignore</code> option applies to all folders.</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>include</code></td>
+<td align="left">Hexo 默认会忽略隐藏文件和文件夹（包括名称以下划线和 <code>.</code> 开头的文件和文件夹，Hexo 的 <code>_posts</code> 和 <code>_data</code> 等目录除外）。通过设置此字段将使 Hexo 处理他们并将它们复制到 <code>source</code> 目录下。</td>
+</tr>
+<tr>
+<td align="left"><code>exclude</code></td>
+<td align="left">Hexo 会忽略这些文件和目录</td>
+</tr>
+<tr>
+<td align="left"><code>ignore</code></td>
+<td align="left">Ignore files/folders</td>
+</tr>
+</tbody></table>
+<p>列表中的每一项都必须用单引号或双引号包裹起来。</p>
+<p><strong>使用代替配置文件</strong></p>
+<p>可以在 hexo-cli 中使用 <code>--config</code> 参数来指定自定义配置文件的路径。你可以使用一个 YAML 或 JSON 文件的路径，也可以使用逗号分隔（无空格）的多个 YAML 或 JSON 文件的路径。例如：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line"><span class="comment"># use 'custom.yml' in place of '_config.yml'</span></span><br><span class="line">$ hexo<span class="built_in"> server </span>--config custom.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># use 'custom.yml' &amp; 'custom2.json', prioritizing 'custom3.yml', then 'custom2.json'</span></span><br><span class="line">$ hexo generate --config custom.yml,custom2.json,custom3.yml</span><br></pre></td></tr></table></figure>
+
+
+
+<p>当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个 <code>_multiconfig.yml</code>。如果遇到重复的配置，排在后面的文件的配置会覆盖排在前面的文件的配置。这个原则适用于任意数量、任意深度的 YAML 和 JSON 文件。</p>
+<p>例如，使用 <code>--options</code> 指定了两个自定义配置文件：</p>
+<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line">$ hexo <span class="keyword">generate</span> --<span class="keyword">config</span> custom<span class="variable">.yml</span>,custom2<span class="variable">.json</span></span><br></pre></td></tr></table></figure>
+
+<p>如果 <code>custom.yml</code> 中指定了 <code>foo: bar</code>，在 <code>custom2.json</code>中指定了 <code>&quot;foo&quot;: &quot;dinosaur&quot;</code>，那么在 <code>_multiconfig.yml</code> 中你会得到 <code>foo: dinosaur</code>。</p>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src="%5Cimages%5Cmylogo.png%22" alt="logo"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Markdown教程</title>
     <url>/archives/96be88e3.html</url>
     <content><![CDATA[<h1 id="Markdown-教程"><a href="#Markdown-教程" class="headerlink" title="Markdown 教程"></a>Markdown 教程</h1><p><strong>Markdown 标题</strong></p>
