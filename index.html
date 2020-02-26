@@ -212,7 +212,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/275cc748.html" class="post-title-link" itemprop="url">hexo 搭建博客优化指南</a>
+            <a href="/archives/275cc748.html" class="post-title-link" itemprop="url">Hexo 搭建博客优化指南</a>
         </h2>
 
         <div class="post-meta">
@@ -252,14 +252,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="hexo-搭建博客之优化指南"><a href="#hexo-搭建博客之优化指南" class="headerlink" title="hexo 搭建博客之优化指南"></a>hexo 搭建博客之优化指南</h1><h2 id="1-看懂站点配置文件"><a href="#1-看懂站点配置文件" class="headerlink" title="1.看懂站点配置文件"></a>1.看懂站点配置文件</h2><p>应用程序的信息。<a href="https://ejs.co/" target="_blank" rel="external nofollow noopener noreferrer">EJS</a>, <a href="http://learnboost.github.io/stylus/" target="_blank" rel="external nofollow noopener noreferrer">Stylus</a> 和 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="external nofollow noopener noreferrer">Markdown</a> renderer 已默认安装，您可以自由移除。</p>
+          <h1 id="Hexo-搭建博客之优化指南"><a href="#Hexo-搭建博客之优化指南" class="headerlink" title="Hexo 搭建博客之优化指南"></a>Hexo 搭建博客之优化指南</h1><h2 id="1-看懂站点配置文件"><a href="#1-看懂站点配置文件" class="headerlink" title="1.看懂站点配置文件"></a>1.看懂站点配置文件</h2><p><strong>package.json</strong></p>
+<p>应用程序的信息。<a href="https://ejs.co/" target="_blank" rel="external nofollow noopener noreferrer">EJS</a>, <a href="http://learnboost.github.io/stylus/" target="_blank" rel="external nofollow noopener noreferrer">Stylus</a> 和 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="external nofollow noopener noreferrer">Markdown</a> renderer 已默认安装，您可以自由移除。</p>
 <p><strong>scaffolds</strong></p>
 <p><a href="https://hexo.io/zh-cn/docs/writing" target="_blank" rel="external nofollow noopener noreferrer">模版</a> 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</p>
 <p>Hexo的模板是指在新建的文章文件中默认填充的内容。例如，如果您修改scaffold/post.md中的Front-matter内容，那么每次新建一篇文章时都会包含这个修改。</p>
 <p><strong>source</strong></p>
 <p>资源文件夹是存放用户资源的地方。除 <code>_posts</code> 文件夹之外，开头命名为 <code>_</code> (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 <code>public</code> 文件夹，而其他文件会被拷贝过去。</p>
+<blockquote>
 <p><strong>网站存放在子目录</strong></p>
-<p>如果您的网站存放在子目录中，例如 <code>http://yoursite.com/blog</code>，则请将您的 <code>url</code> 设为 <code>http://yoursite.com/blog</code> 并把 <code>root</code> 设为 <code>/blog/</code>。</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>如果您的网站存放在子目录中，例如 <code>http://yoursite.com/blog</code>，则请将您的 <code>url</code> 设为     <code>http://yoursite.com/blog</code> 并把 <code>root</code> 设为 <code>/blog/</code>。</p>
+</blockquote>
+</blockquote>
 <hr>
 <p><strong>目录</strong></p>
 <table>
@@ -758,6 +765,7 @@
 
 
 
+
 <script>
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
@@ -785,7 +793,6 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   }, window.Valine);
 });
 </script>
-
 
 </body>
 </html>
