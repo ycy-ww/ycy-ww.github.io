@@ -1,6 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>数据文件夹</title>
+    <url>/archives/7bfb7356.html</url>
+    <content><![CDATA[<h1 id="数据文件"><a href="#数据文件" class="headerlink" title="数据文件"></a>数据文件</h1><p>有时您可能需要在主题中使用某些资料，而这些资料并不在文章内，并且是需要重复使用的，那么您可以考虑使用 Hexo 3.0 新增的「数据文件」功能。此功能会载入 <code>source/_data</code> 内的 YAML 或 JSON 文件，如此一来您便能在网站中复用这些文件了。</p>
+<p>举例来说，在 <code>source/_data</code> 文件夹中新建 <code>menu.yml</code> 文件：</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">Home:</span> /Gallery: <span class="meta-keyword">/gallery/</span>Archives: <span class="meta-keyword">/archives/</span></span><br></pre></td></tr></table></figure>
+
+<p>您就能在模板中使用这些资料：</p>
+<figure class="highlight mojolicious"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span><span class="perl"> <span class="keyword">for</span> (var <span class="keyword">link</span> in site.data.menu) &#123; </span><span class="xml"><span class="tag">%&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%=</span></span></span><span class="perl"> site.data.menu[<span class="keyword">link</span>] </span><span class="xml"><span class="tag"><span class="string">%&gt;"</span>&gt;</span> <span class="tag">&lt;<span class="name">%=</span></span></span><span class="perl"> <span class="keyword">link</span> </span><span class="xml"><span class="tag">%&gt;</span> <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span><span class="perl"> &#125; </span><span class="xml"><span class="tag">%&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>渲染结果如下 :</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/"</span>&gt;</span> Home <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/gallery/"</span>&gt;</span> Gallery <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/archives/"</span>&gt;</span> Archives <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+<p>{ % codeblock % }</p>
+<p>{ % endcodeblock % }</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LF will be replaced by CRLF</title>
+    <url>/archives/b76ba195.html</url>
+    <content><![CDATA[<h2 id="git提交时”warning-LF-will-be-replaced-by-CRLF“提示"><a href="#git提交时”warning-LF-will-be-replaced-by-CRLF“提示" class="headerlink" title="git提交时”warning: LF will be replaced by CRLF“提示"></a>git提交时”warning: LF will be replaced by CRLF“提示</h2><p>当时在网上查了资料，发现很多的解决办法都是：修改git全局配置，禁止git自动将LF转化成CRLF。命令是：<code>git config --global core.autocrlf false</code>.</p>
+<p><strong>LF和CRLF的真相是什么</strong></p>
+<ol>
+<li><p>LF和CRLF都是换行符，在各操作系统下，换行符是不一样的，Linux/UNIX下是LF,而Windows下是CRLF，早期的MAC OS是CR,后来的OS X在更换内核后和UNIX一样也是LF.<br>虽然靠谱的文本编辑器和 IDE 都支持这几种换行符，但文件在保存时总要有一个固定的标准啊，比如跨平台协作的项目源码，到底保存为哪种风格的换行符呢？</p>
+</li>
+<li><p>Git 由大名鼎鼎的 Linus 开发，因此推荐只将 UNIX 风格的换行符保存入库。但它也考虑到了跨平台协作的场景，并且提供了一个“换行符自动转换”功能。</p>
+<pre><code>- 安装好 GitHub 的 Windows 客户端之后，这个功能默认处于“自动模式”。</code></pre><ul>
+<li>当你在签出文件时，Git 试图将 UNIX 换行符（LF）替换为 Windows 的换行符（CRLF）；当你在提交文件时，它又试图将 CRLF 替换为 LF。</li>
+<li>这样一来在提交代码的时候，git会认为你未修改内容的文件也认为是修改过的，然后提示你warning: LF will be replaced by CRLF这样的信息。</li>
+</ul>
+</li>
+<li><p>上面的解决办法固然解决了很多人的问题，但是在某些情况下仍不适用。</p>
+</li>
+</ol>
+<p><strong>有效的解决方法</strong></p>
+<p>如果设置<code>core.autocrlf = false</code>，那么很可能会出现CRLF和LF混合的情况。<br>首先<code>core.autocrlf = true</code>在windows上才是正确的选择，那么如何避免<em>warning</em>呢？还要有以下几个步骤：</p>
+<ul>
+<li>添加<kbd>.gitattributes</kbd></li>
+<li>设置<code>core.safecrlf = true</code></li>
+<li>使用dos2unix、notepad++等工具来将LF转换成CRLF</li>
+</ul>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><kbd><strong>LOGO:</strong></kbd></p>
+]]></content>
+      <categories>
+        <category>小问题</category>
+      </categories>
+      <tags>
+        <tag>bugs</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>资源文件夹</title>
     <url>/archives/eb477856.html</url>
     <content><![CDATA[<h1 id="4-资源文件夹"><a href="#4-资源文件夹" class="headerlink" title="4.资源文件夹"></a>4.资源文件夹</h1><p>资源（Asset）代表 <code>source</code> 文件夹中除了文章以外的所有文件，例如图片、CSS、JS 文件等。比方说，如果你的Hexo项目中只有少量图片，那最简单的方法就是将它们放在 <code>source/images</code> 文件夹中。然后通过类似于 <code>![](/images/image.jpg)</code> 的方法访问它们。</p>
