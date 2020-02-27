@@ -1,9 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>资源文件夹</title>
+    <url>/archives/eb477856.html</url>
+    <content><![CDATA[<h1 id="4-资源文件夹"><a href="#4-资源文件夹" class="headerlink" title="4.资源文件夹"></a>4.资源文件夹</h1><p>资源（Asset）代表 <code>source</code> 文件夹中除了文章以外的所有文件，例如图片、CSS、JS 文件等。比方说，如果你的Hexo项目中只有少量图片，那最简单的方法就是将它们放在 <code>source/images</code> 文件夹中。然后通过类似于 <code>![](/images/image.jpg)</code> 的方法访问它们。</p>
+<h2 id="文章资源文件夹"><a href="#文章资源文件夹" class="headerlink" title="文章资源文件夹"></a>文章资源文件夹</h2><p>对于那些想要更有规律地提供图片和其他资源以及想要将他们的资源分布在各个文章上的人来说，Hexo也提供了更组织化的方式来管理资源。这个稍微有些复杂但是管理资源非常方便的功能可以通过将 <code>config.yml</code> 文件中的 <code>post_asset_folder</code> 选项设为 <code>true</code> 来打开。</p>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="module-access"><span class="module"><span class="identifier">_config</span>.</span></span>ymlpost_asset_folder: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>当资源文件管理功能打开后，Hexo将会在你每一次通过 <code>hexo new [layout] &lt;title&gt;</code> 命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个文章文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以通过相对路径来引用它们，这样你就得到了一个更简单而且方便得多的工作流。</p>
+<h2 id="相对路径引用的标签插件"><a href="#相对路径引用的标签插件" class="headerlink" title="相对路径引用的标签插件"></a>相对路径引用的标签插件</h2><p>通过常规的 markdown 语法和相对路径来引用图片和其它资源可能会导致它们在存档页或者主页上显示不正确。在Hexo 2时代，社区创建了很多插件来解决这个问题。但是，随着Hexo 3 的发布，许多新的标签插件被加入到了核心代码中。这使得你可以更简单地在文章中引用你的资源。</p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">asset_path</span> slug %&#125;</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">asset_img</span> slug [title] %&#125;</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">asset_link</span> slug [title] %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><b>比如说：</b>当你打开文章资源文件夹功能后，你把一个 <code>example.jpg</code> 图片放在了你的资源文件夹中，如果通过使用相对路径的常规 markdown 语法 <code>![](/example.jpg)</code> ，它将 <em>不会</em> 出现在首页上。（但是它会在文章中按你期待的方式工作）</p>
+<p>正确的引用图片方式是使用下列的标签插件而不是 markdown ：</p>
+<figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line">&#123;<span class="symbol">%</span> asset_img <span class="built_in">example</span>.jpg This <span class="built_in">is</span> an <span class="built_in">example</span> <span class="built_in">image</span> <span class="symbol">%</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过这种方式，图片将会同时出现在文章和主页以及归档页中。</p>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><kbd><strong>LOGO:</strong></kbd></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>标签插件</title>
+    <url>/archives/507239ef.html</url>
+    <content><![CDATA[<h1 id="3-标签插件（Tag-Plugins）"><a href="#3-标签插件（Tag-Plugins）" class="headerlink" title="3.标签插件（Tag Plugins）"></a>3.标签插件（Tag Plugins）</h1><p>标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。</p>
+<h2 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h2><p>在文章中插入引言，可包含作者、来源和标题。</p>
+<p><strong>别号：</strong> quote</p>
+<figure class="highlight twig"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">blockquote</span> [author[, <span class="name">source</span>]] [link] [source_link_title] %&#125;</span></span><br><span class="line"><span class="xml">content</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">endblockquote</span> %&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>样例</strong></p>
+<p>没有提供参数，则只输出普通的 blockquote</p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">blockquote</span> %&#125;</span></span><br><span class="line"><span class="xml">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">endblockquote</span> %&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote>
+<p><strong>引用书上的句子</strong></p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">blockquote</span> David Levithan, Wide Awake %&#125;</span></span><br><span class="line"><span class="xml">Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">endblockquote</span> %&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+<p><strong>David Levithan</strong>Wide Awake</p>
+</blockquote>
+<p><strong>引用 Twitter</strong></p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote <span class="meta">@DevDocs</span> <span class="string">https:</span><span class="comment">//twitter.com/devdocs/status/356095192085962752 %&#125;</span></span><br><span class="line"><span class="string">NEW:</span> DevDocs now comes with syntax highlighting. <span class="string">http:</span><span class="comment">//devdocs.io</span></span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>NEW: DevDocs now comes with syntax highlighting. <a href="http://devdocs.io/" target="_blank" rel="external nofollow noopener noreferrer">http://devdocs.io</a></p>
+<p><strong>@DevDocs</strong><a href="https://twitter.com/devdocs/status/356095192085962752" target="_blank" rel="external nofollow noopener noreferrer">twitter.com/devdocs/status/356095192085962752</a></p>
+</blockquote>
+<p><strong>引用网络上的文章</strong></p>
+<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line">&#123;% <span class="keyword">blockquote </span>Seth Godin http://sethgodin.typepad.com/seths_blog/<span class="number">2009</span>/<span class="number">07</span>/welcome-to-island-<span class="keyword">marketing.html </span>Welcome to Island <span class="keyword">Marketing </span>%&#125;</span><br><span class="line"><span class="symbol">Every</span> interaction is <span class="keyword">both </span>precious <span class="keyword">and </span>an opportunity to delight.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>Every interaction is both precious and an opportunity to delight.</p>
+<p><strong>Seth Godin</strong><a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html" target="_blank" rel="external nofollow noopener noreferrer">Welcome to Island Marketing</a></p>
+</blockquote>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>在文章中插入代码。</p>
+<p><strong>别名：</strong> code</p>
+<figure class="highlight inform7"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock <span class="comment">[title]</span> <span class="comment">[lang:language]</span> <span class="comment">[url]</span> <span class="comment">[link text]</span> <span class="comment">[additional options]</span> %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Specify additional options in <code>option:value</code> format, e.g. <code>line_number:false first_line:5</code>.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Extra Options</th>
+<th align="left">Description</th>
+<th align="left">Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>line_number</code></td>
+<td align="left">Show line number</td>
+<td align="left"><code>true</code></td>
+</tr>
+<tr>
+<td align="left"><code>highlight</code></td>
+<td align="left">Enable code highlighting</td>
+<td align="left"><code>true</code></td>
+</tr>
+<tr>
+<td align="left"><code>first_line</code></td>
+<td align="left">Specify the first line number</td>
+<td align="left"><code>1</code></td>
+</tr>
+<tr>
+<td align="left"><code>mark</code></td>
+<td align="left">Line highlight specific line(s), each value separated by a comma. Specify number range using a dash Example: <code>mark:1,4-7,10</code> will mark line 1, 4 to 7 and 10.</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>wrap</code></td>
+<td align="left">Wrap the code block in <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank" rel="external nofollow noopener noreferrer">``</a></td>
+<td align="left"><code>true</code></td>
+</tr>
+</tbody></table>
+<h3 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h3><p><strong>普通的代码块</strong></p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">codeblock</span> %&#125;</span></span><br><span class="line"><span class="xml">alert('Hello World!');</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">endcodeblock</span> %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>alert(&#39;Hello World!&#39;);</code></p>
+<p><strong>指定语言</strong></p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock <span class="string">lang:</span>objc %&#125;</span><br><span class="line">[rectangle <span class="string">setX:</span> <span class="number">10</span> <span class="string">y:</span> <span class="number">10</span> <span class="string">width:</span> <span class="number">20</span> <span class="string">height:</span> <span class="number">20</span>];</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>[rectangle setX: 10 y: 10 width: 20 height: 20];</code></p>
+<p><strong>附加说明</strong></p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">codeblock</span> Array.map %&#125;</span></span><br><span class="line"><span class="xml">array.map(callback[, thisArg])</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">endcodeblock</span> %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Array.map</p>
+</blockquote>
+<blockquote>
+<p><code>array.map(callback[, thisArg])</code></p>
+</blockquote>
+<p><strong>附加说明和网址</strong></p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock _.compact http:<span class="comment">//underscorejs.org/#compact Underscore.js %&#125;</span></span><br><span class="line">_.compact([<span class="number">0</span>, <span class="number">1</span>, <span class="literal">false</span>, <span class="number">2</span>, <span class="string">''</span>, <span class="number">3</span>]);=&gt; [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>_.compact                                                                  <a href="http://underscorejs.org/#compact" target="_blank" rel="external nofollow noopener noreferrer">Underscore.js</a></p>
+</blockquote>
+<blockquote>
+<p>_.compact([0, 1, false, 2, ‘’, 3]);</p>
+</blockquote>
+<blockquote>
+<p>=&gt; [1, 2, 3]</p>
+</blockquote>
+<h2 id="反引号代码块"><a href="#反引号代码块" class="headerlink" title="反引号代码块"></a>反引号代码块</h2><p>另一种形式的代码块，不同的是它使用三个反引号来包裹。</p>
+<p>``` [language] [title] [url] [link text] code snippet ```</p>
+<a id="more"></a>
+
+<h2 id="Pull-Quote"><a href="#Pull-Quote" class="headerlink" title="Pull Quote"></a>Pull Quote</h2><p>在文章中插入 Pull quote。</p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">pullquote</span> [class] %&#125;</span></span><br><span class="line"><span class="xml">content</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">endpullquote</span> %&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="jsFiddle"><a href="#jsFiddle" class="headerlink" title="jsFiddle"></a>jsFiddle</h2><p>在文章中嵌入 jsFiddle。</p>
+<figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">&#123;% jsfiddle shorttag [tabs] [skin] [width] [height] %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h2><p>在文章中嵌入 Gist。</p>
+<figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">&#123;% gist gist_id [filename] %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h2><p>在文章中插入 iframe。</p>
+<figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">&#123;% iframe url [width] [height] %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h2><p>在文章中插入指定大小的图片。</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">&#123;% img [<span class="keyword">class</span> <span class="symbol">names</span>] /<span class="symbol">path</span>/<span class="symbol">to</span>/<span class="symbol">image</span> [<span class="symbol">width</span>] [<span class="symbol">height</span>] '"<span class="symbol">title</span> <span class="symbol">text</span>" "<span class="symbol">alt</span> <span class="symbol">text</span>"' %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p>在文章中插入链接，并自动给外部链接添加 <code>target=&quot;_blank&quot;</code> 属性。</p>
+<figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Include-Code"><a href="#Include-Code" class="headerlink" title="Include Code"></a>Include Code</h2><p>插入 <code>source/downloads/code</code> 文件夹内的代码文件。<code>source/downloads/code</code> 不是固定的，取决于你在配置文件中 <code>code_dir</code> 的配置。</p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">&#123;% include_code [title] [<span class="keyword">lan</span><span class="variable">g:language</span>] [from:<span class="built_in">line</span>] [<span class="keyword">to</span>:<span class="built_in">line</span>] path/<span class="keyword">to</span>/<span class="keyword">file</span> %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="样例-1"><a href="#样例-1" class="headerlink" title="样例"></a>样例</h3><p><strong>嵌入 test.js 文件全文</strong></p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">include_code</span> lang:javascript test.js %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>只嵌入第 3 行</strong></p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">&#123;% include_code lang:javascript <span class="keyword">from</span>:<span class="number">3</span> to:<span class="number">3</span> test.js %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>嵌入第 5 行至第 8 行</strong></p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">&#123;% include_code lang:javascript <span class="keyword">from</span>:<span class="number">5</span> to:<span class="number">8</span> test.js %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>嵌入第 5 行至文件结束</strong></p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">&#123;% include_code lang:javascript <span class="keyword">from</span>:<span class="number">5</span> test.js %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>嵌入第 1 行至第 8 行</strong></p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">&#123;% include_code <span class="keyword">lan</span><span class="variable">g:javascript</span> <span class="keyword">to</span>:<span class="number">8</span> test.js %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Youtube"><a href="#Youtube" class="headerlink" title="Youtube"></a>Youtube</h2><p>在文章中插入 Youtube 视频。</p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">youtube</span> video_id %&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Vimeo"><a href="#Vimeo" class="headerlink" title="Vimeo"></a>Vimeo</h2><p>在文章中插入 Vimeo 视频。</p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">vimeo</span> video_id %&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="引用文章"><a href="#引用文章" class="headerlink" title="引用文章"></a>引用文章</h2><p>引用其他文章的链接。</p>
+<figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">&#123;% post_path filename %&#125;</span><br><span class="line">&#123;% post_link filename [title] [escape] %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在使用此标签时可以忽略文章文件所在的路径或者文章的永久链接信息、如语言、日期。</p>
+<p>例如，在文章中使用 <code></code> 时，只需有一个名为 <code>how-to-bake-a-cake.md</code> 的文章文件即可。即使这个文件位于站点文件夹的 <code>source/posts/2015-02-my-family-holiday</code> 目录下、或者文章的永久链接是 <code>2018/en/how-to-bake-a-cake</code>，都没有影响。</p>
+<p>默认链接文字是文章的标题，你也可以自定义要显示的文本。此时不应该使用 Markdown 语法 <code>[]()</code>。</p>
+<p>默认对文章的标题和自定义标题里的特殊字符进行转义。可以使用<code>escape</code>选项，禁止对特殊字符进行转义。</p>
+<p><strong>链接使用文章的标题</strong></p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">&#123;% post_link hexo<span class="number">-3</span><span class="number">-8</span>-released %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://hexo.io/news/2018/10/19/hexo-3-8-released/" target="_blank" rel="external nofollow noopener noreferrer">Hexo 3.8.0 Released</a></p>
+<p><strong>链接使用自定义文字</strong></p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">&#123;% post_link hexo<span class="number">-3</span><span class="number">-8</span>-released <span class="string">'通往文章的链接'</span> %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://hexo.io/news/2018/10/19/hexo-3-8-released/" target="_blank" rel="external nofollow noopener noreferrer">通往文章的链接</a></p>
+<p><strong>对标题的特殊字符进行转义</strong></p>
+<figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line">&#123;% post_link hexo-<span class="number">4</span>-released 'How to use <span class="tag">&lt;b&gt;</span> <span class="keyword">tag</span> <span class="title">in</span> title' %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://hexo.io/news/2019/10/14/hexo-4-released/" target="_blank" rel="external nofollow noopener noreferrer">How to use  tag in title</a></p>
+<p><strong>禁止对标题的特殊字符进行转义</strong></p>
+<figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line">&#123;% post_link hexo<span class="number">-4</span>-released <span class="string">'&lt;b&gt;bold&lt;/b&gt; custom title'</span> <span class="literal">false</span> %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://hexo.io/news/2019/10/14/hexo-4-released/" target="_blank" rel="external nofollow noopener noreferrer"><strong>bold</strong> custom title</a></p>
+<h2 id="引用资源"><a href="#引用资源" class="headerlink" title="引用资源"></a>引用资源</h2><p>引用文章的资源。</p>
+<figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">&#123;% asset_path filename %&#125;</span><br><span class="line">&#123;% asset_img filename [title] %&#125;</span><br><span class="line">&#123;% asset_link filename [title] [escape] %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Raw"><a href="#Raw" class="headerlink" title="Raw"></a>Raw</h2><p>如果您想在文章中插入 Swig 标签，可以尝试使用 Raw 标签，以免发生解析异常。</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> raw </span>%&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="文章摘要和截断"><a href="#文章摘要和截断" class="headerlink" title="文章摘要和截断"></a>文章摘要和截断</h2><p>在文章中使用 <code>&lt;!-- more --&gt;</code>，那么 <code>&lt;!-- more --&gt;</code> 之前的文字将会被视为摘要。首页中将只出现这部分文字，同时这部分文字也会出现在正文之中。</p>
+<p>例如：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br><span class="line"><span class="comment">&lt;!-- more --&gt;</span></span><br><span class="line">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span><br></pre></td></tr></table></figure>
+
+<p>首页中将只会出现</p>
+<figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed <span class="keyword">do</span> eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br></pre></td></tr></table></figure>
+
+<p>正文中则会出现</p>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed <span class="keyword">do</span> eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br><span class="line"></span><br><span class="line">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <span class="keyword">ex</span> ea commodo consequat. Duis aute irure dolor <span class="keyword">in</span> reprehenderit <span class="keyword">in</span> voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt <span class="keyword">in</span> culpa <span class="keyword">qui</span> officia deserunt mollit anim id <span class="keyword">est</span> laborum.</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意:</strong> 摘要可能会被 Front Matter 中的 <code>excerpt</code> 覆盖。</p>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Front-matter</title>
     <url>/archives/29d51c84.html</url>
-    <content><![CDATA[<h1 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h1><p>Front-matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量，举例来说：</p>
+    <content><![CDATA[<h1 id="2-Front-matter"><a href="#2-Front-matter" class="headerlink" title="2.Front-matter"></a>2.Front-matter</h1><p>Front-matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量，举例来说：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hello</span> <span class="string">World</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2013</span><span class="string">/7/13</span> <span class="number">20</span><span class="string">:46:25</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
 
 <p>以下是预先定义的参数，您可在模板中使用这些参数值并加以利用。</p>
@@ -215,7 +479,7 @@
       </tags>
   </entry>
   <entry>
-    <title>2.指令</title>
+    <title>指令</title>
     <url>/archives/81ac8ad8.html</url>
     <content><![CDATA[<h1 id="2-指令"><a href="#2-指令" class="headerlink" title="2.指令"></a>2.指令</h1><hr>
 <p><strong>init</strong></p>
