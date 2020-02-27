@@ -26,12 +26,12 @@
     var CONFIG = {"hostname":"www.wwyyqblog.work","root":"/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content=":CS&#39;fun">
+  <meta name="description" content="CS&#39;fun">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ycy-ww">
 <meta property="og:url" content="https://www.wwyyqblog.work/index.html">
 <meta property="og:site_name" content="ycy-ww">
-<meta property="og:description" content=":CS&#39;fun">
+<meta property="og:description" content="CS&#39;fun">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="ycy-ww">
 <meta property="article:tag" content="blog">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title> blog - ycy-ww:CS'fun </title>
+  <title> blog - ycy-wwCS'fun </title>
   
 
 
@@ -198,12 +198,379 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/a429e99c.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ycy-ww">
+      <meta itemprop="description" content="CS'fun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ycy-ww">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/archives/a429e99c.html" class="post-title-link" itemprop="url">Nunjucks Errors</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-27 19:10:50" itemprop="dateCreated datePublished" datetime="2020-02-27T19:10:50+08:00">2020-02-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E9%97%AE%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">小问题</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/archives/a429e99c.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/a429e99c.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="hexo-Nunjucks-Errors-解决方法"><a href="#hexo-Nunjucks-Errors-解决方法" class="headerlink" title="hexo Nunjucks Errors 解决方法"></a>hexo Nunjucks Errors 解决方法</h1><p><strong>Code：</strong></p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Nunjucks Error:  [Line <span class="number">43</span>, Column <span class="number">43</span>] Error: Unable <span class="keyword">to</span> call `now`, which <span class="literal">is</span> undefined <span class="keyword">or</span> falsey</span><br><span class="line">    =====               Context Dump               =====</span><br><span class="line">    === (line<span class="built_in"> number</span> probably different from source) ===</span><br><span class="line">  <span class="number">38</span> | <span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span>分支名称<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line">  <span class="number">39</span> | <span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>gh-pages<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"> (GitHub) </span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>coding-pages<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"> (Coding.net) </span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>master<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"> (others)<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line">  <span class="number">40</span> | &lt;/tr&gt;</span><br><span class="line">  <span class="number">41</span> | <span class="xml"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">  42 | </span><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>message<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">  43 | </span><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span>自定义提交信息<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">  44 | </span><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>Site updated: </span><span class="xquery">&#123;&#123; now(<span class="string">'YYYY-MM-DD HH:mm:ss'</span>) &#125;</span><span class="xml">&#125;<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">  45 | <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line">  <span class="number">46</span> | <span class="xml"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">  47 | </span><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>token<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">  48 | </span><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span>Optional token value to authenticate with the repo. Prefix with </span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>$<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"> to read token from environment variable<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">    =====             Context Dump Ends            =====</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>原文：</strong></p>
+<p><img src="/images/Nunjucks_error.png" alt="md文档"></p>
+<p>文章里出现了Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }} 的内容。然后 hexo 的文章渲染使用的是 Nunjucks ，他会将那几个大括号识别成自己的语法，这样生成的时候就会报错。<code>Unable to call now</code></p>
+<p><strong>解决方法：</strong></p>
+<p>前后加一个这个：<code> </code> 。</p>
+<hr>
+<p><img src="http://image.baidu.com/search/detail?ct=503316480&z=3&tn=baiduimagedetail&ipn=d&word=%E6%9D%A8%E8%B6%85%E8%B6%8A%E5%A4%B4%E5%83%8F%E5%9B%BE%E7%89%87%E5%8D%A1%E9%80%9A&step_word=&ie=utf-8&in=&cl=2&lm=-1&st=-1&hd=&latest=&copyright=&cs=2557770639,1590477966&os=1056480712,476593103&simid=3457548530,199525995&pn=0&rn=1&di=6820&ln=177&fr=&fmq=1582801173329_R&ic=&s=undefined&se=&sme=&tab=0&width=0&height=0&face=undefined&is=0,0&istype=2&ist=&jit=&bdtype=0&spn=0&pi=0&gsm=1e&objurl=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20181129%2F0f66ada5c7714420bbd682dfd70002a8.jpeg&rpstart=0&rpnum=0&adpicid=0&force=undefined" alt="美图"></p>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/26b9d431.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ycy-ww">
+      <meta itemprop="description" content="CS'fun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ycy-ww">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/archives/26b9d431.html" class="post-title-link" itemprop="url">部署</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-27 18:33:08" itemprop="dateCreated datePublished" datetime="2020-02-27T18:33:08+08:00">2020-02-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/archives/26b9d431.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/26b9d431.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="7-部署"><a href="#7-部署" class="headerlink" title="7.部署"></a>7.部署</h1><h2 id="Project-page"><a href="#Project-page" class="headerlink" title="Project page"></a>Project page</h2><p>如果你更希望你的站点部署在 <code>&lt;你的 GitHub 用户名&gt;.github.io</code> 的子目录中，你的 repository 需要直接命名为子目录的名字，这样你的站点可以通过 <code>https://&lt;你的 GitHub 用户名&gt;.github.io/&lt;repository 的名字&gt;</code> 访问。              你需要检查你的 Hexo 配置文件，将 <code>url</code> 修改为 <code>https://&lt;你的 GitHub 用户名&gt;.github.io/&lt;repository 的名字&gt;</code>、将 <code>root</code> 的值修改为 <code>/&lt;repository 的名字&gt;/</code></p>
+<p>您可同时使用多个 deployer，Hexo 会依照顺序执行每个 deployer。</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">- <span class="attribute">type</span>: git  </span><br><span class="line">  <span class="attribute">repo</span>:</span><br><span class="line">- <span class="attribute">type</span>: heroku  </span><br><span class="line">  <span class="attribute">repo</span>:</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p><strong>缩进</strong></p>
+</blockquote>
+<blockquote>
+<p>YAML依靠缩进来确定元素间的从属关系。因此，请确保每个deployer的缩进长度相同，并且使用空格缩进。</p>
+</blockquote>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><ol>
+<li>安装 hexo-deployer-git</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>修改配置。</li>
+</ol>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">deploy:</span>  </span><br><span class="line"><span class="symbol">  type:</span> git  </span><br><span class="line"><span class="symbol">  repo:</span> <span class="params">&lt;repository url&gt;</span> <span class="meta">#https:<span class="comment">//bitbucket.org/JohnSmith/johnsmith.bitbucket.io  </span></span></span><br><span class="line"><span class="symbol">  branch:</span> [branch]  </span><br><span class="line"><span class="symbol">  message:</span> [message]</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>repo</code></td>
+<td align="left">库（Repository）地址</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>branch</code></td>
+<td align="left">分支名称</td>
+<td align="left"><code>gh-pages</code> (GitHub) <code>coding-pages</code> (Coding.net) <code>master</code> (others)</td>
+</tr>
+<tr>
+<td align="left"><code>message</code></td>
+<td align="left">自定义提交信息</td>
+<td align="left">Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}</td>
+</tr>
+<tr>
+<td align="left"><code>token</code></td>
+<td align="left">Optional token value to authenticate with the repo. Prefix with <code>$</code> to read token from environment variable</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<ol>
+<li><p>生成站点文件并推送至远程库。</p>
+<ul>
+<li>You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.</li>
+</ul>
+<ul>
+<li>hexo-deployer-git does not store your username and password. Use <a href="https://git-scm.com/docs/git-credential-cache" target="_blank" rel="external nofollow noopener noreferrer">git-credential-cache</a> to store them temporarily.</li>
+</ul>
+</li>
+<li><p>登入 Github请在库设置（Repository Settings）中将默认分支设置为<code>_config.yml</code>配置中的分支名称。稍等片刻，您的站点就会显示在您的Github Pages中。</p>
+</li>
+</ol>
+<h3 id="这一切是如何发生的？"><a href="#这一切是如何发生的？" class="headerlink" title="这一切是如何发生的？"></a>这一切是如何发生的？</h3><p>当执行 <code>hexo deploy</code> 时，Hexo 会将 <code>public</code> 目录中的文件和目录推送至 <code>_config.yml</code> 中指定的远端仓库和分支中，并且<strong>完全覆盖</strong>该分支下的已有内容。</p>
+<blockquote>
+<p><strong>使用 Git 管理站点目录的用户</strong></p>
+<p>由于 Hexo 的部署默认使用分支 <code>master</code>，所以如果你同时正在使用 Git 管理你的站点目录，你应当注意你的部署分支应当不同于写作分支。<br>一个好的实践是将站点目录和 Pages 分别存放在两个不同的 Git 仓库中，可以有效避免相互覆盖。<br>Hexo 在部署你的站点生成的文件时并不会更新你的站点目录。因此你应该手动提交并推送你的写作分支。</p>
+</blockquote>
+<p>此外，如果您的 Github Pages 需要使用 CNAME 文件<strong>自定义域名</strong>，请将 CNAME 文件置于 <code>source</code> 目录下，只有这样 <code>hexo deploy</code> 才能将 CNAME 文件一并推送至部署分支。</p>
+<p><strong>其他deployer：</strong><a href="https://hexo.io/zh-cn/docs/one-command-deployment" target="_blank" rel="external nofollow noopener noreferrer">参考</a></p>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/1393f011.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ycy-ww">
+      <meta itemprop="description" content="CS'fun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ycy-ww">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/archives/1393f011.html" class="post-title-link" itemprop="url">服务器-生成器</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-27 17:25:06" itemprop="dateCreated datePublished" datetime="2020-02-27T17:25:06+08:00">2020-02-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/archives/1393f011.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/1393f011.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="6-服务器"><a href="#6-服务器" class="headerlink" title="6.服务器"></a>6.服务器</h1><h2 id="hexo-server"><a href="#hexo-server" class="headerlink" title="hexo-server"></a>hexo-server</h2><p>如果您想要更改端口，或是在执行时遇到了 <code>EADDRINUSE</code> 错误，可以在执行时使用 <code>-p</code> 选项指定其他端口</p>
+<h3 id="静态模式"><a href="#静态模式" class="headerlink" title="静态模式"></a>静态模式</h3><p>在静态模式下，服务器只处理 <code>public</code> 文件夹内的文件，而不会处理文件变动，在执行时，您应该先自行执行 <code>hexo generate</code>，此模式通常用于生产环境（production mode）下。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo<span class="built_in"> server </span>-s</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="自定义-IP"><a href="#自定义-IP" class="headerlink" title="自定义 IP"></a>自定义 IP</h3><p>服务器默认运行在 <code>0.0.0.0</code>，您可以覆盖默认的 IP 设置，如下：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo<span class="built_in"> server </span>-i 192.168.1.1</span><br></pre></td></tr></table></figure>
+
+<p>指定这个参数后，您就只能通过该IP才能访问站点。</p>
+<p><strong>例如：</strong></p>
+<ul>
+<li><p>对于一台使用无线网络的笔记本电脑，除了指向本机的<code>127.0.0.1</code>外，通常还有一个<code>192.168.*.*</code>的局域网IP，如果像上面那样使用<code>-i</code>参数，就不能用<code>127.0.0.1</code>来访问站点了。</p>
+</li>
+<li><p>对于有公网IP的主机，如果您指定一个局域网IP作为<code>-i</code>参数的值，那么就无法通过公网来访问站点。</p>
+</li>
+</ul>
+<hr>
+<h1 id="生成文件"><a href="#生成文件" class="headerlink" title="生成文件"></a>生成文件</h1><h3 id="监视文件变动"><a href="#监视文件变动" class="headerlink" title="监视文件变动"></a>监视文件变动</h3><p>Hexo 能够监视文件变动并立即重新生成静态文件，在生成时会比对文件的 SHA1 checksum，只有变动的文件才会写入。</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">generate</span> --watch</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="完成后部署"><a href="#完成后部署" class="headerlink" title="完成后部署"></a>完成后部署</h3><p>您可执行下列的其中一个命令，让 Hexo 在生成完毕后自动部署网站，两个命令的作用是相同的。</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">generate</span> --deploy</span><br><span class="line">$ hexo deploy --<span class="keyword">generate</span></span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>简写：<br>$ hexo g -d<br>$ hexo d -g</p>
+</blockquote>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/7bfb7356.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="ycy-ww">
-      <meta itemprop="description" content=":CS'fun">
+      <meta itemprop="description" content="CS'fun">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -261,9 +628,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="数据文件"><a href="#数据文件" class="headerlink" title="数据文件"></a>数据文件</h1><p>有时您可能需要在主题中使用某些资料，而这些资料并不在文章内，并且是需要重复使用的，那么您可以考虑使用 Hexo 3.0 新增的「数据文件」功能。此功能会载入 <code>source/_data</code> 内的 YAML 或 JSON 文件，如此一来您便能在网站中复用这些文件了。</p>
+          <h1 id="5-数据文件"><a href="#5-数据文件" class="headerlink" title="5.数据文件"></a>5.数据文件</h1><p>有时您可能需要在主题中使用某些资料，而这些资料并不在文章内，并且是需要重复使用的，那么您可以考虑使用 Hexo 3.0 新增的「数据文件」功能。此功能会载入 <code>source/_data</code> 内的 YAML 或 JSON 文件，如此一来您便能在网站中复用这些文件了。</p>
 <p>举例来说，在 <code>source/_data</code> 文件夹中新建 <code>menu.yml</code> 文件：</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Home:</span> /Gallery: <span class="meta-keyword">/gallery/</span>Archives: <span class="meta-keyword">/archives/</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Home:</span> /</span><br><span class="line"><span class="symbol">Gallery:</span> <span class="meta-keyword">/gallery/</span></span><br><span class="line"><span class="symbol">Archives:</span> <span class="meta-keyword">/archives/</span></span><br></pre></td></tr></table></figure>
 
 <p>您就能在模板中使用这些资料：</p>
 <figure class="highlight mojolicious"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span><span class="perl"> <span class="keyword">for</span> (var <span class="keyword">link</span> in site.data.menu) &#123; </span><span class="xml"><span class="tag">%&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%=</span></span></span><span class="perl"> site.data.menu[<span class="keyword">link</span>] </span><span class="xml"><span class="tag"><span class="string">%&gt;"</span>&gt;</span> <span class="tag">&lt;<span class="name">%=</span></span></span><span class="perl"> <span class="keyword">link</span> </span><span class="xml"><span class="tag">%&gt;</span> <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span><span class="perl"> &#125; </span><span class="xml"><span class="tag">%&gt;</span></span></span><br></pre></td></tr></table></figure>
@@ -276,8 +643,6 @@
 <hr>
 <p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
 <p><img src alt="logo"></p>
-<p>{ % codeblock % }</p>
-<p>{ % endcodeblock % }</p>
 
       
     </div>
@@ -302,7 +667,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="ycy-ww">
-      <meta itemprop="description" content=":CS'fun">
+      <meta itemprop="description" content="CS'fun">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -408,7 +773,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="ycy-ww">
-      <meta itemprop="description" content=":CS'fun">
+      <meta itemprop="description" content="CS'fun">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -506,7 +871,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="ycy-ww">
-      <meta itemprop="description" content=":CS'fun">
+      <meta itemprop="description" content="CS'fun">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -708,7 +1073,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="ycy-ww">
-      <meta itemprop="description" content=":CS'fun">
+      <meta itemprop="description" content="CS'fun">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -884,7 +1249,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="ycy-ww">
-      <meta itemprop="description" content=":CS'fun">
+      <meta itemprop="description" content="CS'fun">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1064,7 +1429,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="ycy-ww">
-      <meta itemprop="description" content=":CS'fun">
+      <meta itemprop="description" content="CS'fun">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1279,391 +1644,12 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/275cc748.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ycy-ww">
-      <meta itemprop="description" content=":CS'fun">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ycy-ww">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/archives/275cc748.html" class="post-title-link" itemprop="url">Hexo 搭建博客优化指南</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-26 20:42:45" itemprop="dateCreated datePublished" datetime="2020-02-26T20:42:45+08:00">2020-02-26</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/archives/275cc748.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/275cc748.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Hexo-搭建博客之优化指南"><a href="#Hexo-搭建博客之优化指南" class="headerlink" title="Hexo 搭建博客之优化指南"></a>Hexo 搭建博客之优化指南</h1><h2 id="1-看懂站点配置文件"><a href="#1-看懂站点配置文件" class="headerlink" title="1.看懂站点配置文件"></a>1.看懂站点配置文件</h2><p><strong>package.json</strong></p>
-<p>应用程序的信息。<a href="https://ejs.co/" target="_blank" rel="external nofollow noopener noreferrer">EJS</a>, <a href="http://learnboost.github.io/stylus/" target="_blank" rel="external nofollow noopener noreferrer">Stylus</a> 和 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="external nofollow noopener noreferrer">Markdown</a> renderer 已默认安装，您可以自由移除。</p>
-<p><strong>scaffolds</strong></p>
-<p><a href="https://hexo.io/zh-cn/docs/writing" target="_blank" rel="external nofollow noopener noreferrer">模版</a> 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</p>
-<p>Hexo的模板是指在新建的文章文件中默认填充的内容。例如，如果您修改scaffold/post.md中的Front-matter内容，那么每次新建一篇文章时都会包含这个修改。</p>
-<p><strong>source</strong></p>
-<p>资源文件夹是存放用户资源的地方。除 <code>_posts</code> 文件夹之外，开头命名为 <code>_</code> (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 <code>public</code> 文件夹，而其他文件会被拷贝过去。</p>
-<blockquote>
-<p><strong>网站存放在子目录</strong></p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>如果您的网站存放在子目录中，例如 <code>http://yoursite.com/blog</code>，则请将您的 <code>url</code> 设为     <code>http://yoursite.com/blog</code> 并把 <code>root</code> 设为 <code>/blog/</code>。</p>
-</blockquote>
-</blockquote>
-<hr>
-<p><strong>目录</strong></p>
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-<th align="left">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>source_dir</code></td>
-<td align="left">资源文件夹，这个文件夹用来存放内容。</td>
-<td align="left"><code>source</code></td>
-</tr>
-<tr>
-<td align="left"><code>public_dir</code></td>
-<td align="left">公共文件夹，这个文件夹用于存放生成的站点文件。</td>
-<td align="left"><code>public</code></td>
-</tr>
-<tr>
-<td align="left"><code>tag_dir</code></td>
-<td align="left">标签文件夹</td>
-<td align="left"><code>tags</code></td>
-</tr>
-<tr>
-<td align="left"><code>archive_dir</code></td>
-<td align="left">归档文件夹</td>
-<td align="left"><code>archives</code></td>
-</tr>
-<tr>
-<td align="left"><code>category_dir</code></td>
-<td align="left">分类文件夹</td>
-<td align="left"><code>categories</code></td>
-</tr>
-<tr>
-<td align="left"><code>code_dir</code></td>
-<td align="left">Include code 文件夹，<code>source_dir</code> 下的子目录</td>
-<td align="left"><code>downloads/code</code></td>
-</tr>
-<tr>
-<td align="left"><code>i18n_dir</code></td>
-<td align="left">国际化（i18n）文件夹</td>
-<td align="left"><code>:lang</code></td>
-</tr>
-<tr>
-<td align="left"><code>skip_render</code></td>
-<td align="left">跳过指定文件的渲染。匹配到的文件将会被不做改动地复制到 <code>public</code> 目录中。您可使用 <a href="https://github.com/micromatch/micromatch#extended-globbing" target="_blank" rel="external nofollow noopener noreferrer">glob 表达式</a>来匹配路径。</td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<p><strong>文章</strong></p>
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-<th align="left">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>new_post_name</code></td>
-<td align="left">新文章的文件名称</td>
-<td align="left">:title.md</td>
-</tr>
-<tr>
-<td align="left"><code>default_layout</code></td>
-<td align="left">预设布局</td>
-<td align="left">post</td>
-</tr>
-<tr>
-<td align="left"><code>auto_spacing</code></td>
-<td align="left">在中文和英文之间加入空格</td>
-<td align="left">false</td>
-</tr>
-<tr>
-<td align="left"><code>titlecase</code></td>
-<td align="left">把标题转换为 title case</td>
-<td align="left">false</td>
-</tr>
-<tr>
-<td align="left"><code>external_link</code></td>
-<td align="left">在新标签中打开链接</td>
-<td align="left">true</td>
-</tr>
-<tr>
-<td align="left"><code>external_link.enable</code></td>
-<td align="left">在新标签中打开链接</td>
-<td align="left"><code>true</code></td>
-</tr>
-<tr>
-<td align="left"><code>external_link.field</code></td>
-<td align="left">对整个网站（<code>site</code>）生效或仅对文章（<code>post</code>）生效</td>
-<td align="left"><code>site</code></td>
-</tr>
-<tr>
-<td align="left"><code>external_link.exclude</code></td>
-<td align="left">需要排除的域名。主域名和子域名如 <code>www</code> 需分别配置</td>
-<td align="left"><code>[]</code></td>
-</tr>
-<tr>
-<td align="left"><code>filename_case</code></td>
-<td align="left">把文件名称转换为 (1) 小写或 (2) 大写</td>
-<td align="left">0</td>
-</tr>
-<tr>
-<td align="left"><code>render_drafts</code></td>
-<td align="left">显示草稿</td>
-<td align="left">false</td>
-</tr>
-<tr>
-<td align="left"><code>post_asset_folder</code></td>
-<td align="left">启动 <a href="https://hexo.io/zh-cn/docs/asset-folders" target="_blank" rel="external nofollow noopener noreferrer">Asset 文件夹</a></td>
-<td align="left">false</td>
-</tr>
-<tr>
-<td align="left"><code>relative_link</code></td>
-<td align="left">把链接改为与根目录的相对位址</td>
-<td align="left">false</td>
-</tr>
-<tr>
-<td align="left"><code>future</code></td>
-<td align="left">显示未来的文章</td>
-<td align="left">true</td>
-</tr>
-<tr>
-<td align="left"><code>highlight</code></td>
-<td align="left">代码块的设置</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><code>highlight.enable</code></td>
-<td align="left">开启代码块高亮</td>
-<td align="left"><code>true</code></td>
-</tr>
-<tr>
-<td align="left"><code>highlight.auto_detect</code></td>
-<td align="left">如果未指定语言，则启用自动检测</td>
-<td align="left"><code>false</code></td>
-</tr>
-<tr>
-<td align="left"><code>highlight.line_number</code></td>
-<td align="left">显示行数 <em>Enabling this option will also enable wrap option</em></td>
-<td align="left"><code>true</code></td>
-</tr>
-<tr>
-<td align="left"><code>highlight.tab_replace</code></td>
-<td align="left">用 n 个空格替换 tabs；如果值为空，则不会替换 tabs</td>
-<td align="left"><code>&#39;&#39;</code></td>
-</tr>
-<tr>
-<td align="left"><code>highlight.wrap</code></td>
-<td align="left">Wrap the code block in <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank" rel="external nofollow noopener noreferrer">``</a></td>
-<td align="left"><code>true</code></td>
-</tr>
-<tr>
-<td align="left"><code>highlight.hljs</code></td>
-<td align="left">Use the <code>hljs-*</code> prefix for CSS classes</td>
-<td align="left"><code>false</code></td>
-</tr>
-</tbody></table>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/archives/275cc748.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/96be88e3.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ycy-ww">
-      <meta itemprop="description" content=":CS'fun">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ycy-ww">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/archives/96be88e3.html" class="post-title-link" itemprop="url">Markdown教程</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-26 01:24:01" itemprop="dateCreated datePublished" datetime="2020-02-26T01:24:01+08:00">2020-02-26</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/archives/96be88e3.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/96be88e3.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Markdown-教程"><a href="#Markdown-教程" class="headerlink" title="Markdown 教程"></a>Markdown 教程</h1><p><strong>Markdown 标题</strong></p>
-<p>Markdown 标题有两种格式。</p>
-<p><strong>1、使用 = 和 - 标记一级和二级标题</strong></p>
-<p>= 和 - 标记语法格式如下：</p>
-<p>我展示的是一级标题 ============  我展示的是二级标题 —————–</p>
-<p><strong>使用 # 号标记</strong></p>
-<p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。</p>
-<p><strong>Markdown 段落</strong></p>
-<p>Markdown 段落没有特殊的格式，直接编写文字就好，<strong>段落的换行是使用两个以上空格加上回车</strong>。</p>
-<p>当然也可以在段落后面使用一个空行来表示重新开始一个段落。</p>
-<p><strong>字体</strong></p>
-<p>Markdown 可以使用以下几种字体：</p>
-<p>*斜体文本* _斜体文本_ **粗体文本** __粗体文本__ ***粗斜体文本*** ___粗斜体文本___</p>
-<p><strong>分隔线</strong></p>
-<p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
-<p><em><em>\</em>\</em>     ———-      <em>____\</em></p>
-<p><strong>删除线</strong></p>
-<p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，实例如下：</p>
-<p>~~BAIDU.COM~~</p>
-<p><strong>下划线</strong></p>
-<p>下划线可以通过 HTML 的 <code>&lt;u&gt;</code> 标签来实现：</p>
-<p>&lt;u&gt;带下划线文本&lt;/u&gt;</p>
-<p><strong>脚注</strong></p>
-<p>脚注是对文本的补充说明。</p>
-<p>Markdown 脚注的格式如下:</p>
-<p>[^要注明的文本]</p>
-<p>以下实例演示了脚注的用法：</p>
-<p>创建脚注格式类似这样 [^ycy-ww]。  </p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/archives/96be88e3.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 
@@ -1722,14 +1708,14 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="ycy-ww" src="/images/avatar.gif">
   <p class="site-author-name" itemprop="name">ycy-ww</p>
-  <div class="site-description" itemprop="description">:CS'fun</div>
+  <div class="site-description" itemprop="description">CS'fun</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
