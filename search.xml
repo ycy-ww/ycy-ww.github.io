@@ -1,6 +1,1516 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>辅助函数</title>
+    <url>/archives/989bfe87.html</url>
+    <content><![CDATA[<h1 id="辅助函数（Helpers）"><a href="#辅助函数（Helpers）" class="headerlink" title="辅助函数（Helpers）"></a>辅助函数（Helpers）</h1><p>辅助函数帮助您在模版中快速插入内容。辅助函数不能在源文件中使用。</p>
+<h2 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h2><h3 id="url-for"><a href="#url-for" class="headerlink" title="url_for"></a>url_for</h3><p>在路径前加上根路径，从 Hexo 2.7 开始您应该使用此函数而不是 <code>config.root + path</code>。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- url_for<span class="comment">(path, [option])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>relative</code></td>
+<td align="left">是否输出相对链接</td>
+<td align="left"><code>config.relative_link</code> 的值</td>
+</tr>
+</tbody></table>
+<p><strong>示例：</strong></p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line">_config.yml</span><br><span class="line"><span class="symbol">root:</span> <span class="meta-keyword">/blog/</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- url_for<span class="comment">('/a/path')</span> <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// /blog/a/path</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>是否输出相对链接，默认遵循配置文件中 <code>relative_link</code> 的值<br>例如， post/page 的相对路径值可能是 <code>/foo/bar/index.html</code></p>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="module-access"><span class="module"><span class="identifier">_config</span>.</span></span>yml</span><br><span class="line">relative_link: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line">&lt;%- url<span class="constructor">_for('<span class="operator">/</span><span class="params">css</span><span class="operator">/</span><span class="params">style</span>.<span class="params">css</span>')</span> %&gt;</span><br><span class="line"><span class="comment">// ../../css/style.css</span></span><br><span class="line"><span class="comment">/* 覆盖配置 </span></span><br><span class="line"><span class="comment"> * 即使配置文件中启用了 relative_link，你也可以使用 relative 参数禁用相对链接输出，反之亦然 </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">&lt;%- url<span class="constructor">_for('<span class="operator">/</span><span class="params">css</span><span class="operator">/</span><span class="params">style</span>.<span class="params">css</span>', &#123;<span class="params">relative</span>: <span class="params">false</span>&#125;)</span> %&gt;</span><br><span class="line"><span class="comment">// /css/style.css</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="relative-url"><a href="#relative-url" class="headerlink" title="relative_url"></a>relative_url</h3><p>取得与 <code>from</code> 相对的 <code>to</code> 路径。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- relative_url<span class="comment">(from, to)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line">&lt;%- relative<span class="constructor">_url('<span class="params">foo</span><span class="operator">/</span><span class="params">bar</span><span class="operator">/</span>', '<span class="params">css</span><span class="operator">/</span><span class="params">style</span>.<span class="params">css</span>')</span> %&gt;</span><br><span class="line"><span class="comment">// ../../css/style.css</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="gravatar"><a href="#gravatar" class="headerlink" title="gravatar"></a>gravatar</h3><p>根据邮箱地址返回 Gravatar 头像 URL。</p>
+<p>如果你不指定 <code>options</code> 参数，将会应用默认参数。否则，你可以将其设置为一个数字，这个数字将会作为 Gravatar 的大小参数。最后，如果你设置它一个对象，它将会被转换为 Gravatar 的一个查询字符串参数。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- gravatar<span class="comment">(email, [options])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>s</code></td>
+<td align="left">图片大小</td>
+<td align="left">80</td>
+</tr>
+<tr>
+<td align="left"><code>d</code></td>
+<td align="left">默认头像</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>f</code></td>
+<td align="left">强制使用默认图象</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>r</code></td>
+<td align="left">头像等级限制</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<p>访问 <a href="https://en.gravatar.com/site/implement/images/" target="_blank" rel="external nofollow noopener noreferrer">Gravatar</a> 了解更多。</p>
+<p><strong>示例：</strong></p>
+<figure class="highlight llvm"><table><tr><td class="code"><pre><span class="line">&lt;<span class="symbol">%-</span> gravatar('a<span class="title">@abc.com</span>') %&gt;</span><br><span class="line">// https://www.gravatar.com/avatar/b<span class="number">9</span>b<span class="number">00e66</span><span class="keyword">c</span><span class="number">6</span>b<span class="number">8</span>a<span class="number">70</span>f<span class="number">88</span><span class="keyword">c</span><span class="number">73</span>cb<span class="number">6</span>bdb<span class="number">06787</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="symbol">%-</span> gravatar('a<span class="title">@abc.com</span>', <span class="number">40</span>) %&gt;</span><br><span class="line">// https://www.gravatar.com/avatar/b<span class="number">9</span>b<span class="number">00e66</span><span class="keyword">c</span><span class="number">6</span>b<span class="number">8</span>a<span class="number">70</span>f<span class="number">88</span><span class="keyword">c</span><span class="number">73</span>cb<span class="number">6</span>bdb<span class="number">06787</span>?s=<span class="number">40</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="symbol">%-</span> gravatar('a<span class="title">@abc.com</span>' &#123;s: <span class="number">40</span>, d: 'https://via.placeholder.com/<span class="number">150</span>'&#125;) %&gt;// https://www.gravatar.com/avatar/b<span class="number">9</span>b<span class="number">00e66</span><span class="keyword">c</span><span class="number">6</span>b<span class="number">8</span>a<span class="number">70</span>f<span class="number">88</span><span class="keyword">c</span><span class="number">73</span>cb<span class="number">6</span>bdb<span class="number">06787</span>?s=<span class="number">40</span>&amp;d=https<span class="symbol">%3</span>A<span class="symbol">%2</span>F<span class="symbol">%2</span>Fvia.placeholder.com<span class="symbol">%2</span>F<span class="number">150</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="full-url-for"><a href="#full-url-for" class="headerlink" title="full_url_for"></a>full_url_for</h3><p>在路径前加上根路径和域名。输出会被自动转码。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- full_url_for<span class="comment">(path)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">_config.yml</span><br><span class="line"><span class="string">url:</span> <span class="string">https:</span><span class="comment">//example.com/blog # example</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- full_url_for<span class="comment">('/a/path')</span> <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// https://example.com/blog/a/path</span></span><br></pre></td></tr></table></figure>
+
+
+
+<a id="more"></a>
+
+
+
+<h2 id="HTML-标签"><a href="#HTML-标签" class="headerlink" title="HTML 标签"></a>HTML 标签</h2><h3 id="css"><a href="#css" class="headerlink" title="css"></a>css</h3><p>载入 CSS 文件。<code>path</code> 可以是数组或字符串，如果 <code>path</code> 开头不是 <code>/</code> 或任何协议，则会自动加上根路径；如果后面没有加上 <code>.css</code> 扩展名的话，也会自动加上。Use object type for custom attributes.</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- css<span class="comment">(path, ...)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight erb"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%-</span></span></span><span class="ruby"> css(<span class="string">'style.css'</span>) </span><span class="xml"><span class="tag">%&gt;</span></span></span><br><span class="line"><span class="xml">// <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/style.css"</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%-</span></span></span><span class="ruby"> css([<span class="string">'style.css'</span>, <span class="string">'screen.css'</span>]) </span><span class="xml"><span class="tag">%&gt;</span></span></span><br><span class="line"><span class="xml">// <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/style.css"</span>&gt;</span></span></span><br><span class="line"><span class="xml">// <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/screen.css"</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%-</span></span></span><span class="ruby"> css(&#123; <span class="symbol">href:</span> <span class="string">'style.css'</span>, <span class="symbol">integrity:</span> <span class="string">'foo'</span> &#125;) </span><span class="xml"><span class="tag">%&gt;</span></span></span><br><span class="line"><span class="xml">// <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/style.css"</span> <span class="attr">integrity</span>=<span class="string">"foo"</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%-</span></span></span><span class="ruby"> css([&#123; <span class="symbol">href:</span> <span class="string">'style.css'</span>, <span class="symbol">integrity:</span> <span class="string">'foo'</span> &#125;, &#123; <span class="symbol">href:</span> <span class="string">'screen.css'</span>, <span class="symbol">integrity:</span> <span class="string">'bar'</span> &#125;])</span><span class="xml"><span class="tag">%&gt;</span></span></span><br><span class="line"><span class="xml">// <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/style.css"</span> <span class="attr">integrity</span>=<span class="string">"foo"</span>&gt;</span></span></span><br><span class="line"><span class="xml">// <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/screen.css"</span> <span class="attr">integrity</span>=<span class="string">"bar"</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="js"><a href="#js" class="headerlink" title="js"></a>js</h3><p>载入 JavaScript 文件。<code>path</code> 可以是数组或字符串，如果 <code>path</code> 开头不是 <code>/</code> 或任何协议，则会自动加上根路径；如果后面没有加上 <code>.js</code> 扩展名的话，也会自动加上。Use object type for custom attributes.</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- js<span class="comment">(path, ...)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight erb"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%-</span></span></span><span class="ruby"> js(<span class="string">'script.js'</span>) </span><span class="xml"><span class="tag">%&gt;</span></span></span><br><span class="line"><span class="xml">// <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/script.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%-</span></span></span><span class="ruby"> js([<span class="string">'script.js'</span>, <span class="string">'gallery.js'</span>]) </span><span class="xml"><span class="tag">%&gt;</span></span></span><br><span class="line"><span class="xml">// <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/script.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">// <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/gallery.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%-</span></span></span><span class="ruby"> js(&#123; <span class="symbol">src:</span> <span class="string">'script.js'</span>, <span class="symbol">integrity:</span> <span class="string">'foo'</span>, <span class="symbol">async:</span> <span class="literal">true</span> &#125;) </span><span class="xml"><span class="tag">%&gt;</span></span></span><br><span class="line"><span class="xml">// <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/script.js"</span> <span class="attr">integrity</span>=<span class="string">"foo"</span> <span class="attr">async</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%-</span></span></span><span class="ruby"> js([&#123; <span class="symbol">src:</span> <span class="string">'script.js'</span>, <span class="symbol">integrity:</span> <span class="string">'foo'</span> &#125;, &#123; <span class="symbol">src:</span> <span class="string">'gallery.js'</span>, <span class="symbol">integrity:</span> <span class="string">'bar'</span> &#125;]) </span><span class="xml"><span class="tag">%&gt;</span></span></span><br><span class="line"><span class="xml">// <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/script.js"</span> <span class="attr">integrity</span>=<span class="string">"foo"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">// <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/gallery.js"</span> <span class="attr">integrity</span>=<span class="string">"bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="link-to"><a href="#link-to" class="headerlink" title="link_to"></a>link_to</h3><p>插入链接。</p>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line">&lt;%- link<span class="constructor">_to(<span class="params">path</span>, [<span class="params">text</span>], [<span class="params">options</span>])</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>external</code></td>
+<td align="left">在新视窗打开链接</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left"><code>class</code></td>
+<td align="left">Class 名称</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>id</code></td>
+<td align="left">ID</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<p><strong>示例：</strong></p>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line">&lt;%- link<span class="constructor">_to('<span class="params">http</span>:<span class="operator">/</span><span class="operator">/</span><span class="params">www</span>.<span class="params">google</span>.<span class="params">com</span>')</span> %&gt;</span><br><span class="line"><span class="comment">// &lt;a href="http://www.google.com"title="http://www.google.com"&gt;http://www.google.com&lt;/a&gt;</span></span><br><span class="line"></span><br><span class="line">&lt;%- link<span class="constructor">_to('<span class="params">http</span>:<span class="operator">/</span><span class="operator">/</span><span class="params">www</span>.<span class="params">google</span>.<span class="params">com</span>', 'Google')</span> %&gt;</span><br><span class="line"><span class="comment">// &lt;a href="http://www.google.com" title="Google"&gt;Google&lt;/a&gt;</span></span><br><span class="line"></span><br><span class="line">&lt;%- link<span class="constructor">_to('<span class="params">http</span>:<span class="operator">/</span><span class="operator">/</span><span class="params">www</span>.<span class="params">google</span>.<span class="params">com</span>', 'Google', &#123;<span class="params">external</span>: <span class="params">true</span>&#125;)</span> %&gt;</span><br><span class="line"><span class="comment">// &lt;a href="http://www.google.com" title="Google" target="_blank" rel="noopener"&gt;Google&lt;/a&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="mail-to"><a href="#mail-to" class="headerlink" title="mail_to"></a>mail_to</h3><p>插入电子邮箱链接。</p>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line">&lt;%- mail<span class="constructor">_to(<span class="params">path</span>, [<span class="params">text</span>], [<span class="params">options</span>])</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>class</code></td>
+<td align="left">Class 名称</td>
+</tr>
+<tr>
+<td align="left"><code>id</code></td>
+<td align="left">ID</td>
+</tr>
+<tr>
+<td align="left"><code>subject</code></td>
+<td align="left">邮件主题</td>
+</tr>
+<tr>
+<td align="left"><code>cc</code></td>
+<td align="left">抄送（CC）</td>
+</tr>
+<tr>
+<td align="left"><code>bcc</code></td>
+<td align="left">密送（BCC）</td>
+</tr>
+<tr>
+<td align="left"><code>body</code></td>
+<td align="left">邮件内容</td>
+</tr>
+</tbody></table>
+<p><strong>示例：</strong></p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- mail_to<span class="comment">('a@abc.com')</span> <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// &lt;a href="mailto:a@abc.com" title="a@abc.com"&gt;a@abc.com&lt;/a&gt;</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="meta">%</span>- mail_to<span class="comment">('a@abc.com', 'Email')</span> <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// &lt;a href="mailto:a@abc.com" title="Email"&gt;Email&lt;/a&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="image-tag"><a href="#image-tag" class="headerlink" title="image_tag"></a>image_tag</h3><p>插入图片。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- image_tag<span class="comment">(path, [options])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>alt</code></td>
+<td align="left">图片的替代文字</td>
+</tr>
+<tr>
+<td align="left"><code>class</code></td>
+<td align="left">Class 名称</td>
+</tr>
+<tr>
+<td align="left"><code>id</code></td>
+<td align="left">ID</td>
+</tr>
+<tr>
+<td align="left"><code>width</code></td>
+<td align="left">图片宽度</td>
+</tr>
+<tr>
+<td align="left"><code>height</code></td>
+<td align="left">图片高度</td>
+</tr>
+</tbody></table>
+<h3 id="favicon-tag"><a href="#favicon-tag" class="headerlink" title="favicon_tag"></a>favicon_tag</h3><p>插入 favicon。</p>
+<figure class="highlight mel"><table><tr><td class="code"><pre><span class="line">&lt;%- favicon_tag(path) %&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="feed-tag"><a href="#feed-tag" class="headerlink" title="feed_tag"></a>feed_tag</h3><p>插入 feed 链接。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- feed_tag<span class="comment">(path, [options])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>title</code></td>
+<td align="left">Feed 标题</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>type</code></td>
+<td align="left">Feed 类型</td>
+<td align="left">atom</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="条件函数"><a href="#条件函数" class="headerlink" title="条件函数"></a>条件函数</h2><h3 id="is-current"><a href="#is-current" class="headerlink" title="is_current"></a>is_current</h3><p>检查 <code>path</code> 是否符合目前页面的网址。开启 <code>strict</code> 选项启用严格比对。</p>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line">&lt;%- is<span class="constructor">_current(<span class="params">path</span>, [<span class="params">strict</span>])</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="is-home"><a href="#is-home" class="headerlink" title="is_home"></a>is_home</h3><p>检查当前页面是否为首页。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_home<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="is-post"><a href="#is-post" class="headerlink" title="is_post"></a>is_post</h3><p>检查当前页面是否为文章。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_post<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="is-page"><a href="#is-page" class="headerlink" title="is_page"></a>is_page</h3><p>检查当前页面是否为独立页面。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_page<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="is-archive"><a href="#is-archive" class="headerlink" title="is_archive"></a>is_archive</h3><p>检查当前页面是否为存档页面。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_archive<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="is-year"><a href="#is-year" class="headerlink" title="is_year"></a>is_year</h3><p>检查当前页面是否为年度归档页面。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_year<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="is-month"><a href="#is-month" class="headerlink" title="is_month"></a>is_month</h3><p>检查当前页面是否为月度归档页面。</p>
+<figure class="highlight mel"><table><tr><td class="code"><pre><span class="line">&lt;%- is_month() %&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="is-category"><a href="#is-category" class="headerlink" title="is_category"></a>is_category</h3><p>检查当前页面是否为分类归档页面。<br>如果给定一个字符串作为参数，将会检查目前是否为指定分类。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_category<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br><span class="line">&lt;<span class="meta">%</span>- is_category<span class="comment">('hobby')</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="is-tag"><a href="#is-tag" class="headerlink" title="is_tag"></a>is_tag</h3><p>检查当前页面是否为标签归档页面。<br>如果给定一个字符串作为参数，将会检查目前是否为指定标签。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_tag<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br><span class="line">&lt;<span class="meta">%</span>- is_tag<span class="comment">('hobby')</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="字符串处理"><a href="#字符串处理" class="headerlink" title="字符串处理"></a>字符串处理</h2><h3 id="trim"><a href="#trim" class="headerlink" title="trim"></a>trim</h3><p>清除字符串开头和结尾的空格。</p>
+<figure class="highlight mel"><table><tr><td class="code"><pre><span class="line">&lt;%- <span class="keyword">trim</span>(<span class="keyword">string</span>) %&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="strip-html"><a href="#strip-html" class="headerlink" title="strip_html"></a>strip_html</h3><p>清除字符串中的 HTML 标签。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- strip_html<span class="comment">(string)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line">&lt;%- strip<span class="constructor">_html('It\'<span class="params">s</span> <span class="params">not</span> &lt;<span class="params">b</span>&gt;<span class="params">important</span>&lt;<span class="operator">/</span><span class="params">b</span>&gt; <span class="params">anymore</span>!')</span> %&gt;</span><br><span class="line"><span class="comment">// It's not important anymore!</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="titlecase"><a href="#titlecase" class="headerlink" title="titlecase"></a>titlecase</h3><p>把字符串转换为正确的 Title case。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- titlecase<span class="comment">(string)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- titlecase<span class="comment">('this is an apple')</span> <span class="meta">%</span>&gt;</span><br><span class="line"><span class="attr"># This is an Apple</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h3><p>使用 Markdown 解析字符串。</p>
+<figure class="highlight mel"><table><tr><td class="code"><pre><span class="line">&lt;%- markdown(str) %&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight vhdl"><table><tr><td class="code"><pre><span class="line">&lt;%- markdown(<span class="symbol">'make</span> me **<span class="keyword">strong</span>**') %&gt;</span><br><span class="line">// make me &lt;<span class="keyword">strong</span>&gt;<span class="keyword">strong</span>&lt;/<span class="keyword">strong</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="render"><a href="#render" class="headerlink" title="render"></a>render</h3><p>解析字符串。</p>
+<figure class="highlight mel"><table><tr><td class="code"><pre><span class="line">&lt;%- <span class="keyword">render</span>(str, engine, [options]) %&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="word-wrap"><a href="#word-wrap" class="headerlink" title="word_wrap"></a>word_wrap</h3><p>使每行的字符串长度不超过 <code>length</code>。<code>length</code> 预设为 80。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- word_wrap<span class="comment">(str, [length])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- word_wrap<span class="comment">('Once upon a time', 8)</span> <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// Once upon\n a time</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="truncate"><a href="#truncate" class="headerlink" title="truncate"></a>truncate</h3><p>移除超过 <code>length</code> 长度的字符串。<code>length</code> 的默认值是 30。</p>
+<figure class="highlight mel"><table><tr><td class="code"><pre><span class="line">&lt;%- truncate(<span class="keyword">text</span>, length) %&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight mel"><table><tr><td class="code"><pre><span class="line">&lt;%- truncate(<span class="string">'Once upon a time in a world far far away'</span>, &#123;length: <span class="number">17</span>&#125;) %&gt;</span><br><span class="line"><span class="comment">// Once upon a ti...</span></span><br><span class="line"></span><br><span class="line">&lt;%- truncate(<span class="string">'Once upon a time in a world far far away'</span>, &#123;length: <span class="number">17</span>, <span class="keyword">separator</span>: <span class="string">' '</span>&#125;) %&gt;</span><br><span class="line"><span class="comment">// Once upon a...</span></span><br><span class="line"></span><br><span class="line">&lt;%- truncate(<span class="string">'And they found that many people were sleeping better.'</span>, &#123;length: <span class="number">25</span>, omission: <span class="string">'... (continued)'</span>&#125;) %&gt;</span><br><span class="line"><span class="comment">// And they f... (continued)</span></span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><h3 id="partial"><a href="#partial" class="headerlink" title="partial"></a>partial</h3><p>载入其他模板文件，您可在 <code>locals</code> 设定区域变量。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- partial<span class="comment">(layout, [locals], [options])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>cache</code></td>
+<td align="left">缓存（使用 Fragment cache）</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>only</code></td>
+<td align="left">限制局部变量。在模板中只能使用 <code>locals</code> 中设定的变量。</td>
+<td align="left"><code>false</code></td>
+</tr>
+</tbody></table>
+<h3 id="fragment-cache"><a href="#fragment-cache" class="headerlink" title="fragment_cache"></a>fragment_cache</h3><p>局部缓存。它储存局部内容，下次使用时就能直接使用缓存。</p>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line">&lt;%- fragment<span class="constructor">_cache(<span class="params">id</span>, <span class="params">fn</span>)</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line">&lt;%- fragment_cache(<span class="string">'header'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;  </span><br><span class="line">  <span class="keyword">return</span> <span class="string">'&lt;header&gt;&lt;/header&gt;'</span>;</span><br><span class="line">&#125;) %&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="日期与时间"><a href="#日期与时间" class="headerlink" title="日期与时间"></a>日期与时间</h2><h3 id="date"><a href="#date" class="headerlink" title="date"></a>date</h3><p>插入格式化的日期。<code>date</code> 可以是 UNIX 时间、ISO 字符串、Date 对象或 <a href="http://momentjs.com/" target="_blank" rel="external nofollow noopener noreferrer">Moment.js</a> 对象。<code>format</code> 默认为 <code>date_format</code> 配置信息。</p>
+<figure class="highlight mel"><table><tr><td class="code"><pre><span class="line">&lt;%- <span class="keyword">date</span>(<span class="keyword">date</span>, [<span class="keyword">format</span>]) %&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- date<span class="comment">(Date.now()</span>) <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// 2013-01-01</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="meta">%</span>- date<span class="comment">(Date.now()</span>, <span class="string">'YYYY/M/D'</span>) <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// Jan 1 2013</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="date-xml"><a href="#date-xml" class="headerlink" title="date_xml"></a>date_xml</h3><p>插入 XML 格式的日期。<code>date</code> 可以是 UNIX 时间、ISO 字符串、Date 对象或 <a href="http://momentjs.com/" target="_blank" rel="external nofollow noopener noreferrer">Moment.js</a> 对象。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- date_xml<span class="comment">(date)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- date_xml<span class="comment">(Date.now()</span>) <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// 2013-01-01T00:00:00.000Z</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="time"><a href="#time" class="headerlink" title="time"></a>time</h3><p>插入格式化的时间。<code>date</code> 可以是 UNIX 时间、ISO 字符串、Date 对象或 <a href="http://momentjs.com/" target="_blank" rel="external nofollow noopener noreferrer">Moment.js</a> 对象。<code>format</code> 默认为 <code>time_format</code> 配置信息。</p>
+<figure class="highlight mel"><table><tr><td class="code"><pre><span class="line">&lt;%- time(<span class="keyword">date</span>, [<span class="keyword">format</span>]) %&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- time<span class="comment">(Date.now()</span>) <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// 13:05:12</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="meta">%</span>- time<span class="comment">(Date.now()</span>, <span class="string">'h:mm:ss a'</span>) <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// 1:05:12 pm</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="full-date"><a href="#full-date" class="headerlink" title="full_date"></a>full_date</h3><p>插入格式化的日期和时间。<code>date</code> 可以是 UNIX 时间、ISO 字符串、Date 对象或 <a href="http://momentjs.com/" target="_blank" rel="external nofollow noopener noreferrer">Moment.js</a> 对象。<code>format</code> 默认为 <code>date_format + time_format</code>。</p>
+<figure class="highlight mel"><table><tr><td class="code"><pre><span class="line">&lt;%- full_date(<span class="keyword">date</span>, [<span class="keyword">format</span>]) %&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- full_date<span class="comment">(new Date()</span>) <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// Jan 1, 2013 0:00:00</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="meta">%</span>- full_date<span class="comment">(new Date()</span>, <span class="string">'dddd, MMMM Do YYYY, h:mm:ss a'</span>) <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// Tuesday, January 1st 2013, 12:00:00 am</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="moment"><a href="#moment" class="headerlink" title="moment"></a>moment</h3><p><a href="http://momentjs.com/" target="_blank" rel="external nofollow noopener noreferrer">Moment.js</a> 函数库。</p>
+<hr>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="list-categories"><a href="#list-categories" class="headerlink" title="list_categories"></a>list_categories</h3><p>插入分类列表。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- list_categories<span class="comment">([options])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>orderby</code></td>
+<td align="left">分类排列方式</td>
+<td align="left">name</td>
+</tr>
+<tr>
+<td align="left"><code>order</code></td>
+<td align="left">分类排列顺序。<code>1</code>, <code>asc</code> 升序；<code>-1</code>, <code>desc</code> 降序。</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left"><code>show_count</code></td>
+<td align="left">显示每个分类的文章总数</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left"><code>style</code></td>
+<td align="left">分类列表的显示方式。使用 <code>list</code> 以无序列表（unordered list）方式显示。</td>
+<td align="left">list</td>
+</tr>
+<tr>
+<td align="left"><code>separator</code></td>
+<td align="left">分类间的分隔符号。只有在 <code>style</code> 不是 <code>list</code> 时有用。</td>
+<td align="left">,</td>
+</tr>
+<tr>
+<td align="left"><code>depth</code></td>
+<td align="left">要显示的分类层级。<code>0</code> 显示所有层级的分类；<code>-1</code> 和 <code>0</code> 很类似，但是显示不分层级；<code>1</code> 只显示第一层的分类。</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left"><code>class</code></td>
+<td align="left">分类列表的 class 名称。</td>
+<td align="left">category</td>
+</tr>
+<tr>
+<td align="left"><code>transform</code></td>
+<td align="left">改变分类名称显示方法的函数</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>suffix</code></td>
+<td align="left">为链接添加前缀</td>
+<td align="left">None</td>
+</tr>
+</tbody></table>
+<p><strong>用例:</strong></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;%<span class="selector-tag">-</span> <span class="selector-tag">list_categories</span>(<span class="selector-tag">post</span><span class="selector-class">.categories</span>, &#123; </span><br><span class="line">  <span class="attribute">class</span>: <span class="string">'post-category'</span>,  </span><br><span class="line">  <span class="built_in">transform</span>(str) &#123;   </span><br><span class="line">    return <span class="built_in">titlecase</span>(str); </span><br><span class="line">  &#125;</span><br><span class="line">&#125;) %&gt; </span><br><span class="line">  &lt;%<span class="selector-tag">-</span> <span class="selector-tag">list_categories</span>(<span class="selector-tag">post</span><span class="selector-class">.categories</span>, &#123;  </span><br><span class="line">    <span class="attribute">class</span>: <span class="string">'post-category'</span>,  </span><br><span class="line">    <span class="built_in">transform</span>(str) &#123;   </span><br><span class="line">      return str.<span class="built_in">toUpperCase</span>(); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;) %&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="list-tags"><a href="#list-tags" class="headerlink" title="list_tags"></a>list_tags</h3><p>插入标签列表。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- list_tags<span class="comment">([options])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">描述</th>
+<th align="left">预设值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>orderby</code></td>
+<td align="left">标签排列方式</td>
+<td align="left">name</td>
+</tr>
+<tr>
+<td align="left"><code>order</code></td>
+<td align="left">标签排列顺序。<code>1</code>, <code>asc</code> 升序；<code>-1</code>, <code>desc</code> 降序。</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left"><code>show_count</code></td>
+<td align="left">显示每个标签的文章总数</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left"><code>style</code></td>
+<td align="left">标签列表的显示方式。使用 <code>list</code> 以无序列表（unordered list）方式显示。</td>
+<td align="left">list</td>
+</tr>
+<tr>
+<td align="left"><code>separator</code></td>
+<td align="left">标签间的分隔符号。只有在 <code>style</code> 不是 <code>list</code> 时有用。</td>
+<td align="left">,</td>
+</tr>
+<tr>
+<td align="left"><code>class</code></td>
+<td align="left">标签列表的 class 名称。</td>
+<td align="left">tag</td>
+</tr>
+<tr>
+<td align="left"><code>transform</code></td>
+<td align="left">改变标签名称显示方法的函数。请查看 <a href="https://hexo.io/zh-cn/docs/helpers#list-categories" target="_blank" rel="external nofollow noopener noreferrer">list_categories</a> 中给出的例子</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>amount</code></td>
+<td align="left">要显示的标签数量（0 = 无限制）</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left"><code>suffix</code></td>
+<td align="left">为链接添加前缀</td>
+<td align="left">None</td>
+</tr>
+</tbody></table>
+<h3 id="list-archives"><a href="#list-archives" class="headerlink" title="list_archives"></a>list_archives</h3><p>插入归档列表。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- list_archives<span class="comment">([options])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>type</code></td>
+<td align="left">类型。此设定可为 <code>yearly</code> 或 <code>monthly</code>。</td>
+<td align="left">monthly</td>
+</tr>
+<tr>
+<td align="left"><code>order</code></td>
+<td align="left">排列顺序。<code>1</code>, <code>asc</code> 升序；<code>-1</code>, <code>desc</code> 降序。</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left"><code>show_count</code></td>
+<td align="left">显示每个归档的文章总数</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left"><code>format</code></td>
+<td align="left">日期格式</td>
+<td align="left">MMMM YYYY</td>
+</tr>
+<tr>
+<td align="left"><code>style</code></td>
+<td align="left">归档列表的显示方式。使用 <code>list</code> 以无序列表（unordered list）方式显示。</td>
+<td align="left">list</td>
+</tr>
+<tr>
+<td align="left"><code>separator</code></td>
+<td align="left">归档间的分隔符号。只有在 <code>style</code> 不是 <code>list</code> 时有用。</td>
+<td align="left">,</td>
+</tr>
+<tr>
+<td align="left"><code>class</code></td>
+<td align="left">归档列表的 class 名称。</td>
+<td align="left">archive</td>
+</tr>
+<tr>
+<td align="left"><code>transform</code></td>
+<td align="left">改变归档名称显示方法的函数。请查看 <a href="https://hexo.io/zh-cn/docs/helpers#list-categories" target="_blank" rel="external nofollow noopener noreferrer">list_categories</a> 中给出的例子</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h3 id="list-posts"><a href="#list-posts" class="headerlink" title="list_posts"></a>list_posts</h3><p>插入文章列表。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- list_posts<span class="comment">([options])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>orderby</code></td>
+<td align="left">文章排列方式</td>
+<td align="left">date</td>
+</tr>
+<tr>
+<td align="left"><code>order</code></td>
+<td align="left">文章排列顺序。<code>1</code>, <code>asc</code> 升序；<code>-1</code>, <code>desc</code> 降序。</td>
+<td align="left">-1</td>
+</tr>
+<tr>
+<td align="left"><code>style</code></td>
+<td align="left">文章列表的显示方式。使用 <code>list</code> 以无序列表（unordered list）方式显示。</td>
+<td align="left">list</td>
+</tr>
+<tr>
+<td align="left"><code>separator</code></td>
+<td align="left">文章间的分隔符号。只有在 <code>style</code> 不是 <code>list</code> 时有用。</td>
+<td align="left">,</td>
+</tr>
+<tr>
+<td align="left"><code>class</code></td>
+<td align="left">文章列表的 class 名称。</td>
+<td align="left">post</td>
+</tr>
+<tr>
+<td align="left"><code>amount</code></td>
+<td align="left">要显示的文章数量（0 = 无限制）</td>
+<td align="left">6</td>
+</tr>
+<tr>
+<td align="left"><code>transform</code></td>
+<td align="left">改变文章名称显示方法的函数。请查看 <a href="https://hexo.io/zh-cn/docs/helpers#list-categories" target="_blank" rel="external nofollow noopener noreferrer">list_categories</a> 中给出的例子</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h3 id="tagcloud"><a href="#tagcloud" class="headerlink" title="tagcloud"></a>tagcloud</h3><p>插入标签云。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- tagcloud<span class="comment">([tags], [options])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>min_font</code></td>
+<td align="left">最小字体尺寸</td>
+<td align="left">10</td>
+</tr>
+<tr>
+<td align="left"><code>max_font</code></td>
+<td align="left">最大字体尺寸</td>
+<td align="left">20</td>
+</tr>
+<tr>
+<td align="left"><code>unit</code></td>
+<td align="left">字体尺寸的单位</td>
+<td align="left">px</td>
+</tr>
+<tr>
+<td align="left"><code>amount</code></td>
+<td align="left">标签总量</td>
+<td align="left">40</td>
+</tr>
+<tr>
+<td align="left"><code>orderby</code></td>
+<td align="left">标签排列方式</td>
+<td align="left">name</td>
+</tr>
+<tr>
+<td align="left"><code>order</code></td>
+<td align="left">标签排列顺序。<code>1</code>, <code>sac</code> 升序；<code>-1</code>, <code>desc</code> 降序</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left"><code>color</code></td>
+<td align="left">使用颜色</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left"><code>start_color</code></td>
+<td align="left">开始的颜色。您可使用十六进位值（<code>#b700ff</code>），rgba（<code>rgba(183, 0, 255, 1)</code>），hsla（<code>hsla(283, 100%, 50%, 1)</code>）或 <a href="http://www.w3.org/TR/css3-color/#svg-color" target="_blank" rel="external nofollow noopener noreferrer">颜色关键字</a>。此变量仅在 <code>color</code> 参数开启时才有用。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>end_color</code></td>
+<td align="left">结束的颜色。您可使用十六进位值（<code>#b700ff</code>），rgba（<code>rgba(183, 0, 255, 1)</code>），hsla（<code>hsla(283, 100%, 50%, 1)</code>）或 <a href="http://www.w3.org/TR/css3-color/#svg-color" target="_blank" rel="external nofollow noopener noreferrer">颜色关键字</a>。此变量仅在 <code>color</code> 参数开启时才有用。</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="paginator"><a href="#paginator" class="headerlink" title="paginator"></a>paginator</h3><p>插入分页链接。</p>
+<figure class="highlight mel"><table><tr><td class="code"><pre><span class="line">&lt;%- paginator(options) %&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>base</code></td>
+<td align="left">基础网址</td>
+<td align="left">/</td>
+</tr>
+<tr>
+<td align="left"><code>format</code></td>
+<td align="left">网址格式</td>
+<td align="left">page/%d/</td>
+</tr>
+<tr>
+<td align="left"><code>total</code></td>
+<td align="left">分页总数</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left"><code>current</code></td>
+<td align="left">目前页数</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left"><code>prev_text</code></td>
+<td align="left">上一页链接的文字。仅在 <code>prev_next</code> 设定开启时才有用。</td>
+<td align="left">Prev</td>
+</tr>
+<tr>
+<td align="left"><code>next_text</code></td>
+<td align="left">下一页链接的文字。仅在 <code>prev_next</code> 设定开启时才有用。</td>
+<td align="left">Next</td>
+</tr>
+<tr>
+<td align="left"><code>space</code></td>
+<td align="left">空白文字</td>
+<td align="left">…</td>
+</tr>
+<tr>
+<td align="left"><code>prev_next</code></td>
+<td align="left">显示上一页和下一页的链接</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left"><code>end_size</code></td>
+<td align="left">显示于两侧的页数</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left"><code>mid_size</code></td>
+<td align="left">显示于中间的页数</td>
+<td align="left">2</td>
+</tr>
+<tr>
+<td align="left"><code>show_all</code></td>
+<td align="left">显示所有页数。如果开启此参数的话，<code>end_size</code> 和 <code>mid_size</code> 就没用了。</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left"><code>escape</code></td>
+<td align="left">Escape HTML tags</td>
+<td align="left">true</td>
+</tr>
+</tbody></table>
+<p><strong>Examples:</strong></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;%<span class="selector-tag">-</span> <span class="selector-tag">paginator</span>(&#123;  </span><br><span class="line">  <span class="attribute">prev_text</span>: <span class="string">'&lt;'</span>, </span><br><span class="line">  next_text: <span class="string">'&gt;'</span></span><br><span class="line">&#125;) %&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Rendered as --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/1/"</span>&gt;</span><span class="symbol">&amp;lt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/1/"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">2</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/3/"</span>&gt;</span>3<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/3/"</span>&gt;</span><span class="symbol">&amp;gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight scala"><table><tr><td class="code"><pre><span class="line">&lt;%- paginator(&#123;  </span><br><span class="line">  prev_text: '&lt;i <span class="class"><span class="keyword">class</span></span>=<span class="string">"fa fa-angle-left"</span>&gt;&lt;/i&gt;', </span><br><span class="line">  next_text: '&lt;i <span class="class"><span class="keyword">class</span></span>=<span class="string">"fa fa-angle-right"</span>&gt;&lt;/i&gt;', </span><br><span class="line">  escape: <span class="literal">false</span></span><br><span class="line">&#125;) %&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Rendered as --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/1/"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-angle-left"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/1/"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">2</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/3/"</span>&gt;</span>3<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/3/"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-angle-right"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="search-form"><a href="#search-form" class="headerlink" title="search_form"></a>search_form</h3><p>插入 Google 搜索框。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- search_form<span class="comment">(options)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>class</code></td>
+<td align="left">表单的 class name</td>
+<td align="left">search-form</td>
+</tr>
+<tr>
+<td align="left"><code>text</code></td>
+<td align="left">搜索提示文字</td>
+<td align="left">Search</td>
+</tr>
+<tr>
+<td align="left"><code>button</code></td>
+<td align="left">显示搜索按钮。此参数可为布尔值（boolean）或字符串，当设定是字符串的时候，即为搜索按钮的文字。</td>
+<td align="left">false</td>
+</tr>
+</tbody></table>
+<h3 id="number-format"><a href="#number-format" class="headerlink" title="number_format"></a>number_format</h3><p>格式化数字。</p>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line">&lt;%- number<span class="constructor">_format(<span class="params">number</span>, [<span class="params">options</span>])</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>precision</code></td>
+<td align="left">数字精度。此选项可为 <code>false</code> 或非负整数。</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left"><code>delimiter</code></td>
+<td align="left">千位数分隔符号</td>
+<td align="left">,</td>
+</tr>
+<tr>
+<td align="left"><code>separator</code></td>
+<td align="left">整数和小数之间的分隔符号</td>
+<td align="left">.</td>
+</tr>
+</tbody></table>
+<p><strong>示例：</strong></p>
+<figure class="highlight mel"><table><tr><td class="code"><pre><span class="line">&lt;%- number_format(<span class="number">12345.67</span>, &#123;precision: <span class="number">1</span>&#125;) %&gt;</span><br><span class="line"><span class="comment">// 12,345.68</span></span><br><span class="line"></span><br><span class="line">&lt;%- number_format(<span class="number">12345.67</span>, &#123;precision: <span class="number">4</span>&#125;) %&gt;</span><br><span class="line"><span class="comment">// 12,345.6700</span></span><br><span class="line"></span><br><span class="line">&lt;%- number_format(<span class="number">12345.67</span>, &#123;precision: <span class="number">0</span>&#125;) %&gt;</span><br><span class="line"><span class="comment">// 12,345</span></span><br><span class="line"></span><br><span class="line">&lt;%- number_format(<span class="number">12345.67</span>, &#123;delimiter: <span class="string">''</span>&#125;) %&gt;</span><br><span class="line"><span class="comment">// 12345.67</span></span><br><span class="line"></span><br><span class="line">&lt;%- number_format(<span class="number">12345.67</span>, &#123;<span class="keyword">separator</span>: <span class="string">'/'</span>&#125;) %&gt;</span><br><span class="line"><span class="comment">// 12,345/67</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="meta-generator"><a href="#meta-generator" class="headerlink" title="meta_generator"></a>meta_generator</h3><p>Inserts <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta" target="_blank" rel="external nofollow noopener noreferrer">generator tag</a>.</p>
+<figure class="highlight mel"><table><tr><td class="code"><pre><span class="line">&lt;%- meta_generator() %&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Examples:</strong></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">meta_generator</span>() %&gt;</span></span><br><span class="line">// <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"generator"</span> <span class="attr">content</span>=<span class="string">"Hexo 4.0.0"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="open-graph"><a href="#open-graph" class="headerlink" title="open_graph"></a>open_graph</h3><p>插入 open graph 资源。</p>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line">&lt;%- <span class="keyword">open</span><span class="constructor">_graph([<span class="params">options</span>])</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>title</code></td>
+<td align="left">页面标题 (<code>og:title</code>)</td>
+<td align="left"><code>page.title</code></td>
+</tr>
+<tr>
+<td align="left"><code>type</code></td>
+<td align="left">页面类型 (<code>og:type</code>)</td>
+<td align="left">blog</td>
+</tr>
+<tr>
+<td align="left"><code>url</code></td>
+<td align="left">页面网址 (<code>og:url</code>)</td>
+<td align="left"><code>url</code></td>
+</tr>
+<tr>
+<td align="left"><code>image</code></td>
+<td align="left">页面图片 (<code>og:image</code>)</td>
+<td align="left">内容中的图片</td>
+</tr>
+<tr>
+<td align="left"><code>site_name</code></td>
+<td align="left">网站名称 (<code>og:site_name</code>)</td>
+<td align="left"><code>config.title</code></td>
+</tr>
+<tr>
+<td align="left"><code>description</code></td>
+<td align="left">页面描述 (<code>og:description</code>)</td>
+<td align="left">内容摘要或前 200 字</td>
+</tr>
+<tr>
+<td align="left"><code>twitter_card</code></td>
+<td align="left">Twitter 卡片类型 (<code>twitter:card</code>)</td>
+<td align="left">summary</td>
+</tr>
+<tr>
+<td align="left"><code>twitter_id</code></td>
+<td align="left">Twitter ID (<code>twitter:creator</code>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>twitter_site</code></td>
+<td align="left">Twitter 网站 (<code>twitter:site</code>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>google_plus</code></td>
+<td align="left">Google+ 个人资料链接</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>fb_admins</code></td>
+<td align="left">Facebook 管理者 ID</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>fb_app_id</code></td>
+<td align="left">Facebook 应用程序 ID</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h3 id="toc"><a href="#toc" class="headerlink" title="toc"></a>toc</h3><p>解析内容中的标题标签 (h1~h6) 并插入目录。</p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- toc<span class="comment">(str, [options])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>class</code></td>
+<td align="left">Class 名称</td>
+<td align="left">toc</td>
+</tr>
+<tr>
+<td align="left"><code>list_number</code></td>
+<td align="left">显示编号</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left"><code>max_depth</code></td>
+<td align="left">生成 TOC 的最大深度</td>
+<td align="left">6</td>
+</tr>
+<tr>
+<td align="left"><code>min_depth</code></td>
+<td align="left">生成 TOC 的最小深度</td>
+<td align="left">1</td>
+</tr>
+</tbody></table>
+<p><strong>示例：</strong></p>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- toc<span class="comment">(page.content)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>插件</title>
+    <url>/archives/def84ee6.html</url>
+    <content><![CDATA[<h1 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h1><p>Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心模块的源码。在 Hexo 中有两种形式的插件：</p>
+<h3 id="脚本（Scripts）"><a href="#脚本（Scripts）" class="headerlink" title="脚本（Scripts）"></a>脚本（Scripts）</h3><p>如果您的代码很简单，建议您编写脚本，您只需要把 JavaScript 文件放到 <code>scripts</code> 文件夹，在启动时就会自动载入。</p>
+<h3 id="插件（Packages）"><a href="#插件（Packages）" class="headerlink" title="插件（Packages）"></a>插件（Packages）</h3><p>如果您的代码较复杂，或是您想要发布到 NPM 上，建议您编写插件。首先，在 <code>node_modules</code> 文件夹中建立文件夹，文件夹名称开头必须为 <code>hexo-</code>，如此一来 Hexo 才会在启动时载入，否则 Hexo 将会忽略它。</p>
+<p>文件夹内至少要包含 2 个文件：一个是主程序，另一个是 <code>package.json</code>，描述插件的用途和所依赖的插件。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── <span class="selector-tag">index</span><span class="selector-class">.js</span></span><br><span class="line">└── <span class="selector-tag">package</span><span class="selector-class">.json</span></span><br></pre></td></tr></table></figure>
+
+<p><code>package.json</code> 中至少要包含 <code>name</code>, <code>version</code>, <code>main</code> 属性，例如：</p>
+<figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">package</span>.<span class="title">json</span></span></span><br><span class="line"><span class="class">&#123;</span>  </span><br><span class="line">   <span class="string">"name"</span>: <span class="string">"hexo-my-plugin"</span>,  </span><br><span class="line">   <span class="string">"version"</span>: <span class="string">"0.0.1"</span>,  </span><br><span class="line">   <span class="string">"main"</span>: <span class="string">"index"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><p>您可以使用 Hexo 提供的官方工具插件来加速开发：</p>
+<ul>
+<li><a href="https://github.com/hexojs/hexo-fs" target="_blank" rel="external nofollow noopener noreferrer">hexo-fs</a>：文件 IO</li>
+<li><a href="https://github.com/hexojs/hexo-util" target="_blank" rel="external nofollow noopener noreferrer">hexo-util</a>：工具程式</li>
+<li><a href="https://github.com/hexojs/hexo-i18n" target="_blank" rel="external nofollow noopener noreferrer">hexo-i18n</a>：本地化（i18n）</li>
+<li><a href="https://github.com/hexojs/hexo-pagination" target="_blank" rel="external nofollow noopener noreferrer">hexo-pagination</a>：生成分页资料</li>
+</ul>
+<p><strong>发布插件：</strong> 略</p>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>国际化</title>
+    <url>/archives/b349ec92.html</url>
+    <content><![CDATA[<h1 id="国际化（i18n）"><a href="#国际化（i18n）" class="headerlink" title="国际化（i18n）"></a>国际化（i18n）</h1><p>若要让您的网站以不同语言呈现，您可使用国际化（internationalization）功能。请先在 <code>_config.yml</code> 中调整 <code>language</code> 设定，这代表的是预设语言，您也可设定多个语言来调整预设语言的顺位。</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="attribute">language</span>: zh-tw</span><br><span class="line"></span><br><span class="line"><span class="attribute">language</span>: </span><br><span class="line">- zh-tw</span><br><span class="line">- en</span><br></pre></td></tr></table></figure>
+
+<h3 id="语言文件"><a href="#语言文件" class="headerlink" title="语言文件"></a>语言文件</h3><p>语言文件可以使用 YAML 或 JSON 编写，并放在主题文件夹中的 <code>languages</code> 文件夹。您可以在语言文件中使用 <a href="https://github.com/alexei/sprintf.js" target="_blank" rel="external nofollow noopener noreferrer">printf 格式</a>。</p>
+<h3 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h3><p>在模板中，透过 <code>__</code> 或 <code>_p</code> 辅助函数，即可取得翻译后的字符串，前者用于一般使用；而后者用于复数字符串。例如：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">en.yml</span></span><br><span class="line"><span class="attr">index:</span>  </span><br><span class="line">  <span class="attr">title:</span> <span class="string">Home</span>  </span><br><span class="line">  <span class="attr">add:</span> <span class="string">Add</span>  </span><br><span class="line">  <span class="attr">video:</span>    </span><br><span class="line">    <span class="attr">zero:</span> <span class="literal">No</span> <span class="string">videos</span>   </span><br><span class="line">    <span class="attr">one:</span> <span class="string">One</span> <span class="string">video</span>   </span><br><span class="line">    <span class="attr">other:</span> <span class="string">%d</span> <span class="string">videos</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>= __<span class="comment">('index.title')</span> <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// Home</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="meta">%</span>= _p<span class="comment">('index.video', 3)</span> <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// 3 videos</span></span><br></pre></td></tr></table></figure>
+
+
+
+<a id="more"></a>
+
+
+
+<h3 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h3><p>您可在 front-matter 中指定该页面的语言，也可在 <code>_config.yml</code> 中修改 <code>i18n_dir</code> 设定，让 Hexo 自动侦测。</p>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">i18n_dir:</span> :lang</span><br></pre></td></tr></table></figure>
+
+<p><code>i18n_dir</code> 的预设值是 <code>:lang</code>，也就是说 Hexo 会捕获网址中的第一段以检测语言，举例来说：</p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">/<span class="built_in">index</span>.html =&gt; <span class="keyword">en</span></span><br><span class="line">/archives/<span class="built_in">index</span>.html =&gt; <span class="keyword">en</span></span><br><span class="line">/zh-tw/<span class="built_in">index</span>.html =&gt; zh-tw</span><br></pre></td></tr></table></figure>
+
+
+
+<p>捕获到的字符串唯有在语言文件存在的情况下，才会被当作是语言，因此例二 <code>/archives/index.html</code> 中的 <code>archives</code> 就不被当成是语言。</p>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>变量</title>
+    <url>/archives/13ffbe88.html</url>
+    <content><![CDATA[<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><table>
+<thead>
+<tr>
+<th align="left">变量</th>
+<th align="left">描述</th>
+<th align="left">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>site</code></td>
+<td align="left"><a href="https://hexo.io/zh-cn/docs/variables#网站变量" target="_blank" rel="external nofollow noopener noreferrer">网站变量</a></td>
+<td align="left"><code>object</code>; 见 <a href="https://hexo.io/zh-cn/docs/variables#网站变量" target="_blank" rel="external nofollow noopener noreferrer">网站变量</a></td>
+</tr>
+<tr>
+<td align="left"><code>page</code></td>
+<td align="left">针对该页面的内容以及 front-matter 中自定义的变量。</td>
+<td align="left"><code>object</code>; 见 <a href="https://hexo.io/zh-cn/docs/variables#页面变量" target="_blank" rel="external nofollow noopener noreferrer">页面变量</a></td>
+</tr>
+<tr>
+<td align="left"><code>config</code></td>
+<td align="left">网站配置</td>
+<td align="left"><code>object</code> (站点的配置文件)</td>
+</tr>
+<tr>
+<td align="left"><code>theme</code></td>
+<td align="left">主题配置。继承自网站配置。</td>
+<td align="left"><code>object</code> (主题配置文件)</td>
+</tr>
+<tr>
+<td align="left"><code>_</code> (单下划线)</td>
+<td align="left"><a href="https://lodash.com/" target="_blank" rel="external nofollow noopener noreferrer">Lodash</a> 函数库</td>
+<td align="left"><a href="https://lodash.com/" target="_blank" rel="external nofollow noopener noreferrer">Lodash</a> 文档</td>
+</tr>
+<tr>
+<td align="left"><code>path</code></td>
+<td align="left">当前页面的路径（不含根路径）</td>
+<td align="left"><code>string</code></td>
+</tr>
+<tr>
+<td align="left"><code>url</code></td>
+<td align="left">当前页面的完整网址</td>
+<td align="left"><code>string</code></td>
+</tr>
+<tr>
+<td align="left"><code>env</code></td>
+<td align="left">环境变量</td>
+<td align="left">???</td>
+</tr>
+</tbody></table>
+<h3 id="网站变量"><a href="#网站变量" class="headerlink" title="网站变量"></a>网站变量</h3><table>
+<thead>
+<tr>
+<th align="left">变量</th>
+<th align="left">描述</th>
+<th align="left">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>site.posts</code></td>
+<td align="left">所有文章</td>
+<td align="left"><code>array</code> of <code>post</code> objects</td>
+</tr>
+<tr>
+<td align="left"><code>site.pages</code></td>
+<td align="left">所有分页</td>
+<td align="left"><code>array</code> of <code>page</code> objects</td>
+</tr>
+<tr>
+<td align="left"><code>site.categories</code></td>
+<td align="left">所有分类</td>
+<td align="left"><code>object</code>，包含了站点全部的分类</td>
+</tr>
+<tr>
+<td align="left"><code>site.tags</code></td>
+<td align="left">所有标签</td>
+<td align="left"><code>array</code>，包含了站点全部的标签</td>
+</tr>
+</tbody></table>
+<a id="more"></a>
+
+
+
+<h3 id="页面变量"><a href="#页面变量" class="headerlink" title="页面变量"></a>页面变量</h3><p><strong>页面（page）</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">变量</th>
+<th align="left">描述</th>
+<th align="left">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>page.title</code></td>
+<td align="left">页面标题</td>
+<td align="left"><code>string</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.date</code></td>
+<td align="left">页面建立日期</td>
+<td align="left"><a href="http://momentjs.com/" target="_blank" rel="external nofollow noopener noreferrer">Moment.js</a> 对象</td>
+</tr>
+<tr>
+<td align="left"><code>page.updated</code></td>
+<td align="left">页面更新日期</td>
+<td align="left"><a href="http://momentjs.com/" target="_blank" rel="external nofollow noopener noreferrer">Moment.js</a> 对象</td>
+</tr>
+<tr>
+<td align="left"><code>page.comments</code></td>
+<td align="left">留言是否开启</td>
+<td align="left"><code>boolean</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.layout</code></td>
+<td align="left">布局名称</td>
+<td align="left"><code>string</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.content</code></td>
+<td align="left">页面的完整内容</td>
+<td align="left"><code>string</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.excerpt</code></td>
+<td align="left">页面摘要</td>
+<td align="left"><code>string</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.more</code></td>
+<td align="left">除了页面摘要的其余内容</td>
+<td align="left"><code>string</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.source</code></td>
+<td align="left">页面原始路径</td>
+<td align="left"><code>string</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.full_source</code></td>
+<td align="left">页面的完整原始路径</td>
+<td align="left"><code>string</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.path</code></td>
+<td align="left">页面网址（不含根路径）。我们通常在主题中使用 <code>url_for(page.path)</code>。</td>
+<td align="left"><code>string</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.permalink</code></td>
+<td align="left">页面的完整网址</td>
+<td align="left"><code>string</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.prev</code></td>
+<td align="left">上一个页面。如果此为第一个页面则为 <code>null</code>。</td>
+<td align="left"><code>string</code> or <code>null</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.next</code></td>
+<td align="left">下一个页面。如果此为最后一个页面则为 <code>null</code>。</td>
+<td align="left"><code>string</code> or <code>null</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.raw</code></td>
+<td align="left">文章的原始内容</td>
+<td align="left">???</td>
+</tr>
+<tr>
+<td align="left"><code>page.photos</code></td>
+<td align="left">文章的照片（用于相簿）</td>
+<td align="left"><code>array</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.link</code></td>
+<td align="left">文章的外部链接（用于链接文章）</td>
+<td align="left"><code>string</code></td>
+</tr>
+</tbody></table>
+<p><strong>文章 (post):</strong> 与 <code>page</code> 布局相同，但新增以下变量。</p>
+<table>
+<thead>
+<tr>
+<th align="left">变量</th>
+<th align="left">描述</th>
+<th align="left">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>page.published</code></td>
+<td align="left">如果该文章已发布则为 true</td>
+<td align="left"><code>boolean</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.categories</code></td>
+<td align="left">该文章的所有分类</td>
+<td align="left"><code>array</code> of ???</td>
+</tr>
+<tr>
+<td align="left"><code>page.tags</code></td>
+<td align="left">该文章的所有标签</td>
+<td align="left"><code>array</code> of ???</td>
+</tr>
+</tbody></table>
+<p><strong>首页（index）</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">变量</th>
+<th align="left">描述</th>
+<th align="left">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>page.per_page</code></td>
+<td align="left">每页显示的文章数量</td>
+<td align="left"><code>number</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.total</code></td>
+<td align="left">总页数</td>
+<td align="left"><code>number</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.current</code></td>
+<td align="left">目前页数</td>
+<td align="left"><code>number</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.current_url</code></td>
+<td align="left">目前分页的网址</td>
+<td align="left"><code>string</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.posts</code></td>
+<td align="left">本页文章 (<a href="https://hexojs.github.io/warehouse/" target="_blank" rel="external nofollow noopener noreferrer">Data Model</a>)</td>
+<td align="left"><code>object</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.prev</code></td>
+<td align="left">上一页的页数。如果此页是第一页的话则为 <code>0</code>。</td>
+<td align="left"><code>number</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.prev_link</code></td>
+<td align="left">上一页的网址。如果此页是第一页的话则为 <code>&#39;&#39;</code>。</td>
+<td align="left"><code>string</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.next</code></td>
+<td align="left">下一页的页数。如果此页是最后一页的话则为 <code>0</code>。</td>
+<td align="left"><code>number</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.next_link</code></td>
+<td align="left">下一页的网址。如果此页是最后一页的话则为 <code>&#39;&#39;</code>。</td>
+<td align="left"><code>string</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.path</code></td>
+<td align="left">当前页面的路径（不含根目录）。我们通常在主题中使用 <code>url_for(page.path)</code>。</td>
+<td align="left"><code>string</code></td>
+</tr>
+</tbody></table>
+<p><strong>归档 (archive)</strong>：与 <code>index</code> 布局相同，但新增以下变量。</p>
+<table>
+<thead>
+<tr>
+<th align="left">变量</th>
+<th align="left">描述</th>
+<th align="left">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>page.archive</code></td>
+<td align="left">等于 <code>true</code></td>
+<td align="left"><code>boolean</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.year</code></td>
+<td align="left">年份归档 (4位)</td>
+<td align="left"><code>number</code></td>
+</tr>
+<tr>
+<td align="left"><code>page.month</code></td>
+<td align="left">月份归档 (没有前导零的2位数)</td>
+<td align="left"><code>number</code></td>
+</tr>
+</tbody></table>
+<p><strong>分类 (category)</strong>：与 <code>index</code> 布局相同，但新增以下变量。</p>
+<table>
+<thead>
+<tr>
+<th align="left">变量</th>
+<th align="left">描述</th>
+<th align="left">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>page.category</code></td>
+<td align="left">分类名称</td>
+<td align="left"><code>string</code></td>
+</tr>
+</tbody></table>
+<p><strong>标签 (tag)</strong>：与 <code>index</code> 布局相同，但新增以下变量。</p>
+<table>
+<thead>
+<tr>
+<th align="left">变量</th>
+<th align="left">描述</th>
+<th align="left">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>page.tag</code></td>
+<td align="left">标签名称</td>
+<td align="left"><code>string</code></td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>模板</title>
+    <url>/archives/f6010553.html</url>
+    <content><![CDATA[<h1 id="模版"><a href="#模版" class="headerlink" title="模版"></a>模版</h1><p>模板决定了网站内容的呈现方式，每个主题至少都应包含一个 <code>index</code> 模板，以下是各页面相对应的模板名称：</p>
+<table>
+<thead>
+<tr>
+<th align="left">模板</th>
+<th align="left">用途</th>
+<th align="left">回退</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>index</code></td>
+<td align="left">首页</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>post</code></td>
+<td align="left">文章</td>
+<td align="left"><code>index</code></td>
+</tr>
+<tr>
+<td align="left"><code>page</code></td>
+<td align="left">分页</td>
+<td align="left"><code>index</code></td>
+</tr>
+<tr>
+<td align="left"><code>archive</code></td>
+<td align="left">归档</td>
+<td align="left"><code>index</code></td>
+</tr>
+<tr>
+<td align="left"><code>category</code></td>
+<td align="left">分类归档</td>
+<td align="left"><code>archive</code></td>
+</tr>
+<tr>
+<td align="left"><code>tag</code></td>
+<td align="left">标签归档</td>
+<td align="left"><code>archive</code></td>
+</tr>
+</tbody></table>
+<h2 id="布局（Layout）"><a href="#布局（Layout）" class="headerlink" title="布局（Layout）"></a>布局（Layout）</h2><p>如果页面结构类似，例如两个模板都有页首（Header）和页脚（Footer），您可考虑通过「布局」让两个模板共享相同的结构。一个布局文件必须要能显示 <code>body</code> 变量的内容，如此一来模板的内容才会被显示，举例来说：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">index.ejs</span><br><span class="line">index</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">layout.ejs</span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">body</span> %&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>生成：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span>index<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>每个模板都默认使用 <code>layout</code> 布局，您可在 front-matter 指定其他布局，或是设为 <code>false</code> 来关闭布局功能，您甚至可在布局中再使用其他布局来建立嵌套布局。</p>
+<a id="more"></a>
+
+
+
+<h2 id="局部模版（Partial）"><a href="#局部模版（Partial）" class="headerlink" title="局部模版（Partial）"></a>局部模版（Partial）</h2><p>局部模板让您在不同模板之间共享相同的组件，例如页首（Header）、页脚（Footer）或侧边栏（Sidebar）等，可利用局部模板功能分割为个别文件，让维护更加便利。举例来说：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">partial/header.ejs</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">id</span>=<span class="string">"logo"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight axapta"><table><tr><td class="code"><pre><span class="line"><span class="keyword">index</span>.ejs</span><br><span class="line">&lt;%- partial(<span class="string">'partial/header'</span>) %&gt;</span><br><span class="line">&lt;<span class="keyword">div</span> id=<span class="string">"content"</span>&gt;Home page&lt;/<span class="keyword">div</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>生成：</p>
+<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">&lt;h1 <span class="built_in">id</span>=<span class="string">"logo"</span>&gt;My Site&lt;/h1&gt;</span><br><span class="line">&lt;<span class="keyword">div</span> <span class="built_in">id</span>=<span class="string">"content"</span>&gt;Home page&lt;/<span class="keyword">div</span>&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h3><p>您可以在局部模板中指定局部变量并使用。</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">partial/header.ejs<span class="tag">&lt;<span class="name">h1</span> <span class="attr">id</span>=<span class="string">"logo"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">title</span> %&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight axapta"><table><tr><td class="code"><pre><span class="line"><span class="keyword">index</span>.ejs</span><br><span class="line">&lt;%- partial(<span class="string">'partial/header'</span>, &#123;title: <span class="string">'Hello World'</span>&#125;) %&gt;</span><br><span class="line">&lt;<span class="keyword">div</span> id=<span class="string">"content"</span>&gt;Home page&lt;/<span class="keyword">div</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>生成：</p>
+<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">&lt;h1 <span class="built_in">id</span>=<span class="string">"logo"</span>&gt;Hello World&lt;/h1&gt;</span><br><span class="line">&lt;<span class="keyword">div</span> <span class="built_in">id</span>=<span class="string">"content"</span>&gt;Home page&lt;/<span class="keyword">div</span>&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>如果您的主题太过于复杂，或是需要生成的文件量太过于庞大，可能会大幅降低性能，除了简化主题外，您可以考虑 Hexo 2.7 新增的局部缓存（Fragment Caching） 功能。</p>
+<p>本功能借鉴于 <a href="http://guides.rubyonrails.org/caching_with_rails.html#fragment-caching" target="_blank" rel="external nofollow noopener noreferrer">Ruby on Rails</a>，它储存局部内容，下次便能直接使用缓存内容，可以减少文件夹查询并使生成速度更快。</p>
+<p>它可用于页首、页脚、侧边栏等文件不常变动的位置，举例来说：</p>
+<figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line">&lt;%- fragment_cache(<span class="string">'header'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;  </span><br><span class="line">  <span class="keyword">return</span> <span class="string">'&lt;header&gt;&lt;/header&gt;'</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>如果您使用局部模板的话，可以更简单：</p>
+<figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">&lt;%- <span class="keyword">partial</span>(<span class="string">'header'</span>, &#123;&#125;, &#123;cache: <span class="literal">true</span>&#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>fragment_cache()</code> 将会缓存第一次的渲染结果，并在之后直接输出缓存的结果。因此只有在不同页面的渲染结果都相同时才应使用局部缓存。<br>比如，在配置中启用了 <code>relative_link</code> 后不应该使用局部缓存，因为相对链接在每个页面可能不同。</p>
+</blockquote>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>permalink-theme</title>
+    <url>/archives/b950aab4.html</url>
+    <content><![CDATA[<h1 id="永久链接（Permalinks）"><a href="#永久链接（Permalinks）" class="headerlink" title="永久链接（Permalinks）"></a>永久链接（Permalinks）</h1><p>您可以在 <code>_config.yml</code> 配置中调整网站的永久链接或者在每篇文章的 Front-matter 中指定。</p>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>除了下列变量外，您还可使用 Front-matter 中的所有属性。</p>
+<table>
+<thead>
+<tr>
+<th align="left">变量</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>:year</code></td>
+<td align="left">文章的发表年份（4 位数）</td>
+</tr>
+<tr>
+<td align="left"><code>:month</code></td>
+<td align="left">文章的发表月份（2 位数）</td>
+</tr>
+<tr>
+<td align="left"><code>:i_month</code></td>
+<td align="left">文章的发表月份（去掉开头的零）</td>
+</tr>
+<tr>
+<td align="left"><code>:day</code></td>
+<td align="left">文章的发表日期 (2 位数)</td>
+</tr>
+<tr>
+<td align="left"><code>:i_day</code></td>
+<td align="left">文章的发表日期（去掉开头的零）</td>
+</tr>
+<tr>
+<td align="left"><code>:hour</code></td>
+<td align="left">文章发表时的小时 (2 位数)</td>
+</tr>
+<tr>
+<td align="left"><code>:minute</code></td>
+<td align="left">文章发表时的分钟 (2 位数)</td>
+</tr>
+<tr>
+<td align="left"><code>:title</code></td>
+<td align="left">文件名称</td>
+</tr>
+<tr>
+<td align="left"><code>:post_title</code></td>
+<td align="left">文章标题</td>
+</tr>
+<tr>
+<td align="left"><code>:id</code></td>
+<td align="left">文章 ID (<em>not persistent across cache reset</em>)</td>
+</tr>
+<tr>
+<td align="left"><code>:category</code></td>
+<td align="left">分类。如果文章没有分类，则是 <code>default_category</code> 配置信息。</td>
+</tr>
+</tbody></table>
+<p>您可在 <code>permalink_defaults</code> 参数下调整永久链接中各变量的默认值：</p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">permalink_default<span class="variable">s:</span>  </span><br><span class="line">  <span class="keyword">lan</span><span class="variable">g:</span> <span class="keyword">en</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>假设 <code>source/_posts</code> 文件夹中有个 <code>hello-world.md</code>，包含以下内容：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Hello</span> <span class="string">World</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2013</span><span class="number">-07</span><span class="number">-14</span> <span class="number">17</span><span class="string">:01:34</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">foo</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">bar</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>:year/:month/:day/:title/</code></td>
+<td align="left">2013/07/14/hello-world/</td>
+</tr>
+<tr>
+<td align="left"><code>:year-:month-:day-:title.html</code></td>
+<td align="left">2013-07-14-hello-world.html</td>
+</tr>
+<tr>
+<td align="left"><code>:category/:title</code></td>
+<td align="left">foo/bar/hello-world</td>
+</tr>
+</tbody></table>
+<h3 id="多语种支持"><a href="#多语种支持" class="headerlink" title="多语种支持"></a>多语种支持</h3><p>若要建立一个多语种的网站，您可修改 <code>new_post_name</code> 和 <code>permalink</code> 参数，如下：</p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="symbol">new_post_name:</span> <span class="symbol">:lang/</span><span class="symbol">:title</span>.md</span><br><span class="line"><span class="symbol">permalink:</span> <span class="symbol">:lang/</span><span class="symbol">:title/</span></span><br></pre></td></tr></table></figure>
+
+<p>当您建立新文章时，文章会被储存到：</p>
+<figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line">$ hexo <span class="keyword">new</span> <span class="string">"Hello World"</span> --lang tw</span><br><span class="line"># =&gt; <span class="keyword">source</span><span class="regexp">/_posts/</span>tw<span class="regexp">/Hello-World.md</span></span><br></pre></td></tr></table></figure>
+
+<p>而网址会是：</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">http:<span class="regexp">//</span>localhost:<span class="number">4000</span><span class="regexp">/tw/</span>hello-world<span class="regexp">/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h1 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h1><p>创建 Hexo 主题非常容易，您只要在 <code>themes</code> 文件夹内，新增一个任意名称的文件夹，并修改 <code>_config.yml</code> 内的 <code>theme</code> 设定，即可切换主题。一个主题可能会有以下的结构：</p>
+<figure class="highlight mel"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── languages</span><br><span class="line">├── <span class="keyword">layout</span></span><br><span class="line">├── scripts</span><br><span class="line">└── <span class="keyword">source</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3><p>主题的配置文件。修改时会自动更新，无需重启服务器。</p>
+<h3 id="languages"><a href="#languages" class="headerlink" title="languages"></a>languages</h3><p>语言文件夹。请参见 <a href="https://hexo.io/zh-cn/docs/internationalization" target="_blank" rel="external nofollow noopener noreferrer">国际化 (i18n)</a>。</p>
+<h3 id="layout"><a href="#layout" class="headerlink" title="layout"></a>layout</h3><p>布局文件夹。用于存放主题的模板文件，决定了网站内容的呈现方式，Hexo 内建 <a href="https://github.com/node-swig/swig-templates" target="_blank" rel="external nofollow noopener noreferrer">Swig</a> 模板引擎，您可以另外安装插件来获得 <a href="https://github.com/hexojs/hexo-renderer-ejs" target="_blank" rel="external nofollow noopener noreferrer">EJS</a>、<a href="https://github.com/hexojs/hexo-renderer-haml" target="_blank" rel="external nofollow noopener noreferrer">Haml</a> 或 <a href="https://github.com/hexojs/hexo-renderer-jade" target="_blank" rel="external nofollow noopener noreferrer">Jade</a> 支持，Hexo 根据模板文件的扩展名来决定所使用的模板引擎</p>
+<p>例如：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">layout</span><span class="selector-class">.ejs</span>   <span class="selector-tag">-</span> 使用 <span class="selector-tag">EJS</span></span><br><span class="line"><span class="selector-tag">layout</span><span class="selector-class">.swig</span>  <span class="selector-tag">-</span> 使用 <span class="selector-tag">Swig</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="scripts"><a href="#scripts" class="headerlink" title="scripts"></a>scripts</h3><p>脚本文件夹。在启动时，Hexo 会载入此文件夹内的 JavaScript 文件，请参见 <a href="https://hexo.io/zh-cn/docs/plugins" target="_blank" rel="external nofollow noopener noreferrer">插件</a> 以获得更多信息。</p>
+<h3 id="source"><a href="#source" class="headerlink" title="source"></a>source</h3><p>资源文件夹，除了模板以外的 Asset，例如 CSS、JavaScript 文件等，都应该放在这个文件夹中。文件或文件夹开头名称为 <code>_</code>（下划线线）或隐藏的文件会被忽略。</p>
+<p>如果文件可以被渲染的话，会经过解析然后储存到 <code>public</code> 文件夹，否则会直接拷贝到 <code>public</code> 文件夹。</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Nunjucks Errors</title>
     <url>/archives/a429e99c.html</url>
     <content><![CDATA[<h1 id="hexo-Nunjucks-Errors-解决方法"><a href="#hexo-Nunjucks-Errors-解决方法" class="headerlink" title="hexo Nunjucks Errors 解决方法"></a>hexo Nunjucks Errors 解决方法</h1><p><strong>Code：</strong></p>
