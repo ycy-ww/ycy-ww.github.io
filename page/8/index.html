@@ -168,7 +168,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">7</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -178,7 +178,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">31</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">32</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -229,6 +229,178 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/989bfe87.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ycy-ww">
+      <meta itemprop="description" content="CS'fun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ycy-ww">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/archives/989bfe87.html" class="post-title-link" itemprop="url">辅助函数</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2-27-2020 11:06:50 晚上" itemprop="dateCreated datePublished" datetime="2020-02-27T23:06:50+08:00">2-27-2020</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/archives/989bfe87.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/989bfe87.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="辅助函数（Helpers）"><a href="#辅助函数（Helpers）" class="headerlink" title="辅助函数（Helpers）"></a>辅助函数（Helpers）</h1><p>辅助函数帮助您在模版中快速插入内容。辅助函数不能在源文件中使用。</p>
+<h2 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h2><h3 id="url-for"><a href="#url-for" class="headerlink" title="url_for"></a>url_for</h3><p>在路径前加上根路径，从 Hexo 2.7 开始您应该使用此函数而不是 <code>config.root + path</code>。</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- url_for<span class="comment">(path, [option])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>relative</code></td>
+<td align="left">是否输出相对链接</td>
+<td align="left"><code>config.relative_link</code> 的值</td>
+</tr>
+</tbody></table>
+<p><strong>示例：</strong></p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line"><span class="symbol">root:</span> <span class="meta-keyword">/blog/</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- url_for<span class="comment">('/a/path')</span> <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// /blog/a/path</span></span><br></pre></td></tr></table></figure>
+
+<p>是否输出相对链接，默认遵循配置文件中 <code>relative_link</code> 的值</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- url<span class="constructor">_for('<span class="operator">/</span><span class="params">css</span><span class="operator">/</span><span class="params">style</span>.<span class="params">css</span>')</span> %&gt;</span><br><span class="line"><span class="comment">// ../../css/style.css</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 覆盖配置 </span></span><br><span class="line"><span class="comment"> * 即使配置文件中启用了 relative_link，你也可以使用 relative 参数禁用相对链接输出，反之亦然 </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">&lt;%- url<span class="constructor">_for('<span class="operator">/</span><span class="params">css</span><span class="operator">/</span><span class="params">style</span>.<span class="params">css</span>', &#123;<span class="params">relative</span>: <span class="params">false</span>&#125;)</span> %&gt;</span><br><span class="line"><span class="comment">// /css/style.css</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="relative-url"><a href="#relative-url" class="headerlink" title="relative_url"></a>relative_url</h3><p>取得与 <code>from</code> 相对的 <code>to</code> 路径。</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- relative_url<span class="comment">(from, to)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- relative<span class="constructor">_url('<span class="params">foo</span><span class="operator">/</span><span class="params">bar</span><span class="operator">/</span>', '<span class="params">css</span><span class="operator">/</span><span class="params">style</span>.<span class="params">css</span>')</span> %&gt;</span><br><span class="line"><span class="comment">// ../../css/style.css</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="gravatar"><a href="#gravatar" class="headerlink" title="gravatar"></a>gravatar</h3><p>根据邮箱地址返回 Gravatar 头像 URL。</p>
+<p>如果你不指定 <code>options</code> 参数，将会应用默认参数。否则，你可以将其设置为一个数字，这个数字将会作为 Gravatar 的大小参数。最后，如果你设置它一个对象，它将会被转换为 Gravatar 的一个查询字符串参数。</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- gravatar<span class="comment">(email, [options])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>s</code></td>
+<td align="left">图片大小</td>
+<td align="left">80</td>
+</tr>
+<tr>
+<td align="left"><code>d</code></td>
+<td align="left">默认头像</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>f</code></td>
+<td align="left">强制使用默认图象</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>r</code></td>
+<td align="left">头像等级限制</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<p><strong>示例：</strong></p>
+<figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="symbol">%-</span> gravatar('a<span class="title">@abc.com</span>', <span class="number">40</span>) %&gt;</span><br><span class="line">// https://www.gravatar.com/avatar/b<span class="number">9</span>b<span class="number">00e66</span><span class="keyword">c</span><span class="number">6</span>b<span class="number">8</span>a<span class="number">70</span>f<span class="number">88</span><span class="keyword">c</span><span class="number">73</span>cb<span class="number">6</span>bdb<span class="number">06787</span>?s=<span class="number">40</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="symbol">%-</span> gravatar('a<span class="title">@abc.com</span>' &#123;s: <span class="number">40</span>, d: 'https://via.placeholder.com/<span class="number">150</span>'&#125;) %&gt;// https://www.gravatar.com/avatar/b<span class="number">9</span>b<span class="number">00e66</span><span class="keyword">c</span><span class="number">6</span>b<span class="number">8</span>a<span class="number">70</span>f<span class="number">88</span><span class="keyword">c</span><span class="number">73</span>cb<span class="number">6</span>bdb<span class="number">06787</span>?s=<span class="number">40</span>&amp;d=https<span class="symbol">%3</span>A<span class="symbol">%2</span>F<span class="symbol">%2</span>Fvia.placeholder.com<span class="symbol">%2</span>F<span class="number">150</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="full-url-for"><a href="#full-url-for" class="headerlink" title="full_url_for"></a>full_url_for</h3><p>在路径前加上根路径和域名。输出会被自动转码。</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- full_url_for<span class="comment">(path)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line"><span class="string">url:</span> <span class="string">https:</span><span class="comment">//example.com/blog # example</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- full_url_for<span class="comment">('/a/path')</span> <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// https://example.com/blog/a/path</span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/archives/989bfe87.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
         
   
   
@@ -333,103 +505,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/b349ec92.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ycy-ww">
-      <meta itemprop="description" content="CS'fun">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ycy-ww">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/archives/b349ec92.html" class="post-title-link" itemprop="url">国际化</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2-27-2020 10:35:18 晚上" itemprop="dateCreated datePublished" datetime="2020-02-27T22:35:18+08:00">2-27-2020</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/archives/b349ec92.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/b349ec92.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="国际化（i18n）"><a href="#国际化（i18n）" class="headerlink" title="国际化（i18n）"></a>国际化（i18n）</h1><p>若要让您的网站以不同语言呈现，您可使用国际化（internationalization）功能。请先在 <code>_config.yml</code> 中调整 <code>language</code> 设定，这代表的是预设语言，您也可设定多个语言来调整预设语言的顺位。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">language</span>: zh-tw</span><br><span class="line"></span><br><span class="line"><span class="attribute">language</span>: </span><br><span class="line">- zh-tw</span><br><span class="line">- en</span><br></pre></td></tr></table></figure>
-
-<h3 id="语言文件"><a href="#语言文件" class="headerlink" title="语言文件"></a>语言文件</h3><p>语言文件可以使用 YAML 或 JSON 编写，并放在主题文件夹中的 <code>languages</code> 文件夹。您可以在语言文件中使用 <a href="https://github.com/alexei/sprintf.js" target="_blank" rel="external nofollow noopener noreferrer">printf 格式</a>。</p>
-<h3 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h3><p>在模板中，透过 <code>__</code> 或 <code>_p</code> 辅助函数，即可取得翻译后的字符串，前者用于一般使用；而后者用于复数字符串。例如：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">en.yml</span></span><br><span class="line"><span class="attr">index:</span>  </span><br><span class="line">  <span class="attr">title:</span> <span class="string">Home</span>  </span><br><span class="line">  <span class="attr">add:</span> <span class="string">Add</span>  </span><br><span class="line">  <span class="attr">video:</span>    </span><br><span class="line">    <span class="attr">zero:</span> <span class="literal">No</span> <span class="string">videos</span>   </span><br><span class="line">    <span class="attr">one:</span> <span class="string">One</span> <span class="string">video</span>   </span><br><span class="line">    <span class="attr">other:</span> <span class="string">%d</span> <span class="string">videos</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>= __<span class="comment">('index.title')</span> <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// Home</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="meta">%</span>= _p<span class="comment">('index.video', 3)</span> <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// 3 videos</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/archives/b349ec92.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -501,7 +576,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -514,7 +589,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -580,7 +655,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共24.6k字</span>
+  <span class="post-count">博客全站共25.2k字</span>
 </div>
 
         
@@ -671,6 +746,7 @@
 
 
 
+
 <script>
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
@@ -698,7 +774,6 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   }, window.Valine);
 });
 </script>
-
 
 
 

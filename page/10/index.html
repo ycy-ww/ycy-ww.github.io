@@ -168,7 +168,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">7</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -178,7 +178,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">31</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">32</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -229,6 +229,144 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/f6010553.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ycy-ww">
+      <meta itemprop="description" content="CS'fun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ycy-ww">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/archives/f6010553.html" class="post-title-link" itemprop="url">模板</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2-27-2020 10:23:22 晚上" itemprop="dateCreated datePublished" datetime="2020-02-27T22:23:22+08:00">2-27-2020</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/archives/f6010553.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/f6010553.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="模版"><a href="#模版" class="headerlink" title="模版"></a>模版</h1><p>模板决定了网站内容的呈现方式，每个主题至少都应包含一个 <code>index</code> 模板，以下是各页面相对应的模板名称：</p>
+<table>
+<thead>
+<tr>
+<th align="left">模板</th>
+<th align="left">用途</th>
+<th align="left">回退</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>index</code></td>
+<td align="left">首页</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>post</code></td>
+<td align="left">文章</td>
+<td align="left"><code>index</code></td>
+</tr>
+<tr>
+<td align="left"><code>page</code></td>
+<td align="left">分页</td>
+<td align="left"><code>index</code></td>
+</tr>
+<tr>
+<td align="left"><code>archive</code></td>
+<td align="left">归档</td>
+<td align="left"><code>index</code></td>
+</tr>
+<tr>
+<td align="left"><code>category</code></td>
+<td align="left">分类归档</td>
+<td align="left"><code>archive</code></td>
+</tr>
+<tr>
+<td align="left"><code>tag</code></td>
+<td align="left">标签归档</td>
+<td align="left"><code>archive</code></td>
+</tr>
+</tbody></table>
+<h2 id="布局（Layout）"><a href="#布局（Layout）" class="headerlink" title="布局（Layout）"></a>布局（Layout）</h2><p>如果页面结构类似，例如两个模板都有页首（Header）和页脚（Footer），您可考虑通过「布局」让两个模板共享相同的结构。一个布局文件必须要能显示 <code>body</code> 变量的内容，如此一来模板的内容才会被显示，举例来说：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">index.ejs</span><br><span class="line">index</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">layout.ejs</span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">body</span> %&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>生成：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span>index<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>每个模板都默认使用 <code>layout</code> 布局，您可在 front-matter 指定其他布局，或是设为 <code>false</code> 来关闭布局功能，您甚至可在布局中再使用其他布局来建立嵌套布局。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/archives/f6010553.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
         
   
   
@@ -417,104 +555,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/a429e99c.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ycy-ww">
-      <meta itemprop="description" content="CS'fun">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ycy-ww">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/archives/a429e99c.html" class="post-title-link" itemprop="url">Nunjucks Errors</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2-27-2020 7:10:50 晚上" itemprop="dateCreated datePublished" datetime="2020-02-27T19:10:50+08:00">2-27-2020</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B0%8F%E9%97%AE%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">小问题</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/archives/a429e99c.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/a429e99c.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="hexo-Nunjucks-Errors-解决方法"><a href="#hexo-Nunjucks-Errors-解决方法" class="headerlink" title="hexo Nunjucks Errors 解决方法"></a>hexo Nunjucks Errors 解决方法</h1><p><strong>Code：</strong></p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Nunjucks Error:  [Line <span class="number">43</span>, Column <span class="number">43</span>] Error: Unable <span class="keyword">to</span> call `now`, which <span class="literal">is</span> undefined <span class="keyword">or</span> falsey</span><br><span class="line">    =====               Context Dump               =====</span><br><span class="line">    === (line<span class="built_in"> number</span> probably different from source) ===</span><br><span class="line">  <span class="number">38</span> | <span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span>分支名称<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line">  <span class="number">39</span> | <span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>gh-pages<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"> (GitHub) </span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>coding-pages<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"> (Coding.net) </span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>master<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"> (others)<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line">  <span class="number">40</span> | &lt;/tr&gt;</span><br><span class="line">  <span class="number">41</span> | <span class="xml"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">  42 | </span><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>message<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">  43 | </span><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span>自定义提交信息<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">  44 | </span><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>Site updated: </span><span class="xquery">&#123;&#123; now(<span class="string">'YYYY-MM-DD HH:mm:ss'</span>) &#125;</span><span class="xml">&#125;<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">  45 | <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line">  <span class="number">46</span> | <span class="xml"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">  47 | </span><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>token<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">  48 | </span><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span>Optional token value to authenticate with the repo. Prefix with </span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>$<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"> to read token from environment variable<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">    =====             Context Dump Ends            =====</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>原文：</strong></p>
-<p><img src="/images/Nunjucks_error.png" alt="md文档"></p>
-<h2 id="泄露（Escape）内容"><a href="#泄露（Escape）内容" class="headerlink" title="泄露（Escape）内容"></a>泄露（Escape）内容</h2><p>Hexo 使用 <a href="http://mozilla.github.io/nunjucks/" target="_blank" rel="external nofollow noopener noreferrer">Nunjucks</a> 来解析文章（旧版本使用 <a href="http://paularmstrong.github.io/swig/" target="_blank" rel="external nofollow noopener noreferrer">Swig</a>，两者语法类似），内容若包含 {{ }}  或 {% %}  可能导致解析错误。</p>
-<p>文章里出现了Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }} 的内容。然后 hexo 的文章渲染使用的是 Nunjucks ，他会将那几个大括号识别成自己的语法，这样生成的时候就会报错。<code>Unable to call now</code></p>
-<p><strong>解决方法：</strong></p>
-<p>您可以用 <code>raw</code> 标签包裹来避免潜在问题发生。</p>
-<p>前后加： {% raw %} {% endraw %} </p>
-<hr>
-<p><img src="http://image.baidu.com/search/detail?ct=503316480&z=3&tn=baiduimagedetail&ipn=d&word=%E6%9D%A8%E8%B6%85%E8%B6%8A%E5%A4%B4%E5%83%8F%E5%9B%BE%E7%89%87%E5%8D%A1%E9%80%9A&step_word=&ie=utf-8&in=&cl=2&lm=-1&st=-1&hd=&latest=&copyright=&cs=2557770639,1590477966&os=1056480712,476593103&simid=3457548530,199525995&pn=0&rn=1&di=6820&ln=177&fr=&fmq=1582801173329_R&ic=&s=undefined&se=&sme=&tab=0&width=0&height=0&face=undefined&is=0,0&istype=2&ist=&jit=&bdtype=0&spn=0&pi=0&gsm=1e&objurl=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20181129%2F0f66ada5c7714420bbd682dfd70002a8.jpeg&rpstart=0&rpnum=0&adpicid=0&force=undefined" alt="美图"></p>
-<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
-<p><img src="/images/mylogo.png" alt="logo"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -586,7 +626,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -599,7 +639,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -665,7 +705,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共24.6k字</span>
+  <span class="post-count">博客全站共25.2k字</span>
 </div>
 
         
@@ -756,6 +796,7 @@
 
 
 
+
 <script>
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
@@ -783,7 +824,6 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   }, window.Valine);
 });
 </script>
-
 
 
 

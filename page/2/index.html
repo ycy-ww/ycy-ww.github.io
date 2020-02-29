@@ -168,7 +168,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">7</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -178,7 +178,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">31</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">32</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -229,6 +229,120 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/55476d4b.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ycy-ww">
+      <meta itemprop="description" content="CS'fun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ycy-ww">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/archives/55476d4b.html" class="post-title-link" itemprop="url">TCP/IP 简介</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2-29-2020 10:32:40 晚上" itemprop="dateCreated datePublished" datetime="2020-02-29T22:32:40+08:00">2-29-2020</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/archives/55476d4b.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/55476d4b.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a>TCP/IP</h1><h2 id="TCP-IP-是因特网的通信协议。"><a href="#TCP-IP-是因特网的通信协议。" class="headerlink" title="TCP/IP 是因特网的通信协议。"></a>TCP/IP 是因特网的通信协议。</h2><p>通信协议是对计算机必须遵守的规则的描述，只有遵守这些规则，计算机之间才能进行通信。</p>
+<h3 id="因特网地址也是-TCP-IP"><a href="#因特网地址也是-TCP-IP" class="headerlink" title="因特网地址也是 TCP/IP"></a>因特网地址也是 TCP/IP</h3><p>你的因特网地址 112.32.22.120 也是标准的 TCP/IP 协议的一部分。</p>
+<p>TCP/IP 指传输控制协议/网际协议 (<em>T</em>ransmission <em>C</em>ontrol <em>P</em>rotocol / <em>I</em>nternet <em>P</em>rotocol)。</p>
+<p>TCP/IP 定义了电子设备（比如计算机）如何连入因特网，以及数据如何在它们之间传输的标准。</p>
+<h3 id="在-TCP-IP-内部"><a href="#在-TCP-IP-内部" class="headerlink" title="在 TCP/IP 内部"></a>在 TCP/IP 内部</h3><p>在 TCP/IP 中包含一系列用于处理数据通信的协议：</p>
+<ul>
+<li>TCP (传输控制协议) - 应用程序之间通信</li>
+<li>UDP (用户数据包协议) - 应用程序之间的简单通信</li>
+<li>IP (网际协议) - 计算机之间的通信</li>
+<li>ICMP (因特网消息控制协议) - 针对错误和状态</li>
+<li>DHCP (动态主机配置协议) - 针对动态寻址</li>
+</ul>
+<h3 id="TCP-使用固定的连接"><a href="#TCP-使用固定的连接" class="headerlink" title="TCP 使用固定的连接"></a>TCP 使用固定的连接</h3><p>TCP 用于应用程序之间的通信。</p>
+<p>当应用程序希望通过 TCP 与另一个应用程序通信时，它会发送一个通信请求。这个请求必须被送到一个确切的地址。在双方“握手”之后，TCP 将在两个应用程序之间建立一个全双工 (full-duplex) 的通信。</p>
+<p>这个全双工的通信将占用两个进程之间的通信线路，直到它被一方或双方关闭为止。</p>
+<p>UDP 和 TCP 很相似，但是更简单，同时可靠性低于 TCP。</p>
+<h3 id="IP-是无连接的"><a href="#IP-是无连接的" class="headerlink" title="IP 是无连接的"></a>IP 是无连接的</h3><p>IP 用于计算机之间的通信。</p>
+<p>IP 是无连接的通信协议。它不会占用两个正在通信的计算机之间的通信线路。这样，IP 就降低了对网络线路的需求。每条线可以同时满足许多不同的计算机之间的通信需要。</p>
+<p>通过 IP，消息（或者其他数据）被分割为小的独立的包，并通过因特网在计算机之间传送。</p>
+<p>IP 负责将每个包路由至它的目的地。</p>
+<h3 id="IP-路由器"><a href="#IP-路由器" class="headerlink" title="IP 路由器"></a>IP 路由器</h3><p>当一个 IP 包从一台计算机被发送，它会到达一个 IP 路由器。</p>
+<p>IP 路由器负责将这个包路由至它的目的地，直接地或者通过其他的路由器。</p>
+<p>在一个相同的通信中，一个包所经由的路径可能会和其他的包不同。而路由器负责根据通信量、网络中的错误或者其他参数来进行正确地寻址。</p>
+<hr>
+<h2 id="TCP-IP-1"><a href="#TCP-IP-1" class="headerlink" title="TCP/IP"></a>TCP/IP</h2><p>TCP/IP 意味着 TCP 和 IP 在一起协同工作。</p>
+<p>TCP 负责应用软件（比如你的浏览器）和网络软件之间的通信。</p>
+<p>IP 负责计算机之间的通信。</p>
+<p>TCP 负责将数据分割并装入 IP 包，然后在它们到达的时候重新组合它们。</p>
+<p>IP 负责将包发送至接受者。</p>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
         
   
   
@@ -357,115 +471,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/d66d780d.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ycy-ww">
-      <meta itemprop="description" content="CS'fun">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ycy-ww">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/archives/d66d780d.html" class="post-title-link" itemprop="url">eclipse 插件安装</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2-29-2020 7:32:51 晚上" itemprop="dateCreated datePublished" datetime="2020-02-29T19:32:51+08:00">2-29-2020</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/archives/d66d780d.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/d66d780d.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="eclipse-插件安装-——-web项目"><a href="#eclipse-插件安装-——-web项目" class="headerlink" title="eclipse 插件安装 —— web项目"></a>eclipse 插件安装 —— web项目</h1><p>要导入Dynamic Web Project项目，就要为当前的eclipse安装Java EE开发插件。</p>
-<p><strong>步骤如下：</strong></p>
-<ol>
-<li><p>找到菜单栏中的HELP按钮，点击下图的Install New Software选项。</p>
-</li>
-<li><p>点击All available Sites按钮，这时候会稍微等待一段时间，之后会出现下面的一系列选项，勾选下面箭头的选项，点击NEXT按钮</p>
-</li>
-<li><p>依次点击“Next ”知道你看到 “ Review licences”的窗口。在这个窗口选择 “I accept the terms of the licence agreement” 并且点击“Finish”。</p>
-</li>
-<li><p>安装完插件之后, Eclipse会要求你重启eclipse，选择“yes”</p>
-</li>
-<li><p>重启eclipse之后, 打开新建项目的面板，就可以看到 Web文件夹 和 “Dynamic<br>Web Project” 选项了</p>
-</li>
-</ol>
-<hr>
-<p><strong>创建web项目：</strong></p>
-<ol>
-<li>输入项目名称，选择运行时环境（中间件环境），选择web相应的版本</li>
-</ol>
-<p><img src="https://img-blog.csdn.net/20180928212317161?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4ODAzOTc4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="参阅"></p>
-<ol start="2">
-<li>点击Finish。此时如果发现java web工程缺少web.xml文件（有web.xml文件请忽略这一步），那么右键项目名称-&gt;Java EE Tools-&gt;Generate Deployment descriptor stub</li>
-<li>最后项目成功创建</li>
-</ol>
-<hr>
-<p><strong><em>转载标明出处:</em></strong> <em><a href="http://www.wwyyqblog.work">www.wwyyqblog.work</a></em>                            </p>
-<p><kbd>ycy-ww 出品</kbd></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -537,7 +542,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -550,7 +555,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -616,7 +621,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共24.6k字</span>
+  <span class="post-count">博客全站共25.2k字</span>
 </div>
 
         
@@ -707,6 +712,7 @@
 
 
 
+
 <script>
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
@@ -734,7 +740,6 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   }, window.Valine);
 });
 </script>
-
 
 
 

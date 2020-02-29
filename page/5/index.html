@@ -168,7 +168,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">7</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -178,7 +178,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">31</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">32</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -229,6 +229,116 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/69913370.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ycy-ww">
+      <meta itemprop="description" content="CS'fun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ycy-ww">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/archives/69913370.html" class="post-title-link" itemprop="url">辅助函数2</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2-28-2020 3:03:05 下午" itemprop="dateCreated datePublished" datetime="2020-02-28T15:03:05+08:00">2-28-2020</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/archives/69913370.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/69913370.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="辅助函数-2"><a href="#辅助函数-2" class="headerlink" title="辅助函数 2"></a>辅助函数 2</h1><h2 id="条件函数"><a href="#条件函数" class="headerlink" title="条件函数"></a>条件函数</h2><h3 id="is-current"><a href="#is-current" class="headerlink" title="is_current"></a>is_current</h3><p>检查 <code>path</code> 是否符合目前页面的网址。开启 <code>strict</code> 选项启用严格比对。</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- is<span class="constructor">_current(<span class="params">path</span>, [<span class="params">strict</span>])</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="is-home"><a href="#is-home" class="headerlink" title="is_home"></a>is_home</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_home<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="is-post"><a href="#is-post" class="headerlink" title="is_post"></a>is_post</h3><p>检查当前页面是否为文章。</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_post<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="is-page"><a href="#is-page" class="headerlink" title="is_page"></a>is_page</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_page<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="is-archive"><a href="#is-archive" class="headerlink" title="is_archive"></a>is_archive</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_archive<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="is-year"><a href="#is-year" class="headerlink" title="is_year"></a>is_year</h3><p>检查当前页面是否为年度归档页面。</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_year<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="is-month"><a href="#is-month" class="headerlink" title="is_month"></a>is_month</h3><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- is_month() %&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="is-category"><a href="#is-category" class="headerlink" title="is_category"></a>is_category</h3><p>如果给定一个字符串作为参数，将会检查目前是否为指定分类。</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_category<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br><span class="line">&lt;<span class="meta">%</span>- is_category<span class="comment">('hobby')</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="is-tag"><a href="#is-tag" class="headerlink" title="is_tag"></a>is_tag</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_tag<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br><span class="line">&lt;<span class="meta">%</span>- is_tag<span class="comment">('hobby')</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/archives/69913370.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
         
   
   
@@ -373,343 +483,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/80f29645.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ycy-ww">
-      <meta itemprop="description" content="CS'fun">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ycy-ww">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/archives/80f29645.html" class="post-title-link" itemprop="url">辅助函数4</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2-28-2020 2:59:28 下午" itemprop="dateCreated datePublished" datetime="2020-02-28T14:59:28+08:00">2-28-2020</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/archives/80f29645.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/80f29645.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="辅助函数-4"><a href="#辅助函数-4" class="headerlink" title="辅助函数 4"></a>辅助函数 4</h1><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="paginator"><a href="#paginator" class="headerlink" title="paginator"></a>paginator</h3><p>插入分页链接。</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- paginator(options) %&gt;</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-<th align="left">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>base</code></td>
-<td align="left">基础网址</td>
-<td align="left">/</td>
-</tr>
-<tr>
-<td align="left"><code>format</code></td>
-<td align="left">网址格式</td>
-<td align="left">page/%d/</td>
-</tr>
-<tr>
-<td align="left"><code>total</code></td>
-<td align="left">分页总数</td>
-<td align="left">1</td>
-</tr>
-<tr>
-<td align="left"><code>current</code></td>
-<td align="left">目前页数</td>
-<td align="left">0</td>
-</tr>
-<tr>
-<td align="left"><code>prev_text</code></td>
-<td align="left">上一页链接的文字。仅在 <code>prev_next</code> 设定开启时才有用。</td>
-<td align="left">Prev</td>
-</tr>
-<tr>
-<td align="left"><code>next_text</code></td>
-<td align="left">下一页链接的文字。仅在 <code>prev_next</code> 设定开启时才有用。</td>
-<td align="left">Next</td>
-</tr>
-<tr>
-<td align="left"><code>space</code></td>
-<td align="left">空白文字</td>
-<td align="left">…</td>
-</tr>
-<tr>
-<td align="left"><code>prev_next</code></td>
-<td align="left">显示上一页和下一页的链接</td>
-<td align="left">true</td>
-</tr>
-<tr>
-<td align="left"><code>end_size</code></td>
-<td align="left">显示于两侧的页数</td>
-<td align="left">1</td>
-</tr>
-<tr>
-<td align="left"><code>mid_size</code></td>
-<td align="left">显示于中间的页数</td>
-<td align="left">2</td>
-</tr>
-<tr>
-<td align="left"><code>show_all</code></td>
-<td align="left">显示所有页数。如果开启此参数的话，<code>end_size</code> 和 <code>mid_size</code> 就没用了。</td>
-<td align="left">false</td>
-</tr>
-<tr>
-<td align="left"><code>escape</code></td>
-<td align="left">Escape HTML tags</td>
-<td align="left">true</td>
-</tr>
-</tbody></table>
-<p><strong>Examples:</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;%<span class="selector-tag">-</span> <span class="selector-tag">paginator</span>(&#123;  </span><br><span class="line">  <span class="attribute">prev_text</span>: <span class="string">'&lt;'</span>, </span><br><span class="line">  next_text: <span class="string">'&gt;'</span></span><br><span class="line">&#125;) %&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Rendered as --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/1/"</span>&gt;</span><span class="symbol">&amp;lt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/1/"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">2</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/3/"</span>&gt;</span>3<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/3/"</span>&gt;</span><span class="symbol">&amp;gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- paginator(&#123;  </span><br><span class="line">  prev_text: '&lt;i <span class="class"><span class="keyword">class</span></span>=<span class="string">"fa fa-angle-left"</span>&gt;&lt;/i&gt;', </span><br><span class="line">  next_text: '&lt;i <span class="class"><span class="keyword">class</span></span>=<span class="string">"fa fa-angle-right"</span>&gt;&lt;/i&gt;', </span><br><span class="line">  escape: <span class="literal">false</span></span><br><span class="line">&#125;) %&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Rendered as --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/1/"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-angle-left"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/1/"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">2</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/3/"</span>&gt;</span>3<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/3/"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-angle-right"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="search-form"><a href="#search-form" class="headerlink" title="search_form"></a>search_form</h3><p>插入 Google 搜索框。</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- search_form<span class="comment">(options)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-<th align="left">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>class</code></td>
-<td align="left">表单的 class name</td>
-<td align="left">search-form</td>
-</tr>
-<tr>
-<td align="left"><code>text</code></td>
-<td align="left">搜索提示文字</td>
-<td align="left">Search</td>
-</tr>
-<tr>
-<td align="left"><code>button</code></td>
-<td align="left">显示搜索按钮。此参数可为布尔值（boolean）或字符串，当设定是字符串的时候，即为搜索按钮的文字。</td>
-<td align="left">false</td>
-</tr>
-</tbody></table>
-<h3 id="number-format"><a href="#number-format" class="headerlink" title="number_format"></a>number_format</h3><p>格式化数字。</p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- number<span class="constructor">_format(<span class="params">number</span>, [<span class="params">options</span>])</span> %&gt;</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-<th align="left">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>precision</code></td>
-<td align="left">数字精度。此选项可为 <code>false</code> 或非负整数。</td>
-<td align="left">false</td>
-</tr>
-<tr>
-<td align="left"><code>delimiter</code></td>
-<td align="left">千位数分隔符号</td>
-<td align="left">,</td>
-</tr>
-<tr>
-<td align="left"><code>separator</code></td>
-<td align="left">整数和小数之间的分隔符号</td>
-<td align="left">.</td>
-</tr>
-</tbody></table>
-<h3 id="meta-generator"><a href="#meta-generator" class="headerlink" title="meta_generator"></a>meta_generator</h3><p>Inserts <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta" target="_blank" rel="external nofollow noopener noreferrer">generator tag</a>.</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- meta_generator() %&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>Examples:</strong></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">meta_generator</span>() %&gt;</span></span><br><span class="line">// <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"generator"</span> <span class="attr">content</span>=<span class="string">"Hexo 4.0.0"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="open-graph"><a href="#open-graph" class="headerlink" title="open_graph"></a>open_graph</h3><p>插入 open graph 资源。</p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- <span class="keyword">open</span><span class="constructor">_graph([<span class="params">options</span>])</span> %&gt;</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-<th align="left">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>title</code></td>
-<td align="left">页面标题 (<code>og:title</code>)</td>
-<td align="left"><code>page.title</code></td>
-</tr>
-<tr>
-<td align="left"><code>type</code></td>
-<td align="left">页面类型 (<code>og:type</code>)</td>
-<td align="left">blog</td>
-</tr>
-<tr>
-<td align="left"><code>url</code></td>
-<td align="left">页面网址 (<code>og:url</code>)</td>
-<td align="left"><code>url</code></td>
-</tr>
-<tr>
-<td align="left"><code>image</code></td>
-<td align="left">页面图片 (<code>og:image</code>)</td>
-<td align="left">内容中的图片</td>
-</tr>
-<tr>
-<td align="left"><code>site_name</code></td>
-<td align="left">网站名称 (<code>og:site_name</code>)</td>
-<td align="left"><code>config.title</code></td>
-</tr>
-<tr>
-<td align="left"><code>description</code></td>
-<td align="left">页面描述 (<code>og:description</code>)</td>
-<td align="left">内容摘要或前 200 字</td>
-</tr>
-<tr>
-<td align="left"><code>twitter_card</code></td>
-<td align="left">Twitter 卡片类型 (<code>twitter:card</code>)</td>
-<td align="left">summary</td>
-</tr>
-<tr>
-<td align="left"><code>twitter_id</code></td>
-<td align="left">Twitter ID (<code>twitter:creator</code>)</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><code>twitter_site</code></td>
-<td align="left">Twitter 网站 (<code>twitter:site</code>)</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><code>google_plus</code></td>
-<td align="left">Google+ 个人资料链接</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><code>fb_admins</code></td>
-<td align="left">Facebook 管理者 ID</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><code>fb_app_id</code></td>
-<td align="left">Facebook 应用程序 ID</td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<h3 id="toc"><a href="#toc" class="headerlink" title="toc"></a>toc</h3><p>解析内容中的标题标签 (h1~h6) 并插入目录。</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- toc<span class="comment">(str, [options])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-<th align="left">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>class</code></td>
-<td align="left">Class 名称</td>
-<td align="left">toc</td>
-</tr>
-<tr>
-<td align="left"><code>list_number</code></td>
-<td align="left">显示编号</td>
-<td align="left">true</td>
-</tr>
-<tr>
-<td align="left"><code>max_depth</code></td>
-<td align="left">生成 TOC 的最大深度</td>
-<td align="left">6</td>
-</tr>
-<tr>
-<td align="left"><code>min_depth</code></td>
-<td align="left">生成 TOC 的最小深度</td>
-<td align="left">1</td>
-</tr>
-</tbody></table>
-<p><strong>示例：</strong></p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- toc<span class="comment">(page.content)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
-<p><img src alt="logo"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -781,7 +554,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -794,7 +567,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -860,7 +633,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共24.6k字</span>
+  <span class="post-count">博客全站共25.2k字</span>
 </div>
 
         
@@ -951,6 +724,7 @@
 
 
 
+
 <script>
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
@@ -978,7 +752,6 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   }, window.Valine);
 });
 </script>
-
 
 
 
