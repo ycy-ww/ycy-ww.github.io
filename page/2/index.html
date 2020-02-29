@@ -168,17 +168,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">4</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">7</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">2</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">3</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">27</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">31</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -233,7 +233,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/977f8a02.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/967f8653.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -247,7 +247,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/977f8a02.html" class="post-title-link" itemprop="url">next config</a>
+            <a href="/archives/967f8653.html" class="post-title-link" itemprop="url">next config-2</a>
         </h2>
 
         <div class="post-meta">
@@ -257,7 +257,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2-28-2020 9:12:10 晚上" itemprop="dateCreated datePublished" datetime="2020-02-28T21:12:10+08:00">2-28-2020</time>
+              <time title="创建时间：2-29-2020 7:38:42 晚上" itemprop="dateCreated datePublished" datetime="2020-02-29T19:38:42+08:00">2-29-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -278,8 +278,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/977f8a02.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/977f8a02.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/967f8653.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/967f8653.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -296,75 +296,53 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="NexT-主题基础设置"><a href="#NexT-主题基础设置" class="headerlink" title="NexT 主题基础设置"></a>NexT 主题基础设置</h1><h3 id="设置-菜单"><a href="#设置-菜单" class="headerlink" title="设置 菜单"></a>设置 菜单</h3><p>菜单配置包括三个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。 NexT 使用的是 <a href="http://fontawesome.io/" target="_blank" rel="external nofollow noopener noreferrer">Font Awesome</a> 提供的图标， Font Awesome 提供了 600+ 的图标，可以满足绝大的多数的场景，同时无须担心在 Retina 屏幕下 图标模糊的问题。</p>
+          <h1 id="NexT-主题基础设置-2"><a href="#NexT-主题基础设置-2" class="headerlink" title="NexT 主题基础设置 2"></a>NexT 主题基础设置 2</h1><h3 id="设置-RSS"><a href="#设置-RSS" class="headerlink" title="设置 RSS"></a>设置 RSS</h3><h3 id="添加「标签」页面"><a href="#添加「标签」页面" class="headerlink" title="添加「标签」页面"></a>添加「标签」页面</h3><p><strong>注意：</strong>如果有集成评论服务，页面也会带有评论。 若需要关闭的话，请添加字段 <code>comments</code> 并将值设置为 <code>false</code></p>
+<h3 id="设置字体"><a href="#设置字体" class="headerlink" title="设置字体"></a>设置字体</h3><p>为了解决 <a href="https://www.google.com/fonts" target="_blank" rel="external nofollow noopener noreferrer">Google Fonts API</a> 不稳定的问题，NexT 在 5.0.1 中引入此特性。 通过此特性，你可以指定所使用的字体库外链地址；与此同时，NexT 开放了 5 个特定范围的字体设定，他们是：</p>
+<ul>
+<li>全局字体：定义的字体将在全站范围使用</li>
+<li>标题字体：文章内标题的字体（h1, h2, h3, h4, h5, h6）</li>
+<li>文章字体：文章所使用的字体</li>
+<li>Logo字体：Logo 所使用的字体</li>
+<li>代码字体： 代码块所使用的字体</li>
+</ul>
+<p>各项所指定的字体将作为首选字体，当他们不可用时会自动 Fallback 到 NexT 设定的基础字体组：</p>
+<ul>
+<li>非代码类字体：Fallback 到 <code>&quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif</code></li>
+<li>代码类字体： Fallback 到 <code>consolas, Menlo, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, monospace</code></li>
+</ul>
+<p>另外，每一项都有一个额外的 <code>external</code> 属性，此属性用来控制是否使用外链字体库。 开放此属性方便你设定那些已经安装在系统中的字体，减少不必要的请求（请求大小）。</p>
+<p>font:<br>  enable: true</p>
+<p>外链字体库地址，例如 //fonts.googleapis.com (默认值)</p>
+<p>  host:</p>
+<p>全局字体，应用在 body 元素上</p>
+<p>  global:<br>    external: true<br>    family: Monda</p>
+<p>标题字体 (h1, h2, h3, h4, h5, h6)</p>
+<p>  headings:<br>    external: true<br>    family: Roboto Slab</p>
+<p>文章字体</p>
+<p>  posts:<br>    external: true<br>    family:</p>
+<p>Logo 字体</p>
+<p>  logo:<br>    external: true<br>    family: Lobster Two<br>    size: 24</p>
+<p>代码字体，应用于 code 以及代码块</p>
+<p>  codes:<br>    external: true<br>    family: PT Mono</p>
+<h3 id="设置代码高亮主题"><a href="#设置代码高亮主题" class="headerlink" title="设置代码高亮主题"></a>设置代码高亮主题</h3><p>NexT 使用 <a href="https://github.com/chriskempson/tomorrow-theme" target="_blank" rel="external nofollow noopener noreferrer">Tomorrow Theme</a> 作为代码高亮，共有5款主题供你选择。 NexT 默认使用的是 白色的 <code>normal</code> 主题，可选的值有 <code>normal</code>，<code>night</code>， <code>night blue</code>， <code>night bright</code>， <code>night eighties</code>：</p>
+<h3 id="侧边栏社交链接"><a href="#侧边栏社交链接" class="headerlink" title="侧边栏社交链接"></a>侧边栏社交链接</h3><p>侧栏社交链接的修改包含两个部分，第一是链接，第二是链接图标。</p>
 <ol>
-<li>设定菜单内容，对应的字段是 <code>menu</code>。 菜单内容的设置格式是：<code>item name: link</code>。其中 <code>item name</code>是一个名称，这个名称并不直接显示在页面上，她将用于匹配图标以及翻译。</li>
+<li>链接放置在 <code>social</code> 字段下，一行一个链接。其键值格式是 <code>显示文本: 链接地址</code>。</li>
 </ol>
-<blockquote>
-<p>NexT 默认的菜单项有（标注 ! 的项表示需要手动创建这个页面）：</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="left">键值</th>
-<th align="left">设定值</th>
-<th align="left">显示文本（简体中文）</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">home</td>
-<td align="left"><code>home: /</code></td>
-<td align="left">主页</td>
-</tr>
-<tr>
-<td align="left">archives</td>
-<td align="left"><code>archives: /archives</code></td>
-<td align="left">归档页</td>
-</tr>
-<tr>
-<td align="left">categories</td>
-<td align="left"><code>categories: /categories</code></td>
-<td align="left">分类页 !</td>
-</tr>
-<tr>
-<td align="left">tags</td>
-<td align="left"><code>tags: /tags</code></td>
-<td align="left">标签页 !</td>
-</tr>
-<tr>
-<td align="left">about</td>
-<td align="left"><code>about: /about</code></td>
-<td align="left">关于页面 !</td>
-</tr>
-<tr>
-<td align="left">commonweal</td>
-<td align="left"><code>commonweal: /404.html</code></td>
-<td align="left">公益 404 !</td>
-</tr>
-</tbody></table>
-<ul>
-<li>设置菜单项的显示文本。Hexo 在生成的时候将使用 这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在 NexT 主题目录下的 <code>languages/{language}.yml</code> （<code>{language}</code> 为你所使用的语言）。</li>
-</ul>
-<blockquote>
-<blockquote>
-<p>以简体中文为例，若你需要添加一个菜单项，比如 <code>something</code>。那么就需要修改简体中文对应的翻译文件 <code>languages/zh-Hans.yml</code>，在 <code>menu</code> 字段下添加一项： <code>something: 有料</code></p>
-</blockquote>
-</blockquote>
-<ul>
-<li>设定菜单项的图标，对应的字段是 <code>menu_icons</code>。 此设定格式是 <code>item name: icon name</code>，其中 <code>item name</code> 与上一步所配置的菜单名字对应，<code>icon name</code> 是 Font Awesome 图标的 名字。而 <code>enable</code> 可用于控制是否显示图标，你可以设置成 <code>false</code> 来去掉图标。</li>
-</ul>
-<h3 id="设置-侧栏"><a href="#设置-侧栏" class="headerlink" title="设置 侧栏"></a>设置 侧栏</h3><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。 可以通过修改 <strong>主题配置文件</strong> 中的 <code>sidebar</code> 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机。</p>
-<blockquote>
-<p>已知侧栏在 <code>use motion: false</code> 的情况下不会展示。</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/archives/977f8a02.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<ol start="2">
+<li>设定链接的图标，对应的字段是 <code>social_icons</code>。其键值格式是 <code>匹配键: Font Awesome 图标名称</code>， <code>匹配键</code> 与上一步所配置的链接的 <code>显示文本</code> 相同（大小写严格匹配），<code>图标名称</code> 是 Font Awesome 图标的名字（不必带 <code>fa-</code> 前缀）。 <code>enable</code> 选项用于控制是否显示图标，你可以设置成 <code>false</code> 来去掉图标。</li>
+</ol>
+<h3 id="开启打赏功能"><a href="#开启打赏功能" class="headerlink" title="开启打赏功能"></a>开启打赏功能</h3><p>越来越多的平台（微信公众平台，新浪微博，简书，百度打赏等）支持打赏功能，付费阅读时代越来越近，特此增加了打赏功能，支持微信打赏和支付宝打赏。 只需要 <strong>主题配置文件</strong> 中填入 微信 和 支付宝 收款二维码图片地址 即可开启该功能。</p>
+<h3 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接"></a>友情链接</h3><h3 id="腾讯公益404页面"><a href="#腾讯公益404页面" class="headerlink" title="腾讯公益404页面"></a>腾讯公益404页面</h3><h3 id="站点建立时间"><a href="#站点建立时间" class="headerlink" title="站点建立时间"></a>站点建立时间</h3><p>这个时间将在站点的底部显示，例如 <code>© 2013 - 2015</code>。 编辑 <strong>主题配置文件</strong>，新增字段 <code>since</code>。</p>
+<h3 id="订阅微信公众号"><a href="#订阅微信公众号" class="headerlink" title="订阅微信公众号"></a>订阅微信公众号</h3><h1 id="Wechat-Subscriber"><a href="#Wechat-Subscriber" class="headerlink" title="Wechat Subscriber"></a>Wechat Subscriber</h1><p>wechat_subscriber:<br>  enabled: true<br>  qcode: /uploads/wechat-qcode.jpg<br>  description: 欢迎您扫一扫上面的微信公众号，订阅我的博客！</p>
+<h3 id="设置「动画效果」"><a href="#设置「动画效果」" class="headerlink" title="设置「动画效果」"></a>设置「动画效果」</h3><p>NexT 默认开启动画效果，效果使用 JavaScript 编写，因此需要等待 JavaScript 脚本完全加载完毕后才会显示内容。 如果您比较在乎速度，可以将设置此字段的值为 <code>false</code> 来关闭动画</p>
+<p>编辑 <strong>主题配置文件</strong>， 搜索 <code>use_motion</code>，根据您的需求设置值为 <code>true</code> 或者 <code>false</code> 即可</p>
+<h3 id="设置「背景动画」"><a href="#设置「背景动画」" class="headerlink" title="设置「背景动画」"></a>设置「背景动画」</h3><p>NexT 自带两种背景动画效果</p>
+<p>编辑 <strong>主题配置文件</strong>， 搜索 <code>canvas_nest</code> 或 <code>three_waves</code>，根据您的需求设置值为 <code>true</code> 或者 <code>false</code> 即可：</p>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+
       
     </div>
 
@@ -383,7 +361,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/69913370.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/d66d780d.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -397,7 +375,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/69913370.html" class="post-title-link" itemprop="url">辅助函数2</a>
+            <a href="/archives/d66d780d.html" class="post-title-link" itemprop="url">eclipse 插件安装</a>
         </h2>
 
         <div class="post-meta">
@@ -407,7 +385,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2-28-2020 3:03:05 下午" itemprop="dateCreated datePublished" datetime="2020-02-28T15:03:05+08:00">2-28-2020</time>
+              <time title="创建时间：2-29-2020 7:32:51 晚上" itemprop="dateCreated datePublished" datetime="2020-02-29T19:32:51+08:00">2-29-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -428,8 +406,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/69913370.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/69913370.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/d66d780d.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/d66d780d.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -446,35 +424,34 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="辅助函数-2"><a href="#辅助函数-2" class="headerlink" title="辅助函数 2"></a>辅助函数 2</h1><h2 id="条件函数"><a href="#条件函数" class="headerlink" title="条件函数"></a>条件函数</h2><h3 id="is-current"><a href="#is-current" class="headerlink" title="is_current"></a>is_current</h3><p>检查 <code>path</code> 是否符合目前页面的网址。开启 <code>strict</code> 选项启用严格比对。</p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- is<span class="constructor">_current(<span class="params">path</span>, [<span class="params">strict</span>])</span> %&gt;</span><br></pre></td></tr></table></figure>
+          <h1 id="eclipse-插件安装-——-web项目"><a href="#eclipse-插件安装-——-web项目" class="headerlink" title="eclipse 插件安装 —— web项目"></a>eclipse 插件安装 —— web项目</h1><p>要导入Dynamic Web Project项目，就要为当前的eclipse安装Java EE开发插件。</p>
+<p><strong>步骤如下：</strong></p>
+<ol>
+<li><p>找到菜单栏中的HELP按钮，点击下图的Install New Software选项。</p>
+</li>
+<li><p>点击All available Sites按钮，这时候会稍微等待一段时间，之后会出现下面的一系列选项，勾选下面箭头的选项，点击NEXT按钮</p>
+</li>
+<li><p>依次点击“Next ”知道你看到 “ Review licences”的窗口。在这个窗口选择 “I accept the terms of the licence agreement” 并且点击“Finish”。</p>
+</li>
+<li><p>安装完插件之后, Eclipse会要求你重启eclipse，选择“yes”</p>
+</li>
+<li><p>重启eclipse之后, 打开新建项目的面板，就可以看到 Web文件夹 和 “Dynamic<br>Web Project” 选项了</p>
+</li>
+</ol>
+<hr>
+<p><strong>创建web项目：</strong></p>
+<ol>
+<li>输入项目名称，选择运行时环境（中间件环境），选择web相应的版本</li>
+</ol>
+<p><img src="https://img-blog.csdn.net/20180928212317161?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4ODAzOTc4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="参阅"></p>
+<ol start="2">
+<li>点击Finish。此时如果发现java web工程缺少web.xml文件（有web.xml文件请忽略这一步），那么右键项目名称-&gt;Java EE Tools-&gt;Generate Deployment descriptor stub</li>
+<li>最后项目成功创建</li>
+</ol>
+<hr>
+<p><strong><em>转载标明出处:</em></strong> <em><a href="http://www.wwyyqblog.work">www.wwyyqblog.work</a></em>                            </p>
+<p><kbd>ycy-ww 出品</kbd></p>
 
-<h3 id="is-home"><a href="#is-home" class="headerlink" title="is_home"></a>is_home</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_home<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="is-post"><a href="#is-post" class="headerlink" title="is_post"></a>is_post</h3><p>检查当前页面是否为文章。</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_post<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="is-page"><a href="#is-page" class="headerlink" title="is_page"></a>is_page</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_page<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="is-archive"><a href="#is-archive" class="headerlink" title="is_archive"></a>is_archive</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_archive<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="is-year"><a href="#is-year" class="headerlink" title="is_year"></a>is_year</h3><p>检查当前页面是否为年度归档页面。</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_year<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="is-month"><a href="#is-month" class="headerlink" title="is_month"></a>is_month</h3><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- is_month() %&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="is-category"><a href="#is-category" class="headerlink" title="is_category"></a>is_category</h3><p>如果给定一个字符串作为参数，将会检查目前是否为指定分类。</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_category<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br><span class="line">&lt;<span class="meta">%</span>- is_category<span class="comment">('hobby')</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="is-tag"><a href="#is-tag" class="headerlink" title="is_tag"></a>is_tag</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_tag<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br><span class="line">&lt;<span class="meta">%</span>- is_tag<span class="comment">('hobby')</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/archives/69913370.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
@@ -493,7 +470,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -560,20 +537,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -639,7 +616,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共21.7k字</span>
+  <span class="post-count">博客全站共24.6k字</span>
 </div>
 
         
@@ -730,7 +707,6 @@
 
 
 
-
 <script>
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
@@ -758,6 +734,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   }, window.Valine);
 });
 </script>
+
 
 
 

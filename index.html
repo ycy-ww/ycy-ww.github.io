@@ -168,17 +168,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">4</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">7</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">2</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">3</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">27</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">31</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -233,7 +233,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/c40f80fb.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/ba97f213.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -247,7 +247,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/c40f80fb.html" class="post-title-link" itemprop="url">next-config summary</a>
+            <a href="/archives/ba97f213.html" class="post-title-link" itemprop="url">TCP/IP 寻址&邮件</a>
         </h2>
 
         <div class="post-meta">
@@ -257,7 +257,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2-29-2020 2:30:31 下午" itemprop="dateCreated datePublished" datetime="2020-02-29T14:30:31+08:00">2-29-2020</time>
+              <time title="创建时间：2-29-2020 11:06:34 晚上" itemprop="dateCreated datePublished" datetime="2020-02-29T23:06:34+08:00">2-29-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -265,7 +265,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
                 </span>
             </span>
 
@@ -278,8 +278,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/c40f80fb.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/c40f80fb.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/ba97f213.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/ba97f213.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -296,33 +296,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Next-config-summary-2"><a href="#Next-config-summary-2" class="headerlink" title="Next-config summary -2"></a>Next-config summary -2</h1><h1 id="16-在文章底部增加版权信息"><a href="#16-在文章底部增加版权信息" class="headerlink" title="16. 在文章底部增加版权信息"></a>16. 在文章底部增加版权信息</h1><p><strong>实现效果图</strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/5308475-a264542f53665849.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
-<p>在目录 <code>next/layout/_macro/下</code>添加 <code>my-copyright.swig</code>：</p>
-<figure class="highlight twig"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="keyword">if</span></span> page.copyright %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"my_post_copyright"</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">  </span></span><br><span class="line"><span class="xml">  <span class="comment">&lt;!-- JS库 sweetalert 可修改路径 --&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/sweetalert/dist/sweetalert.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>本文标题:<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"</span></span></span><span class="template-variable">&#123;&#123; url_for(page.path) &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">"</span>&gt;</span></span><span class="template-variable">&#123;&#123; page.title &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>文章作者:<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/"</span> <span class="attr">title</span>=<span class="string">"访问 </span></span></span><span class="template-variable">&#123;&#123; theme.author &#125;&#125;</span><span class="xml"><span class="tag"><span class="string"> 的个人博客"</span>&gt;</span></span><span class="template-variable">&#123;&#123; theme.author &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>发布时间:<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><span class="template-variable">&#123;&#123; page.<span class="name">date</span>.format("YYYY年MM月DD日 - HH:mm") &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>最后更新:<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><span class="template-variable">&#123;&#123; page.updated.format("YYYY年MM月DD日 - HH:mm") &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>原始链接:<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"</span></span></span><span class="template-variable">&#123;&#123; url_for(page.path) &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">"</span> <span class="attr">title</span>=<span class="string">"</span></span></span><span class="template-variable">&#123;&#123; page.title &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">"</span>&gt;</span></span><span class="template-variable">&#123;&#123; page.permalink &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"copy-path"</span>  <span class="attr">title</span>=<span class="string">"点击复制文章链接"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-clipboard"</span> <span class="attr">data-clipboard-text</span>=<span class="string">"</span></span></span><span class="template-variable">&#123;&#123; page.permalink &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">"</span>  <span class="attr">aria-label</span>=<span class="string">"复制成功！"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>许可协议:<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-creative-commons"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">rel</span>=<span class="string">"license"</span> <span class="attr">href</span>=<span class="string">"https://creativecommons.org/licenses/by-nc-nd/4.0/"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">title</span>=<span class="string">"Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"</span>&gt;</span>署名-非商业性使用-禁止演绎 4.0 国际<span class="tag">&lt;/<span class="name">a</span>&gt;</span> 转载请保留原文链接及作者。<span class="tag">&lt;/<span class="name">p</span>&gt;</span>  </span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span> </span></span><br><span class="line"><span class="xml">    var clipboard = new Clipboard('.fa-clipboard');</span></span><br><span class="line"><span class="xml">    $(".fa-clipboard").click(function()&#123;</span></span><br><span class="line"><span class="xml">      clipboard.on('success', function()&#123;</span></span><br><span class="line"><span class="xml">        swal(&#123;   </span></span><br><span class="line"><span class="xml">          title: "",   </span></span><br><span class="line"><span class="xml">          text: '复制成功',</span></span><br><span class="line"><span class="xml">          icon: "success", </span></span><br><span class="line"><span class="xml">          showConfirmButton: true</span></span><br><span class="line"><span class="xml">          &#125;);</span></span><br><span class="line"><span class="xml">    &#125;);</span></span><br><span class="line"><span class="xml">    &#125;);  </span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="keyword">endif</span></span> %&#125;</span></span><br></pre></td></tr></table></figure>
-
-<p>在目录<code>next/source/css/_common/components/post/</code>下添加<code>my-post-copyright.styl</code>：</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.my_post_copyright</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">85%</span>;</span><br><span class="line">  <span class="attribute">max-width</span>: <span class="number">45em</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">2.8em</span> auto <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0.5em</span> <span class="number">1.0em</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#d3d3d3</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">0.93rem</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.6em</span>;</span><br><span class="line">  <span class="attribute">word-break</span>: break-all;</span><br><span class="line">  <span class="attribute">background</span>: rgba(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.4</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.my_post_copyright</span> <span class="selector-tag">p</span>&#123;<span class="attribute">margin</span>:<span class="number">0</span>;&#125;</span><br><span class="line"><span class="selector-class">.my_post_copyright</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">5.2em</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#b5b5b5</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.my_post_copyright</span> <span class="selector-class">.raw</span> &#123;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">1em</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">5em</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.my_post_copyright</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#808080</span>;</span><br><span class="line">  <span class="attribute">border-bottom</span>:<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.my_post_copyright</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#a3d2a3</span>;</span><br><span class="line">  <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.my_post_copyright</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.fa-clipboard</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.my_post_copyright</span> <span class="selector-class">.post-url</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">font-weight</span>: normal;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.my_post_copyright</span> <span class="selector-class">.copy-path</span> &#123;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">1em</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1em</span>;</span><br><span class="line">  +mobile()&#123;<span class="attribute">display</span>:none;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.my_post_copyright</span> <span class="selector-class">.copy-path</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#808080</span>;</span><br><span class="line">  <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>修改<code>next/layout/_macro/post.swig</code>，在代码</p>
-<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">      </span><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> not is_index %&#125;</span></span><br><span class="line"><span class="xml">        </span><span class="template-tag">&#123;% <span class="name"><span class="name">include</span></span> 'wechat-subscriber.swig' %&#125;</span></span><br><span class="line"><span class="xml">      </span><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<p>之前添加增加如下代码：</p>
-<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">      </span><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> not is_index %&#125;</span></span><br><span class="line"><span class="xml">        </span><span class="template-tag">&#123;% <span class="name"><span class="name">include</span></span> 'my-copyright.swig' %&#125;</span></span><br><span class="line"><span class="xml">      </span><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>修改<code>next/source/css/_common/components/post/post.styl</code>文件，在最后一行增加代码：</p>
-<figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">import</span> <span class="string">"my-post-copyright"</span></span><br></pre></td></tr></table></figure>
-
-<p>保存重新生成即可。<br>如果要在该博文下面增加版权信息的显示，需要在 Markdown 中增加copyright: true的设置，类似：</p>
-<blockquote>
-<p><strong>小技巧</strong>：如果你觉得每次都要输入<code>copyright: true</code>很麻烦的话,那么在<code>/scaffolds/post.md</code>文件中添加：<br><img src="http://upload-images.jianshu.io/upload_images/5308475-51f087ce1f1903a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"><br>这样每次<code>hexo new &quot;你的内容&quot;</code>之后，生成的md文件会自动把<code>copyright:</code>加到里面去<br>(<strong>注意</strong>：如果解析出来之后，你的原始链接有问题：如：<code>http://yoursite.com/前端小项目：使用canvas绘画哆啦A梦.html</code>,那么在根目录下<code>_config.yml</code>中写成类似这样：）<br><img src="http://upload-images.jianshu.io/upload_images/5308475-980129b36907d103.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img">就行了。</p>
-</blockquote>
+          <h1 id="TCP-IP-寻址"><a href="#TCP-IP-寻址" class="headerlink" title="TCP/IP 寻址"></a>TCP/IP 寻址</h1><p><strong>TCP/IP 使用 32 个比特或者 4 个 0 到 255 之间的数字来为计算机编址。</strong></p>
+<h2 id="协议族"><a href="#协议族" class="headerlink" title="协议族"></a>协议族</h2><p>TCP/IP 是基于 TCP 和 IP 这两个最初的协议之上的不同的通信协议的大的集合。</p>
 <hr>
+<h3 id="HTTP-超文本传输协议"><a href="#HTTP-超文本传输协议" class="headerlink" title="HTTP - 超文本传输协议"></a>HTTP - 超文本传输协议</h3><p>HTTP 负责 web 服务器与 web 浏览器之间的通信。</p>
+<p>HTTP 用于从 web 客户端（浏览器）向 web 服务器发送请求，并从 web 服务器向 web 客户端返回内容（网页）。</p>
+<h3 id="SSL-安全套接字层"><a href="#SSL-安全套接字层" class="headerlink" title="SSL - 安全套接字层"></a>SSL - 安全套接字层</h3><p>SSL 协议用于为安全数据传输加密数据。</p>
+<h3 id="HTTPS-安全的-HTTP"><a href="#HTTPS-安全的-HTTP" class="headerlink" title="HTTPS - 安全的 HTTP"></a>HTTPS - 安全的 HTTP</h3><hr>
+<h3 id="FTP-文件传输协议"><a href="#FTP-文件传输协议" class="headerlink" title="FTP - 文件传输协议"></a>FTP - 文件传输协议</h3><p>FTP 负责计算机之间的文件传输。</p>
+<h3 id="NTP-网络时间协议"><a href="#NTP-网络时间协议" class="headerlink" title="NTP - 网络时间协议"></a>NTP - 网络时间协议</h3><p>NTP 用于在计算机之间同步时间（钟）。</p>
+<h3 id="DHCP-动态主机配置协议"><a href="#DHCP-动态主机配置协议" class="headerlink" title="DHCP - 动态主机配置协议"></a>DHCP - 动态主机配置协议</h3><p>DHCP 用于向网络中的计算机分配动态 IP 地址。</p>
+<h3 id="SNMP-简单网络管理协议"><a href="#SNMP-简单网络管理协议" class="headerlink" title="SNMP - 简单网络管理协议"></a>SNMP - 简单网络管理协议</h3><p>SNMP 用于计算机网络的管理。</p>
+<hr>
+<h3 id="LDAP-轻量级的目录访问协议"><a href="#LDAP-轻量级的目录访问协议" class="headerlink" title="LDAP - 轻量级的目录访问协议"></a>LDAP - 轻量级的目录访问协议</h3><p>LDAP 用于从因特网搜集关于用户和电子邮件地址的信息。</p>
+<h3 id="ICMP-因特网消息控制协议"><a href="#ICMP-因特网消息控制协议" class="headerlink" title="ICMP - 因特网消息控制协议"></a>ICMP - 因特网消息控制协议</h3><p>ICMP 负责网络中的错误处理。</p>
+<hr>
+<h3 id="ARP-Address-Resolution-Protocol"><a href="#ARP-Address-Resolution-Protocol" class="headerlink" title="ARP - Address Resolution Protocol"></a>ARP - Address Resolution Protocol</h3><p>ARP - 用于通过 IP 来查找基于 IP 地址的计算机网卡的硬件地址。</p>
+<h3 id="RARP-Reverse-Address-Resolution-Protocol"><a href="#RARP-Reverse-Address-Resolution-Protocol" class="headerlink" title="RARP - Reverse Address Resolution Protocol"></a>RARP - Reverse Address Resolution Protocol</h3><p>RARP 用于通过 IP 查找基于硬件地址的计算机网卡的 IP 地址。</p>
+<hr>
+<h3 id="BOOTP-Boot-Protocol"><a href="#BOOTP-Boot-Protocol" class="headerlink" title="BOOTP - Boot Protocol"></a>BOOTP - Boot Protocol</h3><p>BOOTP 用于从网络启动计算机。</p>
+<h3 id="PPTP-点对点隧道协议"><a href="#PPTP-点对点隧道协议" class="headerlink" title="PPTP - 点对点隧道协议"></a>PPTP - 点对点隧道协议</h3><p>PPTP 用于私人网络之间的连接（隧道）。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/archives/c40f80fb.html#more" rel="contents">
+              <a class="btn" href="/archives/ba97f213.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -346,7 +342,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/c40f80fb.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/55476d4b.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -360,7 +356,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/c40f80fb.html" class="post-title-link" itemprop="url">next-config summary</a>
+            <a href="/archives/55476d4b.html" class="post-title-link" itemprop="url">TCP/IP 简介</a>
         </h2>
 
         <div class="post-meta">
@@ -370,7 +366,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2-29-2020 12:05:03 凌晨" itemprop="dateCreated datePublished" datetime="2020-02-29T00:05:03+08:00">2-29-2020</time>
+              <time title="创建时间：2-29-2020 10:32:40 晚上" itemprop="dateCreated datePublished" datetime="2020-02-29T22:32:40+08:00">2-29-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -378,7 +374,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
                 </span>
             </span>
 
@@ -391,8 +387,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/c40f80fb.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/c40f80fb.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/55476d4b.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/55476d4b.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -409,53 +405,39 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Hexo的next主题个性化配置教程"><a href="#Hexo的next主题个性化配置教程" class="headerlink" title="Hexo的next主题个性化配置教程"></a>Hexo的next主题个性化配置教程</h1><hr>
-<h1 id="1-添加RSS"><a href="#1-添加RSS" class="headerlink" title="1.添加RSS"></a>1.添加RSS</h1><p><strong>具体实现方法</strong></p>
-<p>切换到blog（根目录）</p>
-<p>然后安装 Hexo 插件：(这个插件会放在<code>node_modules</code>这个文件夹里)</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> <span class="comment">--save hexo-generator-feed</span></span><br></pre></td></tr></table></figure>
-
-<p>接下来打开站点配置文件</p>
-<p>在里面的末尾添加：(<strong>请注意</strong>在冒号后面要加一个空格，不然会发生错误！)</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: http:<span class="comment">//hexo.io/plugins/</span></span><br><span class="line">plugins: hexo-<span class="keyword">generate</span>-feed</span><br></pre></td></tr></table></figure>
-
-<p>然后打开next主题文件夹里面的<code>_config.yml</code>,在里面配置为如下样子：(就是在<code>rss:</code>的后面加上<code>/atom.xml</code>,<strong>注意</strong>在冒号后面要加一个空格)</p>
+          <h1 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a>TCP/IP</h1><h2 id="TCP-IP-是因特网的通信协议。"><a href="#TCP-IP-是因特网的通信协议。" class="headerlink" title="TCP/IP 是因特网的通信协议。"></a>TCP/IP 是因特网的通信协议。</h2><p>通信协议是对计算机必须遵守的规则的描述，只有遵守这些规则，计算机之间才能进行通信。</p>
+<h3 id="因特网地址也是-TCP-IP"><a href="#因特网地址也是-TCP-IP" class="headerlink" title="因特网地址也是 TCP/IP"></a>因特网地址也是 TCP/IP</h3><p>你的因特网地址 112.32.22.120 也是标准的 TCP/IP 协议的一部分。</p>
+<p>TCP/IP 指传输控制协议/网际协议 (<em>T</em>ransmission <em>C</em>ontrol <em>P</em>rotocol / <em>I</em>nternet <em>P</em>rotocol)。</p>
+<p>TCP/IP 定义了电子设备（比如计算机）如何连入因特网，以及数据如何在它们之间传输的标准。</p>
+<h3 id="在-TCP-IP-内部"><a href="#在-TCP-IP-内部" class="headerlink" title="在 TCP/IP 内部"></a>在 TCP/IP 内部</h3><p>在 TCP/IP 中包含一系列用于处理数据通信的协议：</p>
+<ul>
+<li>TCP (传输控制协议) - 应用程序之间通信</li>
+<li>UDP (用户数据包协议) - 应用程序之间的简单通信</li>
+<li>IP (网际协议) - 计算机之间的通信</li>
+<li>ICMP (因特网消息控制协议) - 针对错误和状态</li>
+<li>DHCP (动态主机配置协议) - 针对动态寻址</li>
+</ul>
+<h3 id="TCP-使用固定的连接"><a href="#TCP-使用固定的连接" class="headerlink" title="TCP 使用固定的连接"></a>TCP 使用固定的连接</h3><p>TCP 用于应用程序之间的通信。</p>
+<p>当应用程序希望通过 TCP 与另一个应用程序通信时，它会发送一个通信请求。这个请求必须被送到一个确切的地址。在双方“握手”之后，TCP 将在两个应用程序之间建立一个全双工 (full-duplex) 的通信。</p>
+<p>这个全双工的通信将占用两个进程之间的通信线路，直到它被一方或双方关闭为止。</p>
+<p>UDP 和 TCP 很相似，但是更简单，同时可靠性低于 TCP。</p>
+<h3 id="IP-是无连接的"><a href="#IP-是无连接的" class="headerlink" title="IP 是无连接的"></a>IP 是无连接的</h3><p>IP 用于计算机之间的通信。</p>
+<p>IP 是无连接的通信协议。它不会占用两个正在通信的计算机之间的通信线路。这样，IP 就降低了对网络线路的需求。每条线可以同时满足许多不同的计算机之间的通信需要。</p>
+<p>通过 IP，消息（或者其他数据）被分割为小的独立的包，并通过因特网在计算机之间传送。</p>
+<p>IP 负责将每个包路由至它的目的地。</p>
+<h3 id="IP-路由器"><a href="#IP-路由器" class="headerlink" title="IP 路由器"></a>IP 路由器</h3><p>当一个 IP 包从一台计算机被发送，它会到达一个 IP 路由器。</p>
+<p>IP 路由器负责将这个包路由至它的目的地，直接地或者通过其他的路由器。</p>
+<p>在一个相同的通信中，一个包所经由的路径可能会和其他的包不同。而路由器负责根据通信量、网络中的错误或者其他参数来进行正确地寻址。</p>
 <hr>
-<h1 id="2-修改文章内链接文本样式"><a href="#2-修改文章内链接文本样式" class="headerlink" title="2. 修改文章内链接文本样式"></a>2. 修改文章内链接文本样式</h1><p><strong>实现效果图</strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/5308475-8cc4fc18c399af7e.gif?imageMogr2/auto-orient/strip" alt="img"></p>
-<p><strong>具体实现方法</strong></p>
-<p>修改文件 <code>themes\next\source\css\_common\components\post\post.styl</code>，在末尾添加如下css样式，：</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 文章内链接文本样式</span></span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">p</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#0593d3</span>;</span><br><span class="line">  <span class="attribute">border-bottom</span>: none;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#0593d3</span>;</span><br><span class="line">  &amp;<span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fc6423</span>;</span><br><span class="line">    <span class="attribute">border-bottom</span>: none;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#fc6423</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>其中选择<code>.post-body</code> 是为了不影响标题，选择 <code>p</code> 是为了不影响首页“阅读全文”的显示样式,颜色可以自己定义。</p>
+<h2 id="TCP-IP-1"><a href="#TCP-IP-1" class="headerlink" title="TCP/IP"></a>TCP/IP</h2><p>TCP/IP 意味着 TCP 和 IP 在一起协同工作。</p>
+<p>TCP 负责应用软件（比如你的浏览器）和网络软件之间的通信。</p>
+<p>IP 负责计算机之间的通信。</p>
+<p>TCP 负责将数据分割并装入 IP 包，然后在它们到达的时候重新组合它们。</p>
+<p>IP 负责将包发送至接受者。</p>
 <hr>
-<h1 id="3-修改文章底部的那个带-号的标签"><a href="#3-修改文章底部的那个带-号的标签" class="headerlink" title="3. 修改文章底部的那个带#号的标签"></a>3. 修改文章底部的那个带#号的标签</h1><p><strong>实现效果图</strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/5308475-9f1817d2d7627f7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
-<p><strong>具体实现方法</strong></p>
-<p>修改模板<code>/themes/next/layout/_macro/post.swig</code>，搜索 <code>rel=&quot;tag&quot;&gt;#</code>，将 # 换成<code>&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;</code></p>
-<hr>
-<h1 id="4-在每篇文章末尾统一添加“本文结束”标记"><a href="#4-在每篇文章末尾统一添加“本文结束”标记" class="headerlink" title="4. 在每篇文章末尾统一添加“本文结束”标记"></a>4. 在每篇文章末尾统一添加“本文结束”标记</h1><p><strong>实现效果图</strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/5308475-90be73acbc5f8a7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
-<p><strong>具体实现方法</strong></p>
-<p>在路径 <code>\themes\next\layout\_macro</code> 中新建 <code>passage-end-tag.swig</code> 文件,并添加以下内容：</p>
-<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> not is_index %&#125;</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"text-align:center;color: #ccc;font-size:14px;"</span>&gt;</span>-------------本文结束<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-paw"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>感谢您的阅读-------------<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
 
-<p>接着打开<code>\themes\next\layout\_macro\post.swig</code>文件，在<code>post-body</code> 之后， <code>post-footer</code> 之前添加如下代码</p>
-<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">  </span><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> not is_index %&#125;</span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">include</span></span> 'passage-end-tag.swig' %&#125;</span></span><br><span class="line"><span class="xml">  </span><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<p>然后打开主题配置文件（<code>_config.yml</code>),在末尾添加：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 文章末尾添加“本文结束”标记</span></span><br><span class="line"><span class="attr">passage_end_tag:</span></span><br><span class="line">  <span class="attr">enabled:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>完成以上设置之后，在每篇文章之后都会添加如上效果图的样子。</p>
-<hr>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/archives/c40f80fb.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
@@ -474,7 +456,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -541,20 +523,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -620,7 +602,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共21.7k字</span>
+  <span class="post-count">博客全站共24.6k字</span>
 </div>
 
         
@@ -711,7 +693,6 @@
 
 
 
-
 <script>
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
@@ -739,6 +720,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   }, window.Valine);
 });
 </script>
+
 
 
 

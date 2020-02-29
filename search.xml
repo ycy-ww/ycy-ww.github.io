@@ -1,6 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>TCP/IP 寻址&amp;邮件</title>
+    <url>/archives/ba97f213.html</url>
+    <content><![CDATA[<h1 id="TCP-IP-寻址"><a href="#TCP-IP-寻址" class="headerlink" title="TCP/IP 寻址"></a>TCP/IP 寻址</h1><p><strong>TCP/IP 使用 32 个比特或者 4 个 0 到 255 之间的数字来为计算机编址。</strong></p>
+<h2 id="协议族"><a href="#协议族" class="headerlink" title="协议族"></a>协议族</h2><p>TCP/IP 是基于 TCP 和 IP 这两个最初的协议之上的不同的通信协议的大的集合。</p>
+<hr>
+<h3 id="HTTP-超文本传输协议"><a href="#HTTP-超文本传输协议" class="headerlink" title="HTTP - 超文本传输协议"></a>HTTP - 超文本传输协议</h3><p>HTTP 负责 web 服务器与 web 浏览器之间的通信。</p>
+<p>HTTP 用于从 web 客户端（浏览器）向 web 服务器发送请求，并从 web 服务器向 web 客户端返回内容（网页）。</p>
+<h3 id="SSL-安全套接字层"><a href="#SSL-安全套接字层" class="headerlink" title="SSL - 安全套接字层"></a>SSL - 安全套接字层</h3><p>SSL 协议用于为安全数据传输加密数据。</p>
+<h3 id="HTTPS-安全的-HTTP"><a href="#HTTPS-安全的-HTTP" class="headerlink" title="HTTPS - 安全的 HTTP"></a>HTTPS - 安全的 HTTP</h3><hr>
+<h3 id="FTP-文件传输协议"><a href="#FTP-文件传输协议" class="headerlink" title="FTP - 文件传输协议"></a>FTP - 文件传输协议</h3><p>FTP 负责计算机之间的文件传输。</p>
+<h3 id="NTP-网络时间协议"><a href="#NTP-网络时间协议" class="headerlink" title="NTP - 网络时间协议"></a>NTP - 网络时间协议</h3><p>NTP 用于在计算机之间同步时间（钟）。</p>
+<h3 id="DHCP-动态主机配置协议"><a href="#DHCP-动态主机配置协议" class="headerlink" title="DHCP - 动态主机配置协议"></a>DHCP - 动态主机配置协议</h3><p>DHCP 用于向网络中的计算机分配动态 IP 地址。</p>
+<h3 id="SNMP-简单网络管理协议"><a href="#SNMP-简单网络管理协议" class="headerlink" title="SNMP - 简单网络管理协议"></a>SNMP - 简单网络管理协议</h3><p>SNMP 用于计算机网络的管理。</p>
+<hr>
+<h3 id="LDAP-轻量级的目录访问协议"><a href="#LDAP-轻量级的目录访问协议" class="headerlink" title="LDAP - 轻量级的目录访问协议"></a>LDAP - 轻量级的目录访问协议</h3><p>LDAP 用于从因特网搜集关于用户和电子邮件地址的信息。</p>
+<h3 id="ICMP-因特网消息控制协议"><a href="#ICMP-因特网消息控制协议" class="headerlink" title="ICMP - 因特网消息控制协议"></a>ICMP - 因特网消息控制协议</h3><p>ICMP 负责网络中的错误处理。</p>
+<hr>
+<h3 id="ARP-Address-Resolution-Protocol"><a href="#ARP-Address-Resolution-Protocol" class="headerlink" title="ARP - Address Resolution Protocol"></a>ARP - Address Resolution Protocol</h3><p>ARP - 用于通过 IP 来查找基于 IP 地址的计算机网卡的硬件地址。</p>
+<h3 id="RARP-Reverse-Address-Resolution-Protocol"><a href="#RARP-Reverse-Address-Resolution-Protocol" class="headerlink" title="RARP - Reverse Address Resolution Protocol"></a>RARP - Reverse Address Resolution Protocol</h3><p>RARP 用于通过 IP 查找基于硬件地址的计算机网卡的 IP 地址。</p>
+<hr>
+<h3 id="BOOTP-Boot-Protocol"><a href="#BOOTP-Boot-Protocol" class="headerlink" title="BOOTP - Boot Protocol"></a>BOOTP - Boot Protocol</h3><p>BOOTP 用于从网络启动计算机。</p>
+<h3 id="PPTP-点对点隧道协议"><a href="#PPTP-点对点隧道协议" class="headerlink" title="PPTP - 点对点隧道协议"></a>PPTP - 点对点隧道协议</h3><p>PPTP 用于私人网络之间的连接（隧道）。</p>
+<a id="more"></a>
+
+
+
+
+
+<h1 id="TCP-IP-邮件"><a href="#TCP-IP-邮件" class="headerlink" title="TCP/IP 邮件"></a>TCP/IP 邮件</h1><p><strong>你的电子邮件程序使用不同的 TCP/IP 协议：</strong></p>
+<ul>
+<li>使用 SMTP 来发送邮件</li>
+<li>使用 POP 从邮件服务器下载邮件</li>
+<li>使用 IMAP 连接到邮件服务器</li>
+</ul>
+<hr>
+<h2 id="SMTP-简单邮件传输协议"><a href="#SMTP-简单邮件传输协议" class="headerlink" title="SMTP - 简单邮件传输协议"></a>SMTP - 简单邮件传输协议</h2><p>SMTP 协议用于传输电子邮件。<strong>SMTP 负责把邮件发送到另一台计算机。</strong></p>
+<p>通常情况下，邮件会被送到一台邮件服务器（SMTP 服务器），然后被送到另一台（或几台）服务器，然后最终被送到它的目的地。</p>
+<p>SMTP 可以传送纯文本，但是无法传输诸如图片、声音或者电影之类的二进制数据。</p>
+<p>SMTP 使用 <strong>MIME 协议</strong>(多用途因特网邮件扩展MIME 协议), 使 SMTP 有能力通过 TCP/IP 网络传输多媒体文件，包括声音、视频和二进制数据。MIME 协议会将二进制数据转换为纯文本。</p>
+<h2 id="POP-邮局协议"><a href="#POP-邮局协议" class="headerlink" title="POP - 邮局协议"></a>POP - 邮局协议</h2><p>POP 协议被邮件程序用来取回邮件服务器上面的邮件。</p>
+<p>假如你的邮件程序使用 POP，那么一旦它连接上邮件服务器，你的所有的邮件都会被下载到邮件程序中</p>
+<h2 id="IMAP-因特网消息访问协议"><a href="#IMAP-因特网消息访问协议" class="headerlink" title="IMAP - 因特网消息访问协议"></a>IMAP - 因特网消息访问协议</h2><p>与 POP 类似，IMAP 协议同样被邮件程序使用。</p>
+<p>IMAP 协议与 POP 协议之间的主要差异是：如果 IMAP 连上了邮件服务器，它不会自动地将邮件下载到邮件程序之中。</p>
+<p>IMAP 使你有能力在下载邮件之前先通过邮件服务器端查看他们。通过 IMAP，你可以选择下载这些邮件或者仅仅是删除它们。比方说你需要从不同的位置访问邮件服务器，但是仅仅希望回到办公室的时候再下载邮件，IMAP 在这种情况下会很有用。</p>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>TCP/IP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TCP/IP 简介</title>
+    <url>/archives/55476d4b.html</url>
+    <content><![CDATA[<h1 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a>TCP/IP</h1><h2 id="TCP-IP-是因特网的通信协议。"><a href="#TCP-IP-是因特网的通信协议。" class="headerlink" title="TCP/IP 是因特网的通信协议。"></a>TCP/IP 是因特网的通信协议。</h2><p>通信协议是对计算机必须遵守的规则的描述，只有遵守这些规则，计算机之间才能进行通信。</p>
+<h3 id="因特网地址也是-TCP-IP"><a href="#因特网地址也是-TCP-IP" class="headerlink" title="因特网地址也是 TCP/IP"></a>因特网地址也是 TCP/IP</h3><p>你的因特网地址 112.32.22.120 也是标准的 TCP/IP 协议的一部分。</p>
+<p>TCP/IP 指传输控制协议/网际协议 (<em>T</em>ransmission <em>C</em>ontrol <em>P</em>rotocol / <em>I</em>nternet <em>P</em>rotocol)。</p>
+<p>TCP/IP 定义了电子设备（比如计算机）如何连入因特网，以及数据如何在它们之间传输的标准。</p>
+<h3 id="在-TCP-IP-内部"><a href="#在-TCP-IP-内部" class="headerlink" title="在 TCP/IP 内部"></a>在 TCP/IP 内部</h3><p>在 TCP/IP 中包含一系列用于处理数据通信的协议：</p>
+<ul>
+<li>TCP (传输控制协议) - 应用程序之间通信</li>
+<li>UDP (用户数据包协议) - 应用程序之间的简单通信</li>
+<li>IP (网际协议) - 计算机之间的通信</li>
+<li>ICMP (因特网消息控制协议) - 针对错误和状态</li>
+<li>DHCP (动态主机配置协议) - 针对动态寻址</li>
+</ul>
+<h3 id="TCP-使用固定的连接"><a href="#TCP-使用固定的连接" class="headerlink" title="TCP 使用固定的连接"></a>TCP 使用固定的连接</h3><p>TCP 用于应用程序之间的通信。</p>
+<p>当应用程序希望通过 TCP 与另一个应用程序通信时，它会发送一个通信请求。这个请求必须被送到一个确切的地址。在双方“握手”之后，TCP 将在两个应用程序之间建立一个全双工 (full-duplex) 的通信。</p>
+<p>这个全双工的通信将占用两个进程之间的通信线路，直到它被一方或双方关闭为止。</p>
+<p>UDP 和 TCP 很相似，但是更简单，同时可靠性低于 TCP。</p>
+<h3 id="IP-是无连接的"><a href="#IP-是无连接的" class="headerlink" title="IP 是无连接的"></a>IP 是无连接的</h3><p>IP 用于计算机之间的通信。</p>
+<p>IP 是无连接的通信协议。它不会占用两个正在通信的计算机之间的通信线路。这样，IP 就降低了对网络线路的需求。每条线可以同时满足许多不同的计算机之间的通信需要。</p>
+<p>通过 IP，消息（或者其他数据）被分割为小的独立的包，并通过因特网在计算机之间传送。</p>
+<p>IP 负责将每个包路由至它的目的地。</p>
+<h3 id="IP-路由器"><a href="#IP-路由器" class="headerlink" title="IP 路由器"></a>IP 路由器</h3><p>当一个 IP 包从一台计算机被发送，它会到达一个 IP 路由器。</p>
+<p>IP 路由器负责将这个包路由至它的目的地，直接地或者通过其他的路由器。</p>
+<p>在一个相同的通信中，一个包所经由的路径可能会和其他的包不同。而路由器负责根据通信量、网络中的错误或者其他参数来进行正确地寻址。</p>
+<hr>
+<h2 id="TCP-IP-1"><a href="#TCP-IP-1" class="headerlink" title="TCP/IP"></a>TCP/IP</h2><p>TCP/IP 意味着 TCP 和 IP 在一起协同工作。</p>
+<p>TCP 负责应用软件（比如你的浏览器）和网络软件之间的通信。</p>
+<p>IP 负责计算机之间的通信。</p>
+<p>TCP 负责将数据分割并装入 IP 包，然后在它们到达的时候重新组合它们。</p>
+<p>IP 负责将包发送至接受者。</p>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>TCP/IP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>next config-2</title>
+    <url>/archives/967f8653.html</url>
+    <content><![CDATA[<h1 id="NexT-主题基础设置-2"><a href="#NexT-主题基础设置-2" class="headerlink" title="NexT 主题基础设置 2"></a>NexT 主题基础设置 2</h1><h3 id="设置-RSS"><a href="#设置-RSS" class="headerlink" title="设置 RSS"></a>设置 RSS</h3><h3 id="添加「标签」页面"><a href="#添加「标签」页面" class="headerlink" title="添加「标签」页面"></a>添加「标签」页面</h3><p><strong>注意：</strong>如果有集成评论服务，页面也会带有评论。 若需要关闭的话，请添加字段 <code>comments</code> 并将值设置为 <code>false</code></p>
+<h3 id="设置字体"><a href="#设置字体" class="headerlink" title="设置字体"></a>设置字体</h3><p>为了解决 <a href="https://www.google.com/fonts" target="_blank" rel="external nofollow noopener noreferrer">Google Fonts API</a> 不稳定的问题，NexT 在 5.0.1 中引入此特性。 通过此特性，你可以指定所使用的字体库外链地址；与此同时，NexT 开放了 5 个特定范围的字体设定，他们是：</p>
+<ul>
+<li>全局字体：定义的字体将在全站范围使用</li>
+<li>标题字体：文章内标题的字体（h1, h2, h3, h4, h5, h6）</li>
+<li>文章字体：文章所使用的字体</li>
+<li>Logo字体：Logo 所使用的字体</li>
+<li>代码字体： 代码块所使用的字体</li>
+</ul>
+<p>各项所指定的字体将作为首选字体，当他们不可用时会自动 Fallback 到 NexT 设定的基础字体组：</p>
+<ul>
+<li>非代码类字体：Fallback 到 <code>&quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif</code></li>
+<li>代码类字体： Fallback 到 <code>consolas, Menlo, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, monospace</code></li>
+</ul>
+<p>另外，每一项都有一个额外的 <code>external</code> 属性，此属性用来控制是否使用外链字体库。 开放此属性方便你设定那些已经安装在系统中的字体，减少不必要的请求（请求大小）。</p>
+<p>font:<br>  enable: true</p>
+<p>外链字体库地址，例如 //fonts.googleapis.com (默认值)</p>
+<p>  host:</p>
+<p>全局字体，应用在 body 元素上</p>
+<p>  global:<br>    external: true<br>    family: Monda</p>
+<p>标题字体 (h1, h2, h3, h4, h5, h6)</p>
+<p>  headings:<br>    external: true<br>    family: Roboto Slab</p>
+<p>文章字体</p>
+<p>  posts:<br>    external: true<br>    family:</p>
+<p>Logo 字体</p>
+<p>  logo:<br>    external: true<br>    family: Lobster Two<br>    size: 24</p>
+<p>代码字体，应用于 code 以及代码块</p>
+<p>  codes:<br>    external: true<br>    family: PT Mono</p>
+<h3 id="设置代码高亮主题"><a href="#设置代码高亮主题" class="headerlink" title="设置代码高亮主题"></a>设置代码高亮主题</h3><p>NexT 使用 <a href="https://github.com/chriskempson/tomorrow-theme" target="_blank" rel="external nofollow noopener noreferrer">Tomorrow Theme</a> 作为代码高亮，共有5款主题供你选择。 NexT 默认使用的是 白色的 <code>normal</code> 主题，可选的值有 <code>normal</code>，<code>night</code>， <code>night blue</code>， <code>night bright</code>， <code>night eighties</code>：</p>
+<h3 id="侧边栏社交链接"><a href="#侧边栏社交链接" class="headerlink" title="侧边栏社交链接"></a>侧边栏社交链接</h3><p>侧栏社交链接的修改包含两个部分，第一是链接，第二是链接图标。</p>
+<ol>
+<li>链接放置在 <code>social</code> 字段下，一行一个链接。其键值格式是 <code>显示文本: 链接地址</code>。</li>
+</ol>
+<ol start="2">
+<li>设定链接的图标，对应的字段是 <code>social_icons</code>。其键值格式是 <code>匹配键: Font Awesome 图标名称</code>， <code>匹配键</code> 与上一步所配置的链接的 <code>显示文本</code> 相同（大小写严格匹配），<code>图标名称</code> 是 Font Awesome 图标的名字（不必带 <code>fa-</code> 前缀）。 <code>enable</code> 选项用于控制是否显示图标，你可以设置成 <code>false</code> 来去掉图标。</li>
+</ol>
+<h3 id="开启打赏功能"><a href="#开启打赏功能" class="headerlink" title="开启打赏功能"></a>开启打赏功能</h3><p>越来越多的平台（微信公众平台，新浪微博，简书，百度打赏等）支持打赏功能，付费阅读时代越来越近，特此增加了打赏功能，支持微信打赏和支付宝打赏。 只需要 <strong>主题配置文件</strong> 中填入 微信 和 支付宝 收款二维码图片地址 即可开启该功能。</p>
+<h3 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接"></a>友情链接</h3><h3 id="腾讯公益404页面"><a href="#腾讯公益404页面" class="headerlink" title="腾讯公益404页面"></a>腾讯公益404页面</h3><h3 id="站点建立时间"><a href="#站点建立时间" class="headerlink" title="站点建立时间"></a>站点建立时间</h3><p>这个时间将在站点的底部显示，例如 <code>© 2013 - 2015</code>。 编辑 <strong>主题配置文件</strong>，新增字段 <code>since</code>。</p>
+<h3 id="订阅微信公众号"><a href="#订阅微信公众号" class="headerlink" title="订阅微信公众号"></a>订阅微信公众号</h3><h1 id="Wechat-Subscriber"><a href="#Wechat-Subscriber" class="headerlink" title="Wechat Subscriber"></a>Wechat Subscriber</h1><p>wechat_subscriber:<br>  enabled: true<br>  qcode: /uploads/wechat-qcode.jpg<br>  description: 欢迎您扫一扫上面的微信公众号，订阅我的博客！</p>
+<h3 id="设置「动画效果」"><a href="#设置「动画效果」" class="headerlink" title="设置「动画效果」"></a>设置「动画效果」</h3><p>NexT 默认开启动画效果，效果使用 JavaScript 编写，因此需要等待 JavaScript 脚本完全加载完毕后才会显示内容。 如果您比较在乎速度，可以将设置此字段的值为 <code>false</code> 来关闭动画</p>
+<p>编辑 <strong>主题配置文件</strong>， 搜索 <code>use_motion</code>，根据您的需求设置值为 <code>true</code> 或者 <code>false</code> 即可</p>
+<h3 id="设置「背景动画」"><a href="#设置「背景动画」" class="headerlink" title="设置「背景动画」"></a>设置「背景动画」</h3><p>NexT 自带两种背景动画效果</p>
+<p>编辑 <strong>主题配置文件</strong>， 搜索 <code>canvas_nest</code> 或 <code>three_waves</code>，根据您的需求设置值为 <code>true</code> 或者 <code>false</code> 即可：</p>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>eclipse 插件安装</title>
+    <url>/archives/d66d780d.html</url>
+    <content><![CDATA[<h1 id="eclipse-插件安装-——-web项目"><a href="#eclipse-插件安装-——-web项目" class="headerlink" title="eclipse 插件安装 —— web项目"></a>eclipse 插件安装 —— web项目</h1><p>要导入Dynamic Web Project项目，就要为当前的eclipse安装Java EE开发插件。</p>
+<p><strong>步骤如下：</strong></p>
+<ol>
+<li><p>找到菜单栏中的HELP按钮，点击下图的Install New Software选项。</p>
+</li>
+<li><p>点击All available Sites按钮，这时候会稍微等待一段时间，之后会出现下面的一系列选项，勾选下面箭头的选项，点击NEXT按钮</p>
+</li>
+<li><p>依次点击“Next ”知道你看到 “ Review licences”的窗口。在这个窗口选择 “I accept the terms of the licence agreement” 并且点击“Finish”。</p>
+</li>
+<li><p>安装完插件之后, Eclipse会要求你重启eclipse，选择“yes”</p>
+</li>
+<li><p>重启eclipse之后, 打开新建项目的面板，就可以看到 Web文件夹 和 “Dynamic<br>Web Project” 选项了</p>
+</li>
+</ol>
+<hr>
+<p><strong>创建web项目：</strong></p>
+<ol>
+<li>输入项目名称，选择运行时环境（中间件环境），选择web相应的版本</li>
+</ol>
+<p><img src="https://img-blog.csdn.net/20180928212317161?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4ODAzOTc4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="参阅"></p>
+<ol start="2">
+<li>点击Finish。此时如果发现java web工程缺少web.xml文件（有web.xml文件请忽略这一步），那么右键项目名称-&gt;Java EE Tools-&gt;Generate Deployment descriptor stub</li>
+<li>最后项目成功创建</li>
+</ol>
+<hr>
+<p><strong><em>转载标明出处:</em></strong> <em><a href="http://www.wwyyqblog.work">www.wwyyqblog.work</a></em>                            </p>
+<p><kbd>ycy-ww 出品</kbd></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>eclipse</tag>
+        <tag>安装</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>next-config summary</title>
     <url>/archives/c40f80fb.html</url>
     <content><![CDATA[<h1 id="Next-config-summary-2"><a href="#Next-config-summary-2" class="headerlink" title="Next-config summary -2"></a>Next-config summary -2</h1><h1 id="16-在文章底部增加版权信息"><a href="#16-在文章底部增加版权信息" class="headerlink" title="16. 在文章底部增加版权信息"></a>16. 在文章底部增加版权信息</h1><p><strong>实现效果图</strong></p>
