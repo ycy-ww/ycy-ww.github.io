@@ -168,17 +168,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">8</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">13</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">3</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">4</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">32</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">34</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -233,7 +233,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/3595bc05.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/80f29645.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -247,7 +247,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/3595bc05.html" class="post-title-link" itemprop="url">linux errors</a>
+            <a href="/archives/80f29645.html" class="post-title-link" itemprop="url">辅助函数4</a>
         </h2>
 
         <div class="post-meta">
@@ -257,7 +257,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2-28-2020 11:32:47 中午" itemprop="dateCreated datePublished" datetime="2020-02-28T11:32:47+08:00">2-28-2020</time>
+              <time title="创建时间：2-28-2020 2:59:28 下午" itemprop="dateCreated datePublished" datetime="2020-02-28T14:59:28+08:00">2-28-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -265,7 +265,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B0%8F%E9%97%AE%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">小问题</span></a>
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
                 </span>
             </span>
 
@@ -278,8 +278,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/3595bc05.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/3595bc05.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/80f29645.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/80f29645.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -296,27 +296,255 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="EMFILE-amp-ENOSPC-amp-EMPERM"><a href="#EMFILE-amp-ENOSPC-amp-EMPERM" class="headerlink" title="EMFILE &amp; ENOSPC &amp; EMPERM"></a>EMFILE &amp; ENOSPC &amp; EMPERM</h1><h2 id="EMFILE-错误"><a href="#EMFILE-错误" class="headerlink" title="EMFILE 错误"></a>EMFILE 错误</h2><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Error: </span>EMFILE, too many open files</span><br></pre></td></tr></table></figure>
+          <h1 id="辅助函数-4"><a href="#辅助函数-4" class="headerlink" title="辅助函数 4"></a>辅助函数 4</h1><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="paginator"><a href="#paginator" class="headerlink" title="paginator"></a>paginator</h3><p>插入分页链接。</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- paginator(options) %&gt;</span><br></pre></td></tr></table></figure>
 
-<p>虽然 Node.js 有非阻塞 I/O，同步 I/O 的数量仍被系统所限制，在生成大量静态文件的时候，您可能会碰到 EMFILE 错误，您可以尝试提高同步 I/O 的限制数量来解决此问题。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">ulimit</span> -n 10000</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>base</code></td>
+<td align="left">基础网址</td>
+<td align="left">/</td>
+</tr>
+<tr>
+<td align="left"><code>format</code></td>
+<td align="left">网址格式</td>
+<td align="left">page/%d/</td>
+</tr>
+<tr>
+<td align="left"><code>total</code></td>
+<td align="left">分页总数</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left"><code>current</code></td>
+<td align="left">目前页数</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left"><code>prev_text</code></td>
+<td align="left">上一页链接的文字。仅在 <code>prev_next</code> 设定开启时才有用。</td>
+<td align="left">Prev</td>
+</tr>
+<tr>
+<td align="left"><code>next_text</code></td>
+<td align="left">下一页链接的文字。仅在 <code>prev_next</code> 设定开启时才有用。</td>
+<td align="left">Next</td>
+</tr>
+<tr>
+<td align="left"><code>space</code></td>
+<td align="left">空白文字</td>
+<td align="left">…</td>
+</tr>
+<tr>
+<td align="left"><code>prev_next</code></td>
+<td align="left">显示上一页和下一页的链接</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left"><code>end_size</code></td>
+<td align="left">显示于两侧的页数</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left"><code>mid_size</code></td>
+<td align="left">显示于中间的页数</td>
+<td align="left">2</td>
+</tr>
+<tr>
+<td align="left"><code>show_all</code></td>
+<td align="left">显示所有页数。如果开启此参数的话，<code>end_size</code> 和 <code>mid_size</code> 就没用了。</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left"><code>escape</code></td>
+<td align="left">Escape HTML tags</td>
+<td align="left">true</td>
+</tr>
+</tbody></table>
+<p><strong>Examples:</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;%<span class="selector-tag">-</span> <span class="selector-tag">paginator</span>(&#123;  </span><br><span class="line">  <span class="attribute">prev_text</span>: <span class="string">'&lt;'</span>, </span><br><span class="line">  next_text: <span class="string">'&gt;'</span></span><br><span class="line">&#125;) %&gt;</span><br></pre></td></tr></table></figure>
 
-<p>（这一命令只对Linux系统有效）</p>
-<h2 id="ENOSPC-错误-（Linux）"><a href="#ENOSPC-错误-（Linux）" class="headerlink" title="ENOSPC 错误 （Linux）"></a>ENOSPC 错误 （Linux）</h2><p>运行 <code>$ hexo server</code> 命令有时会返回这样的错误：</p>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Error: </span>watch ENOSPC ...</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Rendered as --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/1/"</span>&gt;</span><span class="symbol">&amp;lt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/1/"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">2</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/3/"</span>&gt;</span>3<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/3/"</span>&gt;</span><span class="symbol">&amp;gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>它可以用过运行 <code>$ npm dedupe</code> 来解决，如果不起作用的话，可以尝试在 Linux 终端中运行下列命令：</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="built_in">fs</span>.inotify.max_user_watches=<span class="number">524288</span> | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p</span><br></pre></td></tr></table></figure>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- paginator(&#123;  </span><br><span class="line">  prev_text: '&lt;i <span class="class"><span class="keyword">class</span></span>=<span class="string">"fa fa-angle-left"</span>&gt;&lt;/i&gt;', </span><br><span class="line">  next_text: '&lt;i <span class="class"><span class="keyword">class</span></span>=<span class="string">"fa fa-angle-right"</span>&gt;&lt;/i&gt;', </span><br><span class="line">  escape: <span class="literal">false</span></span><br><span class="line">&#125;) %&gt;</span><br></pre></td></tr></table></figure>
 
-<p>这将会提高你能监视的文件数量。</p>
-<h2 id="EMPERM-Error-Windows-Subsystem-for-Linux"><a href="#EMPERM-Error-Windows-Subsystem-for-Linux" class="headerlink" title="EMPERM Error (Windows Subsystem for Linux)"></a>EMPERM Error (Windows Subsystem for Linux)</h2><p>在执行 <code>hexo server</code> 后返回如下错误：</p>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Error: </span>watch /path/to/hexo/theme/ EMPERM</span><br></pre></td></tr></table></figure>
-
-<p>这是由于你使用的 WSL 版本不支持监听文件系统改动。 最新版的 WSL 已经解决了这一问题。</p>
-<p>您也仍然可以通过先使用 <code>hexo g</code> 生成文件然后将其作为静态服务器运行来从 WSL 环境运行服务器：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo<span class="built_in"> server </span>-s</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Rendered as --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/1/"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-angle-left"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/1/"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">2</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/3/"</span>&gt;</span>3<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/3/"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-angle-right"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
+
+<h3 id="search-form"><a href="#search-form" class="headerlink" title="search_form"></a>search_form</h3><p>插入 Google 搜索框。</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- search_form<span class="comment">(options)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>class</code></td>
+<td align="left">表单的 class name</td>
+<td align="left">search-form</td>
+</tr>
+<tr>
+<td align="left"><code>text</code></td>
+<td align="left">搜索提示文字</td>
+<td align="left">Search</td>
+</tr>
+<tr>
+<td align="left"><code>button</code></td>
+<td align="left">显示搜索按钮。此参数可为布尔值（boolean）或字符串，当设定是字符串的时候，即为搜索按钮的文字。</td>
+<td align="left">false</td>
+</tr>
+</tbody></table>
+<h3 id="number-format"><a href="#number-format" class="headerlink" title="number_format"></a>number_format</h3><p>格式化数字。</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- number<span class="constructor">_format(<span class="params">number</span>, [<span class="params">options</span>])</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>precision</code></td>
+<td align="left">数字精度。此选项可为 <code>false</code> 或非负整数。</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left"><code>delimiter</code></td>
+<td align="left">千位数分隔符号</td>
+<td align="left">,</td>
+</tr>
+<tr>
+<td align="left"><code>separator</code></td>
+<td align="left">整数和小数之间的分隔符号</td>
+<td align="left">.</td>
+</tr>
+</tbody></table>
+<h3 id="meta-generator"><a href="#meta-generator" class="headerlink" title="meta_generator"></a>meta_generator</h3><p>Inserts <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta" target="_blank" rel="external nofollow noopener noreferrer">generator tag</a>.</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- meta_generator() %&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Examples:</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">meta_generator</span>() %&gt;</span></span><br><span class="line">// <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"generator"</span> <span class="attr">content</span>=<span class="string">"Hexo 4.0.0"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="open-graph"><a href="#open-graph" class="headerlink" title="open_graph"></a>open_graph</h3><p>插入 open graph 资源。</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- <span class="keyword">open</span><span class="constructor">_graph([<span class="params">options</span>])</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>title</code></td>
+<td align="left">页面标题 (<code>og:title</code>)</td>
+<td align="left"><code>page.title</code></td>
+</tr>
+<tr>
+<td align="left"><code>type</code></td>
+<td align="left">页面类型 (<code>og:type</code>)</td>
+<td align="left">blog</td>
+</tr>
+<tr>
+<td align="left"><code>url</code></td>
+<td align="left">页面网址 (<code>og:url</code>)</td>
+<td align="left"><code>url</code></td>
+</tr>
+<tr>
+<td align="left"><code>image</code></td>
+<td align="left">页面图片 (<code>og:image</code>)</td>
+<td align="left">内容中的图片</td>
+</tr>
+<tr>
+<td align="left"><code>site_name</code></td>
+<td align="left">网站名称 (<code>og:site_name</code>)</td>
+<td align="left"><code>config.title</code></td>
+</tr>
+<tr>
+<td align="left"><code>description</code></td>
+<td align="left">页面描述 (<code>og:description</code>)</td>
+<td align="left">内容摘要或前 200 字</td>
+</tr>
+<tr>
+<td align="left"><code>twitter_card</code></td>
+<td align="left">Twitter 卡片类型 (<code>twitter:card</code>)</td>
+<td align="left">summary</td>
+</tr>
+<tr>
+<td align="left"><code>twitter_id</code></td>
+<td align="left">Twitter ID (<code>twitter:creator</code>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>twitter_site</code></td>
+<td align="left">Twitter 网站 (<code>twitter:site</code>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>google_plus</code></td>
+<td align="left">Google+ 个人资料链接</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>fb_admins</code></td>
+<td align="left">Facebook 管理者 ID</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>fb_app_id</code></td>
+<td align="left">Facebook 应用程序 ID</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h3 id="toc"><a href="#toc" class="headerlink" title="toc"></a>toc</h3><p>解析内容中的标题标签 (h1~h6) 并插入目录。</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- toc<span class="comment">(str, [options])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>class</code></td>
+<td align="left">Class 名称</td>
+<td align="left">toc</td>
+</tr>
+<tr>
+<td align="left"><code>list_number</code></td>
+<td align="left">显示编号</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left"><code>max_depth</code></td>
+<td align="left">生成 TOC 的最大深度</td>
+<td align="left">6</td>
+</tr>
+<tr>
+<td align="left"><code>min_depth</code></td>
+<td align="left">生成 TOC 的最小深度</td>
+<td align="left">1</td>
+</tr>
+</tbody></table>
+<p><strong>示例：</strong></p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- toc<span class="comment">(page.content)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -342,7 +570,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/6b7fbf69.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/323d63c3.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -356,7 +584,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/6b7fbf69.html" class="post-title-link" itemprop="url">YAML Troubleshooting</a>
+            <a href="/archives/323d63c3.html" class="post-title-link" itemprop="url">Hexo Troubleshooting</a>
         </h2>
 
         <div class="post-meta">
@@ -366,7 +594,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2-28-2020 11:08:38 上午" itemprop="dateCreated datePublished" datetime="2020-02-28T11:08:38+08:00">2-28-2020</time>
+              <time title="创建时间：2-28-2020 2:29:10 下午" itemprop="dateCreated datePublished" datetime="2020-02-28T14:29:10+08:00">2-28-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -387,8 +615,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/6b7fbf69.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/6b7fbf69.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/323d63c3.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/323d63c3.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -405,33 +633,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="YAML-Troubleshooting"><a href="#YAML-Troubleshooting" class="headerlink" title="YAML Troubleshooting"></a>YAML Troubleshooting</h1><h2 id="YAML-解析错误"><a href="#YAML-解析错误" class="headerlink" title="YAML 解析错误"></a>YAML 解析错误</h2><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JS-YAML: incomplete <span class="built_in">explicit</span> mapping pair; a <span class="built_in">key</span> node <span class="built_in">is</span> missed <span class="built_in">at</span> line <span class="number">18</span>, column <span class="number">29</span>:      last_updated: Last updated: <span class="built_in">%s</span></span><br></pre></td></tr></table></figure>
+          <h1 id="Hexo-Troubleshooting"><a href="#Hexo-Troubleshooting" class="headerlink" title="Hexo Troubleshooting"></a>Hexo Troubleshooting</h1><h2 id="插件安装问题"><a href="#插件安装问题" class="headerlink" title="插件安装问题"></a>插件安装问题</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm ERR! <span class="keyword">node</span><span class="title">-waf</span> configure build</span><br></pre></td></tr></table></figure>
 
-<p>如果 YAML 字符串中包含冒号（<code>:</code>）的话，请加上引号。</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JS-YAML: bad indentation <span class="keyword">of</span> <span class="keyword">a</span> mapping entry <span class="keyword">at</span> <span class="built_in">line</span> <span class="number">18</span>, column <span class="number">31</span>:      		      </span><br><span class="line">	  last_updated:<span class="string">"Last updated: %s"</span></span><br></pre></td></tr></table></figure>
-
-<p>请确认您使用空格进行缩进（Soft tab），并确认冒号后有加上一个空格。</p>
-<h2 id="模板渲染错误"><a href="#模板渲染错误" class="headerlink" title="模板渲染错误"></a>模板渲染错误</h2><p>有的时候你在执行 <code>hexo generate</code> 时会返回以下错误信息：</p>
-<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FATAL Something<span class="comment">'s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span></span><br><span class="line">Template render <span class="keyword">error</span>: (unknown path)</span><br></pre></td></tr></table></figure>
+<p>当您尝试安装以 C/C++ 或其他非 JavaScript 语言所编写的插件时，可能会遇到此类问题，请确认您已经在电脑上安装相对应的编译器。</p>
+<h2 id="在-Jade-或-Swig-遍历资料"><a href="#在-Jade-或-Swig-遍历资料" class="headerlink" title="在 Jade 或 Swig 遍历资料"></a>在 Jade 或 Swig 遍历资料</h2><p>Hexo 使用 <a href="https://github.com/hexojs/warehouse" target="_blank" rel="external nofollow noopener noreferrer">Warehouse</a> 存储资料，它不是一般数组所以必须先进行类型转型才能遍历。</p>
 
 
-
-<p>这表明你的文件中存在一些不可被识别的字符，比如不可见的零宽度字符。有可能你的新文章存在这个问题，或者你在修改配置文件时导致了这个错误。</p>
-<p>检查你的 <code>_config.yml</code> 文件中是否漏掉了列表前的空格。</p>
-<p>这个是错误的：</p>
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plugins:</span><br><span class="line"><span class="bullet">- </span>hexo-generator-feed</span><br><span class="line"><span class="bullet">- </span>hexo-generator-sitemap</span><br></pre></td></tr></table></figure>
-
-<p>正确的应该是这样：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plugins:  </span><br><span class="line"><span class="bullet">  - </span>hexo-generator-feed  </span><br><span class="line"><span class="bullet">  - </span>hexo-generator-sitemap</span><br></pre></td></tr></table></figure>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">for</span></span> post <span class="keyword">in</span> site.posts.toArray() %&#125;</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">endfor</span></span> %&#125;</span></span><br></pre></td></tr></table></figure>
 
 
 
+<h2 id="Git-部署问题"><a href="#Git-部署问题" class="headerlink" title="Git 部署问题"></a>Git 部署问题</h2><h3 id="RPC-failed"><a href="#RPC-failed" class="headerlink" title="RPC failed"></a>RPC failed</h3><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">error: </span>RPC failed; result=22, HTTP code = 403</span><br><span class="line">fatal: 'username.github.io' does not appear to be a git repository</span><br></pre></td></tr></table></figure>
 
-
-
-
-
-
+<p>请确认您已经在电脑上 <a href="https://help.github.com/articles/set-up-git" target="_blank" rel="external nofollow noopener noreferrer">配置 git</a>，或改用 HTTPS 库（repository）地址。</p>
+<h3 id="Error-ENOENT-no-such-file-or-directory"><a href="#Error-ENOENT-no-such-file-or-directory" class="headerlink" title="Error: ENOENT: no such file or directory"></a>Error: ENOENT: no such file or directory</h3><p>如果你遇到了这个错误，有可能是你的文件名、分类或者标签的名字混淆了大写和小写，你可以尝试检查每一个标签和分类的名称，是否大小写一致来修复这一问题。</p>
 <hr>
 <p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
 <p><img src alt="logo"></p>
@@ -454,7 +669,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -521,20 +736,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -600,7 +815,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共25.2k字</span>
+  <span class="post-count">博客全站共28.1k字</span>
 </div>
 
         

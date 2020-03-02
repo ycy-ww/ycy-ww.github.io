@@ -168,17 +168,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">8</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">13</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">3</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">4</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">32</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">34</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -233,7 +233,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/69913370.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/c40f80fb.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -247,7 +247,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/69913370.html" class="post-title-link" itemprop="url">辅助函数2</a>
+            <a href="/archives/c40f80fb.html" class="post-title-link" itemprop="url">next-config summary</a>
         </h2>
 
         <div class="post-meta">
@@ -257,7 +257,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2-28-2020 3:03:05 下午" itemprop="dateCreated datePublished" datetime="2020-02-28T15:03:05+08:00">2-28-2020</time>
+              <time title="创建时间：2-29-2020 12:05:03 凌晨" itemprop="dateCreated datePublished" datetime="2020-02-29T00:05:03+08:00">2-29-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -278,8 +278,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/69913370.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/69913370.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/c40f80fb.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/c40f80fb.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -296,30 +296,48 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="辅助函数-2"><a href="#辅助函数-2" class="headerlink" title="辅助函数 2"></a>辅助函数 2</h1><h2 id="条件函数"><a href="#条件函数" class="headerlink" title="条件函数"></a>条件函数</h2><h3 id="is-current"><a href="#is-current" class="headerlink" title="is_current"></a>is_current</h3><p>检查 <code>path</code> 是否符合目前页面的网址。开启 <code>strict</code> 选项启用严格比对。</p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- is<span class="constructor">_current(<span class="params">path</span>, [<span class="params">strict</span>])</span> %&gt;</span><br></pre></td></tr></table></figure>
+          <h1 id="Hexo的next主题个性化配置教程"><a href="#Hexo的next主题个性化配置教程" class="headerlink" title="Hexo的next主题个性化配置教程"></a>Hexo的next主题个性化配置教程</h1><hr>
+<h1 id="1-添加RSS"><a href="#1-添加RSS" class="headerlink" title="1.添加RSS"></a>1.添加RSS</h1><p><strong>具体实现方法</strong></p>
+<p>切换到blog（根目录）</p>
+<p>然后安装 Hexo 插件：(这个插件会放在<code>node_modules</code>这个文件夹里)</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> <span class="comment">--save hexo-generator-feed</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="is-home"><a href="#is-home" class="headerlink" title="is_home"></a>is_home</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_home<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>接下来打开站点配置文件</p>
+<p>在里面的末尾添加：(<strong>请注意</strong>在冒号后面要加一个空格，不然会发生错误！)</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: http:<span class="comment">//hexo.io/plugins/</span></span><br><span class="line">plugins: hexo-<span class="keyword">generate</span>-feed</span><br></pre></td></tr></table></figure>
 
-<h3 id="is-post"><a href="#is-post" class="headerlink" title="is_post"></a>is_post</h3><p>检查当前页面是否为文章。</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_post<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>然后打开next主题文件夹里面的<code>_config.yml</code>,在里面配置为如下样子：(就是在<code>rss:</code>的后面加上<code>/atom.xml</code>,<strong>注意</strong>在冒号后面要加一个空格)</p>
+<hr>
+<h1 id="2-修改文章内链接文本样式"><a href="#2-修改文章内链接文本样式" class="headerlink" title="2. 修改文章内链接文本样式"></a>2. 修改文章内链接文本样式</h1><p><strong>实现效果图</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/5308475-8cc4fc18c399af7e.gif?imageMogr2/auto-orient/strip" alt="img"></p>
+<p><strong>具体实现方法</strong></p>
+<p>修改文件 <code>themes\next\source\css\_common\components\post\post.styl</code>，在末尾添加如下css样式，：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 文章内链接文本样式</span></span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">p</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#0593d3</span>;</span><br><span class="line">  <span class="attribute">border-bottom</span>: none;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#0593d3</span>;</span><br><span class="line">  &amp;<span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fc6423</span>;</span><br><span class="line">    <span class="attribute">border-bottom</span>: none;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#fc6423</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="is-page"><a href="#is-page" class="headerlink" title="is_page"></a>is_page</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_page<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>其中选择<code>.post-body</code> 是为了不影响标题，选择 <code>p</code> 是为了不影响首页“阅读全文”的显示样式,颜色可以自己定义。</p>
+<hr>
+<h1 id="3-修改文章底部的那个带-号的标签"><a href="#3-修改文章底部的那个带-号的标签" class="headerlink" title="3. 修改文章底部的那个带#号的标签"></a>3. 修改文章底部的那个带#号的标签</h1><p><strong>实现效果图</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/5308475-9f1817d2d7627f7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p><strong>具体实现方法</strong></p>
+<p>修改模板<code>/themes/next/layout/_macro/post.swig</code>，搜索 <code>rel=&quot;tag&quot;&gt;#</code>，将 # 换成<code>&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;</code></p>
+<hr>
+<h1 id="4-在每篇文章末尾统一添加“本文结束”标记"><a href="#4-在每篇文章末尾统一添加“本文结束”标记" class="headerlink" title="4. 在每篇文章末尾统一添加“本文结束”标记"></a>4. 在每篇文章末尾统一添加“本文结束”标记</h1><p><strong>实现效果图</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/5308475-90be73acbc5f8a7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p><strong>具体实现方法</strong></p>
+<p>在路径 <code>\themes\next\layout\_macro</code> 中新建 <code>passage-end-tag.swig</code> 文件,并添加以下内容：</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> not is_index %&#125;</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"text-align:center;color: #ccc;font-size:14px;"</span>&gt;</span>-------------本文结束<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-paw"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>感谢您的阅读-------------<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
-<h3 id="is-archive"><a href="#is-archive" class="headerlink" title="is_archive"></a>is_archive</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_archive<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>接着打开<code>\themes\next\layout\_macro\post.swig</code>文件，在<code>post-body</code> 之后， <code>post-footer</code> 之前添加如下代码</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">  </span><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> not is_index %&#125;</span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">include</span></span> 'passage-end-tag.swig' %&#125;</span></span><br><span class="line"><span class="xml">  </span><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
-<h3 id="is-year"><a href="#is-year" class="headerlink" title="is_year"></a>is_year</h3><p>检查当前页面是否为年度归档页面。</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_year<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>然后打开主题配置文件（<code>_config.yml</code>),在末尾添加：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 文章末尾添加“本文结束”标记</span></span><br><span class="line"><span class="attr">passage_end_tag:</span></span><br><span class="line">  <span class="attr">enabled:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="is-month"><a href="#is-month" class="headerlink" title="is_month"></a>is_month</h3><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- is_month() %&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="is-category"><a href="#is-category" class="headerlink" title="is_category"></a>is_category</h3><p>如果给定一个字符串作为参数，将会检查目前是否为指定分类。</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_category<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br><span class="line">&lt;<span class="meta">%</span>- is_category<span class="comment">('hobby')</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="is-tag"><a href="#is-tag" class="headerlink" title="is_tag"></a>is_tag</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- is_tag<span class="comment">()</span> <span class="meta">%</span>&gt;</span><br><span class="line">&lt;<span class="meta">%</span>- is_tag<span class="comment">('hobby')</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>完成以上设置之后，在每篇文章之后都会添加如上效果图的样子。</p>
+<hr>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/archives/69913370.html#more" rel="contents">
+              <a class="btn" href="/archives/c40f80fb.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -343,7 +361,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/1e9603e6.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/977f8a02.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -357,7 +375,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/1e9603e6.html" class="post-title-link" itemprop="url">辅助函数3</a>
+            <a href="/archives/977f8a02.html" class="post-title-link" itemprop="url">next config</a>
         </h2>
 
         <div class="post-meta">
@@ -367,7 +385,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2-28-2020 3:01:33 下午" itemprop="dateCreated datePublished" datetime="2020-02-28T15:01:33+08:00">2-28-2020</time>
+              <time title="创建时间：2-28-2020 9:12:10 晚上" itemprop="dateCreated datePublished" datetime="2020-02-28T21:12:10+08:00">2-28-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -388,8 +406,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/1e9603e6.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/1e9603e6.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/977f8a02.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/977f8a02.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -406,64 +424,70 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="辅助函数-3"><a href="#辅助函数-3" class="headerlink" title="辅助函数 3"></a>辅助函数 3</h1><h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><h3 id="partial"><a href="#partial" class="headerlink" title="partial"></a>partial</h3><p>载入其他模板文件，您可在 <code>locals</code> 设定区域变量。</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- partial<span class="comment">(layout, [locals], [options])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
-
+          <h1 id="NexT-主题基础设置"><a href="#NexT-主题基础设置" class="headerlink" title="NexT 主题基础设置"></a>NexT 主题基础设置</h1><h3 id="设置-菜单"><a href="#设置-菜单" class="headerlink" title="设置 菜单"></a>设置 菜单</h3><p>菜单配置包括三个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。 NexT 使用的是 <a href="http://fontawesome.io/" target="_blank" rel="external nofollow noopener noreferrer">Font Awesome</a> 提供的图标， Font Awesome 提供了 600+ 的图标，可以满足绝大的多数的场景，同时无须担心在 Retina 屏幕下 图标模糊的问题。</p>
+<ol>
+<li>设定菜单内容，对应的字段是 <code>menu</code>。 菜单内容的设置格式是：<code>item name: link</code>。其中 <code>item name</code>是一个名称，这个名称并不直接显示在页面上，她将用于匹配图标以及翻译。</li>
+</ol>
+<blockquote>
+<p>NexT 默认的菜单项有（标注 ! 的项表示需要手动创建这个页面）：</p>
+</blockquote>
 <table>
 <thead>
 <tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-<th align="left">默认值</th>
+<th align="left">键值</th>
+<th align="left">设定值</th>
+<th align="left">显示文本（简体中文）</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left"><code>cache</code></td>
-<td align="left">缓存（使用 Fragment cache）</td>
-<td align="left"><code>false</code></td>
+<td align="left">home</td>
+<td align="left"><code>home: /</code></td>
+<td align="left">主页</td>
 </tr>
 <tr>
-<td align="left"><code>only</code></td>
-<td align="left">限制局部变量。在模板中只能使用 <code>locals</code> 中设定的变量。</td>
-<td align="left"><code>false</code></td>
+<td align="left">archives</td>
+<td align="left"><code>archives: /archives</code></td>
+<td align="left">归档页</td>
+</tr>
+<tr>
+<td align="left">categories</td>
+<td align="left"><code>categories: /categories</code></td>
+<td align="left">分类页 !</td>
+</tr>
+<tr>
+<td align="left">tags</td>
+<td align="left"><code>tags: /tags</code></td>
+<td align="left">标签页 !</td>
+</tr>
+<tr>
+<td align="left">about</td>
+<td align="left"><code>about: /about</code></td>
+<td align="left">关于页面 !</td>
+</tr>
+<tr>
+<td align="left">commonweal</td>
+<td align="left"><code>commonweal: /404.html</code></td>
+<td align="left">公益 404 !</td>
 </tr>
 </tbody></table>
-<h3 id="fragment-cache"><a href="#fragment-cache" class="headerlink" title="fragment_cache"></a>fragment_cache</h3><p>局部缓存。它储存局部内容，下次使用时就能直接使用缓存。</p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- fragment<span class="constructor">_cache(<span class="params">id</span>, <span class="params">fn</span>)</span>;</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例：</strong></p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- fragment_cache(<span class="string">'header'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;  </span><br><span class="line">  <span class="keyword">return</span> <span class="string">'&lt;header&gt;&lt;/header&gt;'</span>;</span><br><span class="line">&#125;) %&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="日期与时间"><a href="#日期与时间" class="headerlink" title="日期与时间"></a>日期与时间</h2><h3 id="date"><a href="#date" class="headerlink" title="date"></a>date</h3><p>插入格式化的日期。<code>date</code> 可以是 UNIX 时间、ISO 字符串、Date 对象或 <a href="http://momentjs.com/" target="_blank" rel="external nofollow noopener noreferrer">Moment.js</a> 对象。<code>format</code> 默认为 <code>date_format</code> 配置信息。</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- <span class="keyword">date</span>(<span class="keyword">date</span>, [<span class="keyword">format</span>]) %&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例：</strong></p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- date<span class="comment">(Date.now()</span>) <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// 2013-01-01</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="meta">%</span>- date<span class="comment">(Date.now()</span>, <span class="string">'YYYY/M/D'</span>) <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// Jan 1 2013</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="date-xml"><a href="#date-xml" class="headerlink" title="date_xml"></a>date_xml</h3><p>插入 XML 格式的日期。</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- date_xml<span class="comment">(date)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例：</strong></p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- date_xml<span class="comment">(Date.now()</span>) <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// 2013-01-01T00:00:00.000Z</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="time"><a href="#time" class="headerlink" title="time"></a>time</h3><p>插入格式化的时间。<code>format</code> 默认为 <code>time_format</code> 配置信息。</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- time(<span class="keyword">date</span>, [<span class="keyword">format</span>]) %&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例：</strong></p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- time<span class="comment">(Date.now()</span>) <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// 13:05:12</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="meta">%</span>- time<span class="comment">(Date.now()</span>, <span class="string">'h:mm:ss a'</span>) <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// 1:05:12 pm</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="full-date"><a href="#full-date" class="headerlink" title="full_date"></a>full_date</h3><p>插入格式化的日期和时间。</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- full_date(<span class="keyword">date</span>, [<span class="keyword">format</span>]) %&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例：</strong></p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- full_date<span class="comment">(new Date()</span>) <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// Jan 1, 2013 0:00:00</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="meta">%</span>- full_date<span class="comment">(new Date()</span>, <span class="string">'dddd, MMMM Do YYYY, h:mm:ss a'</span>) <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// Tuesday, January 1st 2013, 12:00:00 am</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>设置菜单项的显示文本。Hexo 在生成的时候将使用 这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在 NexT 主题目录下的 <code>languages/{language}.yml</code> （<code>{language}</code> 为你所使用的语言）。</li>
+</ul>
+<blockquote>
+<blockquote>
+<p>以简体中文为例，若你需要添加一个菜单项，比如 <code>something</code>。那么就需要修改简体中文对应的翻译文件 <code>languages/zh-Hans.yml</code>，在 <code>menu</code> 字段下添加一项： <code>something: 有料</code></p>
+</blockquote>
+</blockquote>
+<ul>
+<li>设定菜单项的图标，对应的字段是 <code>menu_icons</code>。 此设定格式是 <code>item name: icon name</code>，其中 <code>item name</code> 与上一步所配置的菜单名字对应，<code>icon name</code> 是 Font Awesome 图标的 名字。而 <code>enable</code> 可用于控制是否显示图标，你可以设置成 <code>false</code> 来去掉图标。</li>
+</ul>
+<h3 id="设置-侧栏"><a href="#设置-侧栏" class="headerlink" title="设置 侧栏"></a>设置 侧栏</h3><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。 可以通过修改 <strong>主题配置文件</strong> 中的 <code>sidebar</code> 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机。</p>
+<blockquote>
+<p>已知侧栏在 <code>use motion: false</code> 的情况下不会展示。</p>
+</blockquote>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/archives/1e9603e6.html#more" rel="contents">
+              <a class="btn" href="/archives/977f8a02.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -487,7 +511,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -554,20 +578,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -633,7 +657,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共25.2k字</span>
+  <span class="post-count">博客全站共28.1k字</span>
 </div>
 
         

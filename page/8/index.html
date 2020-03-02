@@ -168,17 +168,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">8</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">13</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">3</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">4</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">32</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">34</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -233,7 +233,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/989bfe87.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/3595bc05.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -247,7 +247,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/989bfe87.html" class="post-title-link" itemprop="url">辅助函数</a>
+            <a href="/archives/3595bc05.html" class="post-title-link" itemprop="url">linux errors</a>
         </h2>
 
         <div class="post-meta">
@@ -257,7 +257,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2-27-2020 11:06:50 晚上" itemprop="dateCreated datePublished" datetime="2020-02-27T23:06:50+08:00">2-27-2020</time>
+              <time title="创建时间：2-28-2020 11:32:47 中午" itemprop="dateCreated datePublished" datetime="2020-02-28T11:32:47+08:00">2-28-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -265,7 +265,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                  <a href="/categories/%E5%B0%8F%E9%97%AE%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">小问题</span></a>
                 </span>
             </span>
 
@@ -278,8 +278,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/989bfe87.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/989bfe87.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/3595bc05.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/3595bc05.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -296,97 +296,34 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="辅助函数（Helpers）"><a href="#辅助函数（Helpers）" class="headerlink" title="辅助函数（Helpers）"></a>辅助函数（Helpers）</h1><p>辅助函数帮助您在模版中快速插入内容。辅助函数不能在源文件中使用。</p>
-<h2 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h2><h3 id="url-for"><a href="#url-for" class="headerlink" title="url_for"></a>url_for</h3><p>在路径前加上根路径，从 Hexo 2.7 开始您应该使用此函数而不是 <code>config.root + path</code>。</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- url_for<span class="comment">(path, [option])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+          <h1 id="EMFILE-amp-ENOSPC-amp-EMPERM"><a href="#EMFILE-amp-ENOSPC-amp-EMPERM" class="headerlink" title="EMFILE &amp; ENOSPC &amp; EMPERM"></a>EMFILE &amp; ENOSPC &amp; EMPERM</h1><h2 id="EMFILE-错误"><a href="#EMFILE-错误" class="headerlink" title="EMFILE 错误"></a>EMFILE 错误</h2><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Error: </span>EMFILE, too many open files</span><br></pre></td></tr></table></figure>
 
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-<th align="left">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>relative</code></td>
-<td align="left">是否输出相对链接</td>
-<td align="left"><code>config.relative_link</code> 的值</td>
-</tr>
-</tbody></table>
-<p><strong>示例：</strong></p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line"><span class="symbol">root:</span> <span class="meta-keyword">/blog/</span></span><br></pre></td></tr></table></figure>
+<p>虽然 Node.js 有非阻塞 I/O，同步 I/O 的数量仍被系统所限制，在生成大量静态文件的时候，您可能会碰到 EMFILE 错误，您可以尝试提高同步 I/O 的限制数量来解决此问题。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">ulimit</span> -n 10000</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- url_for<span class="comment">('/a/path')</span> <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// /blog/a/path</span></span><br></pre></td></tr></table></figure>
+<p>（这一命令只对Linux系统有效）</p>
+<h2 id="ENOSPC-错误-（Linux）"><a href="#ENOSPC-错误-（Linux）" class="headerlink" title="ENOSPC 错误 （Linux）"></a>ENOSPC 错误 （Linux）</h2><p>运行 <code>$ hexo server</code> 命令有时会返回这样的错误：</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Error: </span>watch ENOSPC ...</span><br></pre></td></tr></table></figure>
 
-<p>是否输出相对链接，默认遵循配置文件中 <code>relative_link</code> 的值</p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- url<span class="constructor">_for('<span class="operator">/</span><span class="params">css</span><span class="operator">/</span><span class="params">style</span>.<span class="params">css</span>')</span> %&gt;</span><br><span class="line"><span class="comment">// ../../css/style.css</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 覆盖配置 </span></span><br><span class="line"><span class="comment"> * 即使配置文件中启用了 relative_link，你也可以使用 relative 参数禁用相对链接输出，反之亦然 </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">&lt;%- url<span class="constructor">_for('<span class="operator">/</span><span class="params">css</span><span class="operator">/</span><span class="params">style</span>.<span class="params">css</span>', &#123;<span class="params">relative</span>: <span class="params">false</span>&#125;)</span> %&gt;</span><br><span class="line"><span class="comment">// /css/style.css</span></span><br></pre></td></tr></table></figure>
+<p>它可以用过运行 <code>$ npm dedupe</code> 来解决，如果不起作用的话，可以尝试在 Linux 终端中运行下列命令：</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="built_in">fs</span>.inotify.max_user_watches=<span class="number">524288</span> | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p</span><br></pre></td></tr></table></figure>
+
+<p>这将会提高你能监视的文件数量。</p>
+<h2 id="EMPERM-Error-Windows-Subsystem-for-Linux"><a href="#EMPERM-Error-Windows-Subsystem-for-Linux" class="headerlink" title="EMPERM Error (Windows Subsystem for Linux)"></a>EMPERM Error (Windows Subsystem for Linux)</h2><p>在执行 <code>hexo server</code> 后返回如下错误：</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Error: </span>watch /path/to/hexo/theme/ EMPERM</span><br></pre></td></tr></table></figure>
+
+<p>这是由于你使用的 WSL 版本不支持监听文件系统改动。 最新版的 WSL 已经解决了这一问题。</p>
+<p>您也仍然可以通过先使用 <code>hexo g</code> 生成文件然后将其作为静态服务器运行来从 WSL 环境运行服务器：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo<span class="built_in"> server </span>-s</span><br></pre></td></tr></table></figure>
 
 
 
 
 
-<h3 id="relative-url"><a href="#relative-url" class="headerlink" title="relative_url"></a>relative_url</h3><p>取得与 <code>from</code> 相对的 <code>to</code> 路径。</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- relative_url<span class="comment">(from, to)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
 
-<p><strong>示例：</strong></p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- relative<span class="constructor">_url('<span class="params">foo</span><span class="operator">/</span><span class="params">bar</span><span class="operator">/</span>', '<span class="params">css</span><span class="operator">/</span><span class="params">style</span>.<span class="params">css</span>')</span> %&gt;</span><br><span class="line"><span class="comment">// ../../css/style.css</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="gravatar"><a href="#gravatar" class="headerlink" title="gravatar"></a>gravatar</h3><p>根据邮箱地址返回 Gravatar 头像 URL。</p>
-<p>如果你不指定 <code>options</code> 参数，将会应用默认参数。否则，你可以将其设置为一个数字，这个数字将会作为 Gravatar 的大小参数。最后，如果你设置它一个对象，它将会被转换为 Gravatar 的一个查询字符串参数。</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- gravatar<span class="comment">(email, [options])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-<th align="left">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>s</code></td>
-<td align="left">图片大小</td>
-<td align="left">80</td>
-</tr>
-<tr>
-<td align="left"><code>d</code></td>
-<td align="left">默认头像</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><code>f</code></td>
-<td align="left">强制使用默认图象</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><code>r</code></td>
-<td align="left">头像等级限制</td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<p><strong>示例：</strong></p>
-<figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="symbol">%-</span> gravatar('a<span class="title">@abc.com</span>', <span class="number">40</span>) %&gt;</span><br><span class="line">// https://www.gravatar.com/avatar/b<span class="number">9</span>b<span class="number">00e66</span><span class="keyword">c</span><span class="number">6</span>b<span class="number">8</span>a<span class="number">70</span>f<span class="number">88</span><span class="keyword">c</span><span class="number">73</span>cb<span class="number">6</span>bdb<span class="number">06787</span>?s=<span class="number">40</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="symbol">%-</span> gravatar('a<span class="title">@abc.com</span>' &#123;s: <span class="number">40</span>, d: 'https://via.placeholder.com/<span class="number">150</span>'&#125;) %&gt;// https://www.gravatar.com/avatar/b<span class="number">9</span>b<span class="number">00e66</span><span class="keyword">c</span><span class="number">6</span>b<span class="number">8</span>a<span class="number">70</span>f<span class="number">88</span><span class="keyword">c</span><span class="number">73</span>cb<span class="number">6</span>bdb<span class="number">06787</span>?s=<span class="number">40</span>&amp;d=https<span class="symbol">%3</span>A<span class="symbol">%2</span>F<span class="symbol">%2</span>Fvia.placeholder.com<span class="symbol">%2</span>F<span class="number">150</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="full-url-for"><a href="#full-url-for" class="headerlink" title="full_url_for"></a>full_url_for</h3><p>在路径前加上根路径和域名。输出会被自动转码。</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- full_url_for<span class="comment">(path)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例：</strong></p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line"><span class="string">url:</span> <span class="string">https:</span><span class="comment">//example.com/blog # example</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- full_url_for<span class="comment">('/a/path')</span> <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// https://example.com/blog/a/path</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/archives/989bfe87.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
@@ -405,7 +342,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/def84ee6.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/6b7fbf69.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -419,7 +356,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/def84ee6.html" class="post-title-link" itemprop="url">插件</a>
+            <a href="/archives/6b7fbf69.html" class="post-title-link" itemprop="url">YAML Troubleshooting</a>
         </h2>
 
         <div class="post-meta">
@@ -429,7 +366,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2-27-2020 10:43:03 晚上" itemprop="dateCreated datePublished" datetime="2020-02-27T22:43:03+08:00">2-27-2020</time>
+              <time title="创建时间：2-28-2020 11:08:38 上午" itemprop="dateCreated datePublished" datetime="2020-02-28T11:08:38+08:00">2-28-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -437,7 +374,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                  <a href="/categories/%E5%B0%8F%E9%97%AE%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">小问题</span></a>
                 </span>
             </span>
 
@@ -450,8 +387,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/def84ee6.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/def84ee6.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/6b7fbf69.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/6b7fbf69.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -468,25 +405,33 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h1><p>Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心模块的源码。在 Hexo 中有两种形式的插件：</p>
-<h3 id="脚本（Scripts）"><a href="#脚本（Scripts）" class="headerlink" title="脚本（Scripts）"></a>脚本（Scripts）</h3><p>如果您的代码很简单，建议您编写脚本，您只需要把 JavaScript 文件放到 <code>scripts</code> 文件夹，在启动时就会自动载入。</p>
-<h3 id="插件（Packages）"><a href="#插件（Packages）" class="headerlink" title="插件（Packages）"></a>插件（Packages）</h3><p>如果您的代码较复杂，或是您想要发布到 NPM 上，建议您编写插件。首先，在 <code>node_modules</code> 文件夹中建立文件夹，文件夹名称开头必须为 <code>hexo-</code>，如此一来 Hexo 才会在启动时载入，否则 Hexo 将会忽略它。</p>
-<p>文件夹内至少要包含 2 个文件：一个是主程序，另一个是 <code>package.json</code>，描述插件的用途和所依赖的插件。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── <span class="selector-tag">index</span><span class="selector-class">.js</span></span><br><span class="line">└── <span class="selector-tag">package</span><span class="selector-class">.json</span></span><br></pre></td></tr></table></figure>
+          <h1 id="YAML-Troubleshooting"><a href="#YAML-Troubleshooting" class="headerlink" title="YAML Troubleshooting"></a>YAML Troubleshooting</h1><h2 id="YAML-解析错误"><a href="#YAML-解析错误" class="headerlink" title="YAML 解析错误"></a>YAML 解析错误</h2><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JS-YAML: incomplete <span class="built_in">explicit</span> mapping pair; a <span class="built_in">key</span> node <span class="built_in">is</span> missed <span class="built_in">at</span> line <span class="number">18</span>, column <span class="number">29</span>:      last_updated: Last updated: <span class="built_in">%s</span></span><br></pre></td></tr></table></figure>
 
-<p><code>package.json</code> 中至少要包含 <code>name</code>, <code>version</code>, <code>main</code> 属性，例如：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">package</span>.<span class="title">json</span></span></span><br><span class="line"><span class="class">&#123;</span>  </span><br><span class="line">   <span class="string">"name"</span>: <span class="string">"hexo-my-plugin"</span>,  </span><br><span class="line">   <span class="string">"version"</span>: <span class="string">"0.0.1"</span>,  </span><br><span class="line">   <span class="string">"main"</span>: <span class="string">"index"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果 YAML 字符串中包含冒号（<code>:</code>）的话，请加上引号。</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JS-YAML: bad indentation <span class="keyword">of</span> <span class="keyword">a</span> mapping entry <span class="keyword">at</span> <span class="built_in">line</span> <span class="number">18</span>, column <span class="number">31</span>:      		      </span><br><span class="line">	  last_updated:<span class="string">"Last updated: %s"</span></span><br></pre></td></tr></table></figure>
+
+<p>请确认您使用空格进行缩进（Soft tab），并确认冒号后有加上一个空格。</p>
+<h2 id="模板渲染错误"><a href="#模板渲染错误" class="headerlink" title="模板渲染错误"></a>模板渲染错误</h2><p>有的时候你在执行 <code>hexo generate</code> 时会返回以下错误信息：</p>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FATAL Something<span class="comment">'s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span></span><br><span class="line">Template render <span class="keyword">error</span>: (unknown path)</span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><p>您可以使用 Hexo 提供的官方工具插件来加速开发：</p>
-<ul>
-<li><a href="https://github.com/hexojs/hexo-fs" target="_blank" rel="external nofollow noopener noreferrer">hexo-fs</a>：文件 IO</li>
-<li><a href="https://github.com/hexojs/hexo-util" target="_blank" rel="external nofollow noopener noreferrer">hexo-util</a>：工具程式</li>
-<li><a href="https://github.com/hexojs/hexo-i18n" target="_blank" rel="external nofollow noopener noreferrer">hexo-i18n</a>：本地化（i18n）</li>
-<li><a href="https://github.com/hexojs/hexo-pagination" target="_blank" rel="external nofollow noopener noreferrer">hexo-pagination</a>：生成分页资料</li>
-</ul>
-<p><strong>发布插件：</strong> 略</p>
+<p>这表明你的文件中存在一些不可被识别的字符，比如不可见的零宽度字符。有可能你的新文章存在这个问题，或者你在修改配置文件时导致了这个错误。</p>
+<p>检查你的 <code>_config.yml</code> 文件中是否漏掉了列表前的空格。</p>
+<p>这个是错误的：</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plugins:</span><br><span class="line"><span class="bullet">- </span>hexo-generator-feed</span><br><span class="line"><span class="bullet">- </span>hexo-generator-sitemap</span><br></pre></td></tr></table></figure>
+
+<p>正确的应该是这样：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plugins:  </span><br><span class="line"><span class="bullet">  - </span>hexo-generator-feed  </span><br><span class="line"><span class="bullet">  - </span>hexo-generator-sitemap</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
 <hr>
 <p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
 <p><img src alt="logo"></p>
@@ -509,7 +454,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -576,20 +521,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -655,7 +600,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共25.2k字</span>
+  <span class="post-count">博客全站共28.1k字</span>
 </div>
 
         
