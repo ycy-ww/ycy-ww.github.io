@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="zh-CN,en,default">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-center-atom.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+  <meta name="keywords" content="blog">
+
+
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/64ed5bdd.js","daovoice")</script>
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*��������ɫ*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*��Ӱ��ɫ*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*�ϱ߿���ɫ*/
+        border-left-color: #1E92FB;    /*��߿���ɫ*/
+    }
+</style>
+
+<script>
+    (function () {
+        if ('') {
+            if (prompt('��������������') !== '') {
+                alert('�������');
+                if (history.length === 1) {
+                    location.replace("https://wwyyqblog.work"); // �����滻�������ҳ
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.wwyyqblog.work","root":"/","scheme":"Mist","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="云服务器 ECS云服务器ECS（Elastic Compute Service）是一种简单高效、处理能力可弹性伸缩的计算服务。帮助您构建更稳定、安全的应用，提升运维效率，降低IT成本，使您更专注于核心业务创新。 产品架构云服务器ECS主要包含以下功能组件：  实例：等同于一台虚拟服务器，内含CPU、内存、操作系统、网络配置、磁盘等基础的计算组件。 镜像：提供实例的操作系统、初始化应用数据及预装的软">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ECS-概念">
+<meta property="og:url" content="https://www.wwyyqblog.work/archives/6903c0f.html">
+<meta property="og:site_name" content="ycy-ww">
+<meta property="og:description" content="云服务器 ECS云服务器ECS（Elastic Compute Service）是一种简单高效、处理能力可弹性伸缩的计算服务。帮助您构建更稳定、安全的应用，提升运维效率，降低IT成本，使您更专注于核心业务创新。 产品架构云服务器ECS主要包含以下功能组件：  实例：等同于一台虚拟服务器，内含CPU、内存、操作系统、网络配置、磁盘等基础的计算组件。 镜像：提供实例的操作系统、初始化应用数据及预装的软">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3723062851/p44516.jpg">
+<meta property="article:published_time" content="2020-03-03T14:25:35.046Z">
+<meta property="article:modified_time" content="2020-03-03T14:25:35.046Z">
+<meta property="article:author" content="ycy-ww">
+<meta property="article:tag" content="云服务器">
+<meta property="article:tag" content="ECS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3723062851/p44516.jpg">
+
+<link rel="canonical" href="https://www.wwyyqblog.work/archives/6903c0f.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>ECS-概念 | ycy-ww</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<link rel="alternate" href="/atom.xml" title="ycy-ww" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    <a href="https://github.com/ycy-ww/" target="_blank" rel="external nofollow noopener noreferrer" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta custom-logo">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ycy-ww</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">Fighting for myself!</h1>
+      
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">21</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">8</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">42</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/6903c0f.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ycy-ww">
+      <meta itemprop="description" content="CS'fun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ycy-ww">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          ECS-概念
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：3-3-2020 10:25:35 晚上" itemprop="dateCreated datePublished" datetime="2020-03-03T22:25:35+08:00">3-3-2020</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/" itemprop="url" rel="index"><span itemprop="name">云服务器 ECS</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/archives/6903c0f.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/6903c0f.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="云服务器-ECS"><a href="#云服务器-ECS" class="headerlink" title="云服务器 ECS"></a>云服务器 ECS</h1><p>云服务器ECS（Elastic Compute Service）是一种简单高效、处理能力可弹性伸缩的计算服务。帮助您构建更稳定、安全的应用，提升运维效率，降低IT成本，使您更专注于核心业务创新。</p>
+<h2 id="产品架构"><a href="#产品架构" class="headerlink" title="产品架构"></a>产品架构</h2><p>云服务器ECS主要包含以下功能组件：</p>
+<ul>
+<li><a href="https://help.aliyun.com/document_detail/25374.html#concept-i1k-fv2-5db" target="_blank" rel="external nofollow noopener noreferrer">实例</a>：等同于一台虚拟服务器，内含CPU、内存、操作系统、网络配置、磁盘等基础的计算组件。</li>
+<li><a href="https://help.aliyun.com/document_detail/25389.html#concept-qql-3zb-wdb" target="_blank" rel="external nofollow noopener noreferrer">镜像</a>：提供实例的操作系统、初始化应用数据及预装的软件。操作系统支持多种Linux发行版和多种Windows Server版本。</li>
+<li><a href="https://help.aliyun.com/document_detail/63136.html#concept-pl4-tzb-wdb" target="_blank" rel="external nofollow noopener noreferrer">块存储</a>：块设备类型产品，具备高性能和低时延的特性。提供基于分布式存储架构的云盘、共享块存储以及基于物理机本地存储的本地盘。</li>
+<li><a href="https://help.aliyun.com/document_detail/25391.html#concept-qft-2zw-ydb" target="_blank" rel="external nofollow noopener noreferrer">快照</a>：某一时间点一块云盘或共享块存储的数据状态文件。常用于数据备份、数据恢复和制作自定义镜像等。</li>
+<li><a href="https://help.aliyun.com/document_detail/25387.html#concept-o2y-mqw-ydb" target="_blank" rel="external nofollow noopener noreferrer">安全组</a>：由同一地域内具有相同保护需求并相互信任的实例组成，是一种虚拟防火墙，用于设置实例的网络访问控制。</li>
+<li>网络<ul>
+<li><a href="https://help.aliyun.com/document_detail/34217.html#concept-kbk-cpz-ndb" target="_blank" rel="external nofollow noopener noreferrer">专有网络（Virtual Private Cloud）</a>：逻辑上彻底隔离的云上私有网络。您可以自行分配私网IP地址范围、配置路由表和网关等。</li>
+<li>经典网络：所有经典网络类型实例都建立在一个共用的基础网络上。由阿里云统一规划和管理网络配置。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3723062851/p44516.jpg" alt></p>
+<h2 id="管理工具"><a href="#管理工具" class="headerlink" title="管理工具"></a>管理工具</h2><p>您可以在任何地域下，通过阿里云提供的以下途径创建、使用或者释放云服务器ECS：</p>
+<ul>
+<li><strong>ECS管理控制台：</strong>具有交互式操作的Web服务页面。关于管理控制台的操作，请参见<a href="https://help.aliyun.com/document_detail/25429.html?spm=a2c4g.11186623.2.26.252450bffRwdmG#concept-q3w-45w-wdb" target="_blank" rel="external nofollow noopener noreferrer">常用操作导航</a>。</li>
+<li><strong>ECS API：</strong>支持GET和POST请求的RPC风格API,以下为调用云服务器ECS API的常用开发者工具：<ul>
+<li><a href="https://help.aliyun.com/document_detail/110244.html?spm=a2c4g.11186623.2.28.252450bffRwdmG#concept-rc3-qrc-bhb" target="_blank" rel="external nofollow noopener noreferrer">命令行工具CLI</a>：基于阿里云API建立的灵活且易于扩展的管理工具。您可基于命令行工具封装阿里云的原生API，扩展出您需要的功能。</li>
+<li><a href="https://api.aliyun.com/?spm=a2c4g.11186623.2.29.252450bffRwdmG" target="_blank" rel="external nofollow noopener noreferrer">OpenAPI Explorer</a>：提供快速检索接口、在线调用API和动态生成SDK示例代码等服务。</li>
+<li><a href="https://develop.aliyun.com/tools/sdk?spm=a2c4g.11186623.2.30.252450bffRwdmG#/java" target="_blank" rel="external nofollow noopener noreferrer">阿里云SDK</a>：提供Java、Python、PHP等多种编程语言的SDK。</li>
+</ul>
+</li>
+<li><a href="https://help.aliyun.com/document_detail/28852.html?spm=a2c4g.11186623.2.31.252450bffRwdmG#concept-28852-zh" target="_blank" rel="external nofollow noopener noreferrer">资源编排（Resource Orchestration Service）</a>：通过创建一个描述您所需的所有阿里云资源的模板，然后资源编排将根据模板，自动创建和配置资源。</li>
+<li><a href="https://help.aliyun.com/document_detail/125604.html?spm=a2c4g.11186623.2.32.252450bffRwdmG#concept-1181174" target="_blank" rel="external nofollow noopener noreferrer">运维编排服务（Operation Orchestration Service）</a>：自动化管理和执行运维任务。您可以在执行模板中定义执行任务、执行顺序、执行输入和输出等，通过执行模板达到自动化完成运维任务的目的。</li>
+<li><a href="https://help.aliyun.com/document_detail/91285.html?spm=a2c4g.11186623.2.33.252450bffRwdmG#concept-twc-3dz-dfb" target="_blank" rel="external nofollow noopener noreferrer">Terraform</a>：能够通过配置文件在阿里云以及其他支持Terraform的云商平台调用计算资源，并对其进行版本控制的开源工具。</li>
+<li>阿里云App：移动端类型的管理工具。</li>
+<li><a href="https://help.aliyun.com/product/29966.html?spm=a2c4g.11186623.2.34.252450bffRwdmG" target="_blank" rel="external nofollow noopener noreferrer">Alibaba Cloud Toolkit</a>：阿里云针对IDE平台为开发者提供的一款插件，用于帮助您高效开发并部署适合在云端运行的应用</li>
+</ul>
+<h2 id="部署建议"><a href="#部署建议" class="headerlink" title="部署建议"></a>部署建议</h2><p>您可以从以下维度考虑如何启动并使用云服务器ECS：</p>
+<ul>
+<li><p>地域和可用区</p>
+<p>地域指阿里云的数据中心，地域和可用区决定了ECS实例所在的物理位置。一旦成功创建实例后，其元数据（仅专有网络VPC类型ECS实例支持获取元数据）将确定下来，并无法更换地域。您可以从用户地理位置、阿里云产品发布情况、应用可用性、以及是否需要内网通信等因素选择地域和可用区。例如，如果您同时需要通过阿里云内网使用云数据库RDS，RDS实例和ECS实例必须处于同一地域中。</p>
+</li>
+<li><p>高可用性</p>
+<p>为保证业务处理的正确性和服务不中断，建议您通过快照实现数据备份，通过跨可用区、部署集、负载均衡（Server Load Balancer）等实现应用容灾。</p>
+</li>
+<li><p>网络规划</p>
+<p>阿里云推荐您使用专有网络VPC，可自行规划私网IP，全面支持新功能和新型实例规格。此外，专有网络VPC支持多业务系统隔离和多地域部署系统的使用场景。</p>
+</li>
+<li><p>安全方案</p>
+<p>您可以使用云服务器ECS的安全组，控制ECS实例的出入网访问策略以及端口监听状态。对于部署在云服务器ECS上的应用，阿里云为您提供了免费的DDoS基础防护和基础安全服务</p>
+<ul>
+<li>通过DDoS高防IP保障源站的稳定可靠。</li>
+<li>通过云安全中心保障云服务器ECS的安全。</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+
+<hr>
+<h1 id="产品优势"><a href="#产品优势" class="headerlink" title="产品优势"></a>产品优势</h1><p>与普通的IDC（Integrated Data Center）机房或服务器厂商相比，阿里云提供的云服务器ECS具有高可用性、安全性和弹性的优势。</p>
+<h2 id="与普通IDC对比优势"><a href="#与普通IDC对比优势" class="headerlink" title="与普通IDC对比优势"></a>与普通IDC对比优势</h2><p>云服务器ECS与普通IDC的优势对比如下表所示。</p>
+<table>
+<thead>
+<tr>
+<th align="left">对比项</th>
+<th align="left">云服务器ECS</th>
+<th align="left">普通IDC</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">机房部署</td>
+<td align="left">阿里云自主研发的直流电服务器，绿色机房设计，PUE（Power Usage Effectiveness，电源利用效率）值低</td>
+<td align="left">传统交流电服务器设计，PUE值高</td>
+</tr>
+<tr>
+<td align="left">骨干机房，出口带宽大，独享带宽</td>
+<td align="left">机房质量参差不齐，用户选择困难，以共享带宽为主</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">BGP（Border Gateway Protocol，边界网关协议）多线机房，全国访问流畅均衡</td>
+<td align="left">以单线和双线为主</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">操作易用</td>
+<td align="left">内置主流的操作系统，Windows正版激活</td>
+<td align="left">需用户自备操作系统，自行安装</td>
+</tr>
+<tr>
+<td align="left">可在线更换操作系统</td>
+<td align="left">无法在线更换操作系统，需要用户重装</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Web在线管理，简单方便</td>
+<td align="left">没有在线管理工具，维护困难</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">手机验证密码设置，安全方便</td>
+<td align="left">重置密码麻烦，且被破解的风险大</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">容灾备份</td>
+<td align="left">三副本数据设计，单份损坏可在短时间内快速恢复</td>
+<td align="left">用户自行搭建，使用普通存储设备，价格高昂</td>
+</tr>
+<tr>
+<td align="left">用户自定义快照</td>
+<td align="left">没有提供快照功能，无法做到自动故障恢复</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">硬件故障事故中可快速自动恢复</td>
+<td align="left">数据损坏需用户修复</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">安全可靠</td>
+<td align="left">有效阻止MAC欺骗和ARP攻击</td>
+<td align="left">很难阻止MAC欺骗和ARP攻击</td>
+</tr>
+<tr>
+<td align="left">有效防护DDoS攻击，可进行流量清洗和黑洞</td>
+<td align="left">清洗和黑洞设备需要另外购买，价格昂贵</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">端口入侵扫描、挂马扫描、漏洞扫描等附加服务</td>
+<td align="left">普遍存在漏洞挂马和端口扫描等问题</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">灵活扩展</td>
+<td align="left">开通云服务器非常灵活，可以在线升级配置</td>
+<td align="left">服务器交付周期长</td>
+</tr>
+<tr>
+<td align="left">带宽升降自由</td>
+<td align="left">带宽一次性购买，无法自由升降</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">在线使用负载均衡，轻松扩展应用</td>
+<td align="left">硬件负载均衡，价格昂贵，设置也非常麻烦</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">节约成本</td>
+<td align="left">使用成本门槛低</td>
+<td align="left">使用成本门槛高</td>
+</tr>
+<tr>
+<td align="left">无需一次性大投入</td>
+<td align="left">一次性投入巨大，闲置浪费严重</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">按需购买，弹性付费，灵活应对业务变化</td>
+<td align="left">无法按需购买，必须为业务峰值满配</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h2 id="高可用性"><a href="#高可用性" class="headerlink" title="高可用性"></a>高可用性</h2><p>阿里云使用更严格的IDC标准、服务器准入标准以及运维标准，保证云计算基础框架的高可用性、数据的可靠性以及云服务器的高可用性。</p>
+<p>阿里云提供的每个地域都存在多可用区。当您需要更高的可用性时，可以利用多可用区部署方案搭建主备服务或者双活服务。对于面向金融领域的两地三中心的解决方案，您也可以通过多地域和多可用区搭建出更高的可用性服务。</p>
+<h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><p>在网络建设方面，推荐您使用阿里云专有网络VPC。专有网络提供了稳定、安全、快速交付、自主可控的网络环境。</p>
+<ul>
+<li><p>丰富的网络产品体系</p>
+</li>
+<li><p>与自建的IDC机房互连</p>
+<p>阿里云专有网络可以建立高速通道到您原有的IDC机房，形成混合云的架构。</p>
+</li>
+<li><p>专有网络的稳定性</p>
+</li>
+<li><p>专有网络的安全性</p>
+<p>面对互联网上不断的攻击流量，专有网络天然具备流量隔离以及攻击隔离的功能。</p>
+</li>
+</ul>
+<h2 id="弹性"><a href="#弹性" class="headerlink" title="弹性"></a>弹性</h2><p>云计算最大的优势在于弹性与灵活性。</p>
+<p>阿里云的弹性体现在计算的弹性、存储的弹性、网络的弹性以及您对于业务架构重新规划的弹性。</p>
+<ul>
+<li><p>计算弹性</p>
+<ul>
+<li><p>纵向的弹性。</p>
+<p>即单台云服务器ECS的配置变更。普通IDC模式下，很难做到对单台服务器进行变更配置。而对于阿里云，当您购买了云服务器ECS或者存储的容量后，可以根据业务量的增减自由变更配置。</p>
+</li>
+<li><p>横向的弹性。</p>
+<p>对于游戏应用或直播平台出现的高峰期，若在普通的IDC模式下，您根本无法立即准备资源；而云计算却可以使用弹性的方式帮助您度过这样的高峰。当业务高峰消失时，您可以将多余的资源释放掉，以减少业务成本。利用横向的扩展和缩减，配合阿里云的弹性伸缩，完全可以做到定时定量的伸缩，或者按照业务的负载进行伸缩。</p>
+</li>
+</ul>
+</li>
+<li><p>存储弹性</p>
+<p>当数据量增多时，对于普通的IDC方案，您只能不断增加服务器，而这样扩展的服务器数量是有限的。阿里云为您提供海量的存储，您可以按需购买，为存储提供最大保障。</p>
+</li>
+<li><p>网络弹性</p>
+<p>阿里云的专有网络VPC的网络配置与普通IDC机房配置可以是完全相同的，并且可以拥有更灵活的拓展性。在阿里云，您可以实现各个可用区（机房）之间的互联互通、安全域隔离以及灵活的网络配置和规划。</p>
+</li>
+</ul>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>Donate comment here.</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="ycy-ww 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="ycy-ww 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+            <div class="social-item">
+              <a target="_blank" class="social-link" href="/images/wechat_channel.png">
+                <span class="icon">
+                  <i class="fa fa-wechat"></i>
+                </span>
+
+                <span class="label">WeChat</span>
+              </a>
+            </div>
+
+            <div class="social-item">
+              <a target="_blank" class="social-link" href="/atom.xml">
+                <span class="icon">
+                  <i class="fa fa-rss"></i>
+                </span>
+
+                <span class="label">RSS</span>
+              </a>
+            </div>
+    </div>
+  </div>
+
+   
+    <div>    
+      
+         <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------The end of this article <i class="fa fa-paw"></i> thanks for reading-------------</div>
+    
+</div>
+    </div>
+    <div>
+      
+        
+
+      
+    </div>
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag"><i class="fa fa-tag"></i><i class="fa fa-tag"></i> 云服务器</a>
+              <a href="/tags/ECS/" rel="tag"><i class="fa fa-tag"></i><i class="fa fa-tag"></i> ECS</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/archives/58a945da.html" rel="prev" title="JS的历史-实现">
+      <i class="fa fa-chevron-left"></i> JS的历史-实现
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/archives/a73d9697.html" rel="next" title="ECS-使用须知">
+      ECS-使用须知 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+            <li class="tab"><a href="#comment-livere">livere</a></li>
+            <li class="tab"><a href="#comment-valine">valine</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments" id="gitalk-container"></div>
+            </div>
+            <div class="tab-pane livere" id="comment-livere">
+              
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80ODgxNi8yNTMxMA=="></div>
+  </div>
+  
+            </div>
+            <div class="tab-pane valine" id="comment-valine">
+              <div class="comments" id="valine-comments"></div>
+            </div>
+        </div>
+      </div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#云服务器-ECS"><span class="nav-number">1.</span> <span class="nav-text">云服务器 ECS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#产品架构"><span class="nav-number">1.1.</span> <span class="nav-text">产品架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#管理工具"><span class="nav-number">1.2.</span> <span class="nav-text">管理工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署建议"><span class="nav-number">1.3.</span> <span class="nav-text">部署建议</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#产品优势"><span class="nav-number">2.</span> <span class="nav-text">产品优势</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#与普通IDC对比优势"><span class="nav-number">2.1.</span> <span class="nav-text">与普通IDC对比优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高可用性"><span class="nav-number">2.2.</span> <span class="nav-text">高可用性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安全性"><span class="nav-number">2.3.</span> <span class="nav-text">安全性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#弹性"><span class="nav-number">2.4.</span> <span class="nav-text">弹性</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ycy-ww" src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">ycy-ww</p>
+  <div class="site-description" itemprop="description">CS'fun</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ycy-ww" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ycy-ww" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:ycywwlove@gmail.com" title="E-Mail → mailto:ycywwlove@gmail.com" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/6575206909" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;6575206909" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Recommend
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://www.alloyteam.com/nav/" title="http:&#x2F;&#x2F;www.alloyteam.com&#x2F;nav&#x2F;" rel="external nofollow noopener noreferrer" target="_blank">Web nav</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://wf.uisdc.com/cn/" title="http:&#x2F;&#x2F;wf.uisdc.com&#x2F;cn&#x2F;" rel="external nofollow noopener noreferrer" target="_blank">Google web</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="external nofollow noopener noreferrer" target="_blank">null </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2020-2-22 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ycy-ww</span>
+</div>
+
+<!-- -->
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=14iu" async="async"></script>
+  </div>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共42.4k字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'aae22db61ce39c0bd88a',
+      clientSecret: 'be1043c62e7a1eb958084607b5e726ef91211463',
+      repo        : 'blog_review',
+      owner       : 'ycy-ww',
+      admin       : ['ycy-ww'],
+      id          : 'e4e0b50b69f17bdc34ee2a042bd1c7ff',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'bCbB2fFiDFNjxsDiBnAIV5VL-gzGzoHsz',
+      appKey     : 'ICRGeLHGGBenHJpEdYpTjYLs',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+
+
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+
+</body>
+</html>

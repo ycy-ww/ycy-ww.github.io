@@ -168,17 +168,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">19</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">21</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">7</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">39</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">42</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -233,7 +233,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/58a945da.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/2287084e.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -247,7 +247,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/58a945da.html" class="post-title-link" itemprop="url">JS的历史-实现</a>
+            <a href="/archives/2287084e.html" class="post-title-link" itemprop="url">ECS-ECS实例创建</a>
         </h2>
 
         <div class="post-meta">
@@ -257,7 +257,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：3-3-2020 6:08:21 晚上" itemprop="dateCreated datePublished" datetime="2020-03-03T18:08:21+08:00">3-3-2020</time>
+              <time title="创建时间：3-4-2020 12:51:58 凌晨" itemprop="dateCreated datePublished" datetime="2020-03-04T00:51:58+08:00">3-4-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -265,7 +265,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                  <a href="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/" itemprop="url" rel="index"><span itemprop="name">云服务器 ECS</span></a>
                 </span>
             </span>
 
@@ -278,8 +278,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/58a945da.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/58a945da.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/2287084e.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/2287084e.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -296,112 +296,42 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="JavaScript-实现"><a href="#JavaScript-实现" class="headerlink" title="JavaScript 实现"></a>JavaScript 实现</h1><p><strong>JavaScript 的核心 ECMAScript 描述了该语言的语法和基本对象；</strong></p>
-<p><strong>DOM 描述了处理网页内容的方法和接口；</strong></p>
-<p><strong>BOM 描述了与浏览器进行交互的方法和接口。</strong></p>
-<h2 id="ECMAScript、DOM-和-BOM"><a href="#ECMAScript、DOM-和-BOM" class="headerlink" title="ECMAScript、DOM 和 BOM"></a>ECMAScript、DOM 和 BOM</h2><p>尽管 ECMAScript 是一个重要的标准，但它并不是 JavaScript 唯一的部分，当然，也不是唯一被标准化的部分。实际上，一个完整的 JavaScript 实现是由以下 3 个不同部分组成的：</p>
+          <h1 id="入门概述"><a href="#入门概述" class="headerlink" title="入门概述"></a>入门概述</h1><p>根据本系列教程，您可以通过管理控制台尝试创建一台ECS实例，再通过配置安全组、连接实例、安装第三方服务、解析域名等操作了解ECS实例的使用方式。最后，您可以释放实例和查看费用账单，了解实例的整个生命周期会消耗的大概费用。</p>
+<h2 id="背景信息"><a href="#背景信息" class="headerlink" title="背景信息"></a>背景信息</h2><p>一台云服务器（以下简称ECS实例）由实例规格、镜像、块存储、快照、安全组、弹性网卡等基础计算组件组成并协同提供服务。其中：</p>
 <ul>
-<li><a href="https://www.w3school.com.cn/js/pro_js_implement.asp#ECMAScript" target="_blank" rel="external nofollow noopener noreferrer">核心（ECMAScript）</a></li>
-<li><a href="https://www.w3school.com.cn/js/pro_js_implement.asp#DOM" target="_blank" rel="external nofollow noopener noreferrer">文档对象模型（DOM）</a></li>
-<li><a href="https://www.w3school.com.cn/js/pro_js_implement.asp#BOM" target="_blank" rel="external nofollow noopener noreferrer">浏览器对象模型（BOM）</a></li>
+<li>实例规格：定义了ECS实例的vCPU和内存的配置，是计算能力的体现。</li>
+<li>镜像：提供启动ECS实例所需的所有信息，包括操作系统和预装软件。</li>
+<li>块存储：提供存储能力，包括系统盘和数据盘。存储类型包括云盘和本地盘等多种不同类型的磁盘。就像硬盘一样，您可以对挂载到ECS实例上的云盘做分区、格式化、创建文件系统等操作，并对数据进行持久化存储。</li>
+<li>网络：使用专有网络（简称VPC），相当于您自己构建了一个数据中心网络，有自己的路由、交换机和访问策略。</li>
+<li>安全组：用来允许或拒绝公网请求和内网请求，为实例提供防护能力。绝大多数情况下，当实例加入一个新创建的安全组时，在提供业务访问前您都必须添加必要的安全组规则。一般来说，安全组等同于服务器防火墙。</li>
 </ul>
-<p><img src="https://www.w3school.com.cn/i/ct_js_JavaScript_ECMAScript_DOM_BOM.gif" alt="JavaScript 包括 ECMAScript、DOM 和 BOM"></p>
-<h2 id="ECMAScript"><a href="#ECMAScript" class="headerlink" title="ECMAScript"></a>ECMAScript</h2><p>ECMAScript 并不与任何具体浏览器相绑定，实际上，它也没有提到用于任何用户输入输出的方法（这点与 C 这类语言不同，它需要依赖外部的库来完成这类任务）。那么什么才是 ECMAScript 呢？ECMA-262 标准（第 2 段）的描述如下：</p>
-<blockquote>
-<p>“ECMAScript 可以为不同种类的宿主环境提供核心的脚本编程能力，因此核心的脚本语言是与任何特定的宿主环境分开进行规定的… …”</p>
-</blockquote>
-<p>Web 浏览器对于 ECMAScript 来说是一个宿主环境，但它并不是唯一的宿主环境。事实上，还有不计其数的其他各种环境（例如 Nombas 的 ScriptEase，以及 Macromedia 同时用在 Flash 和 Director MX 中的 ActionScript）可以容纳 ECMAScript 实现。那么 ECMAScript 在浏览器之外规定了些什么呢？</p>
-<p>简单地说，ECMAScript 描述了以下内容：</p>
+<h2 id="Linux系统实例快速入门"><a href="#Linux系统实例快速入门" class="headerlink" title="Linux系统实例快速入门"></a>Linux系统实例快速入门</h2><p><a href="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7253223851/p87469.png" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7253223851/p87469.png" alt="procedure-linux"></a></p>
+<p>Linux系统ECS实例快速入门分为以下步骤：</p>
 <ul>
-<li>语法</li>
-<li>类型</li>
-<li>语句</li>
-<li>关键字</li>
-<li>保留字</li>
-<li>运算符</li>
-<li>对象</li>
+<li><a href="https://help.aliyun.com/document_detail/151694.html#preparation" target="_blank" rel="external nofollow noopener noreferrer">准备工作</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151694.html#Create" target="_blank" rel="external nofollow noopener noreferrer">步骤一：创建ECS实例</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151694.html#AddSecurityGroupRules" target="_blank" rel="external nofollow noopener noreferrer">步骤二：添加安全组规则</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151694.html#Connect" target="_blank" rel="external nofollow noopener noreferrer">步骤三：连接ECS实例</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151694.html#ApacheConfig" target="_blank" rel="external nofollow noopener noreferrer">步骤四：配置Apache服务</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151694.html#DomainName" target="_blank" rel="external nofollow noopener noreferrer">步骤五:   解析网站域名</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151694.html#Release" target="_blank" rel="external nofollow noopener noreferrer">步骤六:   释放ECS实例</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151694.html#ViewBill" target="_blank" rel="external nofollow noopener noreferrer">步骤七：查看费用账单</a></li>
 </ul>
-<p>ECMAScript 仅仅是一个描述，定义了脚本语言的所有属性、方法和对象。其他语言可以实现 ECMAScript 来作为功能的基准，JavaScript 就是这样：</p>
-<p><img src="https://www.w3school.com.cn/i/ct_js_ECMAScript_JavaScript_ActionScript_ScriptEase.gif" alt="ECMAScript、JavaScript、ActionScript、ScriptEase"></p>
-<p>每个浏览器都有它自己的 ECMAScript 接口的实现，然后这个实现又被扩展，包含了 DOM 和 BOM（在以下几节中再探讨）。当然还有其他实现并扩展了 ECMAScript 的语言，例如 Windows 脚本宿主（Windows Scripting Host, WSH）、Macromedia 在 Flash 和 Director MX 中的 ActionScript，以及 Nombas ScriptEase。</p>
-<h3 id="1-ECMAScript-的版本"><a href="#1-ECMAScript-的版本" class="headerlink" title="1. ECMAScript 的版本"></a>1. ECMAScript 的版本</h3><p>ECMAScript 分成几个不同的版本，它是在一个叫做 ECMA-262 的标准中定义的。和其他标准一样，ECMA-262 会被编辑和更新。当有了主要更新时，就会发布一个标准的新版。最新 ECMA-262 的版本是 5.1，于 2011 年 6 月发布。</p>
-<p>ECMA-262 的第一版在本质上与 Netscape 的 JavaScript 1.1 是一样，只是把所有与浏览器相关的代码删除了，此外还有一些小的调整。首先，ECMA-262 要求对 Unicode 标准的支持（以便支持多语言）。第二，它要求对象是平台无关的（Netscape 的 JavaScript 1.1 事实上有不同的对象实现，例如 Date 对象，是依赖于平台）。这是 JavaScript 1.1 和 1.2 为什么不符合 ECMA-262 规范第一版的主要原因。</p>
-<p>ECMA-262 的第二版大部分更新本质上是编辑性的。这次标准的更新是为了与 ISO/IEC-16262 的严格一致，也并没有特别添加、更改和删除内容。ECMAScript 一般不会遵守第二版。</p>
-<p>ECMA-262 第三版是该标准第一次真正的更新。它提供了对字符串处理、错误定义和数值输出的更新。同时，它还增加了正则表达式、新的控制语句、try…catch 异常处理的支持，以及一些为使标准国际化而做的小改动。一般来说，它标志着 ECMAScript 成为一种真正的编程语言。</p>
-<h3 id="2-何谓-ECMAScript-符合性"><a href="#2-何谓-ECMAScript-符合性" class="headerlink" title="2. 何谓 ECMAScript 符合性"></a>2. 何谓 ECMAScript 符合性</h3><p>在 ECMA-262 中，ECMAScript 符合性（conformance）有明确的定义。一个脚本语言必须满足以下四项基本原则：</p>
+<h2 id="Windows系统实例快速入门"><a href="#Windows系统实例快速入门" class="headerlink" title="Windows系统实例快速入门"></a>Windows系统实例快速入门</h2><p><a href="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7253223851/p87470.png" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7253223851/p87470.png" alt="procedure-windows"></a></p>
+<p>Windows系统ECS实例快速入门分为以下步骤：</p>
 <ul>
-<li>符合的实现必须按照 ECMA-262 中所描述的支持所有的“类型、值、对象、属性、函数和程序语言及语义”（ECMA-262，第一页）</li>
-<li>符合的实现必须支持 Unicode 字符标准（UCS）</li>
-<li>符合的实现可以增加没有在 ECMA-262 中指定的“额外类型、值、对象、属性和函数”。ECMA-262 将这些增加描述为规范中未给定的新对象或对象的新属性</li>
-<li>符合的实现可以支持没有在 ECMA-262 中定义的“程序和正则表达式语法”（意思是可以替换或者扩展内建的正则表达式支持）</li>
+<li><a href="https://help.aliyun.com/document_detail/151695.html#section-y64-jt1-pd3" target="_blank" rel="external nofollow noopener noreferrer">准备工作</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151695.html#Create" target="_blank" rel="external nofollow noopener noreferrer">步骤一：创建ECS实例</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151695.html#AddSecurityGroupRules" target="_blank" rel="external nofollow noopener noreferrer">步骤二：添加安全组规则</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151695.html#Connect" target="_blank" rel="external nofollow noopener noreferrer">步骤三：连接ECS实例</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151695.html#IISConfig" target="_blank" rel="external nofollow noopener noreferrer">步骤四：配置IIS服务</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151695.html#DomainName" target="_blank" rel="external nofollow noopener noreferrer">步骤五：（可选）解析网站域名</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151695.html#Release" target="_blank" rel="external nofollow noopener noreferrer">步骤六：（可选）释放ECS实例</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151695.html#ViewBill" target="_blank" rel="external nofollow noopener noreferrer">步骤七：查看费用账单</a></li>
 </ul>
-<p>所有 ECMAScript 实现必须符合以上标准。</p>
-<h3 id="3-Web-浏览器中的-ECMAScript-支持"><a href="#3-Web-浏览器中的-ECMAScript-支持" class="headerlink" title="3. Web 浏览器中的 ECMAScript 支持"></a>3. Web 浏览器中的 ECMAScript 支持</h3><p>含有 JavaScript 1.1 的 Netscape Navigator 3.0 在 1996 年发布。然后，JavaScript 1.1 规范被作为一个新标准的草案被提交给 EMCA。有了 JavaScript 轰动性的流行，Netscape 十分高兴地开始开发 1.2 版。但有一个问题，ECMA 并未接受 Netscape 的草案。在 Netscape Navigator 3.0 发布后不久，微软就发布了 IE 3.0。该版本的 IE 含有 JScript 1.0（微软自己的 JavaScript 实现的名称），原本计划可以与 JavaScript 1.1 相提并论。然后，由于文档不全以及一些不当的重复特性，JScript 1.0 远远没有达到 JavaScript 1.1 的水平。</p>
-<p>在 ECMA-262 第一版定稿之前，发布含有 JavaScript 1.2 的 Netscape Navigator 4.0 是在 1997 年，在那年晚些时候，ECMA-262 标准被接受并标准化。因此，JavaScript 1.2 并不和 ECMAScript 的第一版兼容，虽然 ECMAScript 应该基于 JavaScript 1.1。</p>
-<p>JScript 的下一步是 IE 4.0 中加入的 JScript 3.0（2.0 版是随 IIS 3.0 一起发布的，但并未包含在浏览器中）。微软大力宣传 JScript 3.0 是世界上第一个真正符合 ECMA 标准的脚本语言。而那时，ECMA-262 还没有最终定稿，所以 JScript 3.0 也遭受了和 JavaScript 1.2 同样的命运 - 它还是没能符合最终的 ECMAScript 标准。</p>
-<p>Netscape 选择在 Netscape Navigator 4.06 中升级它的 JavaScript 实现。JavaScript 1.3 使 Netscape 终于完全符合了 ECMAScript 第一版。Netscape 加入了对 Unicode 标准的支持，并让所有的对象保留了在 JavaScript 1.2 中引入的新特性的同时实现了平台独立。</p>
-<p>当 Netscape 将它的源代码作为 Mozilla 项目公布于众时，本来计划 JavaScript 1.4 将会嵌入到 Netscape Navigator 5.0 中。然而，一个冒进的决定 - 要完全从头重新设计 Netscape 的代码，破坏了这个工作。JavaScript 1.4 仅仅作为一个 Netscape Enterprise Server 的服务器端脚本语言发布，以后也没有被放入浏览器中。</p>
-<p>如今，所有主流的 Web 浏览器都遵守 ECMA-262 第三版。</p>
-<p>下面的表格列出了大部分流行的 Web 浏览器中的 ECMAScript 支持：</p>
-<table>
-<thead>
-<tr>
-<th align="left">浏览器</th>
-<th align="left">DOM 兼容性</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Netscape Navigator 2.0</td>
-<td align="left">-</td>
-</tr>
-<tr>
-<td align="left">Netscape Navigator 3.0</td>
-<td align="left">-</td>
-</tr>
-<tr>
-<td align="left">Netscape Navigator 4.0 - 4.05</td>
-<td align="left">-</td>
-</tr>
-<tr>
-<td align="left">Netscape Navigator 4.06 - 4.79</td>
-<td align="left">Edition 1</td>
-</tr>
-<tr>
-<td align="left">Netscape 6.0+ (Mozilla 0.6.0+)</td>
-<td align="left">Edition 3</td>
-</tr>
-<tr>
-<td align="left">Internet Explorer 3.0</td>
-<td align="left">-</td>
-</tr>
-<tr>
-<td align="left">Internet Explorer 4.0</td>
-<td align="left">-</td>
-</tr>
-<tr>
-<td align="left">Internet Explorer 5.0</td>
-<td align="left">Edition 1</td>
-</tr>
-<tr>
-<td align="left">Internet Explorer 5.5+</td>
-<td align="left">Edition 3</td>
-</tr>
-<tr>
-<td align="left">Opera 6.0 - 7.1</td>
-<td align="left">Edition 2</td>
-</tr>
-<tr>
-<td align="left">Opera 7.2+</td>
-<td align="left">Edition 3</td>
-</tr>
-<tr>
-<td align="left">Safari 1.0+/Konqueror ~ 2.0+</td>
-<td align="left">Edition 3</td>
-</tr>
-</tbody></table>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/archives/58a945da.html#more" rel="contents">
+              <a class="btn" href="/archives/2287084e.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -425,7 +355,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/273d6e7c.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/a73d9697.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -439,7 +369,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/273d6e7c.html" class="post-title-link" itemprop="url">JS的历史</a>
+            <a href="/archives/a73d9697.html" class="post-title-link" itemprop="url">ECS-使用须知</a>
         </h2>
 
         <div class="post-meta">
@@ -449,7 +379,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：3-3-2020 6:08:19 晚上" itemprop="dateCreated datePublished" datetime="2020-03-03T18:08:19+08:00">3-3-2020</time>
+              <time title="创建时间：3-3-2020 11:19:00 晚上" itemprop="dateCreated datePublished" datetime="2020-03-03T23:19:00+08:00">3-3-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -457,7 +387,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                  <a href="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/" itemprop="url" rel="index"><span itemprop="name">云服务器 ECS</span></a>
                 </span>
             </span>
 
@@ -470,8 +400,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/273d6e7c.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/273d6e7c.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/a73d9697.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/a73d9697.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -488,21 +418,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="JavaScript-的历史"><a href="#JavaScript-的历史" class="headerlink" title="JavaScript 的历史"></a>JavaScript 的历史</h1><p><strong>为了发挥 JavaScript 的全部潜力，了解它的本质、历史及局限性是十分重要的。</strong></p>
-<p><strong>本节为您讲解 JavaScript 和客户端脚本的起源。</strong></p>
-<h2 id="Nombas-和-ScriptEase"><a href="#Nombas-和-ScriptEase" class="headerlink" title="Nombas 和 ScriptEase"></a>Nombas 和 ScriptEase</h2><p>大概在 1992 年，一家称作 Nombas 的公司开发了一种叫做 C 减减（C-minus-minus，简称 Cmm）的嵌入式脚本语言。Cmm 背后的理念很简单：一个足够强大可以替代宏操作（macro）的脚本语言，同时保持与 C （和 C ++）足够的相似性，以便开发人员能很快学会。这个脚本语言捆绑在一个叫做 CEnvi 的共享软件中，它首次向开发人员展示了这种语言的威力。Nombas 最终把 Cmm 的名字改成了 ScriptEase。现在 ScriptEase 已经成为了 Nombas 产品背后的主要驱动力。</p>
-<h2 id="Netscape-发明了-JavaScript"><a href="#Netscape-发明了-JavaScript" class="headerlink" title="Netscape 发明了 JavaScript"></a>Netscape 发明了 JavaScript</h2><p>当 Netscape Navigator 崭露头角时，Nombas 开发了一个可以嵌入网页中的 CEnvi 的版本。这些早期的试验被称为 Espresso Page（浓咖啡般的页面），它们代表了第一个在万维网上使用的客户端语言。而 Nombas 丝毫没有料到它的理念将会成为万维网的一块重要基石。</p>
-<p>当网上冲浪越来越流行时，对于开发客户端脚本的需求也逐渐增大。此时，大部分因特网用户还仅仅通过 28.8 kbit/s 的调制解调器连接到网络，即便这时网页已经不断地变得更大和更复杂。而更加加剧用户痛苦的是，仅仅为了简单的表单有效性验证，就要与服务器进行多次地往返交互。设想一下，用户填完一个表单，点击提交按钮，等待了 30 秒的处理后，看到的却是一条告诉你忘记填写一个必要的字段。</p>
-<p>那时正处于技术革新最前沿的 Netscape，开始认真考虑开发一种客户端脚本语言来解决简单的处理问题。</p>
-<p>当时工作于 Netscape 的 Brendan Eich，开始着手为即将在 1995 年发行的 Netscape Navigator 2.0 开发一个称之为 LiveScript 的脚本语言，当时的目的是在浏览器和服务器（本来要叫它 LiveWire）端使用它。Netscape 与 Sun 及时完成 LiveScript 实现。</p>
-<p>就在 Netscape Navigator 2.0 即将正式发布前，Netscape 将其更名为 JavaScript，目的是为了利用 Java 这个因特网时髦词汇。Netscape 的赌注最终得到回报，JavaScript 从此变成了因特网的必备组件。</p>
-<h2 id="三足鼎立"><a href="#三足鼎立" class="headerlink" title="三足鼎立"></a>三足鼎立</h2><p>因为 JavaScript 1.0 如此成功，Netscape 在 Netscape Navigator 3.0 中发布了 1.1 版。恰巧那个时候，微软决定进军浏览器，发布了 IE 3.0 并搭载了一个 JavaScript 的克隆版，叫做 JScript（这样命名是为了避免与 Netscape 潜在的许可纠纷）。微软步入 Web 浏览器领域的这重要一步虽然令其声名狼藉，但也成为 JavaScript 语言发展过程中的重要一步。</p>
-<p>在微软进入后，有 3 种不同的 JavaScript 版本同时存在：Netscape Navigator 3.0 中的 JavaScript、IE 中的 JScript 以及 CEnvi 中的 ScriptEase。与 C 和其他编程语言不同的是，JavaScript 并没有一个标准来统一其语法或特性，而这 3 种不同的版本恰恰突出了这个问题。随着业界担心的增加，这个语言的标准化显然已经势在必行。</p>
-<h2 id="标准化"><a href="#标准化" class="headerlink" title="标准化"></a>标准化</h2><p>1997 年，JavaScript 1.1 作为一个草案提交给欧洲计算机制造商协会（ECMA）。第 39 技术委员会（TC39）被委派来“标准化一个通用、跨平台、中立于厂商的脚本语言的语法和语义”(<a href="http://www.ecma-international.org/memento/TC39.htm)。由来自" target="_blank" rel="external nofollow noopener noreferrer">http://www.ecma-international.org/memento/TC39.htm)。由来自</a> Netscape、Sun、微软、Borland 和其他一些对脚本编程感兴趣的公司的程序员组成的 TC39 锤炼出了 ECMA-262，该标准定义了名为 ECMAScript 的全新脚本语言。</p>
-<p>在接下来的几年里，国际标准化组织及国际电工委员会（ISO/IEC）也采纳 ECMAScript 作为标准（ISO/IEC-16262）。从此，Web 浏览器就开始努力（虽然有着不同的程度的成功和失败）将 ECMAScript 作为 JavaScript 实现的基础。</p>
+          <h1 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h1><p>云服务器ECS具有广泛的应用场景，既可以作为Web服务器或者应用服务器单独使用，又可以与其他阿里云服务集成提供丰富的解决方案。</p>
+<h2 id="企业官网或轻量的Web应用"><a href="#企业官网或轻量的Web应用" class="headerlink" title="企业官网或轻量的Web应用"></a>企业官网或轻量的Web应用</h2><p>网站初始阶段访问量小，只需要一台低配置的云服务器ECS实例即可运行Apache或Nginx等Web应用程序、数据库、存储文件等。随着网站发展，您可以随时升级ECS实例的配置，或者增加ECS实例数量，无需担心低配计算单元在业务突增时带来的资源不足。</p>
+<h2 id="多媒体以及高并发应用或网站"><a href="#多媒体以及高并发应用或网站" class="headerlink" title="多媒体以及高并发应用或网站"></a>多媒体以及高并发应用或网站</h2><p>云服务器ECS与对象存储OSS搭配，对象存储OSS承载静态图片、视频或者下载包，进而降低存储费用。同时配合内容分发网络CDN和负载均衡SLB，可大幅减少用户访问等待时间、降低网络带宽费用以及提高可用性。</p>
+<h2 id="高I-O要求数据库"><a href="#高I-O要求数据库" class="headerlink" title="高I/O要求数据库"></a>高I/O要求数据库</h2><p>支持承载高I/O要求的数据库，如OLTP类型数据库以及NoSQL类型数据库。您可以使用较高配置的I/O优化型云服务器ECS，同时采用ESSD云盘，可实现高I/O并发响应和更高的数据可靠性。您也可以使用多台中等偏下配置的I/O优化型ECS实例，搭配负载均衡SLB，建设高可用底层架构。</p>
+<h2 id="访问量波动剧烈的应用或网站"><a href="#访问量波动剧烈的应用或网站" class="headerlink" title="访问量波动剧烈的应用或网站"></a>访问量波动剧烈的应用或网站</h2><p>某些应用，如抢红包应用、优惠券发放应用、电商网站和票务网站，访问量可能会在短时间内产生巨大的波动。您可以配合使用弹性伸缩，自动化实现在请求高峰来临前增加ECS实例，并在进入请求低谷时减少ECS实例。满足访问量达到峰值时对资源的要求，同时降低了成本。如果搭配负载均衡SLB，您还可以实现高可用应用架构。</p>
+<h2 id="大数据及实时在线或离线分析"><a href="#大数据及实时在线或离线分析" class="headerlink" title="大数据及实时在线或离线分析"></a>大数据及实时在线或离线分析</h2><p>云服务器ECS提供了大数据类型实例规格族，支持Hadoop分布式计算、日志处理和大型数据仓库等业务场景。由于大数据类型实例规格采用了本地存储的架构，云服务器ECS在保证海量存储空间、高存储性能的前提下，可以为云端的Hadoop集群、Spark集群提供更高的网络性能。</p>
+<h2 id="机器学习和深度学习等AI应用"><a href="#机器学习和深度学习等AI应用" class="headerlink" title="机器学习和深度学习等AI应用"></a>机器学习和深度学习等AI应用</h2><p>通过采用GPU计算型实例，您可以搭建基于TensorFlow框架等的AI应用。此外，GPU计算型还可以降低客户端的计算能力要求，适用于图形处理、云游戏云端实时渲染、AR/VR的云端实时渲染等瘦终端场景。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/archives/273d6e7c.html#more" rel="contents">
+              <a class="btn" href="/archives/a73d9697.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -526,7 +451,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -593,20 +518,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-count">42</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -672,7 +597,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共34.8k字</span>
+  <span class="post-count">博客全站共42.4k字</span>
 </div>
 
         

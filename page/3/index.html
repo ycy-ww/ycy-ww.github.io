@@ -168,17 +168,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">19</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">21</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">7</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">39</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">42</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -233,7 +233,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/14d86ed1.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/273d6e7c.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -247,7 +247,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/14d86ed1.html" class="post-title-link" itemprop="url">Eclipse导入jar包</a>
+            <a href="/archives/273d6e7c.html" class="post-title-link" itemprop="url">JS的历史</a>
         </h2>
 
         <div class="post-meta">
@@ -257,7 +257,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：3-2-2020 2:21:31 下午" itemprop="dateCreated datePublished" datetime="2020-03-02T14:21:31+08:00">3-2-2020</time>
+              <time title="创建时间：3-3-2020 6:08:19 晚上" itemprop="dateCreated datePublished" datetime="2020-03-03T18:08:19+08:00">3-3-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -265,7 +265,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
                 </span>
             </span>
 
@@ -278,8 +278,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/14d86ed1.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/14d86ed1.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/273d6e7c.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/273d6e7c.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -296,51 +296,26 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Eclipse怎么导入jar包"><a href="#Eclipse怎么导入jar包" class="headerlink" title="Eclipse怎么导入jar包"></a>Eclipse怎么导入jar包</h1><ol>
-<li>先建一个lib文件夹</li>
-</ol>
-<p><img src="https://img2018.cnblogs.com/blog/1584305/201903/1584305-20190308145306021-1373490921.png" alt="img"></p>
-<p><img src="https://img2018.cnblogs.com/blog/1584305/201903/1584305-20190308145556621-850026260.png" alt="img"></p>
-<ol start="2">
-<li>将jar包拖入lib文件夹</li>
-</ol>
-<p><img src="https://img2018.cnblogs.com/blog/1584305/201903/1584305-20190308150607570-86255265.png" alt="img"></p>
-<ol start="3">
-<li><p>build path</p>
-<p><img src="https://img2018.cnblogs.com/blog/1584305/201903/1584305-20190308145920560-1053374747.png" alt="img"></p>
-</li>
-</ol>
-<ol start="4">
-<li>添加jar包</li>
-</ol>
-<p><img src="https://img2018.cnblogs.com/blog/1584305/201903/1584305-20190308150204101-2113278975.png" alt="img"></p>
-<p><img src="https://img2018.cnblogs.com/blog/1584305/201903/1584305-20190308150132756-1662033148.png" alt="img"></p>
-<ol start="5">
-<li>apply -&gt; finish</li>
-</ol>
-<hr>
-<h1 id="eclipse和myeclipse导入新项目引入的包出现错误解决方式"><a href="#eclipse和myeclipse导入新项目引入的包出现错误解决方式" class="headerlink" title="eclipse和myeclipse导入新项目引入的包出现错误解决方式"></a>eclipse和myeclipse导入新项目引入的包出现错误解决方式</h1><p>这种问题应该是一般新手都会遇到的问题，遇到这种问题不要着急，可以从一下几个途径解决（以java项目为例）：</p>
-<ol>
-<li><p>查看出错的包是否在项目中已经引入，如果不存在，则需要将使用到的包导入到项目的lib目录下；</p>
-</li>
-<li><p>由于新导入的包默认使用编译器环境下的jdk，所以导入新项目后需要更改项目使用JDK的版本，</p>
-</li>
-</ol>
-<p><strong>具体步骤如下：</strong></p>
-<blockquote>
-<p>（1）右键点击项目–&gt;build path–&gt;Configure build path–&gt;Libraries–&gt;JRE System Library</p>
-</blockquote>
-<blockquote>
-<p>（2）点击右侧edit，选择需要的JDK</p>
-</blockquote>
-<ol start="3">
-<li><p>将lib下面的包添加到项目中，右键点击lib–&gt;build path–&gt;build path</p>
-</li>
-<li><p>如果以上3中方法还不能解决，则使用比较传统的方法，选中lib下所有包，右键–&gt;build path–&gt;build path；</p>
-</li>
-</ol>
-<hr>
-
+          <h1 id="JavaScript-的历史"><a href="#JavaScript-的历史" class="headerlink" title="JavaScript 的历史"></a>JavaScript 的历史</h1><p><strong>为了发挥 JavaScript 的全部潜力，了解它的本质、历史及局限性是十分重要的。</strong></p>
+<p><strong>本节为您讲解 JavaScript 和客户端脚本的起源。</strong></p>
+<h2 id="Nombas-和-ScriptEase"><a href="#Nombas-和-ScriptEase" class="headerlink" title="Nombas 和 ScriptEase"></a>Nombas 和 ScriptEase</h2><p>大概在 1992 年，一家称作 Nombas 的公司开发了一种叫做 C 减减（C-minus-minus，简称 Cmm）的嵌入式脚本语言。Cmm 背后的理念很简单：一个足够强大可以替代宏操作（macro）的脚本语言，同时保持与 C （和 C ++）足够的相似性，以便开发人员能很快学会。这个脚本语言捆绑在一个叫做 CEnvi 的共享软件中，它首次向开发人员展示了这种语言的威力。Nombas 最终把 Cmm 的名字改成了 ScriptEase。现在 ScriptEase 已经成为了 Nombas 产品背后的主要驱动力。</p>
+<h2 id="Netscape-发明了-JavaScript"><a href="#Netscape-发明了-JavaScript" class="headerlink" title="Netscape 发明了 JavaScript"></a>Netscape 发明了 JavaScript</h2><p>当 Netscape Navigator 崭露头角时，Nombas 开发了一个可以嵌入网页中的 CEnvi 的版本。这些早期的试验被称为 Espresso Page（浓咖啡般的页面），它们代表了第一个在万维网上使用的客户端语言。而 Nombas 丝毫没有料到它的理念将会成为万维网的一块重要基石。</p>
+<p>当网上冲浪越来越流行时，对于开发客户端脚本的需求也逐渐增大。此时，大部分因特网用户还仅仅通过 28.8 kbit/s 的调制解调器连接到网络，即便这时网页已经不断地变得更大和更复杂。而更加加剧用户痛苦的是，仅仅为了简单的表单有效性验证，就要与服务器进行多次地往返交互。设想一下，用户填完一个表单，点击提交按钮，等待了 30 秒的处理后，看到的却是一条告诉你忘记填写一个必要的字段。</p>
+<p>那时正处于技术革新最前沿的 Netscape，开始认真考虑开发一种客户端脚本语言来解决简单的处理问题。</p>
+<p>当时工作于 Netscape 的 Brendan Eich，开始着手为即将在 1995 年发行的 Netscape Navigator 2.0 开发一个称之为 LiveScript 的脚本语言，当时的目的是在浏览器和服务器（本来要叫它 LiveWire）端使用它。Netscape 与 Sun 及时完成 LiveScript 实现。</p>
+<p>就在 Netscape Navigator 2.0 即将正式发布前，Netscape 将其更名为 JavaScript，目的是为了利用 Java 这个因特网时髦词汇。Netscape 的赌注最终得到回报，JavaScript 从此变成了因特网的必备组件。</p>
+<h2 id="三足鼎立"><a href="#三足鼎立" class="headerlink" title="三足鼎立"></a>三足鼎立</h2><p>因为 JavaScript 1.0 如此成功，Netscape 在 Netscape Navigator 3.0 中发布了 1.1 版。恰巧那个时候，微软决定进军浏览器，发布了 IE 3.0 并搭载了一个 JavaScript 的克隆版，叫做 JScript（这样命名是为了避免与 Netscape 潜在的许可纠纷）。微软步入 Web 浏览器领域的这重要一步虽然令其声名狼藉，但也成为 JavaScript 语言发展过程中的重要一步。</p>
+<p>在微软进入后，有 3 种不同的 JavaScript 版本同时存在：Netscape Navigator 3.0 中的 JavaScript、IE 中的 JScript 以及 CEnvi 中的 ScriptEase。与 C 和其他编程语言不同的是，JavaScript 并没有一个标准来统一其语法或特性，而这 3 种不同的版本恰恰突出了这个问题。随着业界担心的增加，这个语言的标准化显然已经势在必行。</p>
+<h2 id="标准化"><a href="#标准化" class="headerlink" title="标准化"></a>标准化</h2><p>1997 年，JavaScript 1.1 作为一个草案提交给欧洲计算机制造商协会（ECMA）。第 39 技术委员会（TC39）被委派来“标准化一个通用、跨平台、中立于厂商的脚本语言的语法和语义”(<a href="http://www.ecma-international.org/memento/TC39.htm)。由来自" target="_blank" rel="external nofollow noopener noreferrer">http://www.ecma-international.org/memento/TC39.htm)。由来自</a> Netscape、Sun、微软、Borland 和其他一些对脚本编程感兴趣的公司的程序员组成的 TC39 锤炼出了 ECMA-262，该标准定义了名为 ECMAScript 的全新脚本语言。</p>
+<p>在接下来的几年里，国际标准化组织及国际电工委员会（ISO/IEC）也采纳 ECMAScript 作为标准（ISO/IEC-16262）。从此，Web 浏览器就开始努力（虽然有着不同的程度的成功和失败）将 ECMAScript 作为 JavaScript 实现的基础。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/archives/273d6e7c.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -359,7 +334,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/e5c0af90.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/4712f55d.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -373,7 +348,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/e5c0af90.html" class="post-title-link" itemprop="url">公众号开发-1</a>
+            <a href="/archives/4712f55d.html" class="post-title-link" itemprop="url">渠道经理</a>
         </h2>
 
         <div class="post-meta">
@@ -383,7 +358,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：3-1-2020 11:43:52 晚上" itemprop="dateCreated datePublished" datetime="2020-03-01T23:43:52+08:00">3-1-2020</time>
+              <time title="创建时间：3-3-2020 6:04:20 晚上" itemprop="dateCreated datePublished" datetime="2020-03-03T18:04:20+08:00">3-3-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -391,7 +366,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">微信公众号开发</span></a>
+                  <a href="/categories/%E9%94%80%E5%94%AE%E6%B8%A0%E9%81%93/" itemprop="url" rel="index"><span itemprop="name">销售渠道</span></a>
                 </span>
             </span>
 
@@ -404,8 +379,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/e5c0af90.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/e5c0af90.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/4712f55d.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/4712f55d.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -422,47 +397,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="微信公众平台测试号的开发流程"><a href="#微信公众平台测试号的开发流程" class="headerlink" title="微信公众平台测试号的开发流程"></a>微信公众平台测试号的开发流程</h1><ol>
-<li>接入</li>
-</ol>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">*参数		   描述</span></span><br><span class="line"><span class="comment">signature	微信加密签名，signature结合了开发者填写的token参数和请求中的timestamp参数、nonce参数。</span></span><br><span class="line"><span class="comment">timestamp	时间戳</span></span><br><span class="line"><span class="comment">nonce		随机数</span></span><br><span class="line"><span class="comment">echostr		随机字符串</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">	protected void <span class="keyword">do</span><span class="constructor">Get(HttpServletRequest <span class="params">request</span>, HttpServletResponse <span class="params">response</span>)</span> throws ServletException, IOException &#123;</span><br><span class="line">		String signature = request.get<span class="constructor">Parameter(<span class="string">"signature"</span>)</span>;</span><br><span class="line">		String timestamp = request.get<span class="constructor">Parameter(<span class="string">"timestamp"</span>)</span>;</span><br><span class="line">		String nonce = request.get<span class="constructor">Parameter(<span class="string">"nonce"</span>)</span>;</span><br><span class="line">		String echostr = request.get<span class="constructor">Parameter(<span class="string">"echostr"</span>)</span>;</span><br><span class="line">		<span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(signature);</span><br><span class="line">		<span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(timestamp);</span><br><span class="line">		<span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(nonce);</span><br><span class="line">		<span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(echostr);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//校验值请求</span></span><br><span class="line">		<span class="keyword">if</span>(<span class="module-access"><span class="module"><span class="identifier">WeixinService</span>.</span></span>check(timestamp,nonce,signature)) &#123;</span><br><span class="line">			<span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(<span class="string">"检验成功"</span>);</span><br><span class="line">			</span><br><span class="line">			PrintWriter out = response.get<span class="constructor">Writer()</span>;</span><br><span class="line"><span class="comment">//			原样返回			</span></span><br><span class="line">			out.print(echostr);</span><br><span class="line">			out.flush<span class="literal">()</span>;</span><br><span class="line">			out.close<span class="literal">()</span>;</span><br><span class="line">			</span><br><span class="line">		&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(<span class="string">"检验失败"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	 </span><br><span class="line">		</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">String</span> TOKEN = <span class="string">"ycy"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">boolean</span> check(<span class="keyword">String</span> timestamp, <span class="keyword">String</span> nonce, <span class="keyword">String</span> signature) &#123;</span><br><span class="line">		<span class="comment">//1）将token、timestamp、nonce三个参数进行字典序排序</span></span><br><span class="line">		<span class="comment">//2）将三个参数字符串拼接成一个字符串进行sha1加密</span></span><br><span class="line">		<span class="comment">//3）开发者获得加密后的字符串可与signature对比，标识该请求来源于微信</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">String</span>[] strs=<span class="keyword">new</span> <span class="keyword">String</span>[] &#123;TOKEN,timestamp,nonce&#125;;</span><br><span class="line">		Arrays.<span class="built_in">sort</span>(strs);</span><br><span class="line">		<span class="keyword">String</span> <span class="built_in">str</span> = strs[<span class="number">0</span>]+strs[<span class="number">1</span>]+strs[<span class="number">2</span>];</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">String</span> myswig = sha1(<span class="built_in">str</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> myswig.equalsIgnoreCase(signature);</span><br><span class="line">	&#125;		</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//加密方法</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">String</span> sha1(<span class="keyword">String</span> src) &#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="comment">//获取一个加密对象</span></span><br><span class="line">			MessageDigest md = MessageDigest.getInstance(<span class="string">"sha1"</span>);</span><br><span class="line">			<span class="comment">//按字节加密，变成十六进制</span></span><br><span class="line">			<span class="built_in">byte</span>[] diagest = md.digest(src.getBytes());</span><br><span class="line">			<span class="built_in">char</span>[] chars = &#123;<span class="string">'0'</span>,<span class="string">'1'</span>,<span class="string">'2'</span>,<span class="string">'3'</span>,<span class="string">'4'</span>,<span class="string">'5'</span>,<span class="string">'6'</span>,<span class="string">'7'</span>,<span class="string">'8'</span>,<span class="string">'9'</span>,<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>,<span class="string">'f'</span>&#125;;</span><br><span class="line">			StringBuilder sb =<span class="keyword">new</span> StringBuilder();</span><br><span class="line">			<span class="keyword">for</span>(<span class="built_in">byte</span> b:diagest) &#123;</span><br><span class="line">				sb.<span class="built_in">append</span>(chars[(b&gt;&gt;<span class="number">4</span>)&amp;<span class="number">15</span>]);</span><br><span class="line">				sb.<span class="built_in">append</span>(chars[b&amp;<span class="number">15</span>]);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> sb.toString();</span><br><span class="line">			</span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="2">
-<li>接受消息</li>
-</ol>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ServletInputStream si = request.get<span class="constructor">InputStream()</span>;</span><br><span class="line">byte<span class="literal">[]</span> b = <span class="keyword">new</span> byte<span class="literal">[<span class="number">1024</span>]</span>; </span><br><span class="line"><span class="built_in">int</span> len;</span><br><span class="line">StringBuilder sb =<span class="keyword">new</span> <span class="constructor">StringBuilder()</span>;</span><br><span class="line"><span class="keyword">while</span>((len=si.read(b))!=-<span class="number">1</span>) &#123;</span><br><span class="line">	sb.append(<span class="keyword">new</span> <span class="constructor">String(<span class="params">b</span>,0,<span class="params">len</span>)</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(sb.<span class="keyword">to</span><span class="constructor">String()</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="3">
-<li>解析消息</li>
-</ol>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">		<span class="comment">//处理消息和事件推送</span></span><br><span class="line">Map&lt;String,String&gt; requestMap =<span class="module-access"><span class="module"><span class="identifier">WeixinService</span>.</span></span>parse<span class="constructor">Request(<span class="params">request</span>.<span class="params">getInputStream</span>()</span>);</span><br><span class="line">		</span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(requestMap);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public <span class="keyword">static</span> <span class="built_in">Map</span>&lt;<span class="built_in">String</span>,<span class="built_in">String</span>&gt;  parseRequest(InputStream <span class="keyword">is</span>) &#123;</span><br><span class="line">			</span><br><span class="line">			SAXReader reader =<span class="keyword">new</span> SAXReader();</span><br><span class="line">			<span class="built_in">Map</span>&lt;<span class="built_in">String</span>,<span class="built_in">String</span>&gt; map =<span class="keyword">new</span> HashMap();</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line"><span class="comment">//				读取输入流，获取文档对象</span></span><br><span class="line">				Document doc =reader.read(<span class="keyword">is</span>);</span><br><span class="line"><span class="comment">//				根据文档对象获得根节点</span></span><br><span class="line">				<span class="built_in">Element</span> root =doc.getRootElement();</span><br><span class="line">				<span class="built_in">List</span>&lt;<span class="built_in">Element</span>&gt; elements = root.elements();</span><br><span class="line">				<span class="keyword">for</span>(<span class="built_in">Element</span> e:elements) &#123;</span><br><span class="line">					map.put(e.getName(),e.getStringValue());</span><br><span class="line">				&#125;</span><br><span class="line">			&#125; <span class="keyword">catch</span> (DocumentException e) &#123;</span><br><span class="line">				</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> map;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="4">
-<li>回复消息</li>
-</ol>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//		回复的数据包</span></span><br><span class="line">		String respXML =<span class="module-access"><span class="module"><span class="identifier">WeixinService</span>.</span></span>get<span class="constructor">Response(<span class="params">requestMap</span>)</span>; </span><br><span class="line">			</span><br><span class="line">		<span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(respXML);</span><br><span class="line">		PrintWriter out =response.get<span class="constructor">Writer()</span>;</span><br><span class="line">		out.print(respXML);</span><br><span class="line">		out.flush<span class="literal">()</span>;</span><br><span class="line">		out.close<span class="literal">()</span>;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="markdown">/**</span></span></span><br><span class="line"><span class="comment"><span class="markdown"><span class="bullet"> * </span>用于处理所有消息和事件的回应</span></span></span><br><span class="line"><span class="comment"><span class="markdown"><span class="bullet"> * </span>@param requestMap</span></span></span><br><span class="line"><span class="comment"><span class="markdown"><span class="bullet"> * </span>@return</span></span></span><br><span class="line"><span class="comment"><span class="markdown"> */</span></span></span><br><span class="line">public <span class="keyword">static</span> <span class="built_in">String</span> getResponse(<span class="built_in">Map</span>&lt;<span class="built_in">String</span>,<span class="built_in">String</span>&gt; requestMap) &#123;</span><br><span class="line">	<span class="built_in">String</span> msgType =requestMap.<span class="keyword">get</span>(<span class="string">"MsgType"</span>);</span><br><span class="line">	BaseMessage bm =<span class="keyword">null</span>;</span><br><span class="line">	<span class="keyword">switch</span>(msgType) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">"test"</span>:</span><br><span class="line">			bm = dealTextMsg(requestMap);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">"voice"</span>:</span><br><span class="line">						</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">"image"</span>:</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">"video"</span>:</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">"shortvideo"</span>:</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">"link"</span>:</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">"location"</span>:</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(bm);</span><br><span class="line">	<span class="keyword">return</span>  <span class="keyword">null</span>;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 	处理文本信息</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> BaseMessage <span class="title">dealTextMsg</span><span class="params">(Map&lt;<span class="keyword">String</span>,<span class="keyword">String</span>&gt; requestMap)</span> </span>&#123;</span><br><span class="line">		BaseMessage tm =<span class="keyword">new</span> TextMsg(requestMap,<span class="string">"你好骚啊@_@"</span>); </span><br><span class="line">		<span class="keyword">return</span> tm;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<hr>
-
+          <h2 id="渠道经理"><a href="#渠道经理" class="headerlink" title="渠道经理"></a>渠道经理</h2><p>渠道经理与产品经理都不居于“命令型”的管理类型，而是属于”流程型”的管理类型，他们不能直接对销售部门发号施令——因为销售人员只能有一个直接上司，而是通过确立管理目标、业务流程和管理规范．来指导销售人员完成既定的工作，并对关键环节进行动态评估和考核，从整体上来约束和调整销售人员的行为方式，实质上这是一种“间接“而非“直接“的管理体系。</p>
+<h3 id="销售渠道"><a href="#销售渠道" class="headerlink" title="销售渠道"></a>销售渠道</h3><p>包括<a href="https://baike.baidu.com/item/网络销售" target="_blank" rel="external nofollow noopener noreferrer">网络销售</a>、电话销售、<a href="https://baike.baidu.com/item/零售商" target="_blank" rel="external nofollow noopener noreferrer">零售商</a>、<a href="https://baike.baidu.com/item/分销商" target="_blank" rel="external nofollow noopener noreferrer">分销商</a>、商业伙伴和销售队伍。</p>
+<h3 id="确定规范"><a href="#确定规范" class="headerlink" title="确定规范"></a>确定规范</h3><h3 id="关注过程"><a href="#关注过程" class="headerlink" title="关注过程"></a>关注过程</h3><h3 id="控制冲突"><a href="#控制冲突" class="headerlink" title="控制冲突"></a>控制冲突</h3><h3 id="复合管理"><a href="#复合管理" class="headerlink" title="复合管理"></a>复合管理</h3><p><strong>产品与渠道就像企业的双翼，二者有效整合方能拉动企业展翅腾飞。</strong>因此只有产品与渠道进行复台管理才能构成竞争优势。渠道经理的一个重要职责，就是必须与产品经理紧密合作，将<a href="https://baike.baidu.com/item/产品策略" target="_blank" rel="external nofollow noopener noreferrer">产品策略</a>真正落实到渠道策略的执行中，最终实现产品的价值。</p>
+<h3 id="形成团队"><a href="#形成团队" class="headerlink" title="形成团队"></a>形成团队</h3><p><strong>与产品经理相似，渠道经理就相当于某一类渠道的“总代理“。</strong></p>
+<p>他需要制定出渠道发展的整体<a href="https://baike.baidu.com/item/策略规划" target="_blank" rel="external nofollow noopener noreferrer">策略规划</a>、<a href="https://baike.baidu.com/item/渠道销售" target="_blank" rel="external nofollow noopener noreferrer">渠道销售</a>目标、渠道结构体系、纳入的产品体系、渠道的开发模式、渠道的空间占有、渠道的自动化建设、渠道的过程管理等一系列管理内容，然后再不断推动销售团队来执行这些管理规范，并统筹协调过程中出现的种种问题，同时对销售人员进行指导、培训和评估。</p>
+<p><strong>渠道是一种有限的资源，商家谁占有了渠道，就能赢得了竞争优势。</strong></p>
+<p>渠道经理就要对不同类型渠道的发展过程进行密切关注，定目标、造规划、设标准，常评估、勤指导，从而维护各类渠道的良性发展，形成企业真正的核心竞争力。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/archives/4712f55d.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -481,7 +430,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -548,20 +497,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-count">42</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -627,7 +576,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共34.8k字</span>
+  <span class="post-count">博客全站共42.4k字</span>
 </div>
 
         

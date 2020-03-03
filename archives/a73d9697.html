@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="zh-CN,en,default">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-center-atom.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+  <meta name="keywords" content="blog">
+
+
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/64ed5bdd.js","daovoice")</script>
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*��������ɫ*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*��Ӱ��ɫ*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*�ϱ߿���ɫ*/
+        border-left-color: #1E92FB;    /*��߿���ɫ*/
+    }
+</style>
+
+<script>
+    (function () {
+        if ('') {
+            if (prompt('��������������') !== '') {
+                alert('�������');
+                if (history.length === 1) {
+                    location.replace("https://wwyyqblog.work"); // �����滻�������ҳ
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.wwyyqblog.work","root":"/","scheme":"Mist","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="应用场景云服务器ECS具有广泛的应用场景，既可以作为Web服务器或者应用服务器单独使用，又可以与其他阿里云服务集成提供丰富的解决方案。 企业官网或轻量的Web应用网站初始阶段访问量小，只需要一台低配置的云服务器ECS实例即可运行Apache或Nginx等Web应用程序、数据库、存储文件等。随着网站发展，您可以随时升级ECS实例的配置，或者增加ECS实例数量，无需担心低配计算单元在业务突增时带来的资">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ECS-使用须知">
+<meta property="og:url" content="https://www.wwyyqblog.work/archives/a73d9697.html">
+<meta property="og:site_name" content="ycy-ww">
+<meta property="og:description" content="应用场景云服务器ECS具有广泛的应用场景，既可以作为Web服务器或者应用服务器单独使用，又可以与其他阿里云服务集成提供丰富的解决方案。 企业官网或轻量的Web应用网站初始阶段访问量小，只需要一台低配置的云服务器ECS实例即可运行Apache或Nginx等Web应用程序、数据库、存储文件等。随着网站发展，您可以随时升级ECS实例的配置，或者增加ECS实例数量，无需担心低配计算单元在业务突增时带来的资">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7240970851/p80221.png">
+<meta property="og:image" content="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6779202851/p52870.png">
+<meta property="article:published_time" content="2020-03-03T15:19:00.559Z">
+<meta property="article:modified_time" content="2020-03-03T15:19:00.559Z">
+<meta property="article:author" content="ycy-ww">
+<meta property="article:tag" content="云服务器">
+<meta property="article:tag" content="ECS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7240970851/p80221.png">
+
+<link rel="canonical" href="https://www.wwyyqblog.work/archives/a73d9697.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>ECS-使用须知 | ycy-ww</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<link rel="alternate" href="/atom.xml" title="ycy-ww" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    <a href="https://github.com/ycy-ww/" target="_blank" rel="external nofollow noopener noreferrer" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta custom-logo">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ycy-ww</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">Fighting for myself!</h1>
+      
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">21</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">8</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">42</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/a73d9697.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ycy-ww">
+      <meta itemprop="description" content="CS'fun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ycy-ww">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          ECS-使用须知
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：3-3-2020 11:19:00 晚上" itemprop="dateCreated datePublished" datetime="2020-03-03T23:19:00+08:00">3-3-2020</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/" itemprop="url" rel="index"><span itemprop="name">云服务器 ECS</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/archives/a73d9697.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/a73d9697.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h1><p>云服务器ECS具有广泛的应用场景，既可以作为Web服务器或者应用服务器单独使用，又可以与其他阿里云服务集成提供丰富的解决方案。</p>
+<h2 id="企业官网或轻量的Web应用"><a href="#企业官网或轻量的Web应用" class="headerlink" title="企业官网或轻量的Web应用"></a>企业官网或轻量的Web应用</h2><p>网站初始阶段访问量小，只需要一台低配置的云服务器ECS实例即可运行Apache或Nginx等Web应用程序、数据库、存储文件等。随着网站发展，您可以随时升级ECS实例的配置，或者增加ECS实例数量，无需担心低配计算单元在业务突增时带来的资源不足。</p>
+<h2 id="多媒体以及高并发应用或网站"><a href="#多媒体以及高并发应用或网站" class="headerlink" title="多媒体以及高并发应用或网站"></a>多媒体以及高并发应用或网站</h2><p>云服务器ECS与对象存储OSS搭配，对象存储OSS承载静态图片、视频或者下载包，进而降低存储费用。同时配合内容分发网络CDN和负载均衡SLB，可大幅减少用户访问等待时间、降低网络带宽费用以及提高可用性。</p>
+<h2 id="高I-O要求数据库"><a href="#高I-O要求数据库" class="headerlink" title="高I/O要求数据库"></a>高I/O要求数据库</h2><p>支持承载高I/O要求的数据库，如OLTP类型数据库以及NoSQL类型数据库。您可以使用较高配置的I/O优化型云服务器ECS，同时采用ESSD云盘，可实现高I/O并发响应和更高的数据可靠性。您也可以使用多台中等偏下配置的I/O优化型ECS实例，搭配负载均衡SLB，建设高可用底层架构。</p>
+<h2 id="访问量波动剧烈的应用或网站"><a href="#访问量波动剧烈的应用或网站" class="headerlink" title="访问量波动剧烈的应用或网站"></a>访问量波动剧烈的应用或网站</h2><p>某些应用，如抢红包应用、优惠券发放应用、电商网站和票务网站，访问量可能会在短时间内产生巨大的波动。您可以配合使用弹性伸缩，自动化实现在请求高峰来临前增加ECS实例，并在进入请求低谷时减少ECS实例。满足访问量达到峰值时对资源的要求，同时降低了成本。如果搭配负载均衡SLB，您还可以实现高可用应用架构。</p>
+<h2 id="大数据及实时在线或离线分析"><a href="#大数据及实时在线或离线分析" class="headerlink" title="大数据及实时在线或离线分析"></a>大数据及实时在线或离线分析</h2><p>云服务器ECS提供了大数据类型实例规格族，支持Hadoop分布式计算、日志处理和大型数据仓库等业务场景。由于大数据类型实例规格采用了本地存储的架构，云服务器ECS在保证海量存储空间、高存储性能的前提下，可以为云端的Hadoop集群、Spark集群提供更高的网络性能。</p>
+<h2 id="机器学习和深度学习等AI应用"><a href="#机器学习和深度学习等AI应用" class="headerlink" title="机器学习和深度学习等AI应用"></a>机器学习和深度学习等AI应用</h2><p>通过采用GPU计算型实例，您可以搭建基于TensorFlow框架等的AI应用。此外，GPU计算型还可以降低客户端的计算能力要求，适用于图形处理、云游戏云端实时渲染、AR/VR的云端实时渲染等瘦终端场景。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="地域和可用区"><a href="#地域和可用区" class="headerlink" title="地域和可用区"></a>地域和可用区</h1><p>每个地域完全独立。每个可用区完全隔离，但同一个地域内的可用区之间使用低时延链路相连。</p>
+<p><a href="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7240970851/p80221.png" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7240970851/p80221.png" alt="可用区"></a></p>
+<h2 id="地域（Region）"><a href="#地域（Region）" class="headerlink" title="地域（Region）"></a>地域（Region）</h2><p>地域是指物理的数据中心。资源创建成功后不能更换地域。</p>
+<p><strong>说明</strong> 不同产品可选择的地域有所不同，</p>
+<ul>
+<li><p>中国大陆</p>
+<table>
+<thead>
+<tr>
+<th align="left">地域名称</th>
+<th align="left">所在城市</th>
+<th align="left">Region ID</th>
+<th align="left">可用区数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">华北 1</td>
+<td align="left">青岛</td>
+<td align="left">cn-qingdao</td>
+<td align="left">2</td>
+</tr>
+<tr>
+<td align="left">华北 2</td>
+<td align="left">北京</td>
+<td align="left">cn-beijing</td>
+<td align="left">8</td>
+</tr>
+<tr>
+<td align="left">华北 3</td>
+<td align="left">张家口</td>
+<td align="left">cn-zhangjiakou</td>
+<td align="left">2</td>
+</tr>
+<tr>
+<td align="left">华北 5</td>
+<td align="left">呼和浩特</td>
+<td align="left">cn-huhehaote</td>
+<td align="left">2</td>
+</tr>
+<tr>
+<td align="left">华东 1</td>
+<td align="left">杭州</td>
+<td align="left">cn-hangzhou</td>
+<td align="left">8</td>
+</tr>
+<tr>
+<td align="left">华东 2</td>
+<td align="left">上海</td>
+<td align="left">cn-shanghai</td>
+<td align="left">6</td>
+</tr>
+<tr>
+<td align="left">华南 1</td>
+<td align="left">深圳</td>
+<td align="left">cn-shenzhen</td>
+<td align="left">5</td>
+</tr>
+<tr>
+<td align="left">华南 2</td>
+<td align="left">河源</td>
+<td align="left">cn-heyuan</td>
+<td align="left">2</td>
+</tr>
+<tr>
+<td align="left">西南 1</td>
+<td align="left">成都</td>
+<td align="left">cn-chengdu</td>
+<td align="left">2</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>选择地域时，您需要考虑以下几个因素：</p>
+<ul>
+<li><p>地理位置</p>
+<p>请根据您以及您目标用户所在的地理位置选择地域。</p>
+<ul>
+<li><p>中国大陆</p>
+<p>一般情况下建议选择和您目标用户所在地域最为接近的数据中心，可以进一步提升用户访问速度。不过，在基础设施、BGP 网络品质、服务质量、云服务器操作使用与配置等方面，阿里云中国大陆地域没有太大区别。BGP 网络可以保证中国大陆全部地域的快速访问。</p>
+</li>
+<li><p>其他国家及地区</p>
+<p>其他国家及地区提供国际带宽，主要面向非中国大陆地区用户。</p>
+</li>
+</ul>
+</li>
+<li><p>阿里云产品之间的关系</p>
+<p>如果多个阿里云产品一起搭配使用，需要注意：</p>
+<ul>
+<li>不同地域的云服务器 ECS、关系型数据库 RDS、对象存储服务 OSS 内网不互通。</li>
+<li>不同地域之间的云服务器 ECS 不能跨地域部署负载均衡，即在不同的地域购买的 ECS 实例不支持跨地域部署在同一负载均衡实例下。</li>
+</ul>
+</li>
+<li><p>关于经营许可证备案</p>
+<p>选择地域时您需要考虑某些地区的特殊要求。如您在中国大陆地域购买了 ECS 实例，并用于 Web 服务器，您需要完成经营许可证备案。</p>
+<p>如您有办理经营许可证备案的需求，请您重点关注：</p>
+<ul>
+<li>北京地区企业，请选择购买的地域为<strong>华北 2</strong>。</li>
+<li>广东地区企业，请选择购买的地域为<strong>华南 1</strong>。</li>
+</ul>
+</li>
+</ul>
+<h2 id="可用区（Zone）"><a href="#可用区（Zone）" class="headerlink" title="可用区（Zone）"></a>可用区（Zone）</h2><p>可用区是指在同一地域内，电力和网络互相独立的物理区域。同一可用区内实例之间的网络延时更小。</p>
+<p>在同一地域内可用区与可用区之间内网互通，可用区之间能做到故障隔离。是否将实例放在同一可用区内，主要取决于对容灾能力和网络延时的要求。</p>
+<ul>
+<li>如果您的应用需要较高的容灾能力，建议您将实例部署在同一地域的不同可用区内。</li>
+<li>如果您的应用要求实例之间的网络延时较低，建议您将实例创建在同一可用区内。</li>
+</ul>
+<hr>
+<h1 id="使用限制"><a href="#使用限制" class="headerlink" title="使用限制"></a>使用限制</h1><p>本文介绍云服务器ECS在产品功能和服务性能上的不同限制，以及如何申请更高配额。</p>
+<h2 id="限制概述"><a href="#限制概述" class="headerlink" title="限制概述"></a>限制概述</h2><p>使用云服务器ECS有下列限制：</p>
+<ul>
+<li>不支持安装虚拟化软件和二次虚拟化（例如安装使用VMware Workstation）。仅弹性裸金属服务器和超级计算集群支持二次虚拟化。</li>
+<li>不支持声卡应用。</li>
+<li>不支持直接加载外接硬件设备（如硬件加密狗、U盘、外接硬盘、银行U key等），您可以尝试软件加密狗或者动态口令二次验证等。</li>
+<li>不支持多播协议。如果需要使用多播，建议改为使用单播点对点方式。</li>
+<li>日志服务不支持32位Linux系统云服务器。</li>
+<li>如果云服务器需要备案，则云服务器有购买要求，且每台ECS实例可申请的备案服务号数量有限</li>
+</ul>
+<h2 id="查看配额"><a href="#查看配额" class="headerlink" title="查看配额"></a>查看配额</h2><p>您可以在ECS控制台<strong>概览</strong>页面查看<strong>权益配额</strong>，支持查看某一地域中的部分资源使用情况和配额。如果某项资源的配额无法满足业务需求，请提交工单申请提升配额。</p>
+<p><a href="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6779202851/p52870.png" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6779202851/p52870.png" alt="权益配额"></a></p>
+<h2 id><a href="#" class="headerlink" title></a></h2><p>详情参考:<a href="https://help.aliyun.com/document_detail/25412.html?spm=a2c4g.11186623.6.550.38b8acf7fh0r0M" target="_blank" rel="external nofollow noopener noreferrer">https://help.aliyun.com/document_detail/25412.html?spm=a2c4g.11186623.6.550.38b8acf7fh0r0M</a></p>
+<hr>
+<h1 id="使用须知"><a href="#使用须知" class="headerlink" title="使用须知"></a>使用须知</h1><h2 id="操作须知"><a href="#操作须知" class="headerlink" title="操作须知"></a>操作须知</h2><ul>
+<li>创建ECS实例后，您拥有实例的管理员权限，阿里云没有权限登录您的实例。</li>
+<li>禁止使用ECS实例做流量穿透服务。</li>
+<li>禁止使用ECS针对淘宝等电商网站从事刷单、刷销量、刷广告、进行虚假网站交易的网络行为。</li>
+<li>不要卸载相关硬件的驱动程序。</li>
+<li>不要随意修改网卡MAC地址。</li>
+<li>建议不要开启SELinux。</li>
+<li>对于4 GiB以上内存的云服务器，请选择64位操作系统，因为32位操作系统存在4 GiB的内存寻址限制。目前支持的64位操作系统包括：<ul>
+<li>Aliyun Linux 64位</li>
+<li>CoreOS 64位</li>
+<li>CentOS 64位</li>
+<li>Debian 64位</li>
+<li>FreeBSD 64位</li>
+<li>OpenSUSE 64位</li>
+<li>SUSE Linux 64位</li>
+<li>Ubuntu 64位</li>
+<li>Red Hat 64位</li>
+<li>Windows 64位</li>
+</ul>
+</li>
+<li>为保证服务的连续性，避免因宕机迁移而导致的服务不可用，建议将相关软件都设置成开机启动。如果有应用服务连接数据库，需要在程序中设置成自动重连机制。</li>
+<li>不建议升级云服务器的内核和操作系统版本。</li>
+</ul>
+<h2 id="Windows操作系统须知"><a href="#Windows操作系统须知" class="headerlink" title="Windows操作系统须知"></a>Windows操作系统须知</h2><ul>
+<li>不要停止Windows系统自带的AliyunService服务或自带的shutdownmon.exe进程，停止后可能会影响控制台正常关机或者重启。</li>
+<li>不要修改域控制器的hostname。</li>
+<li>不建议从域控制器的虚拟机创建自定义镜像。</li>
+<li>不要重命名、删除或禁用Windows下的administrator账号，以免影响服务器使用。</li>
+<li>如果您使用普通云盘，不建议使用虚拟内存。如果使用高效云盘、SSD云盘或ESSD云盘，可以根据实际情况使用虚拟内存。</li>
+<li>请谨慎使用administrator等管理账号进行扩容、跨区卷、注册表、系统更新等操作，避免误操作引起的数据受损。</li>
+<li>Windows 32位操作系统支持的最高CPU核数为4核。</li>
+<li>将Windows实例用于建站、部署Web环境时，需要至少2 GiB内存。1核1 GiB实例规格无法启动MySQL。</li>
+</ul>
+<h2 id="Linux操作系统须知"><a href="#Linux操作系统须知" class="headerlink" title="Linux操作系统须知"></a>Linux操作系统须知</h2><ul>
+<li>不要修改Linux实例默认的<strong>/etc/issue</strong>文件内容。否则，根据实例创建的自定义镜像的系统发行版本无法被正确识别，使用该镜像创建的实例无法正常启动。</li>
+<li>不要随意更改根目录所在分区下各个目录的权限，尤其是<strong>/etc、/sbin、/bin、/boot、/dev、/usr和/lib</strong>等目录的权限。如果权限更改不当会导致系统出现异常。</li>
+<li>不要重命名、删除或禁用Linux下的root账号。</li>
+<li>不要编译Linux系统的内核，或对内核进行任何其他操作。</li>
+<li>如果您使用普通云盘，不建议使用swap分区。</li>
+<li>不要开启NetWorkManager服务。该服务会跟系统内部网络服务出现冲突，导致网络异常。</li>
+<li>请谨慎使用root等管理账号进行fio、mkfs、fsck、扩容等操作，避免误操作引起的数据受损。</li>
+</ul>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>Donate comment here.</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="ycy-ww 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="ycy-ww 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+            <div class="social-item">
+              <a target="_blank" class="social-link" href="/images/wechat_channel.png">
+                <span class="icon">
+                  <i class="fa fa-wechat"></i>
+                </span>
+
+                <span class="label">WeChat</span>
+              </a>
+            </div>
+
+            <div class="social-item">
+              <a target="_blank" class="social-link" href="/atom.xml">
+                <span class="icon">
+                  <i class="fa fa-rss"></i>
+                </span>
+
+                <span class="label">RSS</span>
+              </a>
+            </div>
+    </div>
+  </div>
+
+   
+    <div>    
+      
+         <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------The end of this article <i class="fa fa-paw"></i> thanks for reading-------------</div>
+    
+</div>
+    </div>
+    <div>
+      
+        
+
+      
+    </div>
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag"><i class="fa fa-tag"></i><i class="fa fa-tag"></i> 云服务器</a>
+              <a href="/tags/ECS/" rel="tag"><i class="fa fa-tag"></i><i class="fa fa-tag"></i> ECS</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/archives/6903c0f.html" rel="prev" title="ECS-概念">
+      <i class="fa fa-chevron-left"></i> ECS-概念
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/archives/2287084e.html" rel="next" title="ECS-ECS实例创建">
+      ECS-ECS实例创建 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+            <li class="tab"><a href="#comment-livere">livere</a></li>
+            <li class="tab"><a href="#comment-valine">valine</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments" id="gitalk-container"></div>
+            </div>
+            <div class="tab-pane livere" id="comment-livere">
+              
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80ODgxNi8yNTMxMA=="></div>
+  </div>
+  
+            </div>
+            <div class="tab-pane valine" id="comment-valine">
+              <div class="comments" id="valine-comments"></div>
+            </div>
+        </div>
+      </div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#应用场景"><span class="nav-number">1.</span> <span class="nav-text">应用场景</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#企业官网或轻量的Web应用"><span class="nav-number">1.1.</span> <span class="nav-text">企业官网或轻量的Web应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多媒体以及高并发应用或网站"><span class="nav-number">1.2.</span> <span class="nav-text">多媒体以及高并发应用或网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高I-O要求数据库"><span class="nav-number">1.3.</span> <span class="nav-text">高I&#x2F;O要求数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问量波动剧烈的应用或网站"><span class="nav-number">1.4.</span> <span class="nav-text">访问量波动剧烈的应用或网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#大数据及实时在线或离线分析"><span class="nav-number">1.5.</span> <span class="nav-text">大数据及实时在线或离线分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习和深度学习等AI应用"><span class="nav-number">1.6.</span> <span class="nav-text">机器学习和深度学习等AI应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#地域和可用区"><span class="nav-number">2.</span> <span class="nav-text">地域和可用区</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#地域（Region）"><span class="nav-number">2.1.</span> <span class="nav-text">地域（Region）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可用区（Zone）"><span class="nav-number">2.2.</span> <span class="nav-text">可用区（Zone）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用限制"><span class="nav-number">3.</span> <span class="nav-text">使用限制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#限制概述"><span class="nav-number">3.1.</span> <span class="nav-text">限制概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看配额"><span class="nav-number">3.2.</span> <span class="nav-text">查看配额</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.3.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用须知"><span class="nav-number">4.</span> <span class="nav-text">使用须知</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#操作须知"><span class="nav-number">4.1.</span> <span class="nav-text">操作须知</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows操作系统须知"><span class="nav-number">4.2.</span> <span class="nav-text">Windows操作系统须知</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux操作系统须知"><span class="nav-number">4.3.</span> <span class="nav-text">Linux操作系统须知</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ycy-ww" src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">ycy-ww</p>
+  <div class="site-description" itemprop="description">CS'fun</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ycy-ww" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ycy-ww" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:ycywwlove@gmail.com" title="E-Mail → mailto:ycywwlove@gmail.com" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/6575206909" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;6575206909" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Recommend
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://www.alloyteam.com/nav/" title="http:&#x2F;&#x2F;www.alloyteam.com&#x2F;nav&#x2F;" rel="external nofollow noopener noreferrer" target="_blank">Web nav</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://wf.uisdc.com/cn/" title="http:&#x2F;&#x2F;wf.uisdc.com&#x2F;cn&#x2F;" rel="external nofollow noopener noreferrer" target="_blank">Google web</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="external nofollow noopener noreferrer" target="_blank">null </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2020-2-22 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ycy-ww</span>
+</div>
+
+<!-- -->
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=14iu" async="async"></script>
+  </div>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共42.4k字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'aae22db61ce39c0bd88a',
+      clientSecret: 'be1043c62e7a1eb958084607b5e726ef91211463',
+      repo        : 'blog_review',
+      owner       : 'ycy-ww',
+      admin       : ['ycy-ww'],
+      id          : '0d2e2cacefc0934d3c594b0e1b28d977',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'bCbB2fFiDFNjxsDiBnAIV5VL-gzGzoHsz',
+      appKey     : 'ICRGeLHGGBenHJpEdYpTjYLs',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+
+
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+
+</body>
+</html>

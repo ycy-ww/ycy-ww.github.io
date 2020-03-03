@@ -1,6 +1,675 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>ECS-ECS实例创建</title>
+    <url>/archives/2287084e.html</url>
+    <content><![CDATA[<h1 id="入门概述"><a href="#入门概述" class="headerlink" title="入门概述"></a>入门概述</h1><p>根据本系列教程，您可以通过管理控制台尝试创建一台ECS实例，再通过配置安全组、连接实例、安装第三方服务、解析域名等操作了解ECS实例的使用方式。最后，您可以释放实例和查看费用账单，了解实例的整个生命周期会消耗的大概费用。</p>
+<h2 id="背景信息"><a href="#背景信息" class="headerlink" title="背景信息"></a>背景信息</h2><p>一台云服务器（以下简称ECS实例）由实例规格、镜像、块存储、快照、安全组、弹性网卡等基础计算组件组成并协同提供服务。其中：</p>
+<ul>
+<li>实例规格：定义了ECS实例的vCPU和内存的配置，是计算能力的体现。</li>
+<li>镜像：提供启动ECS实例所需的所有信息，包括操作系统和预装软件。</li>
+<li>块存储：提供存储能力，包括系统盘和数据盘。存储类型包括云盘和本地盘等多种不同类型的磁盘。就像硬盘一样，您可以对挂载到ECS实例上的云盘做分区、格式化、创建文件系统等操作，并对数据进行持久化存储。</li>
+<li>网络：使用专有网络（简称VPC），相当于您自己构建了一个数据中心网络，有自己的路由、交换机和访问策略。</li>
+<li>安全组：用来允许或拒绝公网请求和内网请求，为实例提供防护能力。绝大多数情况下，当实例加入一个新创建的安全组时，在提供业务访问前您都必须添加必要的安全组规则。一般来说，安全组等同于服务器防火墙。</li>
+</ul>
+<h2 id="Linux系统实例快速入门"><a href="#Linux系统实例快速入门" class="headerlink" title="Linux系统实例快速入门"></a>Linux系统实例快速入门</h2><p><a href="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7253223851/p87469.png" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7253223851/p87469.png" alt="procedure-linux"></a></p>
+<p>Linux系统ECS实例快速入门分为以下步骤：</p>
+<ul>
+<li><a href="https://help.aliyun.com/document_detail/151694.html#preparation" target="_blank" rel="external nofollow noopener noreferrer">准备工作</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151694.html#Create" target="_blank" rel="external nofollow noopener noreferrer">步骤一：创建ECS实例</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151694.html#AddSecurityGroupRules" target="_blank" rel="external nofollow noopener noreferrer">步骤二：添加安全组规则</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151694.html#Connect" target="_blank" rel="external nofollow noopener noreferrer">步骤三：连接ECS实例</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151694.html#ApacheConfig" target="_blank" rel="external nofollow noopener noreferrer">步骤四：配置Apache服务</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151694.html#DomainName" target="_blank" rel="external nofollow noopener noreferrer">步骤五:   解析网站域名</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151694.html#Release" target="_blank" rel="external nofollow noopener noreferrer">步骤六:   释放ECS实例</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151694.html#ViewBill" target="_blank" rel="external nofollow noopener noreferrer">步骤七：查看费用账单</a></li>
+</ul>
+<h2 id="Windows系统实例快速入门"><a href="#Windows系统实例快速入门" class="headerlink" title="Windows系统实例快速入门"></a>Windows系统实例快速入门</h2><p><a href="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7253223851/p87470.png" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7253223851/p87470.png" alt="procedure-windows"></a></p>
+<p>Windows系统ECS实例快速入门分为以下步骤：</p>
+<ul>
+<li><a href="https://help.aliyun.com/document_detail/151695.html#section-y64-jt1-pd3" target="_blank" rel="external nofollow noopener noreferrer">准备工作</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151695.html#Create" target="_blank" rel="external nofollow noopener noreferrer">步骤一：创建ECS实例</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151695.html#AddSecurityGroupRules" target="_blank" rel="external nofollow noopener noreferrer">步骤二：添加安全组规则</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151695.html#Connect" target="_blank" rel="external nofollow noopener noreferrer">步骤三：连接ECS实例</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151695.html#IISConfig" target="_blank" rel="external nofollow noopener noreferrer">步骤四：配置IIS服务</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151695.html#DomainName" target="_blank" rel="external nofollow noopener noreferrer">步骤五：（可选）解析网站域名</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151695.html#Release" target="_blank" rel="external nofollow noopener noreferrer">步骤六：（可选）释放ECS实例</a></li>
+<li><a href="https://help.aliyun.com/document_detail/151695.html#ViewBill" target="_blank" rel="external nofollow noopener noreferrer">步骤七：查看费用账单</a></li>
+</ul>
+<a id="more"></a>
+
+<h1 id="Linux系统实例快速入门-1"><a href="#Linux系统实例快速入门-1" class="headerlink" title="Linux系统实例快速入门"></a>Linux系统实例快速入门</h1><p>本入门教程采用<strong>ecs.g6.large</strong>实例规格，在CentOS 8.0系统上配置了Apache服务，结合ECS管理控制台展示如何快速使用云服务器ECS。</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ol>
+<li><p>创建账号，以及完善账号信息。</p>
+<ul>
+<li>注册阿里云账号，并完成实名认证。</li>
+<li>本入门教程创建的是按量付费实例，您的账号的可用余额（含现金、代金券、优惠券等）不得少于100元</li>
+</ul>
+</li>
+<li><p>可选： </p>
+<p>阿里云提供一个默认的专有网络VPC，如果您不想使用默认的，可以在目标地域创建一个专有网络和交换机。</p>
+<p>具体操作，请参见<a href="https://help.aliyun.com/document_detail/65430.html#task-1512598" target="_blank" rel="external nofollow noopener noreferrer">搭建IPv4专有网络</a>。</p>
+</li>
+<li><p>可选： </p>
+<p>阿里云提供一个默认的安全组，如果您不想使用默认的，可以在目标地域创建一个安全组。</p>
+<p>具体操作，请参见<a href="https://help.aliyun.com/document_detail/25468.html#concept-ocl-bvz-xdb" target="_blank" rel="external nofollow noopener noreferrer">创建安全组</a>。</p>
+</li>
+</ol>
+<h2 id="步骤一：创建ECS实例"><a href="#步骤一：创建ECS实例" class="headerlink" title="步骤一：创建ECS实例"></a>步骤一：创建ECS实例</h2><ol>
+<li><p>前往<a href="https://ecs-buy.aliyun.com/wizard/#/" target="_blank" rel="external nofollow noopener noreferrer">实例创建页</a>。</p>
+</li>
+<li><p>在购买页面的前四个配置页面，完成实例启动配置。</p>
+<p>本入门教程采用以下配置，未提及的配置保持默认选项。</p>
+<table>
+<thead>
+<tr>
+<th align="left">配置页面</th>
+<th align="left">配置项</th>
+<th align="left">示例</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>基础配置</strong></td>
+<td align="left"><strong>付费模式</strong></td>
+<td align="left">按量付费</td>
+<td align="left">按量付费模式操作相对灵活。<strong>说明</strong> 如果您需要为网站域名备案，必须选择<strong>包年包月</strong>。</td>
+</tr>
+<tr>
+<td align="left"><strong>地域与可用区</strong></td>
+<td align="left">地域：华东1（杭州）可用区：随机分配</td>
+<td align="left">实例创建后，无法直接更改地域和可用区，请谨慎选择。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>实例</strong></td>
+<td align="left">规格族：通用型g6规格：ecs.g6.large</td>
+<td align="left">可供选择的实例规格由您所选择的地域以及库存供应决定。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>镜像</strong></td>
+<td align="left">类型：公共镜像版本：CentOS 8.0 64位</td>
+<td align="left">实例启动后，系统盘将完整复制镜像的操作系统和应用数据。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>网络和安全组</strong></td>
+<td align="left"><strong>专有网络</strong></td>
+<td align="left">[默认]vpc-bp1opxu1zkhn00g<strong>**</strong></td>
+<td align="left">带<strong>[默认]</strong>前缀的资源由ECS控制台自动创建。</td>
+</tr>
+<tr>
+<td align="left"><strong>分配公网IPv4地址</strong></td>
+<td align="left">勾选</td>
+<td align="left">勾选后，自动分配一个公网IP（v4）地址。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>带宽计费模式</strong></td>
+<td align="left">按使用流量</td>
+<td align="left"><strong>按使用流量</strong>模式只需为所消耗的公网流量付费。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>峰值带宽</strong></td>
+<td align="left">2 Mbps</td>
+<td align="left">无。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>安全组</strong></td>
+<td align="left">安全组：[默认]sg-bp1bhjjsoiyx44<strong>**</strong>安全组规则：勾选ICMP协议、SSH 22、RDP 3389、HTTP 80和HTTPS 443端口</td>
+<td align="left">带<strong>[默认]</strong>前缀的资源由ECS控制台自动创建。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>系统配置</strong></td>
+<td align="left"><strong>登录凭证</strong></td>
+<td align="left">自定义密码</td>
+<td align="left">请记录该配置，<a href="https://help.aliyun.com/document_detail/151694.html?spm=a2c4g.11186623.6.579.36115b73MyVgZ4#Connect" target="_blank" rel="external nofollow noopener noreferrer">连接ECS实例</a>时，您需要输入root密码。</td>
+</tr>
+<tr>
+<td align="left"><strong>实例名称</strong></td>
+<td align="left"><code>EcsQuickStart</code></td>
+<td align="left">本文中的实例一律使用EcsQuickStart指代。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>分组设置</strong></td>
+<td align="left"><strong>标签</strong></td>
+<td align="left">ECS:Documentation</td>
+<td align="left">有多台实例时，建议添加标签，方便管理。</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>单击<strong>下一步：确认订单</strong>，在该页面确认<strong>所选配置</strong>，或者单击编辑图标<a href="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3991102851/p77356.png" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3991102851/p77356.png" alt="编辑-图标"></a>返回修改配置。</p>
+<p><a href="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3991102851/p77040.png" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3991102851/p77040.png" alt="快速入门-Linux版"></a></p>
+</li>
+<li><p>可选： </p>
+<p>单击<strong>保存为启动模板</strong>，然后设置模板名称和描述。</p>
+<p><a href="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3991102851/p77611.png" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3991102851/p77611.png" alt="快速入门-启动模板"></a></p>
+</li>
+</ol>
+<p>   <strong>说明</strong> 将当前实例所选配置保存为启动模板，方便您下次通过模板一键下单。</p>
+<ol start="5">
+<li><p>勾选<strong>《云服务器ECS服务条款》</strong>，然后单击<strong>创建实例</strong>。</p>
+</li>
+<li><p>单击<strong>创建成功</strong>提示框里的<strong>管理控制台</strong>，前往实例列表页面查看创建进度。</p>
+<p>实例状态进入<strong>运行中</strong>后表示已成功创建。复制实例的公网IP地址，便于下文连接ECS实例时使用。<a href="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3991102851/p77051.png" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3991102851/p77051.png" alt="快速入门-Linux版-创建成功"></a></p>
+</li>
+</ol>
+<h2 id="步骤二：添加安全组规则"><a href="#步骤二：添加安全组规则" class="headerlink" title="步骤二：添加安全组规则"></a>步骤二：添加安全组规则</h2><p>如果创建ECS实例时，您没有在默认安全组中勾选添加安全组规则，或者ECS实例加入的是一个全新的安全组，请按以下步骤继续操作。</p>
+<ol>
+<li><p>单击实例ID，进入实例详情页。</p>
+</li>
+<li><p>在左侧导航栏，单击<strong>本实例安全组</strong>，然后单击安全组ID，进入安全组详情页。</p>
+</li>
+<li><p>在<strong>安全组规则</strong>页面的右上角，单击<strong>快速创建规则</strong>。</p>
+</li>
+<li><p>按以下设置添加安全组规则，未提及的配置保持页面默认选项。</p>
+<table>
+<thead>
+<tr>
+<th align="left">规则方向</th>
+<th align="left">授权策略</th>
+<th align="left">常用端口</th>
+<th align="left">授权类型</th>
+<th align="left">授权对象</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">入方向</td>
+<td align="left">允许</td>
+<td align="left">SSH 22、RDP 3389、HTTP 80、HTTPS 443</td>
+<td align="left">IPv4地址段访问</td>
+<td align="left">0.0.0.0/0</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<p>   <strong>说明</strong></p>
+<ul>
+<li><strong>常用端口</strong>处勾选的是ECS实例上运行的应用需开放的端口。例如<a href="https://help.aliyun.com/document_detail/151694.html?spm=a2c4g.11186623.6.579.36115b73MyVgZ4#ApacheConfig" target="_blank" rel="external nofollow noopener noreferrer">步骤四：配置Apache服务</a>时使用的SSH服务和Apache服务，未开启SSH 22端口和HTTP 80端口会导致实例无响应。</li>
+<li>0.0.0.0/0表示允许全网段设备访问指定的端口。如果您知晓请求端的IP地址，建议设置为具体的IP范围。</li>
+</ul>
+<ol start="5">
+<li>单击<strong>确定</strong>。</li>
+</ol>
+<h2 id="步骤三：连接ECS实例"><a href="#步骤三：连接ECS实例" class="headerlink" title="步骤三：连接ECS实例"></a>步骤三：连接ECS实例</h2><ol>
+<li><p>单击下一步骤中的<a href="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3991102851/p77610.png" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3991102851/p77610.png" alt="cloud-shell-try-it"></a>按钮，等待初始化CloudShell客户端。</p>
+</li>
+<li><p>使用<strong>ssh</strong>命令连接实例。</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">ssh <span class="symbol">root@<span class="keyword">&lt;实例公网IP地址&gt;</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>提示ECS实例此次授信登录需要存储密钥指纹时，输入yes。</p>
+</li>
+<li><p>输入ECS实例的root用户名密码，并回车。</p>
+<p>输入密码阶段，<strong>password:</strong></p>
+<p>提示：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">Welcome <span class="keyword">to</span> Alibaba Cloud Elastic Compute<span class="built_in"> Service </span>!</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="步骤四：配置Apache服务"><a href="#步骤四：配置Apache服务" class="headerlink" title="步骤四：配置Apache服务"></a>步骤四：配置Apache服务</h2><ol>
+<li><p>安装Apache服务。</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">yum <span class="keyword">install</span> -y httpd</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动Apache服务。</p>
+<figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line">systemctl <span class="literal">start</span> httpd</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置Apache服务开机自启动。</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">systemctl <span class="builtin-name">enable</span> httpd</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询Apache服务是否处于运行中状态。</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">systemctl status httpd</span></span><br></pre></td></tr></table></figure>
+
+<p>返回<code>active (running)</code>则表示已开始运行Apache服务。</p>
+</li>
+<li><p>在当前浏览器页面，新开启一个网页，在地址栏输入实例的公网IP地址，并回车。</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">http:</span><span class="comment">//&lt;实例公网IP地址&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/4991102851/p77103.png" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/4991102851/p77103.png" alt="快速入门-Linux版-测试网站"></a></p>
+</li>
+</ol>
+<h2 id="步骤五：解析网站域名"><a href="#步骤五：解析网站域名" class="headerlink" title="步骤五：解析网站域名"></a>步骤五：解析网站域名</h2><p>如果您已有域名或者想为Apache网站注册一个域名，请参见以下步骤。</p>
+<ol>
+<li>注册域名。</li>
+<li>如果域名指向的网站托管在阿里云中国大陆境内节点服务器，您需要备案域名。</li>
+<li>解析域名，将域名指向实例公网IP。</li>
+<li>使用解析后的域名访问Apache服务。</li>
+</ol>
+<h2 id="步骤六：释放ECS实例"><a href="#步骤六：释放ECS实例" class="headerlink" title="步骤六：释放ECS实例"></a>步骤六：释放ECS实例</h2><p>释放后，实例停止计费，数据不可恢复。</p>
+<p><strong>说明</strong> 本小节操作仅适用于按量付费实例，不支持手动释放包年包月实例。</p>
+<ol>
+<li>返回实例列表页面，找到实例EcsQuickStart。</li>
+<li>在<strong>操作</strong>列中，单击<strong>更多 &gt; 实例状态 &gt; 释放设置</strong>。</li>
+<li>选择<strong>立即释放</strong>，并单击<strong>下一步</strong>。</li>
+<li>确认要释放的实例，并单击<strong>确定</strong>。</li>
+<li>输入您收到的手机验证码，单击<strong>确认</strong>。</li>
+</ol>
+<h2 id="步骤七：查看费用账单"><a href="#步骤七：查看费用账单" class="headerlink" title="步骤七：查看费用账单"></a>步骤七：查看费用账单</h2><p>账单明细数据延迟一天更新，且不含万网和云通信数据。</p>
+<ol>
+<li><p>在ECS管理控制台顶部工具栏处，选择<strong>费用 &gt; 用户中心</strong>。</p>
+<p><a href="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/4991102851/p77367.png" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/4991102851/p77367.png" alt="ECS快速入门-查看费用账单"></a></p>
+</li>
+<li><p>在左侧导航栏，单击<strong>费用账单</strong>，然后单击页面中的<strong>账单明细</strong>页签。</p>
+</li>
+<li><p>在<strong>实例名称</strong>处，输入实例名称<kbd>EcsQuickStart</kbd>，并回车开始搜索。</p>
+</li>
+</ol>
+<hr>
+<p>Windows系统请参阅：<a href="https://help.aliyun.com/document_detail/151695.html?spm=a2c4g.11186623.6.580.5d5712a1ioAWcA" target="_blank" rel="external nofollow noopener noreferrer">https://help.aliyun.com/document_detail/151695.html?spm=a2c4g.11186623.6.580.5d5712a1ioAWcA</a></p>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+]]></content>
+      <categories>
+        <category>云服务器 ECS</category>
+      </categories>
+      <tags>
+        <tag>云服务器</tag>
+        <tag>ECS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ECS-使用须知</title>
+    <url>/archives/a73d9697.html</url>
+    <content><![CDATA[<h1 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h1><p>云服务器ECS具有广泛的应用场景，既可以作为Web服务器或者应用服务器单独使用，又可以与其他阿里云服务集成提供丰富的解决方案。</p>
+<h2 id="企业官网或轻量的Web应用"><a href="#企业官网或轻量的Web应用" class="headerlink" title="企业官网或轻量的Web应用"></a>企业官网或轻量的Web应用</h2><p>网站初始阶段访问量小，只需要一台低配置的云服务器ECS实例即可运行Apache或Nginx等Web应用程序、数据库、存储文件等。随着网站发展，您可以随时升级ECS实例的配置，或者增加ECS实例数量，无需担心低配计算单元在业务突增时带来的资源不足。</p>
+<h2 id="多媒体以及高并发应用或网站"><a href="#多媒体以及高并发应用或网站" class="headerlink" title="多媒体以及高并发应用或网站"></a>多媒体以及高并发应用或网站</h2><p>云服务器ECS与对象存储OSS搭配，对象存储OSS承载静态图片、视频或者下载包，进而降低存储费用。同时配合内容分发网络CDN和负载均衡SLB，可大幅减少用户访问等待时间、降低网络带宽费用以及提高可用性。</p>
+<h2 id="高I-O要求数据库"><a href="#高I-O要求数据库" class="headerlink" title="高I/O要求数据库"></a>高I/O要求数据库</h2><p>支持承载高I/O要求的数据库，如OLTP类型数据库以及NoSQL类型数据库。您可以使用较高配置的I/O优化型云服务器ECS，同时采用ESSD云盘，可实现高I/O并发响应和更高的数据可靠性。您也可以使用多台中等偏下配置的I/O优化型ECS实例，搭配负载均衡SLB，建设高可用底层架构。</p>
+<h2 id="访问量波动剧烈的应用或网站"><a href="#访问量波动剧烈的应用或网站" class="headerlink" title="访问量波动剧烈的应用或网站"></a>访问量波动剧烈的应用或网站</h2><p>某些应用，如抢红包应用、优惠券发放应用、电商网站和票务网站，访问量可能会在短时间内产生巨大的波动。您可以配合使用弹性伸缩，自动化实现在请求高峰来临前增加ECS实例，并在进入请求低谷时减少ECS实例。满足访问量达到峰值时对资源的要求，同时降低了成本。如果搭配负载均衡SLB，您还可以实现高可用应用架构。</p>
+<h2 id="大数据及实时在线或离线分析"><a href="#大数据及实时在线或离线分析" class="headerlink" title="大数据及实时在线或离线分析"></a>大数据及实时在线或离线分析</h2><p>云服务器ECS提供了大数据类型实例规格族，支持Hadoop分布式计算、日志处理和大型数据仓库等业务场景。由于大数据类型实例规格采用了本地存储的架构，云服务器ECS在保证海量存储空间、高存储性能的前提下，可以为云端的Hadoop集群、Spark集群提供更高的网络性能。</p>
+<h2 id="机器学习和深度学习等AI应用"><a href="#机器学习和深度学习等AI应用" class="headerlink" title="机器学习和深度学习等AI应用"></a>机器学习和深度学习等AI应用</h2><p>通过采用GPU计算型实例，您可以搭建基于TensorFlow框架等的AI应用。此外，GPU计算型还可以降低客户端的计算能力要求，适用于图形处理、云游戏云端实时渲染、AR/VR的云端实时渲染等瘦终端场景。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="地域和可用区"><a href="#地域和可用区" class="headerlink" title="地域和可用区"></a>地域和可用区</h1><p>每个地域完全独立。每个可用区完全隔离，但同一个地域内的可用区之间使用低时延链路相连。</p>
+<p><a href="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7240970851/p80221.png" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7240970851/p80221.png" alt="可用区"></a></p>
+<h2 id="地域（Region）"><a href="#地域（Region）" class="headerlink" title="地域（Region）"></a>地域（Region）</h2><p>地域是指物理的数据中心。资源创建成功后不能更换地域。</p>
+<p><strong>说明</strong> 不同产品可选择的地域有所不同，</p>
+<ul>
+<li><p>中国大陆</p>
+<table>
+<thead>
+<tr>
+<th align="left">地域名称</th>
+<th align="left">所在城市</th>
+<th align="left">Region ID</th>
+<th align="left">可用区数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">华北 1</td>
+<td align="left">青岛</td>
+<td align="left">cn-qingdao</td>
+<td align="left">2</td>
+</tr>
+<tr>
+<td align="left">华北 2</td>
+<td align="left">北京</td>
+<td align="left">cn-beijing</td>
+<td align="left">8</td>
+</tr>
+<tr>
+<td align="left">华北 3</td>
+<td align="left">张家口</td>
+<td align="left">cn-zhangjiakou</td>
+<td align="left">2</td>
+</tr>
+<tr>
+<td align="left">华北 5</td>
+<td align="left">呼和浩特</td>
+<td align="left">cn-huhehaote</td>
+<td align="left">2</td>
+</tr>
+<tr>
+<td align="left">华东 1</td>
+<td align="left">杭州</td>
+<td align="left">cn-hangzhou</td>
+<td align="left">8</td>
+</tr>
+<tr>
+<td align="left">华东 2</td>
+<td align="left">上海</td>
+<td align="left">cn-shanghai</td>
+<td align="left">6</td>
+</tr>
+<tr>
+<td align="left">华南 1</td>
+<td align="left">深圳</td>
+<td align="left">cn-shenzhen</td>
+<td align="left">5</td>
+</tr>
+<tr>
+<td align="left">华南 2</td>
+<td align="left">河源</td>
+<td align="left">cn-heyuan</td>
+<td align="left">2</td>
+</tr>
+<tr>
+<td align="left">西南 1</td>
+<td align="left">成都</td>
+<td align="left">cn-chengdu</td>
+<td align="left">2</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>选择地域时，您需要考虑以下几个因素：</p>
+<ul>
+<li><p>地理位置</p>
+<p>请根据您以及您目标用户所在的地理位置选择地域。</p>
+<ul>
+<li><p>中国大陆</p>
+<p>一般情况下建议选择和您目标用户所在地域最为接近的数据中心，可以进一步提升用户访问速度。不过，在基础设施、BGP 网络品质、服务质量、云服务器操作使用与配置等方面，阿里云中国大陆地域没有太大区别。BGP 网络可以保证中国大陆全部地域的快速访问。</p>
+</li>
+<li><p>其他国家及地区</p>
+<p>其他国家及地区提供国际带宽，主要面向非中国大陆地区用户。</p>
+</li>
+</ul>
+</li>
+<li><p>阿里云产品之间的关系</p>
+<p>如果多个阿里云产品一起搭配使用，需要注意：</p>
+<ul>
+<li>不同地域的云服务器 ECS、关系型数据库 RDS、对象存储服务 OSS 内网不互通。</li>
+<li>不同地域之间的云服务器 ECS 不能跨地域部署负载均衡，即在不同的地域购买的 ECS 实例不支持跨地域部署在同一负载均衡实例下。</li>
+</ul>
+</li>
+<li><p>关于经营许可证备案</p>
+<p>选择地域时您需要考虑某些地区的特殊要求。如您在中国大陆地域购买了 ECS 实例，并用于 Web 服务器，您需要完成经营许可证备案。</p>
+<p>如您有办理经营许可证备案的需求，请您重点关注：</p>
+<ul>
+<li>北京地区企业，请选择购买的地域为<strong>华北 2</strong>。</li>
+<li>广东地区企业，请选择购买的地域为<strong>华南 1</strong>。</li>
+</ul>
+</li>
+</ul>
+<h2 id="可用区（Zone）"><a href="#可用区（Zone）" class="headerlink" title="可用区（Zone）"></a>可用区（Zone）</h2><p>可用区是指在同一地域内，电力和网络互相独立的物理区域。同一可用区内实例之间的网络延时更小。</p>
+<p>在同一地域内可用区与可用区之间内网互通，可用区之间能做到故障隔离。是否将实例放在同一可用区内，主要取决于对容灾能力和网络延时的要求。</p>
+<ul>
+<li>如果您的应用需要较高的容灾能力，建议您将实例部署在同一地域的不同可用区内。</li>
+<li>如果您的应用要求实例之间的网络延时较低，建议您将实例创建在同一可用区内。</li>
+</ul>
+<hr>
+<h1 id="使用限制"><a href="#使用限制" class="headerlink" title="使用限制"></a>使用限制</h1><p>本文介绍云服务器ECS在产品功能和服务性能上的不同限制，以及如何申请更高配额。</p>
+<h2 id="限制概述"><a href="#限制概述" class="headerlink" title="限制概述"></a>限制概述</h2><p>使用云服务器ECS有下列限制：</p>
+<ul>
+<li>不支持安装虚拟化软件和二次虚拟化（例如安装使用VMware Workstation）。仅弹性裸金属服务器和超级计算集群支持二次虚拟化。</li>
+<li>不支持声卡应用。</li>
+<li>不支持直接加载外接硬件设备（如硬件加密狗、U盘、外接硬盘、银行U key等），您可以尝试软件加密狗或者动态口令二次验证等。</li>
+<li>不支持多播协议。如果需要使用多播，建议改为使用单播点对点方式。</li>
+<li>日志服务不支持32位Linux系统云服务器。</li>
+<li>如果云服务器需要备案，则云服务器有购买要求，且每台ECS实例可申请的备案服务号数量有限</li>
+</ul>
+<h2 id="查看配额"><a href="#查看配额" class="headerlink" title="查看配额"></a>查看配额</h2><p>您可以在ECS控制台<strong>概览</strong>页面查看<strong>权益配额</strong>，支持查看某一地域中的部分资源使用情况和配额。如果某项资源的配额无法满足业务需求，请提交工单申请提升配额。</p>
+<p><a href="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6779202851/p52870.png" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6779202851/p52870.png" alt="权益配额"></a></p>
+<h2 id><a href="#" class="headerlink" title></a></h2><p>详情参考:<a href="https://help.aliyun.com/document_detail/25412.html?spm=a2c4g.11186623.6.550.38b8acf7fh0r0M" target="_blank" rel="external nofollow noopener noreferrer">https://help.aliyun.com/document_detail/25412.html?spm=a2c4g.11186623.6.550.38b8acf7fh0r0M</a></p>
+<hr>
+<h1 id="使用须知"><a href="#使用须知" class="headerlink" title="使用须知"></a>使用须知</h1><h2 id="操作须知"><a href="#操作须知" class="headerlink" title="操作须知"></a>操作须知</h2><ul>
+<li>创建ECS实例后，您拥有实例的管理员权限，阿里云没有权限登录您的实例。</li>
+<li>禁止使用ECS实例做流量穿透服务。</li>
+<li>禁止使用ECS针对淘宝等电商网站从事刷单、刷销量、刷广告、进行虚假网站交易的网络行为。</li>
+<li>不要卸载相关硬件的驱动程序。</li>
+<li>不要随意修改网卡MAC地址。</li>
+<li>建议不要开启SELinux。</li>
+<li>对于4 GiB以上内存的云服务器，请选择64位操作系统，因为32位操作系统存在4 GiB的内存寻址限制。目前支持的64位操作系统包括：<ul>
+<li>Aliyun Linux 64位</li>
+<li>CoreOS 64位</li>
+<li>CentOS 64位</li>
+<li>Debian 64位</li>
+<li>FreeBSD 64位</li>
+<li>OpenSUSE 64位</li>
+<li>SUSE Linux 64位</li>
+<li>Ubuntu 64位</li>
+<li>Red Hat 64位</li>
+<li>Windows 64位</li>
+</ul>
+</li>
+<li>为保证服务的连续性，避免因宕机迁移而导致的服务不可用，建议将相关软件都设置成开机启动。如果有应用服务连接数据库，需要在程序中设置成自动重连机制。</li>
+<li>不建议升级云服务器的内核和操作系统版本。</li>
+</ul>
+<h2 id="Windows操作系统须知"><a href="#Windows操作系统须知" class="headerlink" title="Windows操作系统须知"></a>Windows操作系统须知</h2><ul>
+<li>不要停止Windows系统自带的AliyunService服务或自带的shutdownmon.exe进程，停止后可能会影响控制台正常关机或者重启。</li>
+<li>不要修改域控制器的hostname。</li>
+<li>不建议从域控制器的虚拟机创建自定义镜像。</li>
+<li>不要重命名、删除或禁用Windows下的administrator账号，以免影响服务器使用。</li>
+<li>如果您使用普通云盘，不建议使用虚拟内存。如果使用高效云盘、SSD云盘或ESSD云盘，可以根据实际情况使用虚拟内存。</li>
+<li>请谨慎使用administrator等管理账号进行扩容、跨区卷、注册表、系统更新等操作，避免误操作引起的数据受损。</li>
+<li>Windows 32位操作系统支持的最高CPU核数为4核。</li>
+<li>将Windows实例用于建站、部署Web环境时，需要至少2 GiB内存。1核1 GiB实例规格无法启动MySQL。</li>
+</ul>
+<h2 id="Linux操作系统须知"><a href="#Linux操作系统须知" class="headerlink" title="Linux操作系统须知"></a>Linux操作系统须知</h2><ul>
+<li>不要修改Linux实例默认的<strong>/etc/issue</strong>文件内容。否则，根据实例创建的自定义镜像的系统发行版本无法被正确识别，使用该镜像创建的实例无法正常启动。</li>
+<li>不要随意更改根目录所在分区下各个目录的权限，尤其是<strong>/etc、/sbin、/bin、/boot、/dev、/usr和/lib</strong>等目录的权限。如果权限更改不当会导致系统出现异常。</li>
+<li>不要重命名、删除或禁用Linux下的root账号。</li>
+<li>不要编译Linux系统的内核，或对内核进行任何其他操作。</li>
+<li>如果您使用普通云盘，不建议使用swap分区。</li>
+<li>不要开启NetWorkManager服务。该服务会跟系统内部网络服务出现冲突，导致网络异常。</li>
+<li>请谨慎使用root等管理账号进行fio、mkfs、fsck、扩容等操作，避免误操作引起的数据受损。</li>
+</ul>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+]]></content>
+      <categories>
+        <category>云服务器 ECS</category>
+      </categories>
+      <tags>
+        <tag>云服务器</tag>
+        <tag>ECS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ECS-概念</title>
+    <url>/archives/6903c0f.html</url>
+    <content><![CDATA[<h1 id="云服务器-ECS"><a href="#云服务器-ECS" class="headerlink" title="云服务器 ECS"></a>云服务器 ECS</h1><p>云服务器ECS（Elastic Compute Service）是一种简单高效、处理能力可弹性伸缩的计算服务。帮助您构建更稳定、安全的应用，提升运维效率，降低IT成本，使您更专注于核心业务创新。</p>
+<h2 id="产品架构"><a href="#产品架构" class="headerlink" title="产品架构"></a>产品架构</h2><p>云服务器ECS主要包含以下功能组件：</p>
+<ul>
+<li><a href="https://help.aliyun.com/document_detail/25374.html#concept-i1k-fv2-5db" target="_blank" rel="external nofollow noopener noreferrer">实例</a>：等同于一台虚拟服务器，内含CPU、内存、操作系统、网络配置、磁盘等基础的计算组件。</li>
+<li><a href="https://help.aliyun.com/document_detail/25389.html#concept-qql-3zb-wdb" target="_blank" rel="external nofollow noopener noreferrer">镜像</a>：提供实例的操作系统、初始化应用数据及预装的软件。操作系统支持多种Linux发行版和多种Windows Server版本。</li>
+<li><a href="https://help.aliyun.com/document_detail/63136.html#concept-pl4-tzb-wdb" target="_blank" rel="external nofollow noopener noreferrer">块存储</a>：块设备类型产品，具备高性能和低时延的特性。提供基于分布式存储架构的云盘、共享块存储以及基于物理机本地存储的本地盘。</li>
+<li><a href="https://help.aliyun.com/document_detail/25391.html#concept-qft-2zw-ydb" target="_blank" rel="external nofollow noopener noreferrer">快照</a>：某一时间点一块云盘或共享块存储的数据状态文件。常用于数据备份、数据恢复和制作自定义镜像等。</li>
+<li><a href="https://help.aliyun.com/document_detail/25387.html#concept-o2y-mqw-ydb" target="_blank" rel="external nofollow noopener noreferrer">安全组</a>：由同一地域内具有相同保护需求并相互信任的实例组成，是一种虚拟防火墙，用于设置实例的网络访问控制。</li>
+<li>网络<ul>
+<li><a href="https://help.aliyun.com/document_detail/34217.html#concept-kbk-cpz-ndb" target="_blank" rel="external nofollow noopener noreferrer">专有网络（Virtual Private Cloud）</a>：逻辑上彻底隔离的云上私有网络。您可以自行分配私网IP地址范围、配置路由表和网关等。</li>
+<li>经典网络：所有经典网络类型实例都建立在一个共用的基础网络上。由阿里云统一规划和管理网络配置。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3723062851/p44516.jpg" alt></p>
+<h2 id="管理工具"><a href="#管理工具" class="headerlink" title="管理工具"></a>管理工具</h2><p>您可以在任何地域下，通过阿里云提供的以下途径创建、使用或者释放云服务器ECS：</p>
+<ul>
+<li><strong>ECS管理控制台：</strong>具有交互式操作的Web服务页面。关于管理控制台的操作，请参见<a href="https://help.aliyun.com/document_detail/25429.html?spm=a2c4g.11186623.2.26.252450bffRwdmG#concept-q3w-45w-wdb" target="_blank" rel="external nofollow noopener noreferrer">常用操作导航</a>。</li>
+<li><strong>ECS API：</strong>支持GET和POST请求的RPC风格API,以下为调用云服务器ECS API的常用开发者工具：<ul>
+<li><a href="https://help.aliyun.com/document_detail/110244.html?spm=a2c4g.11186623.2.28.252450bffRwdmG#concept-rc3-qrc-bhb" target="_blank" rel="external nofollow noopener noreferrer">命令行工具CLI</a>：基于阿里云API建立的灵活且易于扩展的管理工具。您可基于命令行工具封装阿里云的原生API，扩展出您需要的功能。</li>
+<li><a href="https://api.aliyun.com/?spm=a2c4g.11186623.2.29.252450bffRwdmG" target="_blank" rel="external nofollow noopener noreferrer">OpenAPI Explorer</a>：提供快速检索接口、在线调用API和动态生成SDK示例代码等服务。</li>
+<li><a href="https://develop.aliyun.com/tools/sdk?spm=a2c4g.11186623.2.30.252450bffRwdmG#/java" target="_blank" rel="external nofollow noopener noreferrer">阿里云SDK</a>：提供Java、Python、PHP等多种编程语言的SDK。</li>
+</ul>
+</li>
+<li><a href="https://help.aliyun.com/document_detail/28852.html?spm=a2c4g.11186623.2.31.252450bffRwdmG#concept-28852-zh" target="_blank" rel="external nofollow noopener noreferrer">资源编排（Resource Orchestration Service）</a>：通过创建一个描述您所需的所有阿里云资源的模板，然后资源编排将根据模板，自动创建和配置资源。</li>
+<li><a href="https://help.aliyun.com/document_detail/125604.html?spm=a2c4g.11186623.2.32.252450bffRwdmG#concept-1181174" target="_blank" rel="external nofollow noopener noreferrer">运维编排服务（Operation Orchestration Service）</a>：自动化管理和执行运维任务。您可以在执行模板中定义执行任务、执行顺序、执行输入和输出等，通过执行模板达到自动化完成运维任务的目的。</li>
+<li><a href="https://help.aliyun.com/document_detail/91285.html?spm=a2c4g.11186623.2.33.252450bffRwdmG#concept-twc-3dz-dfb" target="_blank" rel="external nofollow noopener noreferrer">Terraform</a>：能够通过配置文件在阿里云以及其他支持Terraform的云商平台调用计算资源，并对其进行版本控制的开源工具。</li>
+<li>阿里云App：移动端类型的管理工具。</li>
+<li><a href="https://help.aliyun.com/product/29966.html?spm=a2c4g.11186623.2.34.252450bffRwdmG" target="_blank" rel="external nofollow noopener noreferrer">Alibaba Cloud Toolkit</a>：阿里云针对IDE平台为开发者提供的一款插件，用于帮助您高效开发并部署适合在云端运行的应用</li>
+</ul>
+<h2 id="部署建议"><a href="#部署建议" class="headerlink" title="部署建议"></a>部署建议</h2><p>您可以从以下维度考虑如何启动并使用云服务器ECS：</p>
+<ul>
+<li><p>地域和可用区</p>
+<p>地域指阿里云的数据中心，地域和可用区决定了ECS实例所在的物理位置。一旦成功创建实例后，其元数据（仅专有网络VPC类型ECS实例支持获取元数据）将确定下来，并无法更换地域。您可以从用户地理位置、阿里云产品发布情况、应用可用性、以及是否需要内网通信等因素选择地域和可用区。例如，如果您同时需要通过阿里云内网使用云数据库RDS，RDS实例和ECS实例必须处于同一地域中。</p>
+</li>
+<li><p>高可用性</p>
+<p>为保证业务处理的正确性和服务不中断，建议您通过快照实现数据备份，通过跨可用区、部署集、负载均衡（Server Load Balancer）等实现应用容灾。</p>
+</li>
+<li><p>网络规划</p>
+<p>阿里云推荐您使用专有网络VPC，可自行规划私网IP，全面支持新功能和新型实例规格。此外，专有网络VPC支持多业务系统隔离和多地域部署系统的使用场景。</p>
+</li>
+<li><p>安全方案</p>
+<p>您可以使用云服务器ECS的安全组，控制ECS实例的出入网访问策略以及端口监听状态。对于部署在云服务器ECS上的应用，阿里云为您提供了免费的DDoS基础防护和基础安全服务</p>
+<ul>
+<li>通过DDoS高防IP保障源站的稳定可靠。</li>
+<li>通过云安全中心保障云服务器ECS的安全。</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+
+<hr>
+<h1 id="产品优势"><a href="#产品优势" class="headerlink" title="产品优势"></a>产品优势</h1><p>与普通的IDC（Integrated Data Center）机房或服务器厂商相比，阿里云提供的云服务器ECS具有高可用性、安全性和弹性的优势。</p>
+<h2 id="与普通IDC对比优势"><a href="#与普通IDC对比优势" class="headerlink" title="与普通IDC对比优势"></a>与普通IDC对比优势</h2><p>云服务器ECS与普通IDC的优势对比如下表所示。</p>
+<table>
+<thead>
+<tr>
+<th align="left">对比项</th>
+<th align="left">云服务器ECS</th>
+<th align="left">普通IDC</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">机房部署</td>
+<td align="left">阿里云自主研发的直流电服务器，绿色机房设计，PUE（Power Usage Effectiveness，电源利用效率）值低</td>
+<td align="left">传统交流电服务器设计，PUE值高</td>
+</tr>
+<tr>
+<td align="left">骨干机房，出口带宽大，独享带宽</td>
+<td align="left">机房质量参差不齐，用户选择困难，以共享带宽为主</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">BGP（Border Gateway Protocol，边界网关协议）多线机房，全国访问流畅均衡</td>
+<td align="left">以单线和双线为主</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">操作易用</td>
+<td align="left">内置主流的操作系统，Windows正版激活</td>
+<td align="left">需用户自备操作系统，自行安装</td>
+</tr>
+<tr>
+<td align="left">可在线更换操作系统</td>
+<td align="left">无法在线更换操作系统，需要用户重装</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Web在线管理，简单方便</td>
+<td align="left">没有在线管理工具，维护困难</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">手机验证密码设置，安全方便</td>
+<td align="left">重置密码麻烦，且被破解的风险大</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">容灾备份</td>
+<td align="left">三副本数据设计，单份损坏可在短时间内快速恢复</td>
+<td align="left">用户自行搭建，使用普通存储设备，价格高昂</td>
+</tr>
+<tr>
+<td align="left">用户自定义快照</td>
+<td align="left">没有提供快照功能，无法做到自动故障恢复</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">硬件故障事故中可快速自动恢复</td>
+<td align="left">数据损坏需用户修复</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">安全可靠</td>
+<td align="left">有效阻止MAC欺骗和ARP攻击</td>
+<td align="left">很难阻止MAC欺骗和ARP攻击</td>
+</tr>
+<tr>
+<td align="left">有效防护DDoS攻击，可进行流量清洗和黑洞</td>
+<td align="left">清洗和黑洞设备需要另外购买，价格昂贵</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">端口入侵扫描、挂马扫描、漏洞扫描等附加服务</td>
+<td align="left">普遍存在漏洞挂马和端口扫描等问题</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">灵活扩展</td>
+<td align="left">开通云服务器非常灵活，可以在线升级配置</td>
+<td align="left">服务器交付周期长</td>
+</tr>
+<tr>
+<td align="left">带宽升降自由</td>
+<td align="left">带宽一次性购买，无法自由升降</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">在线使用负载均衡，轻松扩展应用</td>
+<td align="left">硬件负载均衡，价格昂贵，设置也非常麻烦</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">节约成本</td>
+<td align="left">使用成本门槛低</td>
+<td align="left">使用成本门槛高</td>
+</tr>
+<tr>
+<td align="left">无需一次性大投入</td>
+<td align="left">一次性投入巨大，闲置浪费严重</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">按需购买，弹性付费，灵活应对业务变化</td>
+<td align="left">无法按需购买，必须为业务峰值满配</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h2 id="高可用性"><a href="#高可用性" class="headerlink" title="高可用性"></a>高可用性</h2><p>阿里云使用更严格的IDC标准、服务器准入标准以及运维标准，保证云计算基础框架的高可用性、数据的可靠性以及云服务器的高可用性。</p>
+<p>阿里云提供的每个地域都存在多可用区。当您需要更高的可用性时，可以利用多可用区部署方案搭建主备服务或者双活服务。对于面向金融领域的两地三中心的解决方案，您也可以通过多地域和多可用区搭建出更高的可用性服务。</p>
+<h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><p>在网络建设方面，推荐您使用阿里云专有网络VPC。专有网络提供了稳定、安全、快速交付、自主可控的网络环境。</p>
+<ul>
+<li><p>丰富的网络产品体系</p>
+</li>
+<li><p>与自建的IDC机房互连</p>
+<p>阿里云专有网络可以建立高速通道到您原有的IDC机房，形成混合云的架构。</p>
+</li>
+<li><p>专有网络的稳定性</p>
+</li>
+<li><p>专有网络的安全性</p>
+<p>面对互联网上不断的攻击流量，专有网络天然具备流量隔离以及攻击隔离的功能。</p>
+</li>
+</ul>
+<h2 id="弹性"><a href="#弹性" class="headerlink" title="弹性"></a>弹性</h2><p>云计算最大的优势在于弹性与灵活性。</p>
+<p>阿里云的弹性体现在计算的弹性、存储的弹性、网络的弹性以及您对于业务架构重新规划的弹性。</p>
+<ul>
+<li><p>计算弹性</p>
+<ul>
+<li><p>纵向的弹性。</p>
+<p>即单台云服务器ECS的配置变更。普通IDC模式下，很难做到对单台服务器进行变更配置。而对于阿里云，当您购买了云服务器ECS或者存储的容量后，可以根据业务量的增减自由变更配置。</p>
+</li>
+<li><p>横向的弹性。</p>
+<p>对于游戏应用或直播平台出现的高峰期，若在普通的IDC模式下，您根本无法立即准备资源；而云计算却可以使用弹性的方式帮助您度过这样的高峰。当业务高峰消失时，您可以将多余的资源释放掉，以减少业务成本。利用横向的扩展和缩减，配合阿里云的弹性伸缩，完全可以做到定时定量的伸缩，或者按照业务的负载进行伸缩。</p>
+</li>
+</ul>
+</li>
+<li><p>存储弹性</p>
+<p>当数据量增多时，对于普通的IDC方案，您只能不断增加服务器，而这样扩展的服务器数量是有限的。阿里云为您提供海量的存储，您可以按需购买，为存储提供最大保障。</p>
+</li>
+<li><p>网络弹性</p>
+<p>阿里云的专有网络VPC的网络配置与普通IDC机房配置可以是完全相同的，并且可以拥有更灵活的拓展性。在阿里云，您可以实现各个可用区（机房）之间的互联互通、安全域隔离以及灵活的网络配置和规划。</p>
+</li>
+</ul>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+]]></content>
+      <categories>
+        <category>云服务器 ECS</category>
+      </categories>
+      <tags>
+        <tag>云服务器</tag>
+        <tag>ECS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JS的历史-实现</title>
     <url>/archives/58a945da.html</url>
     <content><![CDATA[<h1 id="JavaScript-实现"><a href="#JavaScript-实现" class="headerlink" title="JavaScript 实现"></a>JavaScript 实现</h1><p><strong>JavaScript 的核心 ECMAScript 描述了该语言的语法和基本对象；</strong></p>

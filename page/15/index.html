@@ -168,17 +168,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">19</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">21</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">7</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">39</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">42</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -233,7 +233,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/26b9d431.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/f6010553.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -247,7 +247,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/26b9d431.html" class="post-title-link" itemprop="url">部署</a>
+            <a href="/archives/f6010553.html" class="post-title-link" itemprop="url">模板</a>
         </h2>
 
         <div class="post-meta">
@@ -257,7 +257,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2-27-2020 6:33:08 晚上" itemprop="dateCreated datePublished" datetime="2020-02-27T18:33:08+08:00">2-27-2020</time>
+              <time title="创建时间：2-27-2020 10:23:22 晚上" itemprop="dateCreated datePublished" datetime="2020-02-27T22:23:22+08:00">2-27-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -278,8 +278,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/26b9d431.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/26b9d431.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/f6010553.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/f6010553.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -296,80 +296,63 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="7-部署"><a href="#7-部署" class="headerlink" title="7.部署"></a>7.部署</h1><h2 id="Project-page"><a href="#Project-page" class="headerlink" title="Project page"></a>Project page</h2><p>如果你更希望你的站点部署在 <code>&lt;你的 GitHub 用户名&gt;.github.io</code> 的子目录中，你的 repository 需要直接命名为子目录的名字，这样你的站点可以通过 <code>https://&lt;你的 GitHub 用户名&gt;.github.io/&lt;repository 的名字&gt;</code> 访问。              你需要检查你的 Hexo 配置文件，将 <code>url</code> 修改为 <code>https://&lt;你的 GitHub 用户名&gt;.github.io/&lt;repository 的名字&gt;</code>、将 <code>root</code> 的值修改为 <code>/&lt;repository 的名字&gt;/</code></p>
-<p>您可同时使用多个 deployer，Hexo 会依照顺序执行每个 deployer。</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">- <span class="attribute">type</span>: git  </span><br><span class="line">  <span class="attribute">repo</span>:</span><br><span class="line">- <span class="attribute">type</span>: heroku  </span><br><span class="line">  <span class="attribute">repo</span>:</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p><strong>缩进</strong></p>
-</blockquote>
-<blockquote>
-<p>YAML依靠缩进来确定元素间的从属关系。因此，请确保每个deployer的缩进长度相同，并且使用空格缩进。</p>
-</blockquote>
-<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><ol>
-<li>安装 hexo-deployer-git</li>
-</ol>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>修改配置。</li>
-</ol>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">deploy:</span>  </span><br><span class="line"><span class="symbol">  type:</span> git  </span><br><span class="line"><span class="symbol">  repo:</span> <span class="params">&lt;repository url&gt;</span> <span class="meta">#https:<span class="comment">//bitbucket.org/JohnSmith/johnsmith.bitbucket.io  </span></span></span><br><span class="line"><span class="symbol">  branch:</span> [branch]  </span><br><span class="line"><span class="symbol">  message:</span> [message]</span><br></pre></td></tr></table></figure>
-
+          <h1 id="模版"><a href="#模版" class="headerlink" title="模版"></a>模版</h1><p>模板决定了网站内容的呈现方式，每个主题至少都应包含一个 <code>index</code> 模板，以下是各页面相对应的模板名称：</p>
 <table>
 <thead>
 <tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-<th align="left">默认</th>
+<th align="left">模板</th>
+<th align="left">用途</th>
+<th align="left">回退</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left"><code>repo</code></td>
-<td align="left">库（Repository）地址</td>
+<td align="left"><code>index</code></td>
+<td align="left">首页</td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left"><code>branch</code></td>
-<td align="left">分支名称</td>
-<td align="left"><code>gh-pages</code> (GitHub) <code>coding-pages</code> (Coding.net) <code>master</code> (others)</td>
+<td align="left"><code>post</code></td>
+<td align="left">文章</td>
+<td align="left"><code>index</code></td>
 </tr>
 <tr>
-<td align="left"><code>message</code></td>
-<td align="left">自定义提交信息</td>
-<td align="left">Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}</td>
+<td align="left"><code>page</code></td>
+<td align="left">分页</td>
+<td align="left"><code>index</code></td>
 </tr>
 <tr>
-<td align="left"><code>token</code></td>
-<td align="left">Optional token value to authenticate with the repo. Prefix with <code>$</code> to read token from environment variable</td>
-<td align="left"></td>
+<td align="left"><code>archive</code></td>
+<td align="left">归档</td>
+<td align="left"><code>index</code></td>
+</tr>
+<tr>
+<td align="left"><code>category</code></td>
+<td align="left">分类归档</td>
+<td align="left"><code>archive</code></td>
+</tr>
+<tr>
+<td align="left"><code>tag</code></td>
+<td align="left">标签归档</td>
+<td align="left"><code>archive</code></td>
 </tr>
 </tbody></table>
-<ol>
-<li><p>生成站点文件并推送至远程库。</p>
-<ul>
-<li>You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.</li>
-</ul>
-<ul>
-<li>hexo-deployer-git does not store your username and password. Use <a href="https://git-scm.com/docs/git-credential-cache" target="_blank" rel="external nofollow noopener noreferrer">git-credential-cache</a> to store them temporarily.</li>
-</ul>
-</li>
-<li><p>登入 Github请在库设置（Repository Settings）中将默认分支设置为<code>_config.yml</code>配置中的分支名称。稍等片刻，您的站点就会显示在您的Github Pages中。</p>
-</li>
-</ol>
-<h3 id="这一切是如何发生的？"><a href="#这一切是如何发生的？" class="headerlink" title="这一切是如何发生的？"></a>这一切是如何发生的？</h3><p>当执行 <code>hexo deploy</code> 时，Hexo 会将 <code>public</code> 目录中的文件和目录推送至 <code>_config.yml</code> 中指定的远端仓库和分支中，并且<strong>完全覆盖</strong>该分支下的已有内容。</p>
-<blockquote>
-<p><strong>使用 Git 管理站点目录的用户</strong></p>
-<p>由于 Hexo 的部署默认使用分支 <code>master</code>，所以如果你同时正在使用 Git 管理你的站点目录，你应当注意你的部署分支应当不同于写作分支。<br>一个好的实践是将站点目录和 Pages 分别存放在两个不同的 Git 仓库中，可以有效避免相互覆盖。<br>Hexo 在部署你的站点生成的文件时并不会更新你的站点目录。因此你应该手动提交并推送你的写作分支。</p>
-</blockquote>
-<p>此外，如果您的 Github Pages 需要使用 CNAME 文件<strong>自定义域名</strong>，请将 CNAME 文件置于 <code>source</code> 目录下，只有这样 <code>hexo deploy</code> 才能将 CNAME 文件一并推送至部署分支。</p>
-<p><strong>其他deployer：</strong><a href="https://hexo.io/zh-cn/docs/one-command-deployment" target="_blank" rel="external nofollow noopener noreferrer">参考</a></p>
-<hr>
-<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
-<p><img src alt="logo"></p>
+<h2 id="布局（Layout）"><a href="#布局（Layout）" class="headerlink" title="布局（Layout）"></a>布局（Layout）</h2><p>如果页面结构类似，例如两个模板都有页首（Header）和页脚（Footer），您可考虑通过「布局」让两个模板共享相同的结构。一个布局文件必须要能显示 <code>body</code> 变量的内容，如此一来模板的内容才会被显示，举例来说：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">index.ejs</span><br><span class="line">index</span><br></pre></td></tr></table></figure>
 
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">layout.ejs</span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">body</span> %&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>生成：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span>index<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>每个模板都默认使用 <code>layout</code> 布局，您可在 front-matter 指定其他布局，或是设为 <code>false</code> 来关闭布局功能，您甚至可在布局中再使用其他布局来建立嵌套布局。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/archives/f6010553.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -388,7 +371,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/1393f011.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/b950aab4.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -402,7 +385,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/1393f011.html" class="post-title-link" itemprop="url">服务器-生成器</a>
+            <a href="/archives/b950aab4.html" class="post-title-link" itemprop="url">permalink-theme</a>
         </h2>
 
         <div class="post-meta">
@@ -412,7 +395,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2-27-2020 5:25:06 下午" itemprop="dateCreated datePublished" datetime="2020-02-27T17:25:06+08:00">2-27-2020</time>
+              <time title="创建时间：2-27-2020 10:00:44 晚上" itemprop="dateCreated datePublished" datetime="2020-02-27T22:00:44+08:00">2-27-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -433,8 +416,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/1393f011.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/1393f011.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/b950aab4.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/b950aab4.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -451,40 +434,112 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="6-服务器"><a href="#6-服务器" class="headerlink" title="6.服务器"></a>6.服务器</h1><h2 id="hexo-server"><a href="#hexo-server" class="headerlink" title="hexo-server"></a>hexo-server</h2><p>如果您想要更改端口，或是在执行时遇到了 <code>EADDRINUSE</code> 错误，可以在执行时使用 <code>-p</code> 选项指定其他端口</p>
-<h3 id="静态模式"><a href="#静态模式" class="headerlink" title="静态模式"></a>静态模式</h3><p>在静态模式下，服务器只处理 <code>public</code> 文件夹内的文件，而不会处理文件变动，在执行时，您应该先自行执行 <code>hexo generate</code>，此模式通常用于生产环境（production mode）下。</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo<span class="built_in"> server </span>-s</span><br></pre></td></tr></table></figure>
+          <h1 id="永久链接（Permalinks）"><a href="#永久链接（Permalinks）" class="headerlink" title="永久链接（Permalinks）"></a>永久链接（Permalinks）</h1><p>您可以在 <code>_config.yml</code> 配置中调整网站的永久链接或者在每篇文章的 Front-matter 中指定。</p>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>除了下列变量外，您还可使用 Front-matter 中的所有属性。</p>
+<table>
+<thead>
+<tr>
+<th align="left">变量</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>:year</code></td>
+<td align="left">文章的发表年份（4 位数）</td>
+</tr>
+<tr>
+<td align="left"><code>:month</code></td>
+<td align="left">文章的发表月份（2 位数）</td>
+</tr>
+<tr>
+<td align="left"><code>:i_month</code></td>
+<td align="left">文章的发表月份（去掉开头的零）</td>
+</tr>
+<tr>
+<td align="left"><code>:day</code></td>
+<td align="left">文章的发表日期 (2 位数)</td>
+</tr>
+<tr>
+<td align="left"><code>:i_day</code></td>
+<td align="left">文章的发表日期（去掉开头的零）</td>
+</tr>
+<tr>
+<td align="left"><code>:hour</code></td>
+<td align="left">文章发表时的小时 (2 位数)</td>
+</tr>
+<tr>
+<td align="left"><code>:minute</code></td>
+<td align="left">文章发表时的分钟 (2 位数)</td>
+</tr>
+<tr>
+<td align="left"><code>:title</code></td>
+<td align="left">文件名称</td>
+</tr>
+<tr>
+<td align="left"><code>:post_title</code></td>
+<td align="left">文章标题</td>
+</tr>
+<tr>
+<td align="left"><code>:id</code></td>
+<td align="left">文章 ID (<em>not persistent across cache reset</em>)</td>
+</tr>
+<tr>
+<td align="left"><code>:category</code></td>
+<td align="left">分类。如果文章没有分类，则是 <code>default_category</code> 配置信息。</td>
+</tr>
+</tbody></table>
+<p>您可在 <code>permalink_defaults</code> 参数下调整永久链接中各变量的默认值：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">permalink_default<span class="variable">s:</span>  </span><br><span class="line">  <span class="keyword">lan</span><span class="variable">g:</span> <span class="keyword">en</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>假设 <code>source/_posts</code> 文件夹中有个 <code>hello-world.md</code>，包含以下内容：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Hello</span> <span class="string">World</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2013</span><span class="number">-07</span><span class="number">-14</span> <span class="number">17</span><span class="string">:01:34</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">foo</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">bar</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>:year/:month/:day/:title/</code></td>
+<td align="left">2013/07/14/hello-world/</td>
+</tr>
+<tr>
+<td align="left"><code>:year-:month-:day-:title.html</code></td>
+<td align="left">2013-07-14-hello-world.html</td>
+</tr>
+<tr>
+<td align="left"><code>:category/:title</code></td>
+<td align="left">foo/bar/hello-world</td>
+</tr>
+</tbody></table>
+<h3 id="多语种支持"><a href="#多语种支持" class="headerlink" title="多语种支持"></a>多语种支持</h3><p>若要建立一个多语种的网站，您可修改 <code>new_post_name</code> 和 <code>permalink</code> 参数，如下：</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">new_post_name:</span> <span class="symbol">:lang/</span><span class="symbol">:title</span>.md</span><br><span class="line"><span class="symbol">permalink:</span> <span class="symbol">:lang/</span><span class="symbol">:title/</span></span><br></pre></td></tr></table></figure>
+
+<p>当您建立新文章时，文章会被储存到：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">new</span> <span class="string">"Hello World"</span> --lang tw</span><br><span class="line"># =&gt; <span class="keyword">source</span><span class="regexp">/_posts/</span>tw<span class="regexp">/Hello-World.md</span></span><br></pre></td></tr></table></figure>
+
+<p>而网址会是：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="regexp">//</span>localhost:<span class="number">4000</span><span class="regexp">/tw/</span>hello-world<span class="regexp">/</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="自定义-IP"><a href="#自定义-IP" class="headerlink" title="自定义 IP"></a>自定义 IP</h3><p>服务器默认运行在 <code>0.0.0.0</code>，您可以覆盖默认的 IP 设置，如下：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo<span class="built_in"> server </span>-i 192.168.1.1</span><br></pre></td></tr></table></figure>
-
-<p>指定这个参数后，您就只能通过该IP才能访问站点。</p>
-<p><strong>例如：</strong></p>
-<ul>
-<li><p>对于一台使用无线网络的笔记本电脑，除了指向本机的<code>127.0.0.1</code>外，通常还有一个<code>192.168.*.*</code>的局域网IP，如果像上面那样使用<code>-i</code>参数，就不能用<code>127.0.0.1</code>来访问站点了。</p>
-</li>
-<li><p>对于有公网IP的主机，如果您指定一个局域网IP作为<code>-i</code>参数的值，那么就无法通过公网来访问站点。</p>
-</li>
-</ul>
 <hr>
-<h1 id="生成文件"><a href="#生成文件" class="headerlink" title="生成文件"></a>生成文件</h1><h3 id="监视文件变动"><a href="#监视文件变动" class="headerlink" title="监视文件变动"></a>监视文件变动</h3><p>Hexo 能够监视文件变动并立即重新生成静态文件，在生成时会比对文件的 SHA1 checksum，只有变动的文件才会写入。</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">generate</span> --watch</span><br></pre></td></tr></table></figure>
+<h1 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h1><p>创建 Hexo 主题非常容易，您只要在 <code>themes</code> 文件夹内，新增一个任意名称的文件夹，并修改 <code>_config.yml</code> 内的 <code>theme</code> 设定，即可切换主题。一个主题可能会有以下的结构：</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── languages</span><br><span class="line">├── <span class="keyword">layout</span></span><br><span class="line">├── scripts</span><br><span class="line">└── <span class="keyword">source</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3><p>主题的配置文件。修改时会自动更新，无需重启服务器。</p>
+<h3 id="languages"><a href="#languages" class="headerlink" title="languages"></a>languages</h3><p>语言文件夹。请参见 <a href="https://hexo.io/zh-cn/docs/internationalization" target="_blank" rel="external nofollow noopener noreferrer">国际化 (i18n)</a>。</p>
+<h3 id="layout"><a href="#layout" class="headerlink" title="layout"></a>layout</h3><p>布局文件夹。用于存放主题的模板文件，决定了网站内容的呈现方式，Hexo 内建 <a href="https://github.com/node-swig/swig-templates" target="_blank" rel="external nofollow noopener noreferrer">Swig</a> 模板引擎，您可以另外安装插件来获得 <a href="https://github.com/hexojs/hexo-renderer-ejs" target="_blank" rel="external nofollow noopener noreferrer">EJS</a>、<a href="https://github.com/hexojs/hexo-renderer-haml" target="_blank" rel="external nofollow noopener noreferrer">Haml</a> 或 <a href="https://github.com/hexojs/hexo-renderer-jade" target="_blank" rel="external nofollow noopener noreferrer">Jade</a> 支持，Hexo 根据模板文件的扩展名来决定所使用的模板引擎</p>
+<p>例如：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">layout</span><span class="selector-class">.ejs</span>   <span class="selector-tag">-</span> 使用 <span class="selector-tag">EJS</span></span><br><span class="line"><span class="selector-tag">layout</span><span class="selector-class">.swig</span>  <span class="selector-tag">-</span> 使用 <span class="selector-tag">Swig</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="完成后部署"><a href="#完成后部署" class="headerlink" title="完成后部署"></a>完成后部署</h3><p>您可执行下列的其中一个命令，让 Hexo 在生成完毕后自动部署网站，两个命令的作用是相同的。</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">generate</span> --deploy</span><br><span class="line">$ hexo deploy --<span class="keyword">generate</span></span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>简写：<br>$ hexo g -d<br>$ hexo d -g</p>
-</blockquote>
-<hr>
-<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
-<p><img src alt="logo"></p>
+<h3 id="scripts"><a href="#scripts" class="headerlink" title="scripts"></a>scripts</h3><p>脚本文件夹。在启动时，Hexo 会载入此文件夹内的 JavaScript 文件，请参见 <a href="https://hexo.io/zh-cn/docs/plugins" target="_blank" rel="external nofollow noopener noreferrer">插件</a> 以获得更多信息。</p>
+<h3 id="source"><a href="#source" class="headerlink" title="source"></a>source</h3><p>资源文件夹，除了模板以外的 Asset，例如 CSS、JavaScript 文件等，都应该放在这个文件夹中。文件或文件夹开头名称为 <code>_</code>（下划线线）或隐藏的文件会被忽略。</p>
+<p>如果文件可以被渲染的话，会经过解析然后储存到 <code>public</code> 文件夹，否则会直接拷贝到 <code>public</code> 文件夹。</p>
 
       
     </div>
@@ -504,7 +559,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/14/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/16/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/14/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/16/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -571,20 +626,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-count">42</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -650,7 +705,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共34.8k字</span>
+  <span class="post-count">博客全站共42.4k字</span>
 </div>
 
         

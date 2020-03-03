@@ -168,17 +168,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">19</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">21</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">7</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">39</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">42</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -233,7 +233,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/13ffbe88.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/989bfe87.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -247,7 +247,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/13ffbe88.html" class="post-title-link" itemprop="url">变量</a>
+            <a href="/archives/989bfe87.html" class="post-title-link" itemprop="url">辅助函数</a>
         </h2>
 
         <div class="post-meta">
@@ -257,7 +257,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2-27-2020 10:29:46 晚上" itemprop="dateCreated datePublished" datetime="2020-02-27T22:29:46+08:00">2-27-2020</time>
+              <time title="创建时间：2-27-2020 11:06:50 晚上" itemprop="dateCreated datePublished" datetime="2020-02-27T23:06:50+08:00">2-27-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -278,8 +278,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/13ffbe88.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/13ffbe88.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/989bfe87.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/989bfe87.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -296,87 +296,92 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><table>
+          <h1 id="辅助函数（Helpers）"><a href="#辅助函数（Helpers）" class="headerlink" title="辅助函数（Helpers）"></a>辅助函数（Helpers）</h1><p>辅助函数帮助您在模版中快速插入内容。辅助函数不能在源文件中使用。</p>
+<h2 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h2><h3 id="url-for"><a href="#url-for" class="headerlink" title="url_for"></a>url_for</h3><p>在路径前加上根路径，从 Hexo 2.7 开始您应该使用此函数而不是 <code>config.root + path</code>。</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- url_for<span class="comment">(path, [option])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
 <thead>
 <tr>
-<th align="left">变量</th>
+<th align="left">参数</th>
 <th align="left">描述</th>
-<th align="left">类型</th>
+<th align="left">默认值</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left"><code>site</code></td>
-<td align="left"><a href="https://hexo.io/zh-cn/docs/variables#网站变量" target="_blank" rel="external nofollow noopener noreferrer">网站变量</a></td>
-<td align="left"><code>object</code>; 见 <a href="https://hexo.io/zh-cn/docs/variables#网站变量" target="_blank" rel="external nofollow noopener noreferrer">网站变量</a></td>
-</tr>
-<tr>
-<td align="left"><code>page</code></td>
-<td align="left">针对该页面的内容以及 front-matter 中自定义的变量。</td>
-<td align="left"><code>object</code>; 见 <a href="https://hexo.io/zh-cn/docs/variables#页面变量" target="_blank" rel="external nofollow noopener noreferrer">页面变量</a></td>
-</tr>
-<tr>
-<td align="left"><code>config</code></td>
-<td align="left">网站配置</td>
-<td align="left"><code>object</code> (站点的配置文件)</td>
-</tr>
-<tr>
-<td align="left"><code>theme</code></td>
-<td align="left">主题配置。继承自网站配置。</td>
-<td align="left"><code>object</code> (主题配置文件)</td>
-</tr>
-<tr>
-<td align="left"><code>_</code> (单下划线)</td>
-<td align="left"><a href="https://lodash.com/" target="_blank" rel="external nofollow noopener noreferrer">Lodash</a> 函数库</td>
-<td align="left"><a href="https://lodash.com/" target="_blank" rel="external nofollow noopener noreferrer">Lodash</a> 文档</td>
-</tr>
-<tr>
-<td align="left"><code>path</code></td>
-<td align="left">当前页面的路径（不含根路径）</td>
-<td align="left"><code>string</code></td>
-</tr>
-<tr>
-<td align="left"><code>url</code></td>
-<td align="left">当前页面的完整网址</td>
-<td align="left"><code>string</code></td>
-</tr>
-<tr>
-<td align="left"><code>env</code></td>
-<td align="left">环境变量</td>
-<td align="left">???</td>
+<td align="left"><code>relative</code></td>
+<td align="left">是否输出相对链接</td>
+<td align="left"><code>config.relative_link</code> 的值</td>
 </tr>
 </tbody></table>
-<h3 id="网站变量"><a href="#网站变量" class="headerlink" title="网站变量"></a>网站变量</h3><table>
+<p><strong>示例：</strong></p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line"><span class="symbol">root:</span> <span class="meta-keyword">/blog/</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- url_for<span class="comment">('/a/path')</span> <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// /blog/a/path</span></span><br></pre></td></tr></table></figure>
+
+<p>是否输出相对链接，默认遵循配置文件中 <code>relative_link</code> 的值</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- url<span class="constructor">_for('<span class="operator">/</span><span class="params">css</span><span class="operator">/</span><span class="params">style</span>.<span class="params">css</span>')</span> %&gt;</span><br><span class="line"><span class="comment">// ../../css/style.css</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 覆盖配置 </span></span><br><span class="line"><span class="comment"> * 即使配置文件中启用了 relative_link，你也可以使用 relative 参数禁用相对链接输出，反之亦然 </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">&lt;%- url<span class="constructor">_for('<span class="operator">/</span><span class="params">css</span><span class="operator">/</span><span class="params">style</span>.<span class="params">css</span>', &#123;<span class="params">relative</span>: <span class="params">false</span>&#125;)</span> %&gt;</span><br><span class="line"><span class="comment">// /css/style.css</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="relative-url"><a href="#relative-url" class="headerlink" title="relative_url"></a>relative_url</h3><p>取得与 <code>from</code> 相对的 <code>to</code> 路径。</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- relative_url<span class="comment">(from, to)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- relative<span class="constructor">_url('<span class="params">foo</span><span class="operator">/</span><span class="params">bar</span><span class="operator">/</span>', '<span class="params">css</span><span class="operator">/</span><span class="params">style</span>.<span class="params">css</span>')</span> %&gt;</span><br><span class="line"><span class="comment">// ../../css/style.css</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="gravatar"><a href="#gravatar" class="headerlink" title="gravatar"></a>gravatar</h3><p>根据邮箱地址返回 Gravatar 头像 URL。</p>
+<p>如果你不指定 <code>options</code> 参数，将会应用默认参数。否则，你可以将其设置为一个数字，这个数字将会作为 Gravatar 的大小参数。最后，如果你设置它一个对象，它将会被转换为 Gravatar 的一个查询字符串参数。</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- gravatar<span class="comment">(email, [options])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
 <thead>
 <tr>
-<th align="left">变量</th>
+<th align="left">参数</th>
 <th align="left">描述</th>
-<th align="left">类型</th>
+<th align="left">默认值</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left"><code>site.posts</code></td>
-<td align="left">所有文章</td>
-<td align="left"><code>array</code> of <code>post</code> objects</td>
+<td align="left"><code>s</code></td>
+<td align="left">图片大小</td>
+<td align="left">80</td>
 </tr>
 <tr>
-<td align="left"><code>site.pages</code></td>
-<td align="left">所有分页</td>
-<td align="left"><code>array</code> of <code>page</code> objects</td>
+<td align="left"><code>d</code></td>
+<td align="left">默认头像</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="left"><code>site.categories</code></td>
-<td align="left">所有分类</td>
-<td align="left"><code>object</code>，包含了站点全部的分类</td>
+<td align="left"><code>f</code></td>
+<td align="left">强制使用默认图象</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="left"><code>site.tags</code></td>
-<td align="left">所有标签</td>
-<td align="left"><code>array</code>，包含了站点全部的标签</td>
+<td align="left"><code>r</code></td>
+<td align="left">头像等级限制</td>
+<td align="left"></td>
 </tr>
 </tbody></table>
+<p><strong>示例：</strong></p>
+<figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="symbol">%-</span> gravatar('a<span class="title">@abc.com</span>', <span class="number">40</span>) %&gt;</span><br><span class="line">// https://www.gravatar.com/avatar/b<span class="number">9</span>b<span class="number">00e66</span><span class="keyword">c</span><span class="number">6</span>b<span class="number">8</span>a<span class="number">70</span>f<span class="number">88</span><span class="keyword">c</span><span class="number">73</span>cb<span class="number">6</span>bdb<span class="number">06787</span>?s=<span class="number">40</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="symbol">%-</span> gravatar('a<span class="title">@abc.com</span>' &#123;s: <span class="number">40</span>, d: 'https://via.placeholder.com/<span class="number">150</span>'&#125;) %&gt;// https://www.gravatar.com/avatar/b<span class="number">9</span>b<span class="number">00e66</span><span class="keyword">c</span><span class="number">6</span>b<span class="number">8</span>a<span class="number">70</span>f<span class="number">88</span><span class="keyword">c</span><span class="number">73</span>cb<span class="number">6</span>bdb<span class="number">06787</span>?s=<span class="number">40</span>&amp;d=https<span class="symbol">%3</span>A<span class="symbol">%2</span>F<span class="symbol">%2</span>Fvia.placeholder.com<span class="symbol">%2</span>F<span class="number">150</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="full-url-for"><a href="#full-url-for" class="headerlink" title="full_url_for"></a>full_url_for</h3><p>在路径前加上根路径和域名。输出会被自动转码。</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- full_url_for<span class="comment">(path)</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line"><span class="string">url:</span> <span class="string">https:</span><span class="comment">//example.com/blog # example</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- full_url_for<span class="comment">('/a/path')</span> <span class="meta">%</span>&gt;</span><br><span class="line"><span class="comment">// https://example.com/blog/a/path</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/archives/13ffbe88.html#more" rel="contents">
+              <a class="btn" href="/archives/989bfe87.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -400,7 +405,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/f6010553.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/def84ee6.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -414,7 +419,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/f6010553.html" class="post-title-link" itemprop="url">模板</a>
+            <a href="/archives/def84ee6.html" class="post-title-link" itemprop="url">插件</a>
         </h2>
 
         <div class="post-meta">
@@ -424,7 +429,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2-27-2020 10:23:22 晚上" itemprop="dateCreated datePublished" datetime="2020-02-27T22:23:22+08:00">2-27-2020</time>
+              <time title="创建时间：2-27-2020 10:43:03 晚上" itemprop="dateCreated datePublished" datetime="2020-02-27T22:43:03+08:00">2-27-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -445,8 +450,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/f6010553.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/f6010553.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/def84ee6.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/def84ee6.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -463,63 +468,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="模版"><a href="#模版" class="headerlink" title="模版"></a>模版</h1><p>模板决定了网站内容的呈现方式，每个主题至少都应包含一个 <code>index</code> 模板，以下是各页面相对应的模板名称：</p>
-<table>
-<thead>
-<tr>
-<th align="left">模板</th>
-<th align="left">用途</th>
-<th align="left">回退</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>index</code></td>
-<td align="left">首页</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><code>post</code></td>
-<td align="left">文章</td>
-<td align="left"><code>index</code></td>
-</tr>
-<tr>
-<td align="left"><code>page</code></td>
-<td align="left">分页</td>
-<td align="left"><code>index</code></td>
-</tr>
-<tr>
-<td align="left"><code>archive</code></td>
-<td align="left">归档</td>
-<td align="left"><code>index</code></td>
-</tr>
-<tr>
-<td align="left"><code>category</code></td>
-<td align="left">分类归档</td>
-<td align="left"><code>archive</code></td>
-</tr>
-<tr>
-<td align="left"><code>tag</code></td>
-<td align="left">标签归档</td>
-<td align="left"><code>archive</code></td>
-</tr>
-</tbody></table>
-<h2 id="布局（Layout）"><a href="#布局（Layout）" class="headerlink" title="布局（Layout）"></a>布局（Layout）</h2><p>如果页面结构类似，例如两个模板都有页首（Header）和页脚（Footer），您可考虑通过「布局」让两个模板共享相同的结构。一个布局文件必须要能显示 <code>body</code> 变量的内容，如此一来模板的内容才会被显示，举例来说：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">index.ejs</span><br><span class="line">index</span><br></pre></td></tr></table></figure>
+          <h1 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h1><p>Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心模块的源码。在 Hexo 中有两种形式的插件：</p>
+<h3 id="脚本（Scripts）"><a href="#脚本（Scripts）" class="headerlink" title="脚本（Scripts）"></a>脚本（Scripts）</h3><p>如果您的代码很简单，建议您编写脚本，您只需要把 JavaScript 文件放到 <code>scripts</code> 文件夹，在启动时就会自动载入。</p>
+<h3 id="插件（Packages）"><a href="#插件（Packages）" class="headerlink" title="插件（Packages）"></a>插件（Packages）</h3><p>如果您的代码较复杂，或是您想要发布到 NPM 上，建议您编写插件。首先，在 <code>node_modules</code> 文件夹中建立文件夹，文件夹名称开头必须为 <code>hexo-</code>，如此一来 Hexo 才会在启动时载入，否则 Hexo 将会忽略它。</p>
+<p>文件夹内至少要包含 2 个文件：一个是主程序，另一个是 <code>package.json</code>，描述插件的用途和所依赖的插件。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── <span class="selector-tag">index</span><span class="selector-class">.js</span></span><br><span class="line">└── <span class="selector-tag">package</span><span class="selector-class">.json</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">layout.ejs</span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">body</span> %&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>package.json</code> 中至少要包含 <code>name</code>, <code>version</code>, <code>main</code> 属性，例如：</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">package</span>.<span class="title">json</span></span></span><br><span class="line"><span class="class">&#123;</span>  </span><br><span class="line">   <span class="string">"name"</span>: <span class="string">"hexo-my-plugin"</span>,  </span><br><span class="line">   <span class="string">"version"</span>: <span class="string">"0.0.1"</span>,  </span><br><span class="line">   <span class="string">"main"</span>: <span class="string">"index"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>生成：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span>index<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>每个模板都默认使用 <code>layout</code> 布局，您可在 front-matter 指定其他布局，或是设为 <code>false</code> 来关闭布局功能，您甚至可在布局中再使用其他布局来建立嵌套布局。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/archives/f6010553.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+
+<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><p>您可以使用 Hexo 提供的官方工具插件来加速开发：</p>
+<ul>
+<li><a href="https://github.com/hexojs/hexo-fs" target="_blank" rel="external nofollow noopener noreferrer">hexo-fs</a>：文件 IO</li>
+<li><a href="https://github.com/hexojs/hexo-util" target="_blank" rel="external nofollow noopener noreferrer">hexo-util</a>：工具程式</li>
+<li><a href="https://github.com/hexojs/hexo-i18n" target="_blank" rel="external nofollow noopener noreferrer">hexo-i18n</a>：本地化（i18n）</li>
+<li><a href="https://github.com/hexojs/hexo-pagination" target="_blank" rel="external nofollow noopener noreferrer">hexo-pagination</a>：生成分页资料</li>
+</ul>
+<p><strong>发布插件：</strong> 略</p>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+
       
     </div>
 
@@ -538,7 +509,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -605,20 +576,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-count">42</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -684,7 +655,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共34.8k字</span>
+  <span class="post-count">博客全站共42.4k字</span>
 </div>
 
         
