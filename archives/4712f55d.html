@@ -312,6 +312,8 @@
 <p>他需要制定出渠道发展的整体<a href="https://baike.baidu.com/item/策略规划" target="_blank" rel="external nofollow noopener noreferrer">策略规划</a>、<a href="https://baike.baidu.com/item/渠道销售" target="_blank" rel="external nofollow noopener noreferrer">渠道销售</a>目标、渠道结构体系、纳入的产品体系、渠道的开发模式、渠道的空间占有、渠道的自动化建设、渠道的过程管理等一系列管理内容，然后再不断推动销售团队来执行这些管理规范，并统筹协调过程中出现的种种问题，同时对销售人员进行指导、培训和评估。</p>
 <p><strong>渠道是一种有限的资源，商家谁占有了渠道，就能赢得了竞争优势。</strong></p>
 <p>渠道经理就要对不同类型渠道的发展过程进行密切关注，定目标、造规划、设标准，常评估、勤指导，从而维护各类渠道的良性发展，形成企业真正的核心竞争力。</p>
+<a id="more"></a>
+
 <h4 id="主要职责："><a href="#主要职责：" class="headerlink" title="主要职责："></a>主要职责：</h4><ol>
 <li><p>寻找潜在合作伙伴。</p>
 </li>
@@ -455,20 +457,20 @@
           
       <div class="tabs tabs-comment">
         <ul class="nav-tabs">
-            <li class="tab"><a href="#comment-livere">livere</a></li>
             <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+            <li class="tab"><a href="#comment-livere">livere</a></li>
             <li class="tab"><a href="#comment-valine">valine</a></li>
         </ul>
         <div class="tab-content">
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments" id="gitalk-container"></div>
+            </div>
             <div class="tab-pane livere" id="comment-livere">
               
   <div class="comments">
     <div id="lv-container" data-id="city" data-uid="MTAyMC80ODgxNi8yNTMxMA=="></div>
   </div>
   
-            </div>
-            <div class="tab-pane gitalk" id="comment-gitalk">
-              <div class="comments" id="gitalk-container"></div>
             </div>
             <div class="tab-pane valine" id="comment-valine">
               <div class="comments" id="valine-comments"></div>
@@ -615,7 +617,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共34.7k字</span>
+  <span class="post-count">博客全站共34.8k字</span>
 </div>
 
         
@@ -704,22 +706,6 @@
 
   
 
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
-
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
@@ -737,6 +723,22 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
     });
     gitalk.render('gitalk-container');
   }, window.Gitalk);
+});
+</script>
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
 });
 </script>
 
