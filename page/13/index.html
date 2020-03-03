@@ -168,17 +168,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">13</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">19</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">7</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">34</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">39</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -233,7 +233,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/1393f011.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/13ffbe88.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -247,7 +247,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/1393f011.html" class="post-title-link" itemprop="url">服务器-生成器</a>
+            <a href="/archives/13ffbe88.html" class="post-title-link" itemprop="url">变量</a>
         </h2>
 
         <div class="post-meta">
@@ -257,7 +257,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2-27-2020 5:25:06 下午" itemprop="dateCreated datePublished" datetime="2020-02-27T17:25:06+08:00">2-27-2020</time>
+              <time title="创建时间：2-27-2020 10:29:46 晚上" itemprop="dateCreated datePublished" datetime="2020-02-27T22:29:46+08:00">2-27-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -278,8 +278,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/1393f011.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/1393f011.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/13ffbe88.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/13ffbe88.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -296,41 +296,92 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="6-服务器"><a href="#6-服务器" class="headerlink" title="6.服务器"></a>6.服务器</h1><h2 id="hexo-server"><a href="#hexo-server" class="headerlink" title="hexo-server"></a>hexo-server</h2><p>如果您想要更改端口，或是在执行时遇到了 <code>EADDRINUSE</code> 错误，可以在执行时使用 <code>-p</code> 选项指定其他端口</p>
-<h3 id="静态模式"><a href="#静态模式" class="headerlink" title="静态模式"></a>静态模式</h3><p>在静态模式下，服务器只处理 <code>public</code> 文件夹内的文件，而不会处理文件变动，在执行时，您应该先自行执行 <code>hexo generate</code>，此模式通常用于生产环境（production mode）下。</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo<span class="built_in"> server </span>-s</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="自定义-IP"><a href="#自定义-IP" class="headerlink" title="自定义 IP"></a>自定义 IP</h3><p>服务器默认运行在 <code>0.0.0.0</code>，您可以覆盖默认的 IP 设置，如下：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo<span class="built_in"> server </span>-i 192.168.1.1</span><br></pre></td></tr></table></figure>
-
-<p>指定这个参数后，您就只能通过该IP才能访问站点。</p>
-<p><strong>例如：</strong></p>
-<ul>
-<li><p>对于一台使用无线网络的笔记本电脑，除了指向本机的<code>127.0.0.1</code>外，通常还有一个<code>192.168.*.*</code>的局域网IP，如果像上面那样使用<code>-i</code>参数，就不能用<code>127.0.0.1</code>来访问站点了。</p>
-</li>
-<li><p>对于有公网IP的主机，如果您指定一个局域网IP作为<code>-i</code>参数的值，那么就无法通过公网来访问站点。</p>
-</li>
-</ul>
-<hr>
-<h1 id="生成文件"><a href="#生成文件" class="headerlink" title="生成文件"></a>生成文件</h1><h3 id="监视文件变动"><a href="#监视文件变动" class="headerlink" title="监视文件变动"></a>监视文件变动</h3><p>Hexo 能够监视文件变动并立即重新生成静态文件，在生成时会比对文件的 SHA1 checksum，只有变动的文件才会写入。</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">generate</span> --watch</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="完成后部署"><a href="#完成后部署" class="headerlink" title="完成后部署"></a>完成后部署</h3><p>您可执行下列的其中一个命令，让 Hexo 在生成完毕后自动部署网站，两个命令的作用是相同的。</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">generate</span> --deploy</span><br><span class="line">$ hexo deploy --<span class="keyword">generate</span></span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>简写：<br>$ hexo g -d<br>$ hexo d -g</p>
-</blockquote>
-<hr>
-<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
-<p><img src alt="logo"></p>
-
+          <h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><table>
+<thead>
+<tr>
+<th align="left">变量</th>
+<th align="left">描述</th>
+<th align="left">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>site</code></td>
+<td align="left"><a href="https://hexo.io/zh-cn/docs/variables#网站变量" target="_blank" rel="external nofollow noopener noreferrer">网站变量</a></td>
+<td align="left"><code>object</code>; 见 <a href="https://hexo.io/zh-cn/docs/variables#网站变量" target="_blank" rel="external nofollow noopener noreferrer">网站变量</a></td>
+</tr>
+<tr>
+<td align="left"><code>page</code></td>
+<td align="left">针对该页面的内容以及 front-matter 中自定义的变量。</td>
+<td align="left"><code>object</code>; 见 <a href="https://hexo.io/zh-cn/docs/variables#页面变量" target="_blank" rel="external nofollow noopener noreferrer">页面变量</a></td>
+</tr>
+<tr>
+<td align="left"><code>config</code></td>
+<td align="left">网站配置</td>
+<td align="left"><code>object</code> (站点的配置文件)</td>
+</tr>
+<tr>
+<td align="left"><code>theme</code></td>
+<td align="left">主题配置。继承自网站配置。</td>
+<td align="left"><code>object</code> (主题配置文件)</td>
+</tr>
+<tr>
+<td align="left"><code>_</code> (单下划线)</td>
+<td align="left"><a href="https://lodash.com/" target="_blank" rel="external nofollow noopener noreferrer">Lodash</a> 函数库</td>
+<td align="left"><a href="https://lodash.com/" target="_blank" rel="external nofollow noopener noreferrer">Lodash</a> 文档</td>
+</tr>
+<tr>
+<td align="left"><code>path</code></td>
+<td align="left">当前页面的路径（不含根路径）</td>
+<td align="left"><code>string</code></td>
+</tr>
+<tr>
+<td align="left"><code>url</code></td>
+<td align="left">当前页面的完整网址</td>
+<td align="left"><code>string</code></td>
+</tr>
+<tr>
+<td align="left"><code>env</code></td>
+<td align="left">环境变量</td>
+<td align="left">???</td>
+</tr>
+</tbody></table>
+<h3 id="网站变量"><a href="#网站变量" class="headerlink" title="网站变量"></a>网站变量</h3><table>
+<thead>
+<tr>
+<th align="left">变量</th>
+<th align="left">描述</th>
+<th align="left">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>site.posts</code></td>
+<td align="left">所有文章</td>
+<td align="left"><code>array</code> of <code>post</code> objects</td>
+</tr>
+<tr>
+<td align="left"><code>site.pages</code></td>
+<td align="left">所有分页</td>
+<td align="left"><code>array</code> of <code>page</code> objects</td>
+</tr>
+<tr>
+<td align="left"><code>site.categories</code></td>
+<td align="left">所有分类</td>
+<td align="left"><code>object</code>，包含了站点全部的分类</td>
+</tr>
+<tr>
+<td align="left"><code>site.tags</code></td>
+<td align="left">所有标签</td>
+<td align="left"><code>array</code>，包含了站点全部的标签</td>
+</tr>
+</tbody></table>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/archives/13ffbe88.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -349,7 +400,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/7bfb7356.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/f6010553.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -363,7 +414,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/7bfb7356.html" class="post-title-link" itemprop="url">数据文件夹</a>
+            <a href="/archives/f6010553.html" class="post-title-link" itemprop="url">模板</a>
         </h2>
 
         <div class="post-meta">
@@ -373,7 +424,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2-27-2020 4:52:04 下午" itemprop="dateCreated datePublished" datetime="2020-02-27T16:52:04+08:00">2-27-2020</time>
+              <time title="创建时间：2-27-2020 10:23:22 晚上" itemprop="dateCreated datePublished" datetime="2020-02-27T22:23:22+08:00">2-27-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -394,8 +445,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/7bfb7356.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/7bfb7356.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/f6010553.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/f6010553.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -412,22 +463,63 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="5-数据文件"><a href="#5-数据文件" class="headerlink" title="5.数据文件"></a>5.数据文件</h1><p>有时您可能需要在主题中使用某些资料，而这些资料并不在文章内，并且是需要重复使用的，那么您可以考虑使用 Hexo 3.0 新增的「数据文件」功能。此功能会载入 <code>source/_data</code> 内的 YAML 或 JSON 文件，如此一来您便能在网站中复用这些文件了。</p>
-<p>举例来说，在 <code>source/_data</code> 文件夹中新建 <code>menu.yml</code> 文件：</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Home:</span> /</span><br><span class="line"><span class="symbol">Gallery:</span> <span class="meta-keyword">/gallery/</span></span><br><span class="line"><span class="symbol">Archives:</span> <span class="meta-keyword">/archives/</span></span><br></pre></td></tr></table></figure>
+          <h1 id="模版"><a href="#模版" class="headerlink" title="模版"></a>模版</h1><p>模板决定了网站内容的呈现方式，每个主题至少都应包含一个 <code>index</code> 模板，以下是各页面相对应的模板名称：</p>
+<table>
+<thead>
+<tr>
+<th align="left">模板</th>
+<th align="left">用途</th>
+<th align="left">回退</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>index</code></td>
+<td align="left">首页</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>post</code></td>
+<td align="left">文章</td>
+<td align="left"><code>index</code></td>
+</tr>
+<tr>
+<td align="left"><code>page</code></td>
+<td align="left">分页</td>
+<td align="left"><code>index</code></td>
+</tr>
+<tr>
+<td align="left"><code>archive</code></td>
+<td align="left">归档</td>
+<td align="left"><code>index</code></td>
+</tr>
+<tr>
+<td align="left"><code>category</code></td>
+<td align="left">分类归档</td>
+<td align="left"><code>archive</code></td>
+</tr>
+<tr>
+<td align="left"><code>tag</code></td>
+<td align="left">标签归档</td>
+<td align="left"><code>archive</code></td>
+</tr>
+</tbody></table>
+<h2 id="布局（Layout）"><a href="#布局（Layout）" class="headerlink" title="布局（Layout）"></a>布局（Layout）</h2><p>如果页面结构类似，例如两个模板都有页首（Header）和页脚（Footer），您可考虑通过「布局」让两个模板共享相同的结构。一个布局文件必须要能显示 <code>body</code> 变量的内容，如此一来模板的内容才会被显示，举例来说：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">index.ejs</span><br><span class="line">index</span><br></pre></td></tr></table></figure>
 
-<p>您就能在模板中使用这些资料：</p>
-<figure class="highlight mojolicious"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span><span class="perl"> <span class="keyword">for</span> (var <span class="keyword">link</span> in site.data.menu) &#123; </span><span class="xml"><span class="tag">%&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%=</span></span></span><span class="perl"> site.data.menu[<span class="keyword">link</span>] </span><span class="xml"><span class="tag"><span class="string">%&gt;"</span>&gt;</span> <span class="tag">&lt;<span class="name">%=</span></span></span><span class="perl"> <span class="keyword">link</span> </span><span class="xml"><span class="tag">%&gt;</span> <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span><span class="perl"> &#125; </span><span class="xml"><span class="tag">%&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">layout.ejs</span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">body</span> %&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>渲染结果如下 :</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/"</span>&gt;</span> Home <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/gallery/"</span>&gt;</span> Gallery <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/archives/"</span>&gt;</span> Archives <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>生成：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span>index<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-
-
-<hr>
-<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
-<p><img src alt="logo"></p>
-
+<p>每个模板都默认使用 <code>layout</code> 布局，您可在 front-matter 指定其他布局，或是设为 <code>false</code> 来关闭布局功能，您甚至可在布局中再使用其他布局来建立嵌套布局。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/archives/f6010553.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -446,7 +538,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -513,20 +605,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">39</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -592,7 +684,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共28.1k字</span>
+  <span class="post-count">博客全站共34.7k字</span>
 </div>
 
         

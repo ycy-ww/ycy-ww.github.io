@@ -1,6 +1,520 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>JS的历史-实现</title>
+    <url>/archives/58a945da.html</url>
+    <content><![CDATA[<h1 id="JavaScript-实现"><a href="#JavaScript-实现" class="headerlink" title="JavaScript 实现"></a>JavaScript 实现</h1><p><strong>JavaScript 的核心 ECMAScript 描述了该语言的语法和基本对象；</strong></p>
+<p><strong>DOM 描述了处理网页内容的方法和接口；</strong></p>
+<p><strong>BOM 描述了与浏览器进行交互的方法和接口。</strong></p>
+<h2 id="ECMAScript、DOM-和-BOM"><a href="#ECMAScript、DOM-和-BOM" class="headerlink" title="ECMAScript、DOM 和 BOM"></a>ECMAScript、DOM 和 BOM</h2><p>尽管 ECMAScript 是一个重要的标准，但它并不是 JavaScript 唯一的部分，当然，也不是唯一被标准化的部分。实际上，一个完整的 JavaScript 实现是由以下 3 个不同部分组成的：</p>
+<ul>
+<li><a href="https://www.w3school.com.cn/js/pro_js_implement.asp#ECMAScript" target="_blank" rel="external nofollow noopener noreferrer">核心（ECMAScript）</a></li>
+<li><a href="https://www.w3school.com.cn/js/pro_js_implement.asp#DOM" target="_blank" rel="external nofollow noopener noreferrer">文档对象模型（DOM）</a></li>
+<li><a href="https://www.w3school.com.cn/js/pro_js_implement.asp#BOM" target="_blank" rel="external nofollow noopener noreferrer">浏览器对象模型（BOM）</a></li>
+</ul>
+<p><img src="https://www.w3school.com.cn/i/ct_js_JavaScript_ECMAScript_DOM_BOM.gif" alt="JavaScript 包括 ECMAScript、DOM 和 BOM"></p>
+<h2 id="ECMAScript"><a href="#ECMAScript" class="headerlink" title="ECMAScript"></a>ECMAScript</h2><p>ECMAScript 并不与任何具体浏览器相绑定，实际上，它也没有提到用于任何用户输入输出的方法（这点与 C 这类语言不同，它需要依赖外部的库来完成这类任务）。那么什么才是 ECMAScript 呢？ECMA-262 标准（第 2 段）的描述如下：</p>
+<blockquote>
+<p>“ECMAScript 可以为不同种类的宿主环境提供核心的脚本编程能力，因此核心的脚本语言是与任何特定的宿主环境分开进行规定的… …”</p>
+</blockquote>
+<p>Web 浏览器对于 ECMAScript 来说是一个宿主环境，但它并不是唯一的宿主环境。事实上，还有不计其数的其他各种环境（例如 Nombas 的 ScriptEase，以及 Macromedia 同时用在 Flash 和 Director MX 中的 ActionScript）可以容纳 ECMAScript 实现。那么 ECMAScript 在浏览器之外规定了些什么呢？</p>
+<p>简单地说，ECMAScript 描述了以下内容：</p>
+<ul>
+<li>语法</li>
+<li>类型</li>
+<li>语句</li>
+<li>关键字</li>
+<li>保留字</li>
+<li>运算符</li>
+<li>对象</li>
+</ul>
+<p>ECMAScript 仅仅是一个描述，定义了脚本语言的所有属性、方法和对象。其他语言可以实现 ECMAScript 来作为功能的基准，JavaScript 就是这样：</p>
+<p><img src="https://www.w3school.com.cn/i/ct_js_ECMAScript_JavaScript_ActionScript_ScriptEase.gif" alt="ECMAScript、JavaScript、ActionScript、ScriptEase"></p>
+<p>每个浏览器都有它自己的 ECMAScript 接口的实现，然后这个实现又被扩展，包含了 DOM 和 BOM（在以下几节中再探讨）。当然还有其他实现并扩展了 ECMAScript 的语言，例如 Windows 脚本宿主（Windows Scripting Host, WSH）、Macromedia 在 Flash 和 Director MX 中的 ActionScript，以及 Nombas ScriptEase。</p>
+<h3 id="1-ECMAScript-的版本"><a href="#1-ECMAScript-的版本" class="headerlink" title="1. ECMAScript 的版本"></a>1. ECMAScript 的版本</h3><p>ECMAScript 分成几个不同的版本，它是在一个叫做 ECMA-262 的标准中定义的。和其他标准一样，ECMA-262 会被编辑和更新。当有了主要更新时，就会发布一个标准的新版。最新 ECMA-262 的版本是 5.1，于 2011 年 6 月发布。</p>
+<p>ECMA-262 的第一版在本质上与 Netscape 的 JavaScript 1.1 是一样，只是把所有与浏览器相关的代码删除了，此外还有一些小的调整。首先，ECMA-262 要求对 Unicode 标准的支持（以便支持多语言）。第二，它要求对象是平台无关的（Netscape 的 JavaScript 1.1 事实上有不同的对象实现，例如 Date 对象，是依赖于平台）。这是 JavaScript 1.1 和 1.2 为什么不符合 ECMA-262 规范第一版的主要原因。</p>
+<p>ECMA-262 的第二版大部分更新本质上是编辑性的。这次标准的更新是为了与 ISO/IEC-16262 的严格一致，也并没有特别添加、更改和删除内容。ECMAScript 一般不会遵守第二版。</p>
+<p>ECMA-262 第三版是该标准第一次真正的更新。它提供了对字符串处理、错误定义和数值输出的更新。同时，它还增加了正则表达式、新的控制语句、try…catch 异常处理的支持，以及一些为使标准国际化而做的小改动。一般来说，它标志着 ECMAScript 成为一种真正的编程语言。</p>
+<h3 id="2-何谓-ECMAScript-符合性"><a href="#2-何谓-ECMAScript-符合性" class="headerlink" title="2. 何谓 ECMAScript 符合性"></a>2. 何谓 ECMAScript 符合性</h3><p>在 ECMA-262 中，ECMAScript 符合性（conformance）有明确的定义。一个脚本语言必须满足以下四项基本原则：</p>
+<ul>
+<li>符合的实现必须按照 ECMA-262 中所描述的支持所有的“类型、值、对象、属性、函数和程序语言及语义”（ECMA-262，第一页）</li>
+<li>符合的实现必须支持 Unicode 字符标准（UCS）</li>
+<li>符合的实现可以增加没有在 ECMA-262 中指定的“额外类型、值、对象、属性和函数”。ECMA-262 将这些增加描述为规范中未给定的新对象或对象的新属性</li>
+<li>符合的实现可以支持没有在 ECMA-262 中定义的“程序和正则表达式语法”（意思是可以替换或者扩展内建的正则表达式支持）</li>
+</ul>
+<p>所有 ECMAScript 实现必须符合以上标准。</p>
+<h3 id="3-Web-浏览器中的-ECMAScript-支持"><a href="#3-Web-浏览器中的-ECMAScript-支持" class="headerlink" title="3. Web 浏览器中的 ECMAScript 支持"></a>3. Web 浏览器中的 ECMAScript 支持</h3><p>含有 JavaScript 1.1 的 Netscape Navigator 3.0 在 1996 年发布。然后，JavaScript 1.1 规范被作为一个新标准的草案被提交给 EMCA。有了 JavaScript 轰动性的流行，Netscape 十分高兴地开始开发 1.2 版。但有一个问题，ECMA 并未接受 Netscape 的草案。在 Netscape Navigator 3.0 发布后不久，微软就发布了 IE 3.0。该版本的 IE 含有 JScript 1.0（微软自己的 JavaScript 实现的名称），原本计划可以与 JavaScript 1.1 相提并论。然后，由于文档不全以及一些不当的重复特性，JScript 1.0 远远没有达到 JavaScript 1.1 的水平。</p>
+<p>在 ECMA-262 第一版定稿之前，发布含有 JavaScript 1.2 的 Netscape Navigator 4.0 是在 1997 年，在那年晚些时候，ECMA-262 标准被接受并标准化。因此，JavaScript 1.2 并不和 ECMAScript 的第一版兼容，虽然 ECMAScript 应该基于 JavaScript 1.1。</p>
+<p>JScript 的下一步是 IE 4.0 中加入的 JScript 3.0（2.0 版是随 IIS 3.0 一起发布的，但并未包含在浏览器中）。微软大力宣传 JScript 3.0 是世界上第一个真正符合 ECMA 标准的脚本语言。而那时，ECMA-262 还没有最终定稿，所以 JScript 3.0 也遭受了和 JavaScript 1.2 同样的命运 - 它还是没能符合最终的 ECMAScript 标准。</p>
+<p>Netscape 选择在 Netscape Navigator 4.06 中升级它的 JavaScript 实现。JavaScript 1.3 使 Netscape 终于完全符合了 ECMAScript 第一版。Netscape 加入了对 Unicode 标准的支持，并让所有的对象保留了在 JavaScript 1.2 中引入的新特性的同时实现了平台独立。</p>
+<p>当 Netscape 将它的源代码作为 Mozilla 项目公布于众时，本来计划 JavaScript 1.4 将会嵌入到 Netscape Navigator 5.0 中。然而，一个冒进的决定 - 要完全从头重新设计 Netscape 的代码，破坏了这个工作。JavaScript 1.4 仅仅作为一个 Netscape Enterprise Server 的服务器端脚本语言发布，以后也没有被放入浏览器中。</p>
+<p>如今，所有主流的 Web 浏览器都遵守 ECMA-262 第三版。</p>
+<p>下面的表格列出了大部分流行的 Web 浏览器中的 ECMAScript 支持：</p>
+<table>
+<thead>
+<tr>
+<th align="left">浏览器</th>
+<th align="left">DOM 兼容性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Netscape Navigator 2.0</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Netscape Navigator 3.0</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Netscape Navigator 4.0 - 4.05</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Netscape Navigator 4.06 - 4.79</td>
+<td align="left">Edition 1</td>
+</tr>
+<tr>
+<td align="left">Netscape 6.0+ (Mozilla 0.6.0+)</td>
+<td align="left">Edition 3</td>
+</tr>
+<tr>
+<td align="left">Internet Explorer 3.0</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Internet Explorer 4.0</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Internet Explorer 5.0</td>
+<td align="left">Edition 1</td>
+</tr>
+<tr>
+<td align="left">Internet Explorer 5.5+</td>
+<td align="left">Edition 3</td>
+</tr>
+<tr>
+<td align="left">Opera 6.0 - 7.1</td>
+<td align="left">Edition 2</td>
+</tr>
+<tr>
+<td align="left">Opera 7.2+</td>
+<td align="left">Edition 3</td>
+</tr>
+<tr>
+<td align="left">Safari 1.0+/Konqueror ~ 2.0+</td>
+<td align="left">Edition 3</td>
+</tr>
+</tbody></table>
+<h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><p>DOM（文档对象模型）是 HTML 和 XML 的应用程序接口（API）。DOM 将把整个页面规划成由节点层级构成的文档。HTML 或 XML 页面的每个部分都是一个节点的衍生物。请考虑下面的 HTML 页面：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Sample Page<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>hello world!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这段代码可以用 DOM 绘制成一个节点层次图：</p>
+<p><img src="https://www.w3school.com.cn/i/ct_js_domtree.gif" alt="DOM 节点层次图"></p>
+<p>DOM 通过创建树来表示文档，从而使开发者对文档的内容和结构具有空前的控制力。用 DOM API 可以轻松地删除、添加和替换节点。</p>
+<h3 id="1-为什么-DOM-必不可少"><a href="#1-为什么-DOM-必不可少" class="headerlink" title="1. 为什么 DOM 必不可少"></a>1. 为什么 DOM 必不可少</h3><p>自从 IE 4.0 和 Netscape Navigator 4.0 开始支持不同形态的动态 HTML（DHTML），开发者首次能够在不重载网页的情况下修改它的外观和内容。这是 Web 技术的一大飞跃，不过也带来了巨大的问题。Netscape 和微软各自开发自己的 DHTML，从而结束了 Web 开发者只编写一个 HTML 页面就可以在所有浏览器中访问的时期。</p>
+<p>业界决定必须要做点什么以保持 Web 的跨平台特性，他们担心如果放任 Netscape 和微软公司这样做，Web 必将分化为两个独立的部分，每一部分只适用于特定的浏览器。因此，负责指定 Web 通信标准的团体 W3C（World Wide Web Consortium）就开始制定 DOM。</p>
+<h3 id="2-DOM-的各个-level"><a href="#2-DOM-的各个-level" class="headerlink" title="2. DOM 的各个 level"></a>2. DOM 的各个 level</h3><p>DOM Level 1 是 W3C 于 1998 年 10 月提出的。它由两个模块组成，即 DOM Core 和 DOM HTML。前者提供了基于 XML 的文档的结构图，以便访问和操作文档的任意部分；后者添加了一些 HTML 专用的对象和方法，从而扩展了 DOM Core。</p>
+<p>注意，DOM 不是 JavaScript 专有的，事实上许多其他语言都实现了它。不过，Web 浏览器中的 DOM 已经用 ECMAScript 实现了，现在是 JavaScript 语言的一个很大组成部分。</p>
+<p>DOM Level 1 只是一个目标，即规划文档的结构，DOM Level 2 的目标就广泛多了。对原始 DOM 的扩展添加了对鼠标和用户界面事件（DHTML 对此有丰富的支持）、范围、遍历（重复执行 DOM 文档的方法）的支持，并通过对象接口添加了对 CSS（层叠样式表）的支持。由 Level 1 引入的原始 DOM Core 也加入了对 XML 命名空间的支持。</p>
+<p>DOM Level 2 引入了几种 DOM 新模块，用于处理新的接口类型：</p>
+<ul>
+<li>DOM 视图 - 描述跟踪文档的各种视图（即 CSS 样式化之前和 CSS 样式化之后的文档）</li>
+<li>DOM 事件 - 描述事件的接口</li>
+<li>DOM 样式 - 描述处理基于 CSS 样式的接口</li>
+<li>DOM 遍历和范围 - 描述遍历和操作文档树的接口</li>
+</ul>
+<p>DOM Level 3 引入了以统一的方式载入和保持文档的方法（包含在新模块 DOM Load and Save）以及验证文档（DOM Validation）的方法，从而进一步扩展了 DOM。在 Level 3 中，DOM Core 被扩展为支持所有的 XML 1.0 特性，包括 XML Infoset、XPath 和 XML Base。</p>
+<p>在学习 DOM 时，可能会遇到有人引用 DOM Level 0。注意，根本没有 DOM Level 0 这个标准，它只是 DOM 的一个历史参考点（DOM Level 0 指的是 IE 4.0 和 Netscape Navigator 4.0 中支持的原始 DHTML）。</p>
+<h3 id="3-其他-DOM"><a href="#3-其他-DOM" class="headerlink" title="3. 其他 DOM"></a>3. 其他 DOM</h3><p>除了 DOM Core 和 DOM HTML 外，还有其他几种语言发布了自己的 DOM 标准。这些语言都是基于 XML 的，每种 DOM 都给对应语言添加了特有的方法和接口：</p>
+<ul>
+<li>可缩放矢量语言（SVG）1.0</li>
+<li>数字标记语言（MathML）1.0</li>
+<li>同步多媒体集成语言（SMIL）</li>
+</ul>
+<p><strong>注释：</strong>如果希望学习更多相关内容，请访问 w3school 的 <a href="https://www.w3school.com.cn/smil/index.asp" target="_blank" rel="external nofollow noopener noreferrer">SMIL 教程</a> 和 <a href="https://www.w3school.com.cn/svg/index.asp" target="_blank" rel="external nofollow noopener noreferrer">SVG 教程</a>。</p>
+<p>此外，其他语言也开发了自己的 DOM 实现，如 Mozilla 的 XML 用户界面语言（XUL）。不过，只有上面列出的几种语言是 W3C 的推荐标准。</p>
+<h3 id="4-Web-浏览器中的-DOM-支持"><a href="#4-Web-浏览器中的-DOM-支持" class="headerlink" title="4. Web 浏览器中的 DOM 支持"></a>4. Web 浏览器中的 DOM 支持</h3><p>DOM 在被 Web 浏览器开始实现之前就已经是一种标准了。IE 首次尝试 DOM 是在 5.0 版本中，不过其实直到 5.5 版本之后才具有真正的 DOM 支持，IE 5.5 实现了 DOM Level 1。从那时起，IE 就没有引入新的 DOM 功能。</p>
+<p>Netscape 直到 Netscape 6（Mozilla 0.6.0）才引入 DOM 支持。目前，Mozilla 具有最好的 DOM 支持，实现了完整的 Level 1、几乎所有 Level 2 以及一部分 Level 3。（Mozilla 开发小组的目标是构造一个与标准 100% 兼容的浏览器，他们的工作得到了回报。）</p>
+<p>Opera 直到 7.0 版本才加入 DOM 支持，还有 Safari 也实现了大部分 DOM Level 1。它们几乎都与 IE 5.5 处于同一水平，有些情况下，甚至超过了 IE 5.5。不过，就对 DOM 的支持而论，所有浏览器都远远落后于 Mozilla。下表列出了常用浏览器对 DOM 的支持。</p>
+<table>
+<thead>
+<tr>
+<th align="left">浏览器</th>
+<th align="left">DOM 兼容性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Netscape Navigator 1.0 - 4.x</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Netscape 6.0+ (Mozilla 0.6.0+)</td>
+<td align="left">Level 1、Level 2、Level 3（部分）</td>
+</tr>
+<tr>
+<td align="left">IE 2.0 - 4.x</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">IE 5.0</td>
+<td align="left">Level 1（最小）</td>
+</tr>
+<tr>
+<td align="left">IE 5.5+</td>
+<td align="left">Level 1（几乎全部）</td>
+</tr>
+<tr>
+<td align="left">Opera 1.0 - 6.0</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Opera 7.0+</td>
+<td align="left">Level 1（几乎全部）、Level 2 （部分）</td>
+</tr>
+<tr>
+<td align="left">Safari 1.0+/Konqueror ~ 2.0+</td>
+<td align="left">Level 1</td>
+</tr>
+</tbody></table>
+<p><strong>注释：</strong>如果希望进一步地学习 DOM 的知识，请访问 w3school 的 <a href="https://www.w3school.com.cn/htmldom/index.asp" target="_blank" rel="external nofollow noopener noreferrer">HTML DOM 教程</a> 和 <a href="https://www.w3school.com.cn/xmldom/index.asp" target="_blank" rel="external nofollow noopener noreferrer">XML DOM 教程</a>。</p>
+<h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><p>IE 3.0 和 Netscape Navigator 3.0 提供了一种特性 - BOM（浏览器对象模型），可以对浏览器窗口进行访问和操作。使用 BOM，开发者可以移动窗口、改变状态栏中的文本以及执行其他与页面内容不直接相关的动作。使 BOM 独树一帜且又常常令人怀疑的地方在于，它只是 JavaScript 的一个部分，没有任何相关的标准。</p>
+<p>BOM 主要处理浏览器窗口和框架，不过通常浏览器特定的 JavaScript 扩展都被看做 BOM 的一部分。这些扩展包括：</p>
+<ul>
+<li>弹出新的浏览器窗口</li>
+<li>移动、关闭浏览器窗口以及调整窗口大小</li>
+<li>提供 Web 浏览器详细信息的定位对象</li>
+<li>提供用户屏幕分辨率详细信息的屏幕对象</li>
+<li>对 cookie 的支持</li>
+<li>IE 扩展了 BOM，加入了 ActiveXObject 类，可以通过 JavaScript 实例化 ActiveX 对象</li>
+</ul>
+<p>由于没有相关的 BOM 标准，每种浏览器都有自己的 BOM 实现。有一些事实上的标准，如具有一个窗口对象和一个导航对象，不过每种浏览器可以为这些对象或其他对象定义自己的属性和方法。</p>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+        <tag>历史</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS的历史</title>
+    <url>/archives/273d6e7c.html</url>
+    <content><![CDATA[<h1 id="JavaScript-的历史"><a href="#JavaScript-的历史" class="headerlink" title="JavaScript 的历史"></a>JavaScript 的历史</h1><p><strong>为了发挥 JavaScript 的全部潜力，了解它的本质、历史及局限性是十分重要的。</strong></p>
+<p><strong>本节为您讲解 JavaScript 和客户端脚本的起源。</strong></p>
+<h2 id="Nombas-和-ScriptEase"><a href="#Nombas-和-ScriptEase" class="headerlink" title="Nombas 和 ScriptEase"></a>Nombas 和 ScriptEase</h2><p>大概在 1992 年，一家称作 Nombas 的公司开发了一种叫做 C 减减（C-minus-minus，简称 Cmm）的嵌入式脚本语言。Cmm 背后的理念很简单：一个足够强大可以替代宏操作（macro）的脚本语言，同时保持与 C （和 C ++）足够的相似性，以便开发人员能很快学会。这个脚本语言捆绑在一个叫做 CEnvi 的共享软件中，它首次向开发人员展示了这种语言的威力。Nombas 最终把 Cmm 的名字改成了 ScriptEase。现在 ScriptEase 已经成为了 Nombas 产品背后的主要驱动力。</p>
+<h2 id="Netscape-发明了-JavaScript"><a href="#Netscape-发明了-JavaScript" class="headerlink" title="Netscape 发明了 JavaScript"></a>Netscape 发明了 JavaScript</h2><p>当 Netscape Navigator 崭露头角时，Nombas 开发了一个可以嵌入网页中的 CEnvi 的版本。这些早期的试验被称为 Espresso Page（浓咖啡般的页面），它们代表了第一个在万维网上使用的客户端语言。而 Nombas 丝毫没有料到它的理念将会成为万维网的一块重要基石。</p>
+<p>当网上冲浪越来越流行时，对于开发客户端脚本的需求也逐渐增大。此时，大部分因特网用户还仅仅通过 28.8 kbit/s 的调制解调器连接到网络，即便这时网页已经不断地变得更大和更复杂。而更加加剧用户痛苦的是，仅仅为了简单的表单有效性验证，就要与服务器进行多次地往返交互。设想一下，用户填完一个表单，点击提交按钮，等待了 30 秒的处理后，看到的却是一条告诉你忘记填写一个必要的字段。</p>
+<p>那时正处于技术革新最前沿的 Netscape，开始认真考虑开发一种客户端脚本语言来解决简单的处理问题。</p>
+<p>当时工作于 Netscape 的 Brendan Eich，开始着手为即将在 1995 年发行的 Netscape Navigator 2.0 开发一个称之为 LiveScript 的脚本语言，当时的目的是在浏览器和服务器（本来要叫它 LiveWire）端使用它。Netscape 与 Sun 及时完成 LiveScript 实现。</p>
+<p>就在 Netscape Navigator 2.0 即将正式发布前，Netscape 将其更名为 JavaScript，目的是为了利用 Java 这个因特网时髦词汇。Netscape 的赌注最终得到回报，JavaScript 从此变成了因特网的必备组件。</p>
+<h2 id="三足鼎立"><a href="#三足鼎立" class="headerlink" title="三足鼎立"></a>三足鼎立</h2><p>因为 JavaScript 1.0 如此成功，Netscape 在 Netscape Navigator 3.0 中发布了 1.1 版。恰巧那个时候，微软决定进军浏览器，发布了 IE 3.0 并搭载了一个 JavaScript 的克隆版，叫做 JScript（这样命名是为了避免与 Netscape 潜在的许可纠纷）。微软步入 Web 浏览器领域的这重要一步虽然令其声名狼藉，但也成为 JavaScript 语言发展过程中的重要一步。</p>
+<p>在微软进入后，有 3 种不同的 JavaScript 版本同时存在：Netscape Navigator 3.0 中的 JavaScript、IE 中的 JScript 以及 CEnvi 中的 ScriptEase。与 C 和其他编程语言不同的是，JavaScript 并没有一个标准来统一其语法或特性，而这 3 种不同的版本恰恰突出了这个问题。随着业界担心的增加，这个语言的标准化显然已经势在必行。</p>
+<h2 id="标准化"><a href="#标准化" class="headerlink" title="标准化"></a>标准化</h2><p>1997 年，JavaScript 1.1 作为一个草案提交给欧洲计算机制造商协会（ECMA）。第 39 技术委员会（TC39）被委派来“标准化一个通用、跨平台、中立于厂商的脚本语言的语法和语义”(<a href="http://www.ecma-international.org/memento/TC39.htm)。由来自" target="_blank" rel="external nofollow noopener noreferrer">http://www.ecma-international.org/memento/TC39.htm)。由来自</a> Netscape、Sun、微软、Borland 和其他一些对脚本编程感兴趣的公司的程序员组成的 TC39 锤炼出了 ECMA-262，该标准定义了名为 ECMAScript 的全新脚本语言。</p>
+<p>在接下来的几年里，国际标准化组织及国际电工委员会（ISO/IEC）也采纳 ECMAScript 作为标准（ISO/IEC-16262）。从此，Web 浏览器就开始努力（虽然有着不同的程度的成功和失败）将 ECMAScript 作为 JavaScript 实现的基础。</p>
+<a id="more"></a>
+
+
+
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+        <tag>历史</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>渠道经理</title>
+    <url>/archives/4712f55d.html</url>
+    <content><![CDATA[<h2 id="渠道经理"><a href="#渠道经理" class="headerlink" title="渠道经理"></a>渠道经理</h2><p>渠道经理与产品经理都不居于“命令型”的管理类型，而是属于”流程型”的管理类型，他们不能直接对销售部门发号施令——因为销售人员只能有一个直接上司，而是通过确立管理目标、业务流程和管理规范．来指导销售人员完成既定的工作，并对关键环节进行动态评估和考核，从整体上来约束和调整销售人员的行为方式，实质上这是一种“间接“而非“直接“的管理体系。</p>
+<h3 id="销售渠道"><a href="#销售渠道" class="headerlink" title="销售渠道"></a>销售渠道</h3><p>包括<a href="https://baike.baidu.com/item/网络销售" target="_blank" rel="external nofollow noopener noreferrer">网络销售</a>、电话销售、<a href="https://baike.baidu.com/item/零售商" target="_blank" rel="external nofollow noopener noreferrer">零售商</a>、<a href="https://baike.baidu.com/item/分销商" target="_blank" rel="external nofollow noopener noreferrer">分销商</a>、商业伙伴和销售队伍。</p>
+<h3 id="确定规范"><a href="#确定规范" class="headerlink" title="确定规范"></a>确定规范</h3><h3 id="关注过程"><a href="#关注过程" class="headerlink" title="关注过程"></a>关注过程</h3><h3 id="控制冲突"><a href="#控制冲突" class="headerlink" title="控制冲突"></a>控制冲突</h3><h3 id="复合管理"><a href="#复合管理" class="headerlink" title="复合管理"></a>复合管理</h3><p><strong>产品与渠道就像企业的双翼，二者有效整合方能拉动企业展翅腾飞。</strong>因此只有产品与渠道进行复台管理才能构成竞争优势。渠道经理的一个重要职责，就是必须与产品经理紧密合作，将<a href="https://baike.baidu.com/item/产品策略" target="_blank" rel="external nofollow noopener noreferrer">产品策略</a>真正落实到渠道策略的执行中，最终实现产品的价值。</p>
+<h3 id="形成团队"><a href="#形成团队" class="headerlink" title="形成团队"></a>形成团队</h3><p><strong>与产品经理相似，渠道经理就相当于某一类渠道的“总代理“。</strong></p>
+<p>他需要制定出渠道发展的整体<a href="https://baike.baidu.com/item/策略规划" target="_blank" rel="external nofollow noopener noreferrer">策略规划</a>、<a href="https://baike.baidu.com/item/渠道销售" target="_blank" rel="external nofollow noopener noreferrer">渠道销售</a>目标、渠道结构体系、纳入的产品体系、渠道的开发模式、渠道的空间占有、渠道的自动化建设、渠道的过程管理等一系列管理内容，然后再不断推动销售团队来执行这些管理规范，并统筹协调过程中出现的种种问题，同时对销售人员进行指导、培训和评估。</p>
+<p><strong>渠道是一种有限的资源，商家谁占有了渠道，就能赢得了竞争优势。</strong></p>
+<p>渠道经理就要对不同类型渠道的发展过程进行密切关注，定目标、造规划、设标准，常评估、勤指导，从而维护各类渠道的良性发展，形成企业真正的核心竞争力。</p>
+<h4 id="主要职责："><a href="#主要职责：" class="headerlink" title="主要职责："></a>主要职责：</h4><ol>
+<li><p>寻找潜在合作伙伴。</p>
+</li>
+<li><p>与潜在合作伙伴进行商务洽谈和签约。</p>
+</li>
+<li><p>行业渠道建设，渠道管理和渠道关系维护等工作。</p>
+</li>
+<li><p>开拓建立地区市场的代理渠道。</p>
+</li>
+<li><p>管理当地区域代理商经销商</p>
+</li>
+<li><p>对区域代理商经销商的销售人员进行培训</p>
+</li>
+<li><p>地区市场状况竞争品牌的信息进行调研反馈。</p>
+</li>
+<li><p>制定当地的市场推广计划及方案。</p>
+</li>
+</ol>
+<h4 id="任职资格："><a href="#任职资格：" class="headerlink" title="任职资格："></a>任职资格：</h4><ol>
+<li><p>与代理商的谈判和<strong>沟通能力</strong>强；</p>
+</li>
+<li><p>具备快速的学习能力，强烈的市场竞争意识；</p>
+</li>
+<li><p><strong>较强的商务谈判和独立的市场开拓能力</strong>，有渠道开发管理经验者优先考虑；</p>
+</li>
+<li><p>有较强的<strong>项目策划</strong>能力和谈判能力，文笔流畅；</p>
+</li>
+<li><p>丰富的渠道代理开拓能力，丰富的沟通、<strong>谈判技巧</strong>、渠道管理经验；</p>
+</li>
+</ol>
+<h4 id="必备素质"><a href="#必备素质" class="headerlink" title="必备素质"></a>必备素质</h4><p>（1）知识要求：渠道经理一般要求具备<strong>市场营销</strong>或相关专业本科以上学历，具有市场营销、产品知识、产业经济、公共关系、管理技能开发等方面的专业知识。</p>
+<p>（2）技能要求：具备良好的渠道<strong>客户关系管理</strong>能力，以及合理的目标设定和评定能力，熟悉产品市场<strong>营销渠道</strong>开发和建设的业务，有良好的沟通技巧和语言表达能力及独立工作能力，良好的市场判断力和开拓能力，具有较强的观察力、应变能力和财务能力。</p>
+<p>（3）经验要求：最好具备两年以上企业<strong>销售管理</strong>的工作经验，对市场营销工作有深刻认知，善于对资金、资源和人力进行整合。</p>
+<p>（4）职业素养：具备把握方向和大局的能力，具有一定的<strong>客户网络</strong>，有高度的工作热情和良好的团队合作精神，思路清楚、乐于接受挑战。</p>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+]]></content>
+      <categories>
+        <category>销售渠道</category>
+      </categories>
+      <tags>
+        <tag>渠道</tag>
+        <tag>销售</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>市场营销</title>
+    <url>/archives/2fd2f140.html</url>
+    <content><![CDATA[<h1 id="市场营销"><a href="#市场营销" class="headerlink" title="市场营销"></a>市场营销</h1><h2 id="企业管理-创新-市场营销"><a href="#企业管理-创新-市场营销" class="headerlink" title="企业管理=创新+市场营销"></a>企业管理=创新+市场营销</h2><p><strong><em>营销是全社会人员的换位思维</em></strong></p>
+<p><strong>市场营销：</strong>以<strong>客户</strong>为中心</p>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583219694573.png" alt="1583219694573"></p>
+<p><strong>内部营销：</strong>把<strong>员工</strong>当客户</p>
+<blockquote>
+<p> 国家营销：一带一路战略</p>
+<p> 政治营销：美国大选</p>
+<p> 个人营销：个人推销</p>
+</blockquote>
+<hr>
+<h2 id="市场："><a href="#市场：" class="headerlink" title="市场："></a>市场：</h2><ol>
+<li><p><strong>商品交换场所的场所</strong></p>
+<p>实体渠道的开发：地址+管理+服务</p>
+<p>电子渠道的开拓：宣传+优化</p>
+</li>
+</ol>
+<ol start="2">
+<li><p><strong>交换关系的市场</strong></p>
+<blockquote>
+<p> 简单买卖关系：</p>
+</blockquote>
+<p>供给侧结构性改革+刺激消费</p>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583220326679.png" alt="1583220326679"></p>
+</li>
+</ol>
+<blockquote>
+<p> 现代市场关系：</p>
+</blockquote>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583220362483.png" alt="1583220362483"></p>
+<p><strong>解决：寻找利益相关者</strong></p>
+<pre><code>* 卖方：找分销商
+
+* 企业：找供应商     </code></pre><ul>
+<li>中间商很重要</li>
+</ul>
+<ul>
+<li><p>关系营销：建立互惠互利的长久营销关系</p>
+</li>
+<li><p>全方位营销</p>
+</li>
+</ul>
+<pre><code>3. **法律关系的市场:诚信**
+
+
+
+4. **顾客视角的市场：中国市场**
+
+
+
+## 营销思维：
+
+### 营（手段）+销（目标）=质量+服务+价值
+
+
+
+**创造**     </code></pre><p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583221525209.png" alt="1583221525209"></p>
+<p><strong>全方位营销架构：</strong></p>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583221688369.png" alt="1583221688369"></p>
+<p><strong>把营销的下一个环节当作客户</strong></p>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583221776499.png" alt="1583221776499"></p>
+<p><strong>找到客户的核心价值 + 业务合作伙伴：</strong></p>
+<blockquote>
+<p> 3G+联通+苹果</p>
+</blockquote>
+<h1 id="市场营销思维五步法："><a href="#市场营销思维五步法：" class="headerlink" title="市场营销思维五步法："></a>市场营销思维五步法：</h1><p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583222048307.png" alt="1583222048307"></p>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583222061695.png" alt="1583222061695"></p>
+<h3 id="市场营销理论体系："><a href="#市场营销理论体系：" class="headerlink" title="市场营销理论体系："></a>市场营销理论体系：</h3><p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583222166198.png" alt="1583222166198"></p>
+<h3 id="市场营销组合四理论："><a href="#市场营销组合四理论：" class="headerlink" title="市场营销组合四理论："></a>市场营销组合四理论：</h3><p><kbd><strong>4P‘S理论：</strong>        ——><strong>卖点</strong></kbd></p>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583222548589.png" alt="1583222548589"></p>
+<p><strong>6P’S：</strong>+政治权力+公共关系</p>
+<p><strong>10P‘S：</strong>+探查+分割+优先+定位</p>
+<p><strong>11P’S：</strong>+<strong>人</strong></p>
+<p><kbd><strong>4C‘S:</strong> 消费者需求+成本+方便+沟通      ——>  <strong>买点</strong></kbd></p>
+<p><kbd><strong>4R'S：</strong> <strong><em>人有我快 + 需求 + 关联</em></strong>    反应+关联+关系+回报</kbd></p>
+<p><strong>案例：</strong></p>
+<blockquote>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583223454024.png" alt="1583223454024"></p>
+</blockquote>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583223326441.png" alt="1583223326441"></p>
+<blockquote>
+<p> 千元雪桃之谜</p>
+</blockquote>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583223148254.png" alt="1583223148254"></p>
+<p><strong>营销组合总结：</strong> 卖点+买点+需求+关联</p>
+<a id="more"></a>
+
+
+
+<hr>
+<h2 id="1-明确顾客是谁？"><a href="#1-明确顾客是谁？" class="headerlink" title="1.明确顾客是谁？"></a>1.明确顾客是谁？</h2><p>5W1H方法+麦凯66问</p>
+<h2 id="2-为什么买？"><a href="#2-为什么买？" class="headerlink" title="2.为什么买？"></a>2.为什么买？</h2><p><strong>需求创造+顾客感知价值</strong></p>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583223877706.png" alt="1583223877706"></p>
+<p><strong>需要——&gt;欲望：</strong>营销刺激观念转变</p>
+<p><strong>欲望——&gt;需求：</strong>支付方式</p>
+<hr>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583224143234.png" alt="1583224143234"></p>
+<p><strong>牛逼的营销：</strong>顾客总价值+总成本都不变，如何让顾客感知价值上升</p>
+<h2 id="3-顾客获悉信息途径"><a href="#3-顾客获悉信息途径" class="headerlink" title="3.顾客获悉信息途径"></a>3.顾客获悉信息途径</h2><p>营销传播策略：传播媒体+个人媒体</p>
+<blockquote>
+<p>2011蓉逸移动营销策划：</p>
+</blockquote>
+<ol>
+<li>主题：</li>
+</ol>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583224951069.png" alt="1583224951069"></p>
+<ol start="2">
+<li>客户需求：</li>
+</ol>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583224552742.png" alt="1583224552742"></p>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583224577425.png" alt="1583224577425"></p>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583224604952.png" alt="1583224604952"></p>
+<ol start="3">
+<li>感知价值+关联热点：</li>
+</ol>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583224653460.png" alt="1583224653460"></p>
+<ol start="4">
+<li>投放媒体调研：</li>
+</ol>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583224700464.png" alt="1583224700464"></p>
+<ol start="5">
+<li>落地营销策略：</li>
+</ol>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583224778947.png" alt="1583224778947"></p>
+<hr>
+<h2 id="4-顾客购买方便吗？"><a href="#4-顾客购买方便吗？" class="headerlink" title="4.顾客购买方便吗？"></a>4.顾客购买方便吗？</h2><p><strong>销售渠道</strong></p>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583225379878.png" alt="1583225379878"></p>
+<hr>
+<h2 id="5-顾客购买满意吗？"><a href="#5-顾客购买满意吗？" class="headerlink" title="5.顾客购买满意吗？"></a>5.顾客购买满意吗？</h2><p><strong>客户管理</strong></p>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583225482724.png" alt="1583225482724"></p>
+<p><strong>PS：</strong>重视品牌的社会责任</p>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583225593317.png" alt="1583225593317"></p>
+<p><strong>顾客的抱怨是礼物</strong></p>
+<p><strong>创造性地满足顾客的需求</strong></p>
+<p><img src="C:%5CUsers%5C13122%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583225695352.png" alt="1583225695352"></p>
+<hr>
+<h2 id="6-顾客会持续购买吗？"><a href="#6-顾客会持续购买吗？" class="headerlink" title="6.顾客会持续购买吗？"></a>6.顾客会持续购买吗？</h2><p><strong>顾客忠诚度管理</strong></p>
+<p><strong>忠诚客户的特征：</strong></p>
+<blockquote>
+<p>重复购买次数多</p>
+<p>挑选时间短</p>
+<p>对价格敏感小</p>
+<p>对竞争产品有排他性</p>
+<p>对产品质量事故的承受能力强</p>
+</blockquote>
+<p><strong>维护五个老客户=开发一个新客户</strong>：重视老客户</p>
+<p><strong>建立顾客忠诚的途径：</strong>顾客为中心+精细市场细分+新技术+提供超预期价值+畅通顾客沟通</p>
+<hr>
+<p><strong>总结：</strong></p>
+<ol>
+<li>顾客的人的特征</li>
+<li>创造需求</li>
+<li>建立营销传播策略</li>
+<li>建立渠道策略</li>
+<li>加强顾客满意度管理和忠诚度管理</li>
+</ol>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+]]></content>
+      <categories>
+        <category>市场营销</category>
+      </categories>
+      <tags>
+        <tag>营销</tag>
+        <tag>客户</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Eclipse导入jar包</title>
+    <url>/archives/14d86ed1.html</url>
+    <content><![CDATA[<h1 id="Eclipse怎么导入jar包"><a href="#Eclipse怎么导入jar包" class="headerlink" title="Eclipse怎么导入jar包"></a>Eclipse怎么导入jar包</h1><ol>
+<li>先建一个lib文件夹</li>
+</ol>
+<p><img src="https://img2018.cnblogs.com/blog/1584305/201903/1584305-20190308145306021-1373490921.png" alt="img"></p>
+<p><img src="https://img2018.cnblogs.com/blog/1584305/201903/1584305-20190308145556621-850026260.png" alt="img"></p>
+<ol start="2">
+<li>将jar包拖入lib文件夹</li>
+</ol>
+<p><img src="https://img2018.cnblogs.com/blog/1584305/201903/1584305-20190308150607570-86255265.png" alt="img"></p>
+<ol start="3">
+<li><p>build path</p>
+<p><img src="https://img2018.cnblogs.com/blog/1584305/201903/1584305-20190308145920560-1053374747.png" alt="img"></p>
+</li>
+</ol>
+<ol start="4">
+<li>添加jar包</li>
+</ol>
+<p><img src="https://img2018.cnblogs.com/blog/1584305/201903/1584305-20190308150204101-2113278975.png" alt="img"></p>
+<p><img src="https://img2018.cnblogs.com/blog/1584305/201903/1584305-20190308150132756-1662033148.png" alt="img"></p>
+<ol start="5">
+<li>apply -&gt; finish</li>
+</ol>
+<hr>
+<h1 id="eclipse和myeclipse导入新项目引入的包出现错误解决方式"><a href="#eclipse和myeclipse导入新项目引入的包出现错误解决方式" class="headerlink" title="eclipse和myeclipse导入新项目引入的包出现错误解决方式"></a>eclipse和myeclipse导入新项目引入的包出现错误解决方式</h1><p>这种问题应该是一般新手都会遇到的问题，遇到这种问题不要着急，可以从一下几个途径解决（以java项目为例）：</p>
+<ol>
+<li><p>查看出错的包是否在项目中已经引入，如果不存在，则需要将使用到的包导入到项目的lib目录下；</p>
+</li>
+<li><p>由于新导入的包默认使用编译器环境下的jdk，所以导入新项目后需要更改项目使用JDK的版本，</p>
+</li>
+</ol>
+<p><strong>具体步骤如下：</strong></p>
+<blockquote>
+<p>（1）右键点击项目–&gt;build path–&gt;Configure build path–&gt;Libraries–&gt;JRE System Library</p>
+</blockquote>
+<blockquote>
+<p>（2）点击右侧edit，选择需要的JDK</p>
+</blockquote>
+<ol start="3">
+<li><p>将lib下面的包添加到项目中，右键点击lib–&gt;build path–&gt;build path</p>
+</li>
+<li><p>如果以上3中方法还不能解决，则使用比较传统的方法，选中lib下所有包，右键–&gt;build path–&gt;build path；</p>
+</li>
+</ol>
+<hr>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Eclipse</tag>
+        <tag>jar 包</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>公众号开发-1</title>
     <url>/archives/e5c0af90.html</url>
     <content><![CDATA[<h1 id="微信公众平台测试号的开发流程"><a href="#微信公众平台测试号的开发流程" class="headerlink" title="微信公众平台测试号的开发流程"></a>微信公众平台测试号的开发流程</h1><ol>
@@ -48,9 +562,9 @@
         <category>微信公众号开发</category>
       </categories>
       <tags>
+        <tag>Eclipse</tag>
         <tag>Java</tag>
         <tag>XML</tag>
-        <tag>Eclipse</tag>
       </tags>
   </entry>
   <entry>

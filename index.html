@@ -168,17 +168,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">13</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">19</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">7</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">34</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">39</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -233,7 +233,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/e5c0af90.html">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/58a945da.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -247,7 +247,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/e5c0af90.html" class="post-title-link" itemprop="url">公众号开发-1</a>
+            <a href="/archives/58a945da.html" class="post-title-link" itemprop="url">JS的历史-实现</a>
         </h2>
 
         <div class="post-meta">
@@ -257,129 +257,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：3-1-2020 11:43:52 晚上" itemprop="dateCreated datePublished" datetime="2020-03-01T23:43:52+08:00">3-1-2020</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">微信公众号开发</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/archives/e5c0af90.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/e5c0af90.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="微信公众平台测试号的开发流程"><a href="#微信公众平台测试号的开发流程" class="headerlink" title="微信公众平台测试号的开发流程"></a>微信公众平台测试号的开发流程</h1><ol>
-<li>接入</li>
-</ol>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">*参数		   描述</span></span><br><span class="line"><span class="comment">signature	微信加密签名，signature结合了开发者填写的token参数和请求中的timestamp参数、nonce参数。</span></span><br><span class="line"><span class="comment">timestamp	时间戳</span></span><br><span class="line"><span class="comment">nonce		随机数</span></span><br><span class="line"><span class="comment">echostr		随机字符串</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">	protected void <span class="keyword">do</span><span class="constructor">Get(HttpServletRequest <span class="params">request</span>, HttpServletResponse <span class="params">response</span>)</span> throws ServletException, IOException &#123;</span><br><span class="line">		String signature = request.get<span class="constructor">Parameter(<span class="string">"signature"</span>)</span>;</span><br><span class="line">		String timestamp = request.get<span class="constructor">Parameter(<span class="string">"timestamp"</span>)</span>;</span><br><span class="line">		String nonce = request.get<span class="constructor">Parameter(<span class="string">"nonce"</span>)</span>;</span><br><span class="line">		String echostr = request.get<span class="constructor">Parameter(<span class="string">"echostr"</span>)</span>;</span><br><span class="line">		<span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(signature);</span><br><span class="line">		<span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(timestamp);</span><br><span class="line">		<span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(nonce);</span><br><span class="line">		<span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(echostr);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//校验值请求</span></span><br><span class="line">		<span class="keyword">if</span>(<span class="module-access"><span class="module"><span class="identifier">WeixinService</span>.</span></span>check(timestamp,nonce,signature)) &#123;</span><br><span class="line">			<span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(<span class="string">"检验成功"</span>);</span><br><span class="line">			</span><br><span class="line">			PrintWriter out = response.get<span class="constructor">Writer()</span>;</span><br><span class="line"><span class="comment">//			原样返回			</span></span><br><span class="line">			out.print(echostr);</span><br><span class="line">			out.flush<span class="literal">()</span>;</span><br><span class="line">			out.close<span class="literal">()</span>;</span><br><span class="line">			</span><br><span class="line">		&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(<span class="string">"检验失败"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	 </span><br><span class="line">		</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">String</span> TOKEN = <span class="string">"ycy"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">boolean</span> check(<span class="keyword">String</span> timestamp, <span class="keyword">String</span> nonce, <span class="keyword">String</span> signature) &#123;</span><br><span class="line">		<span class="comment">//1）将token、timestamp、nonce三个参数进行字典序排序</span></span><br><span class="line">		<span class="comment">//2）将三个参数字符串拼接成一个字符串进行sha1加密</span></span><br><span class="line">		<span class="comment">//3）开发者获得加密后的字符串可与signature对比，标识该请求来源于微信</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">String</span>[] strs=<span class="keyword">new</span> <span class="keyword">String</span>[] &#123;TOKEN,timestamp,nonce&#125;;</span><br><span class="line">		Arrays.<span class="built_in">sort</span>(strs);</span><br><span class="line">		<span class="keyword">String</span> <span class="built_in">str</span> = strs[<span class="number">0</span>]+strs[<span class="number">1</span>]+strs[<span class="number">2</span>];</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">String</span> myswig = sha1(<span class="built_in">str</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> myswig.equalsIgnoreCase(signature);</span><br><span class="line">	&#125;		</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//加密方法</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">String</span> sha1(<span class="keyword">String</span> src) &#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="comment">//获取一个加密对象</span></span><br><span class="line">			MessageDigest md = MessageDigest.getInstance(<span class="string">"sha1"</span>);</span><br><span class="line">			<span class="comment">//按字节加密，变成十六进制</span></span><br><span class="line">			<span class="built_in">byte</span>[] diagest = md.digest(src.getBytes());</span><br><span class="line">			<span class="built_in">char</span>[] chars = &#123;<span class="string">'0'</span>,<span class="string">'1'</span>,<span class="string">'2'</span>,<span class="string">'3'</span>,<span class="string">'4'</span>,<span class="string">'5'</span>,<span class="string">'6'</span>,<span class="string">'7'</span>,<span class="string">'8'</span>,<span class="string">'9'</span>,<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>,<span class="string">'f'</span>&#125;;</span><br><span class="line">			StringBuilder sb =<span class="keyword">new</span> StringBuilder();</span><br><span class="line">			<span class="keyword">for</span>(<span class="built_in">byte</span> b:diagest) &#123;</span><br><span class="line">				sb.<span class="built_in">append</span>(chars[(b&gt;&gt;<span class="number">4</span>)&amp;<span class="number">15</span>]);</span><br><span class="line">				sb.<span class="built_in">append</span>(chars[b&amp;<span class="number">15</span>]);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> sb.toString();</span><br><span class="line">			</span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="2">
-<li>接受消息</li>
-</ol>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ServletInputStream si = request.get<span class="constructor">InputStream()</span>;</span><br><span class="line">byte<span class="literal">[]</span> b = <span class="keyword">new</span> byte<span class="literal">[<span class="number">1024</span>]</span>; </span><br><span class="line"><span class="built_in">int</span> len;</span><br><span class="line">StringBuilder sb =<span class="keyword">new</span> <span class="constructor">StringBuilder()</span>;</span><br><span class="line"><span class="keyword">while</span>((len=si.read(b))!=-<span class="number">1</span>) &#123;</span><br><span class="line">	sb.append(<span class="keyword">new</span> <span class="constructor">String(<span class="params">b</span>,0,<span class="params">len</span>)</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(sb.<span class="keyword">to</span><span class="constructor">String()</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="3">
-<li>解析消息</li>
-</ol>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">		<span class="comment">//处理消息和事件推送</span></span><br><span class="line">Map&lt;String,String&gt; requestMap =<span class="module-access"><span class="module"><span class="identifier">WeixinService</span>.</span></span>parse<span class="constructor">Request(<span class="params">request</span>.<span class="params">getInputStream</span>()</span>);</span><br><span class="line">		</span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(requestMap);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public <span class="keyword">static</span> <span class="built_in">Map</span>&lt;<span class="built_in">String</span>,<span class="built_in">String</span>&gt;  parseRequest(InputStream <span class="keyword">is</span>) &#123;</span><br><span class="line">			</span><br><span class="line">			SAXReader reader =<span class="keyword">new</span> SAXReader();</span><br><span class="line">			<span class="built_in">Map</span>&lt;<span class="built_in">String</span>,<span class="built_in">String</span>&gt; map =<span class="keyword">new</span> HashMap();</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line"><span class="comment">//				读取输入流，获取文档对象</span></span><br><span class="line">				Document doc =reader.read(<span class="keyword">is</span>);</span><br><span class="line"><span class="comment">//				根据文档对象获得根节点</span></span><br><span class="line">				<span class="built_in">Element</span> root =doc.getRootElement();</span><br><span class="line">				<span class="built_in">List</span>&lt;<span class="built_in">Element</span>&gt; elements = root.elements();</span><br><span class="line">				<span class="keyword">for</span>(<span class="built_in">Element</span> e:elements) &#123;</span><br><span class="line">					map.put(e.getName(),e.getStringValue());</span><br><span class="line">				&#125;</span><br><span class="line">			&#125; <span class="keyword">catch</span> (DocumentException e) &#123;</span><br><span class="line">				</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> map;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="4">
-<li>回复消息</li>
-</ol>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//		回复的数据包</span></span><br><span class="line">		String respXML =<span class="module-access"><span class="module"><span class="identifier">WeixinService</span>.</span></span>get<span class="constructor">Response(<span class="params">requestMap</span>)</span>; </span><br><span class="line">			</span><br><span class="line">		<span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(respXML);</span><br><span class="line">		PrintWriter out =response.get<span class="constructor">Writer()</span>;</span><br><span class="line">		out.print(respXML);</span><br><span class="line">		out.flush<span class="literal">()</span>;</span><br><span class="line">		out.close<span class="literal">()</span>;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="markdown">/**</span></span></span><br><span class="line"><span class="comment"><span class="markdown"><span class="bullet"> * </span>用于处理所有消息和事件的回应</span></span></span><br><span class="line"><span class="comment"><span class="markdown"><span class="bullet"> * </span>@param requestMap</span></span></span><br><span class="line"><span class="comment"><span class="markdown"><span class="bullet"> * </span>@return</span></span></span><br><span class="line"><span class="comment"><span class="markdown"> */</span></span></span><br><span class="line">public <span class="keyword">static</span> <span class="built_in">String</span> getResponse(<span class="built_in">Map</span>&lt;<span class="built_in">String</span>,<span class="built_in">String</span>&gt; requestMap) &#123;</span><br><span class="line">	<span class="built_in">String</span> msgType =requestMap.<span class="keyword">get</span>(<span class="string">"MsgType"</span>);</span><br><span class="line">	BaseMessage bm =<span class="keyword">null</span>;</span><br><span class="line">	<span class="keyword">switch</span>(msgType) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">"test"</span>:</span><br><span class="line">			bm = dealTextMsg(requestMap);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">"voice"</span>:</span><br><span class="line">						</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">"image"</span>:</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">"video"</span>:</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">"shortvideo"</span>:</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">"link"</span>:</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">"location"</span>:</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(bm);</span><br><span class="line">	<span class="keyword">return</span>  <span class="keyword">null</span>;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 	处理文本信息</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> BaseMessage <span class="title">dealTextMsg</span><span class="params">(Map&lt;<span class="keyword">String</span>,<span class="keyword">String</span>&gt; requestMap)</span> </span>&#123;</span><br><span class="line">		BaseMessage tm =<span class="keyword">new</span> TextMsg(requestMap,<span class="string">"你好骚啊@_@"</span>); </span><br><span class="line">		<span class="keyword">return</span> tm;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<hr>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/78399ede.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ycy-ww">
-      <meta itemprop="description" content="CS'fun">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ycy-ww">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/archives/78399ede.html" class="post-title-link" itemprop="url">eclipse如何配置tomcat</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：3-1-2020 3:01:16 下午" itemprop="dateCreated datePublished" datetime="2020-03-01T15:01:16+08:00">3-1-2020</time>
+              <time title="创建时间：3-3-2020 6:08:21 晚上" itemprop="dateCreated datePublished" datetime="2020-03-03T18:08:21+08:00">3-3-2020</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -400,8 +278,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/78399ede.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/78399ede.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/58a945da.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/58a945da.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -418,25 +296,292 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <hr>
-<h1 id="1-eclipse环境下如何配置tomcat，并且把项目部署到Tomcat服务器上"><a href="#1-eclipse环境下如何配置tomcat，并且把项目部署到Tomcat服务器上" class="headerlink" title="1.eclipse环境下如何配置tomcat，并且把项目部署到Tomcat服务器上"></a>1.eclipse环境下如何配置tomcat，并且把项目部署到Tomcat服务器上</h1><p>1.打开Eclipse，单击“Window”菜单，选择下方的“Preferences”。</p>
-<p> <img src="https://images2018.cnblogs.com/blog/1247786/201808/1247786-20180825165024308-1525781996.png" alt="img"></p>
-<p>2.单击“Server”选项，选择下方的“Runtime Environments”。</p>
-<p> <img src="https://images2018.cnblogs.com/blog/1247786/201808/1247786-20180825165045551-1458459752.png" alt="img"></p>
-<p>3.点击“Add”添加Tomcat。</p>
-<p> <img src="https://images2018.cnblogs.com/blog/1247786/201808/1247786-20180825165101130-1801646339.png" alt="img"></p>
-<p>4.点击“Next”，选中自己的Tomcat路径。</p>
-<p> <img src="https://images2018.cnblogs.com/blog/1247786/201808/1247786-20180825165118780-1676576675.png" alt="img"></p>
-<p>点击“Finish”完成。</p>
-<p>5.建立一个Web应用File → New → Dynamic Web Project</p>
-<p> <img src="https://images2018.cnblogs.com/blog/1247786/201808/1247786-20180825165141990-1358583114.png" alt="img"></p>
-<p><img src="https://images2018.cnblogs.com/blog/1247786/201808/1247786-20180825165226615-2039130663.png" alt="img"></p>
-<p><img src="https://images2018.cnblogs.com/blog/1247786/201808/1247786-20180825165238176-1821322901.png" alt="img"></p>
-<p><img src="https://images2018.cnblogs.com/blog/1247786/201808/1247786-20180825165248912-1625141825.png" alt="img"></p>
-<p><img src="https://images2018.cnblogs.com/blog/1247786/201808/1247786-20180825165257068-860207628.png" alt="img"></p>
+          <h1 id="JavaScript-实现"><a href="#JavaScript-实现" class="headerlink" title="JavaScript 实现"></a>JavaScript 实现</h1><p><strong>JavaScript 的核心 ECMAScript 描述了该语言的语法和基本对象；</strong></p>
+<p><strong>DOM 描述了处理网页内容的方法和接口；</strong></p>
+<p><strong>BOM 描述了与浏览器进行交互的方法和接口。</strong></p>
+<h2 id="ECMAScript、DOM-和-BOM"><a href="#ECMAScript、DOM-和-BOM" class="headerlink" title="ECMAScript、DOM 和 BOM"></a>ECMAScript、DOM 和 BOM</h2><p>尽管 ECMAScript 是一个重要的标准，但它并不是 JavaScript 唯一的部分，当然，也不是唯一被标准化的部分。实际上，一个完整的 JavaScript 实现是由以下 3 个不同部分组成的：</p>
+<ul>
+<li><a href="https://www.w3school.com.cn/js/pro_js_implement.asp#ECMAScript" target="_blank" rel="external nofollow noopener noreferrer">核心（ECMAScript）</a></li>
+<li><a href="https://www.w3school.com.cn/js/pro_js_implement.asp#DOM" target="_blank" rel="external nofollow noopener noreferrer">文档对象模型（DOM）</a></li>
+<li><a href="https://www.w3school.com.cn/js/pro_js_implement.asp#BOM" target="_blank" rel="external nofollow noopener noreferrer">浏览器对象模型（BOM）</a></li>
+</ul>
+<p><img src="https://www.w3school.com.cn/i/ct_js_JavaScript_ECMAScript_DOM_BOM.gif" alt="JavaScript 包括 ECMAScript、DOM 和 BOM"></p>
+<h2 id="ECMAScript"><a href="#ECMAScript" class="headerlink" title="ECMAScript"></a>ECMAScript</h2><p>ECMAScript 并不与任何具体浏览器相绑定，实际上，它也没有提到用于任何用户输入输出的方法（这点与 C 这类语言不同，它需要依赖外部的库来完成这类任务）。那么什么才是 ECMAScript 呢？ECMA-262 标准（第 2 段）的描述如下：</p>
+<blockquote>
+<p>“ECMAScript 可以为不同种类的宿主环境提供核心的脚本编程能力，因此核心的脚本语言是与任何特定的宿主环境分开进行规定的… …”</p>
+</blockquote>
+<p>Web 浏览器对于 ECMAScript 来说是一个宿主环境，但它并不是唯一的宿主环境。事实上，还有不计其数的其他各种环境（例如 Nombas 的 ScriptEase，以及 Macromedia 同时用在 Flash 和 Director MX 中的 ActionScript）可以容纳 ECMAScript 实现。那么 ECMAScript 在浏览器之外规定了些什么呢？</p>
+<p>简单地说，ECMAScript 描述了以下内容：</p>
+<ul>
+<li>语法</li>
+<li>类型</li>
+<li>语句</li>
+<li>关键字</li>
+<li>保留字</li>
+<li>运算符</li>
+<li>对象</li>
+</ul>
+<p>ECMAScript 仅仅是一个描述，定义了脚本语言的所有属性、方法和对象。其他语言可以实现 ECMAScript 来作为功能的基准，JavaScript 就是这样：</p>
+<p><img src="https://www.w3school.com.cn/i/ct_js_ECMAScript_JavaScript_ActionScript_ScriptEase.gif" alt="ECMAScript、JavaScript、ActionScript、ScriptEase"></p>
+<p>每个浏览器都有它自己的 ECMAScript 接口的实现，然后这个实现又被扩展，包含了 DOM 和 BOM（在以下几节中再探讨）。当然还有其他实现并扩展了 ECMAScript 的语言，例如 Windows 脚本宿主（Windows Scripting Host, WSH）、Macromedia 在 Flash 和 Director MX 中的 ActionScript，以及 Nombas ScriptEase。</p>
+<h3 id="1-ECMAScript-的版本"><a href="#1-ECMAScript-的版本" class="headerlink" title="1. ECMAScript 的版本"></a>1. ECMAScript 的版本</h3><p>ECMAScript 分成几个不同的版本，它是在一个叫做 ECMA-262 的标准中定义的。和其他标准一样，ECMA-262 会被编辑和更新。当有了主要更新时，就会发布一个标准的新版。最新 ECMA-262 的版本是 5.1，于 2011 年 6 月发布。</p>
+<p>ECMA-262 的第一版在本质上与 Netscape 的 JavaScript 1.1 是一样，只是把所有与浏览器相关的代码删除了，此外还有一些小的调整。首先，ECMA-262 要求对 Unicode 标准的支持（以便支持多语言）。第二，它要求对象是平台无关的（Netscape 的 JavaScript 1.1 事实上有不同的对象实现，例如 Date 对象，是依赖于平台）。这是 JavaScript 1.1 和 1.2 为什么不符合 ECMA-262 规范第一版的主要原因。</p>
+<p>ECMA-262 的第二版大部分更新本质上是编辑性的。这次标准的更新是为了与 ISO/IEC-16262 的严格一致，也并没有特别添加、更改和删除内容。ECMAScript 一般不会遵守第二版。</p>
+<p>ECMA-262 第三版是该标准第一次真正的更新。它提供了对字符串处理、错误定义和数值输出的更新。同时，它还增加了正则表达式、新的控制语句、try…catch 异常处理的支持，以及一些为使标准国际化而做的小改动。一般来说，它标志着 ECMAScript 成为一种真正的编程语言。</p>
+<h3 id="2-何谓-ECMAScript-符合性"><a href="#2-何谓-ECMAScript-符合性" class="headerlink" title="2. 何谓 ECMAScript 符合性"></a>2. 何谓 ECMAScript 符合性</h3><p>在 ECMA-262 中，ECMAScript 符合性（conformance）有明确的定义。一个脚本语言必须满足以下四项基本原则：</p>
+<ul>
+<li>符合的实现必须按照 ECMA-262 中所描述的支持所有的“类型、值、对象、属性、函数和程序语言及语义”（ECMA-262，第一页）</li>
+<li>符合的实现必须支持 Unicode 字符标准（UCS）</li>
+<li>符合的实现可以增加没有在 ECMA-262 中指定的“额外类型、值、对象、属性和函数”。ECMA-262 将这些增加描述为规范中未给定的新对象或对象的新属性</li>
+<li>符合的实现可以支持没有在 ECMA-262 中定义的“程序和正则表达式语法”（意思是可以替换或者扩展内建的正则表达式支持）</li>
+</ul>
+<p>所有 ECMAScript 实现必须符合以上标准。</p>
+<h3 id="3-Web-浏览器中的-ECMAScript-支持"><a href="#3-Web-浏览器中的-ECMAScript-支持" class="headerlink" title="3. Web 浏览器中的 ECMAScript 支持"></a>3. Web 浏览器中的 ECMAScript 支持</h3><p>含有 JavaScript 1.1 的 Netscape Navigator 3.0 在 1996 年发布。然后，JavaScript 1.1 规范被作为一个新标准的草案被提交给 EMCA。有了 JavaScript 轰动性的流行，Netscape 十分高兴地开始开发 1.2 版。但有一个问题，ECMA 并未接受 Netscape 的草案。在 Netscape Navigator 3.0 发布后不久，微软就发布了 IE 3.0。该版本的 IE 含有 JScript 1.0（微软自己的 JavaScript 实现的名称），原本计划可以与 JavaScript 1.1 相提并论。然后，由于文档不全以及一些不当的重复特性，JScript 1.0 远远没有达到 JavaScript 1.1 的水平。</p>
+<p>在 ECMA-262 第一版定稿之前，发布含有 JavaScript 1.2 的 Netscape Navigator 4.0 是在 1997 年，在那年晚些时候，ECMA-262 标准被接受并标准化。因此，JavaScript 1.2 并不和 ECMAScript 的第一版兼容，虽然 ECMAScript 应该基于 JavaScript 1.1。</p>
+<p>JScript 的下一步是 IE 4.0 中加入的 JScript 3.0（2.0 版是随 IIS 3.0 一起发布的，但并未包含在浏览器中）。微软大力宣传 JScript 3.0 是世界上第一个真正符合 ECMA 标准的脚本语言。而那时，ECMA-262 还没有最终定稿，所以 JScript 3.0 也遭受了和 JavaScript 1.2 同样的命运 - 它还是没能符合最终的 ECMAScript 标准。</p>
+<p>Netscape 选择在 Netscape Navigator 4.06 中升级它的 JavaScript 实现。JavaScript 1.3 使 Netscape 终于完全符合了 ECMAScript 第一版。Netscape 加入了对 Unicode 标准的支持，并让所有的对象保留了在 JavaScript 1.2 中引入的新特性的同时实现了平台独立。</p>
+<p>当 Netscape 将它的源代码作为 Mozilla 项目公布于众时，本来计划 JavaScript 1.4 将会嵌入到 Netscape Navigator 5.0 中。然而，一个冒进的决定 - 要完全从头重新设计 Netscape 的代码，破坏了这个工作。JavaScript 1.4 仅仅作为一个 Netscape Enterprise Server 的服务器端脚本语言发布，以后也没有被放入浏览器中。</p>
+<p>如今，所有主流的 Web 浏览器都遵守 ECMA-262 第三版。</p>
+<p>下面的表格列出了大部分流行的 Web 浏览器中的 ECMAScript 支持：</p>
+<table>
+<thead>
+<tr>
+<th align="left">浏览器</th>
+<th align="left">DOM 兼容性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Netscape Navigator 2.0</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Netscape Navigator 3.0</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Netscape Navigator 4.0 - 4.05</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Netscape Navigator 4.06 - 4.79</td>
+<td align="left">Edition 1</td>
+</tr>
+<tr>
+<td align="left">Netscape 6.0+ (Mozilla 0.6.0+)</td>
+<td align="left">Edition 3</td>
+</tr>
+<tr>
+<td align="left">Internet Explorer 3.0</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Internet Explorer 4.0</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Internet Explorer 5.0</td>
+<td align="left">Edition 1</td>
+</tr>
+<tr>
+<td align="left">Internet Explorer 5.5+</td>
+<td align="left">Edition 3</td>
+</tr>
+<tr>
+<td align="left">Opera 6.0 - 7.1</td>
+<td align="left">Edition 2</td>
+</tr>
+<tr>
+<td align="left">Opera 7.2+</td>
+<td align="left">Edition 3</td>
+</tr>
+<tr>
+<td align="left">Safari 1.0+/Konqueror ~ 2.0+</td>
+<td align="left">Edition 3</td>
+</tr>
+</tbody></table>
+<h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><p>DOM（文档对象模型）是 HTML 和 XML 的应用程序接口（API）。DOM 将把整个页面规划成由节点层级构成的文档。HTML 或 XML 页面的每个部分都是一个节点的衍生物。请考虑下面的 HTML 页面：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Sample Page<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>hello world!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这段代码可以用 DOM 绘制成一个节点层次图：</p>
+<p><img src="https://www.w3school.com.cn/i/ct_js_domtree.gif" alt="DOM 节点层次图"></p>
+<p>DOM 通过创建树来表示文档，从而使开发者对文档的内容和结构具有空前的控制力。用 DOM API 可以轻松地删除、添加和替换节点。</p>
+<h3 id="1-为什么-DOM-必不可少"><a href="#1-为什么-DOM-必不可少" class="headerlink" title="1. 为什么 DOM 必不可少"></a>1. 为什么 DOM 必不可少</h3><p>自从 IE 4.0 和 Netscape Navigator 4.0 开始支持不同形态的动态 HTML（DHTML），开发者首次能够在不重载网页的情况下修改它的外观和内容。这是 Web 技术的一大飞跃，不过也带来了巨大的问题。Netscape 和微软各自开发自己的 DHTML，从而结束了 Web 开发者只编写一个 HTML 页面就可以在所有浏览器中访问的时期。</p>
+<p>业界决定必须要做点什么以保持 Web 的跨平台特性，他们担心如果放任 Netscape 和微软公司这样做，Web 必将分化为两个独立的部分，每一部分只适用于特定的浏览器。因此，负责指定 Web 通信标准的团体 W3C（World Wide Web Consortium）就开始制定 DOM。</p>
+<h3 id="2-DOM-的各个-level"><a href="#2-DOM-的各个-level" class="headerlink" title="2. DOM 的各个 level"></a>2. DOM 的各个 level</h3><p>DOM Level 1 是 W3C 于 1998 年 10 月提出的。它由两个模块组成，即 DOM Core 和 DOM HTML。前者提供了基于 XML 的文档的结构图，以便访问和操作文档的任意部分；后者添加了一些 HTML 专用的对象和方法，从而扩展了 DOM Core。</p>
+<p>注意，DOM 不是 JavaScript 专有的，事实上许多其他语言都实现了它。不过，Web 浏览器中的 DOM 已经用 ECMAScript 实现了，现在是 JavaScript 语言的一个很大组成部分。</p>
+<p>DOM Level 1 只是一个目标，即规划文档的结构，DOM Level 2 的目标就广泛多了。对原始 DOM 的扩展添加了对鼠标和用户界面事件（DHTML 对此有丰富的支持）、范围、遍历（重复执行 DOM 文档的方法）的支持，并通过对象接口添加了对 CSS（层叠样式表）的支持。由 Level 1 引入的原始 DOM Core 也加入了对 XML 命名空间的支持。</p>
+<p>DOM Level 2 引入了几种 DOM 新模块，用于处理新的接口类型：</p>
+<ul>
+<li>DOM 视图 - 描述跟踪文档的各种视图（即 CSS 样式化之前和 CSS 样式化之后的文档）</li>
+<li>DOM 事件 - 描述事件的接口</li>
+<li>DOM 样式 - 描述处理基于 CSS 样式的接口</li>
+<li>DOM 遍历和范围 - 描述遍历和操作文档树的接口</li>
+</ul>
+<p>DOM Level 3 引入了以统一的方式载入和保持文档的方法（包含在新模块 DOM Load and Save）以及验证文档（DOM Validation）的方法，从而进一步扩展了 DOM。在 Level 3 中，DOM Core 被扩展为支持所有的 XML 1.0 特性，包括 XML Infoset、XPath 和 XML Base。</p>
+<p>在学习 DOM 时，可能会遇到有人引用 DOM Level 0。注意，根本没有 DOM Level 0 这个标准，它只是 DOM 的一个历史参考点（DOM Level 0 指的是 IE 4.0 和 Netscape Navigator 4.0 中支持的原始 DHTML）。</p>
+<h3 id="3-其他-DOM"><a href="#3-其他-DOM" class="headerlink" title="3. 其他 DOM"></a>3. 其他 DOM</h3><p>除了 DOM Core 和 DOM HTML 外，还有其他几种语言发布了自己的 DOM 标准。这些语言都是基于 XML 的，每种 DOM 都给对应语言添加了特有的方法和接口：</p>
+<ul>
+<li>可缩放矢量语言（SVG）1.0</li>
+<li>数字标记语言（MathML）1.0</li>
+<li>同步多媒体集成语言（SMIL）</li>
+</ul>
+<p><strong>注释：</strong>如果希望学习更多相关内容，请访问 w3school 的 <a href="https://www.w3school.com.cn/smil/index.asp" target="_blank" rel="external nofollow noopener noreferrer">SMIL 教程</a> 和 <a href="https://www.w3school.com.cn/svg/index.asp" target="_blank" rel="external nofollow noopener noreferrer">SVG 教程</a>。</p>
+<p>此外，其他语言也开发了自己的 DOM 实现，如 Mozilla 的 XML 用户界面语言（XUL）。不过，只有上面列出的几种语言是 W3C 的推荐标准。</p>
+<h3 id="4-Web-浏览器中的-DOM-支持"><a href="#4-Web-浏览器中的-DOM-支持" class="headerlink" title="4. Web 浏览器中的 DOM 支持"></a>4. Web 浏览器中的 DOM 支持</h3><p>DOM 在被 Web 浏览器开始实现之前就已经是一种标准了。IE 首次尝试 DOM 是在 5.0 版本中，不过其实直到 5.5 版本之后才具有真正的 DOM 支持，IE 5.5 实现了 DOM Level 1。从那时起，IE 就没有引入新的 DOM 功能。</p>
+<p>Netscape 直到 Netscape 6（Mozilla 0.6.0）才引入 DOM 支持。目前，Mozilla 具有最好的 DOM 支持，实现了完整的 Level 1、几乎所有 Level 2 以及一部分 Level 3。（Mozilla 开发小组的目标是构造一个与标准 100% 兼容的浏览器，他们的工作得到了回报。）</p>
+<p>Opera 直到 7.0 版本才加入 DOM 支持，还有 Safari 也实现了大部分 DOM Level 1。它们几乎都与 IE 5.5 处于同一水平，有些情况下，甚至超过了 IE 5.5。不过，就对 DOM 的支持而论，所有浏览器都远远落后于 Mozilla。下表列出了常用浏览器对 DOM 的支持。</p>
+<table>
+<thead>
+<tr>
+<th align="left">浏览器</th>
+<th align="left">DOM 兼容性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Netscape Navigator 1.0 - 4.x</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Netscape 6.0+ (Mozilla 0.6.0+)</td>
+<td align="left">Level 1、Level 2、Level 3（部分）</td>
+</tr>
+<tr>
+<td align="left">IE 2.0 - 4.x</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">IE 5.0</td>
+<td align="left">Level 1（最小）</td>
+</tr>
+<tr>
+<td align="left">IE 5.5+</td>
+<td align="left">Level 1（几乎全部）</td>
+</tr>
+<tr>
+<td align="left">Opera 1.0 - 6.0</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Opera 7.0+</td>
+<td align="left">Level 1（几乎全部）、Level 2 （部分）</td>
+</tr>
+<tr>
+<td align="left">Safari 1.0+/Konqueror ~ 2.0+</td>
+<td align="left">Level 1</td>
+</tr>
+</tbody></table>
+<p><strong>注释：</strong>如果希望进一步地学习 DOM 的知识，请访问 w3school 的 <a href="https://www.w3school.com.cn/htmldom/index.asp" target="_blank" rel="external nofollow noopener noreferrer">HTML DOM 教程</a> 和 <a href="https://www.w3school.com.cn/xmldom/index.asp" target="_blank" rel="external nofollow noopener noreferrer">XML DOM 教程</a>。</p>
+<h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><p>IE 3.0 和 Netscape Navigator 3.0 提供了一种特性 - BOM（浏览器对象模型），可以对浏览器窗口进行访问和操作。使用 BOM，开发者可以移动窗口、改变状态栏中的文本以及执行其他与页面内容不直接相关的动作。使 BOM 独树一帜且又常常令人怀疑的地方在于，它只是 JavaScript 的一个部分，没有任何相关的标准。</p>
+<p>BOM 主要处理浏览器窗口和框架，不过通常浏览器特定的 JavaScript 扩展都被看做 BOM 的一部分。这些扩展包括：</p>
+<ul>
+<li>弹出新的浏览器窗口</li>
+<li>移动、关闭浏览器窗口以及调整窗口大小</li>
+<li>提供 Web 浏览器详细信息的定位对象</li>
+<li>提供用户屏幕分辨率详细信息的屏幕对象</li>
+<li>对 cookie 的支持</li>
+<li>IE 扩展了 BOM，加入了 ActiveXObject 类，可以通过 JavaScript 实例化 ActiveX 对象</li>
+</ul>
+<p>由于没有相关的 BOM 标准，每种浏览器都有自己的 BOM 实现。有一些事实上的标准，如具有一个窗口对象和一个导航对象，不过每种浏览器可以为这些对象或其他对象定义自己的属性和方法。</p>
+<hr>
+<p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
+<p><img src alt="logo"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.wwyyqblog.work/archives/273d6e7c.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ycy-ww">
+      <meta itemprop="description" content="CS'fun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ycy-ww">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/archives/273d6e7c.html" class="post-title-link" itemprop="url">JS的历史</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：3-3-2020 6:08:19 晚上" itemprop="dateCreated datePublished" datetime="2020-03-03T18:08:19+08:00">3-3-2020</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/archives/273d6e7c.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/273d6e7c.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="JavaScript-的历史"><a href="#JavaScript-的历史" class="headerlink" title="JavaScript 的历史"></a>JavaScript 的历史</h1><p><strong>为了发挥 JavaScript 的全部潜力，了解它的本质、历史及局限性是十分重要的。</strong></p>
+<p><strong>本节为您讲解 JavaScript 和客户端脚本的起源。</strong></p>
+<h2 id="Nombas-和-ScriptEase"><a href="#Nombas-和-ScriptEase" class="headerlink" title="Nombas 和 ScriptEase"></a>Nombas 和 ScriptEase</h2><p>大概在 1992 年，一家称作 Nombas 的公司开发了一种叫做 C 减减（C-minus-minus，简称 Cmm）的嵌入式脚本语言。Cmm 背后的理念很简单：一个足够强大可以替代宏操作（macro）的脚本语言，同时保持与 C （和 C ++）足够的相似性，以便开发人员能很快学会。这个脚本语言捆绑在一个叫做 CEnvi 的共享软件中，它首次向开发人员展示了这种语言的威力。Nombas 最终把 Cmm 的名字改成了 ScriptEase。现在 ScriptEase 已经成为了 Nombas 产品背后的主要驱动力。</p>
+<h2 id="Netscape-发明了-JavaScript"><a href="#Netscape-发明了-JavaScript" class="headerlink" title="Netscape 发明了 JavaScript"></a>Netscape 发明了 JavaScript</h2><p>当 Netscape Navigator 崭露头角时，Nombas 开发了一个可以嵌入网页中的 CEnvi 的版本。这些早期的试验被称为 Espresso Page（浓咖啡般的页面），它们代表了第一个在万维网上使用的客户端语言。而 Nombas 丝毫没有料到它的理念将会成为万维网的一块重要基石。</p>
+<p>当网上冲浪越来越流行时，对于开发客户端脚本的需求也逐渐增大。此时，大部分因特网用户还仅仅通过 28.8 kbit/s 的调制解调器连接到网络，即便这时网页已经不断地变得更大和更复杂。而更加加剧用户痛苦的是，仅仅为了简单的表单有效性验证，就要与服务器进行多次地往返交互。设想一下，用户填完一个表单，点击提交按钮，等待了 30 秒的处理后，看到的却是一条告诉你忘记填写一个必要的字段。</p>
+<p>那时正处于技术革新最前沿的 Netscape，开始认真考虑开发一种客户端脚本语言来解决简单的处理问题。</p>
+<p>当时工作于 Netscape 的 Brendan Eich，开始着手为即将在 1995 年发行的 Netscape Navigator 2.0 开发一个称之为 LiveScript 的脚本语言，当时的目的是在浏览器和服务器（本来要叫它 LiveWire）端使用它。Netscape 与 Sun 及时完成 LiveScript 实现。</p>
+<p>就在 Netscape Navigator 2.0 即将正式发布前，Netscape 将其更名为 JavaScript，目的是为了利用 Java 这个因特网时髦词汇。Netscape 的赌注最终得到回报，JavaScript 从此变成了因特网的必备组件。</p>
+<h2 id="三足鼎立"><a href="#三足鼎立" class="headerlink" title="三足鼎立"></a>三足鼎立</h2><p>因为 JavaScript 1.0 如此成功，Netscape 在 Netscape Navigator 3.0 中发布了 1.1 版。恰巧那个时候，微软决定进军浏览器，发布了 IE 3.0 并搭载了一个 JavaScript 的克隆版，叫做 JScript（这样命名是为了避免与 Netscape 潜在的许可纠纷）。微软步入 Web 浏览器领域的这重要一步虽然令其声名狼藉，但也成为 JavaScript 语言发展过程中的重要一步。</p>
+<p>在微软进入后，有 3 种不同的 JavaScript 版本同时存在：Netscape Navigator 3.0 中的 JavaScript、IE 中的 JScript 以及 CEnvi 中的 ScriptEase。与 C 和其他编程语言不同的是，JavaScript 并没有一个标准来统一其语法或特性，而这 3 种不同的版本恰恰突出了这个问题。随着业界担心的增加，这个语言的标准化显然已经势在必行。</p>
+<h2 id="标准化"><a href="#标准化" class="headerlink" title="标准化"></a>标准化</h2><p>1997 年，JavaScript 1.1 作为一个草案提交给欧洲计算机制造商协会（ECMA）。第 39 技术委员会（TC39）被委派来“标准化一个通用、跨平台、中立于厂商的脚本语言的语法和语义”(<a href="http://www.ecma-international.org/memento/TC39.htm)。由来自" target="_blank" rel="external nofollow noopener noreferrer">http://www.ecma-international.org/memento/TC39.htm)。由来自</a> Netscape、Sun、微软、Borland 和其他一些对脚本编程感兴趣的公司的程序员组成的 TC39 锤炼出了 ECMA-262，该标准定义了名为 ECMAScript 的全新脚本语言。</p>
+<p>在接下来的几年里，国际标准化组织及国际电工委员会（ISO/IEC）也采纳 ECMAScript 作为标准（ISO/IEC-16262）。从此，Web 浏览器就开始努力（虽然有着不同的程度的成功和失败）将 ECMAScript 作为 JavaScript 实现的基础。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/archives/78399ede.html#more" rel="contents">
+              <a class="btn" href="/archives/273d6e7c.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -460,7 +605,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -527,20 +672,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">39</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -606,7 +751,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共28.1k字</span>
+  <span class="post-count">博客全站共34.7k字</span>
 </div>
 
         
