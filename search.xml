@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>ECS-ECS实例创建</title>
-    <url>/archives/2287084e.html</url>
+    <url>/ycy-ww.github.io/archives/2287084e.html</url>
     <content><![CDATA[<h1 id="入门概述"><a href="#入门概述" class="headerlink" title="入门概述"></a>入门概述</h1><p>根据本系列教程，您可以通过管理控制台尝试创建一台ECS实例，再通过配置安全组、连接实例、安装第三方服务、解析域名等操作了解ECS实例的使用方式。最后，您可以释放实例和查看费用账单，了解实例的整个生命周期会消耗的大概费用。</p>
 <h2 id="背景信息"><a href="#背景信息" class="headerlink" title="背景信息"></a>背景信息</h2><p>一台云服务器（以下简称ECS实例）由实例规格、镜像、块存储、快照、安全组、弹性网卡等基础计算组件组成并协同提供服务。其中：</p>
 <ul>
@@ -274,7 +274,7 @@
   </entry>
   <entry>
     <title>ECS-使用须知</title>
-    <url>/archives/a73d9697.html</url>
+    <url>/ycy-ww.github.io/archives/a73d9697.html</url>
     <content><![CDATA[<h1 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h1><p>云服务器ECS具有广泛的应用场景，既可以作为Web服务器或者应用服务器单独使用，又可以与其他阿里云服务集成提供丰富的解决方案。</p>
 <h2 id="企业官网或轻量的Web应用"><a href="#企业官网或轻量的Web应用" class="headerlink" title="企业官网或轻量的Web应用"></a>企业官网或轻量的Web应用</h2><p>网站初始阶段访问量小，只需要一台低配置的云服务器ECS实例即可运行Apache或Nginx等Web应用程序、数据库、存储文件等。随着网站发展，您可以随时升级ECS实例的配置，或者增加ECS实例数量，无需担心低配计算单元在业务突增时带来的资源不足。</p>
 <h2 id="多媒体以及高并发应用或网站"><a href="#多媒体以及高并发应用或网站" class="headerlink" title="多媒体以及高并发应用或网站"></a>多媒体以及高并发应用或网站</h2><p>云服务器ECS与对象存储OSS搭配，对象存储OSS承载静态图片、视频或者下载包，进而降低存储费用。同时配合内容分发网络CDN和负载均衡SLB，可大幅减少用户访问等待时间、降低网络带宽费用以及提高可用性。</p>
@@ -463,7 +463,7 @@
   </entry>
   <entry>
     <title>ECS-概念</title>
-    <url>/archives/6903c0f.html</url>
+    <url>/ycy-ww.github.io/archives/6903c0f.html</url>
     <content><![CDATA[<h1 id="云服务器-ECS"><a href="#云服务器-ECS" class="headerlink" title="云服务器 ECS"></a>云服务器 ECS</h1><p>云服务器ECS（Elastic Compute Service）是一种简单高效、处理能力可弹性伸缩的计算服务。帮助您构建更稳定、安全的应用，提升运维效率，降低IT成本，使您更专注于核心业务创新。</p>
 <h2 id="产品架构"><a href="#产品架构" class="headerlink" title="产品架构"></a>产品架构</h2><p>云服务器ECS主要包含以下功能组件：</p>
 <ul>
@@ -671,7 +671,7 @@
   </entry>
   <entry>
     <title>JS的历史-实现</title>
-    <url>/archives/58a945da.html</url>
+    <url>/ycy-ww.github.io/archives/58a945da.html</url>
     <content><![CDATA[<h1 id="JavaScript-实现"><a href="#JavaScript-实现" class="headerlink" title="JavaScript 实现"></a>JavaScript 实现</h1><p><strong>JavaScript 的核心 ECMAScript 描述了该语言的语法和基本对象；</strong></p>
 <p><strong>DOM 描述了处理网页内容的方法和接口；</strong></p>
 <p><strong>BOM 描述了与浏览器进行交互的方法和接口。</strong></p>
@@ -876,7 +876,7 @@
   </entry>
   <entry>
     <title>JS的历史</title>
-    <url>/archives/273d6e7c.html</url>
+    <url>/ycy-ww.github.io/archives/273d6e7c.html</url>
     <content><![CDATA[<h1 id="JavaScript-的历史"><a href="#JavaScript-的历史" class="headerlink" title="JavaScript 的历史"></a>JavaScript 的历史</h1><p><strong>为了发挥 JavaScript 的全部潜力，了解它的本质、历史及局限性是十分重要的。</strong></p>
 <p><strong>本节为您讲解 JavaScript 和客户端脚本的起源。</strong></p>
 <h2 id="Nombas-和-ScriptEase"><a href="#Nombas-和-ScriptEase" class="headerlink" title="Nombas 和 ScriptEase"></a>Nombas 和 ScriptEase</h2><p>大概在 1992 年，一家称作 Nombas 的公司开发了一种叫做 C 减减（C-minus-minus，简称 Cmm）的嵌入式脚本语言。Cmm 背后的理念很简单：一个足够强大可以替代宏操作（macro）的脚本语言，同时保持与 C （和 C ++）足够的相似性，以便开发人员能很快学会。这个脚本语言捆绑在一个叫做 CEnvi 的共享软件中，它首次向开发人员展示了这种语言的威力。Nombas 最终把 Cmm 的名字改成了 ScriptEase。现在 ScriptEase 已经成为了 Nombas 产品背后的主要驱动力。</p>
@@ -907,7 +907,7 @@
   </entry>
   <entry>
     <title>渠道经理</title>
-    <url>/archives/4712f55d.html</url>
+    <url>/ycy-ww.github.io/archives/4712f55d.html</url>
     <content><![CDATA[<h2 id="渠道经理"><a href="#渠道经理" class="headerlink" title="渠道经理"></a>渠道经理</h2><p>渠道经理与产品经理都不居于“命令型”的管理类型，而是属于”流程型”的管理类型，他们不能直接对销售部门发号施令——因为销售人员只能有一个直接上司，而是通过确立管理目标、业务流程和管理规范．来指导销售人员完成既定的工作，并对关键环节进行动态评估和考核，从整体上来约束和调整销售人员的行为方式，实质上这是一种“间接“而非“直接“的管理体系。</p>
 <h3 id="销售渠道"><a href="#销售渠道" class="headerlink" title="销售渠道"></a>销售渠道</h3><p>包括<a href="https://baike.baidu.com/item/网络销售" target="_blank" rel="external nofollow noopener noreferrer">网络销售</a>、电话销售、<a href="https://baike.baidu.com/item/零售商" target="_blank" rel="external nofollow noopener noreferrer">零售商</a>、<a href="https://baike.baidu.com/item/分销商" target="_blank" rel="external nofollow noopener noreferrer">分销商</a>、商业伙伴和销售队伍。</p>
 <h3 id="确定规范"><a href="#确定规范" class="headerlink" title="确定规范"></a>确定规范</h3><h3 id="关注过程"><a href="#关注过程" class="headerlink" title="关注过程"></a>关注过程</h3><h3 id="控制冲突"><a href="#控制冲突" class="headerlink" title="控制冲突"></a>控制冲突</h3><h3 id="复合管理"><a href="#复合管理" class="headerlink" title="复合管理"></a>复合管理</h3><p><strong>产品与渠道就像企业的双翼，二者有效整合方能拉动企业展翅腾飞。</strong>因此只有产品与渠道进行复台管理才能构成竞争优势。渠道经理的一个重要职责，就是必须与产品经理紧密合作，将<a href="https://baike.baidu.com/item/产品策略" target="_blank" rel="external nofollow noopener noreferrer">产品策略</a>真正落实到渠道策略的执行中，最终实现产品的价值。</p>
@@ -965,7 +965,7 @@
   </entry>
   <entry>
     <title>市场营销</title>
-    <url>/archives/2fd2f140.html</url>
+    <url>/ycy-ww.github.io/archives/2fd2f140.html</url>
     <content><![CDATA[<h1 id="市场营销"><a href="#市场营销" class="headerlink" title="市场营销"></a>市场营销</h1><h2 id="企业管理-创新-市场营销"><a href="#企业管理-创新-市场营销" class="headerlink" title="企业管理=创新+市场营销"></a>企业管理=创新+市场营销</h2><p><strong><em>营销是全社会人员的换位思维</em></strong></p>
 <p><strong>市场营销：</strong>以<strong>客户</strong>为中心</p>
 <p><img src="%5Cimages%5C1583219694573.png" alt="1583219694573"></p>
@@ -1135,7 +1135,7 @@
   </entry>
   <entry>
     <title>Eclipse导入jar包</title>
-    <url>/archives/14d86ed1.html</url>
+    <url>/ycy-ww.github.io/archives/14d86ed1.html</url>
     <content><![CDATA[<h1 id="Eclipse怎么导入jar包"><a href="#Eclipse怎么导入jar包" class="headerlink" title="Eclipse怎么导入jar包"></a>Eclipse怎么导入jar包</h1><ol>
 <li>先建一个lib文件夹</li>
 </ol>
@@ -1191,7 +1191,7 @@
   </entry>
   <entry>
     <title>公众号开发-1</title>
-    <url>/archives/e5c0af90.html</url>
+    <url>/ycy-ww.github.io/archives/e5c0af90.html</url>
     <content><![CDATA[<h1 id="微信公众平台测试号的开发流程"><a href="#微信公众平台测试号的开发流程" class="headerlink" title="微信公众平台测试号的开发流程"></a>微信公众平台测试号的开发流程</h1><ol>
 <li>接入</li>
 </ol>
@@ -1244,7 +1244,7 @@
   </entry>
   <entry>
     <title>eclipse如何配置tomcat</title>
-    <url>/archives/78399ede.html</url>
+    <url>/ycy-ww.github.io/archives/78399ede.html</url>
     <content><![CDATA[<hr>
 <h1 id="1-eclipse环境下如何配置tomcat，并且把项目部署到Tomcat服务器上"><a href="#1-eclipse环境下如何配置tomcat，并且把项目部署到Tomcat服务器上" class="headerlink" title="1.eclipse环境下如何配置tomcat，并且把项目部署到Tomcat服务器上"></a>1.eclipse环境下如何配置tomcat，并且把项目部署到Tomcat服务器上</h1><p>1.打开Eclipse，单击“Window”菜单，选择下方的“Preferences”。</p>
 <p> <img src="https://images2018.cnblogs.com/blog/1247786/201808/1247786-20180825165024308-1525781996.png" alt="img"></p>
@@ -1313,7 +1313,7 @@
   </entry>
   <entry>
     <title>JS 使用&amp;&amp;输出</title>
-    <url>/archives/3f9a76aa.html</url>
+    <url>/ycy-ww.github.io/archives/3f9a76aa.html</url>
     <content><![CDATA[<h1 id="JavaScript-使用-amp-amp-输出"><a href="#JavaScript-使用-amp-amp-输出" class="headerlink" title="JavaScript 使用&amp;&amp;输出"></a>JavaScript 使用&amp;&amp;输出</h1><p><strong>JavaScript 的部分能力</strong></p>
 <ul>
 <li><p>JavaScript 能够改变 HTML 内容</p>
@@ -1384,7 +1384,7 @@
   </entry>
   <entry>
     <title>TCP/IP 寻址&amp;邮件</title>
-    <url>/archives/ba97f213.html</url>
+    <url>/ycy-ww.github.io/archives/ba97f213.html</url>
     <content><![CDATA[<h1 id="TCP-IP-寻址"><a href="#TCP-IP-寻址" class="headerlink" title="TCP/IP 寻址"></a>TCP/IP 寻址</h1><p><strong>TCP/IP 使用 32 个比特或者 4 个 0 到 255 之间的数字来为计算机编址。</strong></p>
 <h2 id="协议族"><a href="#协议族" class="headerlink" title="协议族"></a>协议族</h2><p>TCP/IP 是基于 TCP 和 IP 这两个最初的协议之上的不同的通信协议的大的集合。</p>
 <hr>
@@ -1440,7 +1440,7 @@
   </entry>
   <entry>
     <title>TCP/IP 简介</title>
-    <url>/archives/55476d4b.html</url>
+    <url>/ycy-ww.github.io/archives/55476d4b.html</url>
     <content><![CDATA[<h1 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a>TCP/IP</h1><h2 id="TCP-IP-是因特网的通信协议。"><a href="#TCP-IP-是因特网的通信协议。" class="headerlink" title="TCP/IP 是因特网的通信协议。"></a>TCP/IP 是因特网的通信协议。</h2><p>通信协议是对计算机必须遵守的规则的描述，只有遵守这些规则，计算机之间才能进行通信。</p>
 <h3 id="因特网地址也是-TCP-IP"><a href="#因特网地址也是-TCP-IP" class="headerlink" title="因特网地址也是 TCP/IP"></a>因特网地址也是 TCP/IP</h3><p>你的因特网地址 112.32.22.120 也是标准的 TCP/IP 协议的一部分。</p>
 <p>TCP/IP 指传输控制协议/网际协议 (<em>T</em>ransmission <em>C</em>ontrol <em>P</em>rotocol / <em>I</em>nternet <em>P</em>rotocol)。</p>
@@ -1483,7 +1483,7 @@
   </entry>
   <entry>
     <title>next config-2</title>
-    <url>/archives/967f8653.html</url>
+    <url>/ycy-ww.github.io/archives/967f8653.html</url>
     <content><![CDATA[<h1 id="NexT-主题基础设置-2"><a href="#NexT-主题基础设置-2" class="headerlink" title="NexT 主题基础设置 2"></a>NexT 主题基础设置 2</h1><h3 id="设置-RSS"><a href="#设置-RSS" class="headerlink" title="设置 RSS"></a>设置 RSS</h3><h3 id="添加「标签」页面"><a href="#添加「标签」页面" class="headerlink" title="添加「标签」页面"></a>添加「标签」页面</h3><p><strong>注意：</strong>如果有集成评论服务，页面也会带有评论。 若需要关闭的话，请添加字段 <code>comments</code> 并将值设置为 <code>false</code></p>
 <h3 id="设置字体"><a href="#设置字体" class="headerlink" title="设置字体"></a>设置字体</h3><p>为了解决 <a href="https://www.google.com/fonts" target="_blank" rel="external nofollow noopener noreferrer">Google Fonts API</a> 不稳定的问题，NexT 在 5.0.1 中引入此特性。 通过此特性，你可以指定所使用的字体库外链地址；与此同时，NexT 开放了 5 个特定范围的字体设定，他们是：</p>
 <ul>
@@ -1540,7 +1540,7 @@
   </entry>
   <entry>
     <title>eclipse-插件安装 &amp;&amp; 镜像站</title>
-    <url>/archives/d66d780d.html</url>
+    <url>/ycy-ww.github.io/archives/d66d780d.html</url>
     <content><![CDATA[<h1 id="eclipse-插件安装-——-web项目"><a href="#eclipse-插件安装-——-web项目" class="headerlink" title="eclipse 插件安装 —— web项目"></a>eclipse 插件安装 —— web项目</h1><p>要导入Dynamic Web Project项目，就要为当前的eclipse安装Java EE开发插件。</p>
 <p><strong>步骤如下：</strong></p>
 <ol>
@@ -1604,7 +1604,7 @@
 <h3 id="npm-镜像"><a href="#npm-镜像" class="headerlink" title="npm 镜像"></a>npm 镜像</h3><p>cnpm：<a href="http://npm.taobao.org/" target="_blank" rel="external nofollow noopener noreferrer">http://npm.taobao.org/</a></p>
 <p>cnpmjs：<a href="http://cnpmjs.org/" target="_blank" rel="external nofollow noopener noreferrer">http://cnpmjs.org/</a></p>
 <hr>
-<p><strong><em>转载标明出处:</em></strong> <em><a href="http://www.wwyyqblog.work">www.wwyyqblog.work</a></em>                            </p>
+<p><strong><em>转载标明出处:</em></strong> <em><a href="http://www.wwyyqblog.work" target="_blank" rel="noopener">www.wwyyqblog.work</a></em>                            </p>
 <p><kbd>ycy-ww 出品</kbd></p>
 ]]></content>
       <categories>
@@ -1618,7 +1618,7 @@
   </entry>
   <entry>
     <title>next-config summary</title>
-    <url>/archives/c40f80fb.html</url>
+    <url>/ycy-ww.github.io/archives/c40f80fb.html</url>
     <content><![CDATA[<h1 id="Next-config-summary-2"><a href="#Next-config-summary-2" class="headerlink" title="Next-config summary -2"></a>Next-config summary -2</h1><h1 id="16-在文章底部增加版权信息"><a href="#16-在文章底部增加版权信息" class="headerlink" title="16. 在文章底部增加版权信息"></a>16. 在文章底部增加版权信息</h1><p><strong>实现效果图</strong></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/5308475-a264542f53665849.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
 <p>在目录 <code>next/layout/_macro/下</code>添加 <code>my-copyright.swig</code>：</p>
@@ -1768,7 +1768,7 @@
   </entry>
   <entry>
     <title>next-config summary</title>
-    <url>/archives/c40f80fb.html</url>
+    <url>/ycy-ww.github.io/archives/c40f80fb.html</url>
     <content><![CDATA[<h1 id="Hexo的next主题个性化配置教程"><a href="#Hexo的next主题个性化配置教程" class="headerlink" title="Hexo的next主题个性化配置教程"></a>Hexo的next主题个性化配置教程</h1><hr>
 <h1 id="1-添加RSS"><a href="#1-添加RSS" class="headerlink" title="1.添加RSS"></a>1.添加RSS</h1><p><strong>具体实现方法</strong></p>
 <p>切换到blog（根目录）</p>
@@ -1918,7 +1918,7 @@
   </entry>
   <entry>
     <title>next config</title>
-    <url>/archives/977f8a02.html</url>
+    <url>/ycy-ww.github.io/archives/977f8a02.html</url>
     <content><![CDATA[<h1 id="NexT-主题基础设置"><a href="#NexT-主题基础设置" class="headerlink" title="NexT 主题基础设置"></a>NexT 主题基础设置</h1><h3 id="设置-菜单"><a href="#设置-菜单" class="headerlink" title="设置 菜单"></a>设置 菜单</h3><p>菜单配置包括三个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。 NexT 使用的是 <a href="http://fontawesome.io/" target="_blank" rel="external nofollow noopener noreferrer">Font Awesome</a> 提供的图标， Font Awesome 提供了 600+ 的图标，可以满足绝大的多数的场景，同时无须担心在 Retina 屏幕下 图标模糊的问题。</p>
 <ol>
 <li>设定菜单内容，对应的字段是 <code>menu</code>。 菜单内容的设置格式是：<code>item name: link</code>。其中 <code>item name</code>是一个名称，这个名称并不直接显示在页面上，她将用于匹配图标以及翻译。</li>
@@ -2006,7 +2006,7 @@
   </entry>
   <entry>
     <title>辅助函数2</title>
-    <url>/archives/69913370.html</url>
+    <url>/ycy-ww.github.io/archives/69913370.html</url>
     <content><![CDATA[<h1 id="辅助函数-2"><a href="#辅助函数-2" class="headerlink" title="辅助函数 2"></a>辅助函数 2</h1><h2 id="条件函数"><a href="#条件函数" class="headerlink" title="条件函数"></a>条件函数</h2><h3 id="is-current"><a href="#is-current" class="headerlink" title="is_current"></a>is_current</h3><p>检查 <code>path</code> 是否符合目前页面的网址。开启 <code>strict</code> 选项启用严格比对。</p>
 <figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line">&lt;%- is<span class="constructor">_current(<span class="params">path</span>, [<span class="params">strict</span>])</span> %&gt;</span><br></pre></td></tr></table></figure>
 
@@ -2080,7 +2080,7 @@
   </entry>
   <entry>
     <title>辅助函数3</title>
-    <url>/archives/1e9603e6.html</url>
+    <url>/ycy-ww.github.io/archives/1e9603e6.html</url>
     <content><![CDATA[<h1 id="辅助函数-3"><a href="#辅助函数-3" class="headerlink" title="辅助函数 3"></a>辅助函数 3</h1><h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><h3 id="partial"><a href="#partial" class="headerlink" title="partial"></a>partial</h3><p>载入其他模板文件，您可在 <code>locals</code> 设定区域变量。</p>
 <figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- partial<span class="comment">(layout, [locals], [options])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
 
@@ -2308,7 +2308,7 @@
   </entry>
   <entry>
     <title>辅助函数4</title>
-    <url>/archives/80f29645.html</url>
+    <url>/ycy-ww.github.io/archives/80f29645.html</url>
     <content><![CDATA[<h1 id="辅助函数-4"><a href="#辅助函数-4" class="headerlink" title="辅助函数 4"></a>辅助函数 4</h1><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="paginator"><a href="#paginator" class="headerlink" title="paginator"></a>paginator</h3><p>插入分页链接。</p>
 <figure class="highlight mel"><table><tr><td class="code"><pre><span class="line">&lt;%- paginator(options) %&gt;</span><br></pre></td></tr></table></figure>
 
@@ -2574,7 +2574,7 @@
   </entry>
   <entry>
     <title>Hexo Troubleshooting</title>
-    <url>/archives/323d63c3.html</url>
+    <url>/ycy-ww.github.io/archives/323d63c3.html</url>
     <content><![CDATA[<h1 id="Hexo-Troubleshooting"><a href="#Hexo-Troubleshooting" class="headerlink" title="Hexo Troubleshooting"></a>Hexo Troubleshooting</h1><h2 id="插件安装问题"><a href="#插件安装问题" class="headerlink" title="插件安装问题"></a>插件安装问题</h2><figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line">npm ERR! <span class="keyword">node</span><span class="title">-waf</span> configure build</span><br></pre></td></tr></table></figure>
 
 <p>当您尝试安装以 C/C++ 或其他非 JavaScript 语言所编写的插件时，可能会遇到此类问题，请确认您已经在电脑上安装相对应的编译器。</p>
@@ -2602,7 +2602,7 @@
   </entry>
   <entry>
     <title>linux errors</title>
-    <url>/archives/3595bc05.html</url>
+    <url>/ycy-ww.github.io/archives/3595bc05.html</url>
     <content><![CDATA[<h1 id="EMFILE-amp-ENOSPC-amp-EMPERM"><a href="#EMFILE-amp-ENOSPC-amp-EMPERM" class="headerlink" title="EMFILE &amp; ENOSPC &amp; EMPERM"></a>EMFILE &amp; ENOSPC &amp; EMPERM</h1><h2 id="EMFILE-错误"><a href="#EMFILE-错误" class="headerlink" title="EMFILE 错误"></a>EMFILE 错误</h2><figure class="highlight subunit"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Error: </span>EMFILE, too many open files</span><br></pre></td></tr></table></figure>
 
 <p>虽然 Node.js 有非阻塞 I/O，同步 I/O 的数量仍被系统所限制，在生成大量静态文件的时候，您可能会碰到 EMFILE 错误，您可以尝试提高同步 I/O 的限制数量来解决此问题。</p>
@@ -2640,7 +2640,7 @@
   </entry>
   <entry>
     <title>YAML Troubleshooting</title>
-    <url>/archives/6b7fbf69.html</url>
+    <url>/ycy-ww.github.io/archives/6b7fbf69.html</url>
     <content><![CDATA[<h1 id="YAML-Troubleshooting"><a href="#YAML-Troubleshooting" class="headerlink" title="YAML Troubleshooting"></a>YAML Troubleshooting</h1><h2 id="YAML-解析错误"><a href="#YAML-解析错误" class="headerlink" title="YAML 解析错误"></a>YAML 解析错误</h2><figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line">JS-YAML: incomplete <span class="built_in">explicit</span> mapping pair; a <span class="built_in">key</span> node <span class="built_in">is</span> missed <span class="built_in">at</span> line <span class="number">18</span>, column <span class="number">29</span>:      last_updated: Last updated: <span class="built_in">%s</span></span><br></pre></td></tr></table></figure>
 
 <p>如果 YAML 字符串中包含冒号（<code>:</code>）的话，请加上引号。</p>
@@ -2681,7 +2681,7 @@
   </entry>
   <entry>
     <title>辅助函数</title>
-    <url>/archives/989bfe87.html</url>
+    <url>/ycy-ww.github.io/archives/989bfe87.html</url>
     <content><![CDATA[<h1 id="辅助函数（Helpers）"><a href="#辅助函数（Helpers）" class="headerlink" title="辅助函数（Helpers）"></a>辅助函数（Helpers）</h1><p>辅助函数帮助您在模版中快速插入内容。辅助函数不能在源文件中使用。</p>
 <h2 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h2><h3 id="url-for"><a href="#url-for" class="headerlink" title="url_for"></a>url_for</h3><p>在路径前加上根路径，从 Hexo 2.7 开始您应该使用此函数而不是 <code>config.root + path</code>。</p>
 <figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- url_for<span class="comment">(path, [option])</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
@@ -2930,7 +2930,7 @@
   </entry>
   <entry>
     <title>插件</title>
-    <url>/archives/def84ee6.html</url>
+    <url>/ycy-ww.github.io/archives/def84ee6.html</url>
     <content><![CDATA[<h1 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h1><p>Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心模块的源码。在 Hexo 中有两种形式的插件：</p>
 <h3 id="脚本（Scripts）"><a href="#脚本（Scripts）" class="headerlink" title="脚本（Scripts）"></a>脚本（Scripts）</h3><p>如果您的代码很简单，建议您编写脚本，您只需要把 JavaScript 文件放到 <code>scripts</code> 文件夹，在启动时就会自动载入。</p>
 <h3 id="插件（Packages）"><a href="#插件（Packages）" class="headerlink" title="插件（Packages）"></a>插件（Packages）</h3><p>如果您的代码较复杂，或是您想要发布到 NPM 上，建议您编写插件。首先，在 <code>node_modules</code> 文件夹中建立文件夹，文件夹名称开头必须为 <code>hexo-</code>，如此一来 Hexo 才会在启动时载入，否则 Hexo 将会忽略它。</p>
@@ -2963,7 +2963,7 @@
   </entry>
   <entry>
     <title>国际化</title>
-    <url>/archives/b349ec92.html</url>
+    <url>/ycy-ww.github.io/archives/b349ec92.html</url>
     <content><![CDATA[<h1 id="国际化（i18n）"><a href="#国际化（i18n）" class="headerlink" title="国际化（i18n）"></a>国际化（i18n）</h1><p>若要让您的网站以不同语言呈现，您可使用国际化（internationalization）功能。请先在 <code>_config.yml</code> 中调整 <code>language</code> 设定，这代表的是预设语言，您也可设定多个语言来调整预设语言的顺位。</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="attribute">language</span>: zh-tw</span><br><span class="line"></span><br><span class="line"><span class="attribute">language</span>: </span><br><span class="line">- zh-tw</span><br><span class="line">- en</span><br></pre></td></tr></table></figure>
 
@@ -3001,7 +3001,7 @@
   </entry>
   <entry>
     <title>变量</title>
-    <url>/archives/13ffbe88.html</url>
+    <url>/ycy-ww.github.io/archives/13ffbe88.html</url>
     <content><![CDATA[<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><table>
 <thead>
 <tr>
@@ -3332,7 +3332,7 @@
   </entry>
   <entry>
     <title>模板</title>
-    <url>/archives/f6010553.html</url>
+    <url>/ycy-ww.github.io/archives/f6010553.html</url>
     <content><![CDATA[<h1 id="模版"><a href="#模版" class="headerlink" title="模版"></a>模版</h1><p>模板决定了网站内容的呈现方式，每个主题至少都应包含一个 <code>index</code> 模板，以下是各页面相对应的模板名称：</p>
 <table>
 <thead>
@@ -3430,7 +3430,7 @@
   </entry>
   <entry>
     <title>permalink-theme</title>
-    <url>/archives/b950aab4.html</url>
+    <url>/ycy-ww.github.io/archives/b950aab4.html</url>
     <content><![CDATA[<h1 id="永久链接（Permalinks）"><a href="#永久链接（Permalinks）" class="headerlink" title="永久链接（Permalinks）"></a>永久链接（Permalinks）</h1><p>您可以在 <code>_config.yml</code> 配置中调整网站的永久链接或者在每篇文章的 Front-matter 中指定。</p>
 <h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>除了下列变量外，您还可使用 Front-matter 中的所有属性。</p>
 <table>
@@ -3547,7 +3547,7 @@
   </entry>
   <entry>
     <title>Nunjucks Errors</title>
-    <url>/archives/a429e99c.html</url>
+    <url>/ycy-ww.github.io/archives/a429e99c.html</url>
     <content><![CDATA[<h1 id="hexo-Nunjucks-Errors-解决方法"><a href="#hexo-Nunjucks-Errors-解决方法" class="headerlink" title="hexo Nunjucks Errors 解决方法"></a>hexo Nunjucks Errors 解决方法</h1><p><strong>Code：</strong></p>
 <figure class="highlight xquery"><table><tr><td class="code"><pre><span class="line">Nunjucks Error:  [Line <span class="number">43</span>, Column <span class="number">43</span>] Error: Unable <span class="keyword">to</span> call `now`, which <span class="literal">is</span> undefined <span class="keyword">or</span> falsey</span><br><span class="line">    =====               Context Dump               =====</span><br><span class="line">    === (line<span class="built_in"> number</span> probably different from source) ===</span><br><span class="line">  <span class="number">38</span> | <span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span>分支名称<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line">  <span class="number">39</span> | <span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>gh-pages<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"> (GitHub) </span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>coding-pages<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"> (Coding.net) </span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>master<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"> (others)<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line">  <span class="number">40</span> | &lt;/tr&gt;</span><br><span class="line">  <span class="number">41</span> | <span class="xml"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">  42 | </span><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>message<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">  43 | </span><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span>自定义提交信息<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">  44 | </span><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>Site updated: </span><span class="xquery">&#123;&#123; now(<span class="string">'YYYY-MM-DD HH:mm:ss'</span>) &#125;</span><span class="xml">&#125;<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">  45 | <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line">  <span class="number">46</span> | <span class="xml"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">  47 | </span><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>token<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">  48 | </span><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span>Optional token value to authenticate with the repo. Prefix with </span><span class="xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span>$<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><span class="xml"> to read token from environment variable<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">    =====             Context Dump Ends            =====</span></span><br></pre></td></tr></table></figure>
 
@@ -3574,7 +3574,7 @@
   </entry>
   <entry>
     <title>部署</title>
-    <url>/archives/26b9d431.html</url>
+    <url>/ycy-ww.github.io/archives/26b9d431.html</url>
     <content><![CDATA[<h1 id="7-部署"><a href="#7-部署" class="headerlink" title="7.部署"></a>7.部署</h1><h2 id="Project-page"><a href="#Project-page" class="headerlink" title="Project page"></a>Project page</h2><p>如果你更希望你的站点部署在 <code>&lt;你的 GitHub 用户名&gt;.github.io</code> 的子目录中，你的 repository 需要直接命名为子目录的名字，这样你的站点可以通过 <code>https://&lt;你的 GitHub 用户名&gt;.github.io/&lt;repository 的名字&gt;</code> 访问。              你需要检查你的 Hexo 配置文件，将 <code>url</code> 修改为 <code>https://&lt;你的 GitHub 用户名&gt;.github.io/&lt;repository 的名字&gt;</code>、将 <code>root</code> 的值修改为 <code>/&lt;repository 的名字&gt;/</code></p>
 <p>您可同时使用多个 deployer，Hexo 会依照顺序执行每个 deployer。</p>
 <figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">- <span class="attribute">type</span>: git  </span><br><span class="line">  <span class="attribute">repo</span>:</span><br><span class="line">- <span class="attribute">type</span>: heroku  </span><br><span class="line">  <span class="attribute">repo</span>:</span><br></pre></td></tr></table></figure>
@@ -3658,7 +3658,7 @@
   </entry>
   <entry>
     <title>服务器-生成器</title>
-    <url>/archives/1393f011.html</url>
+    <url>/ycy-ww.github.io/archives/1393f011.html</url>
     <content><![CDATA[<h1 id="6-服务器"><a href="#6-服务器" class="headerlink" title="6.服务器"></a>6.服务器</h1><h2 id="hexo-server"><a href="#hexo-server" class="headerlink" title="hexo-server"></a>hexo-server</h2><p>如果您想要更改端口，或是在执行时遇到了 <code>EADDRINUSE</code> 错误，可以在执行时使用 <code>-p</code> 选项指定其他端口</p>
 <h3 id="静态模式"><a href="#静态模式" class="headerlink" title="静态模式"></a>静态模式</h3><p>在静态模式下，服务器只处理 <code>public</code> 文件夹内的文件，而不会处理文件变动，在执行时，您应该先自行执行 <code>hexo generate</code>，此模式通常用于生产环境（production mode）下。</p>
 <figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">$ hexo<span class="built_in"> server </span>-s</span><br></pre></td></tr></table></figure>
@@ -3703,7 +3703,7 @@
   </entry>
   <entry>
     <title>数据文件夹</title>
-    <url>/archives/7bfb7356.html</url>
+    <url>/ycy-ww.github.io/archives/7bfb7356.html</url>
     <content><![CDATA[<h1 id="5-数据文件"><a href="#5-数据文件" class="headerlink" title="5.数据文件"></a>5.数据文件</h1><p>有时您可能需要在主题中使用某些资料，而这些资料并不在文章内，并且是需要重复使用的，那么您可以考虑使用 Hexo 3.0 新增的「数据文件」功能。此功能会载入 <code>source/_data</code> 内的 YAML 或 JSON 文件，如此一来您便能在网站中复用这些文件了。</p>
 <p>举例来说，在 <code>source/_data</code> 文件夹中新建 <code>menu.yml</code> 文件：</p>
 <figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">Home:</span> /</span><br><span class="line"><span class="symbol">Gallery:</span> <span class="meta-keyword">/gallery/</span></span><br><span class="line"><span class="symbol">Archives:</span> <span class="meta-keyword">/archives/</span></span><br></pre></td></tr></table></figure>
@@ -3729,7 +3729,7 @@
   </entry>
   <entry>
     <title>LF will be replaced by CRLF</title>
-    <url>/archives/b76ba195.html</url>
+    <url>/ycy-ww.github.io/archives/b76ba195.html</url>
     <content><![CDATA[<h2 id="git提交时”warning-LF-will-be-replaced-by-CRLF“提示"><a href="#git提交时”warning-LF-will-be-replaced-by-CRLF“提示" class="headerlink" title="git提交时”warning: LF will be replaced by CRLF“提示"></a>git提交时”warning: LF will be replaced by CRLF“提示</h2><p>当时在网上查了资料，发现很多的解决办法都是：修改git全局配置，禁止git自动将LF转化成CRLF。命令是：<code>git config --global core.autocrlf false</code>.</p>
 <p><strong>LF和CRLF的真相是什么</strong></p>
 <ol>
@@ -3764,12 +3764,10 @@
   </entry>
   <entry>
     <title>资源文件夹</title>
-    <url>/archives/eb477856.html</url>
+    <url>/ycy-ww.github.io/archives/eb477856.html</url>
     <content><![CDATA[<h1 id="4-资源文件夹"><a href="#4-资源文件夹" class="headerlink" title="4.资源文件夹"></a>4.资源文件夹</h1><p>资源（Asset）代表 <code>source</code> 文件夹中除了文章以外的所有文件，例如图片、CSS、JS 文件等。比方说，如果你的Hexo项目中只有少量图片，那最简单的方法就是将它们放在 <code>source/images</code> 文件夹中。然后通过类似于 <code>![](/images/image.jpg)</code> 的方法访问它们。</p>
 <h2 id="文章资源文件夹"><a href="#文章资源文件夹" class="headerlink" title="文章资源文件夹"></a>文章资源文件夹</h2><p>对于那些想要更有规律地提供图片和其他资源以及想要将他们的资源分布在各个文章上的人来说，Hexo也提供了更组织化的方式来管理资源。这个稍微有些复杂但是管理资源非常方便的功能可以通过将 <code>config.yml</code> 文件中的 <code>post_asset_folder</code> 选项设为 <code>true</code> 来打开。</p>
-<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="module-access"><span class="module"><span class="identifier">_config</span>.</span></span>ymlpost_asset_folder: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>当资源文件管理功能打开后，Hexo将会在你每一次通过 <code>hexo new [layout] &lt;title&gt;</code> 命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个文章文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以通过相对路径来引用它们，这样你就得到了一个更简单而且方便得多的工作流。</p>
+<p>当资源文件管理功能打开后，Hexo将会在你每一次通过 <code>hexo new [layout] &lt;title&gt;</code> 命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个文章文件一样的名字。<strong><em>将所有与你的文章有关的资源放在这个关联文件夹中</em></strong>之后，你可以通过相对路径来引用它们，这样你就得到了一个更简单而且方便得多的工作流。</p>
 <h2 id="相对路径引用的标签插件"><a href="#相对路径引用的标签插件" class="headerlink" title="相对路径引用的标签插件"></a>相对路径引用的标签插件</h2><p>通过常规的 markdown 语法和相对路径来引用图片和其它资源可能会导致它们在存档页或者主页上显示不正确。在Hexo 2时代，社区创建了很多插件来解决这个问题。但是，随着Hexo 3 的发布，许多新的标签插件被加入到了核心代码中。这使得你可以更简单地在文章中引用你的资源。</p>
 <figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">asset_path</span> slug %&#125;</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">asset_img</span> slug [title] %&#125;</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">asset_link</span> slug [title] %&#125;</span></span><br></pre></td></tr></table></figure>
 
@@ -3791,8 +3789,8 @@
   </entry>
   <entry>
     <title>标签插件</title>
-    <url>/archives/507239ef.html</url>
-    <content><![CDATA[<h1 id="3-标签插件（Tag-Plugins）"><a href="#3-标签插件（Tag-Plugins）" class="headerlink" title="3.标签插件（Tag Plugins）"></a>3.标签插件（Tag Plugins）</h1><p>标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。</p>
+    <url>/ycy-ww.github.io/archives/507239ef.html</url>
+    <content><![CDATA[<h1 id="标签插件（Tag-Plugins）"><a href="#标签插件（Tag-Plugins）" class="headerlink" title="标签插件（Tag Plugins）"></a>标签插件（Tag Plugins）</h1><p>标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。</p>
 <h2 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h2><p>在文章中插入引言，可包含作者、来源和标题。</p>
 <p><strong>别号：</strong> quote</p>
 <figure class="highlight twig"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">blockquote</span> [author[, <span class="name">source</span>]] [link] [source_link_title] %&#125;</span></span><br><span class="line"><span class="xml">content</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">endblockquote</span> %&#125;</span></span><br></pre></td></tr></table></figure>
@@ -3820,8 +3818,6 @@
 <p><strong>引用 Twitter</strong></p>
 <figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote <span class="meta">@DevDocs</span> <span class="string">https:</span><span class="comment">//twitter.com/devdocs/status/356095192085962752 %&#125;</span></span><br><span class="line"><span class="string">NEW:</span> DevDocs now comes with syntax highlighting. <span class="string">http:</span><span class="comment">//devdocs.io</span></span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
 
-
-
 <blockquote>
 <p>NEW: DevDocs now comes with syntax highlighting. <a href="http://devdocs.io/" target="_blank" rel="external nofollow noopener noreferrer">http://devdocs.io</a></p>
 <p><strong>@DevDocs</strong><a href="https://twitter.com/devdocs/status/356095192085962752" target="_blank" rel="external nofollow noopener noreferrer">twitter.com/devdocs/status/356095192085962752</a></p>
@@ -3839,7 +3835,7 @@
 <p><strong>别名：</strong> code</p>
 <figure class="highlight inform7"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock <span class="comment">[title]</span> <span class="comment">[lang:language]</span> <span class="comment">[url]</span> <span class="comment">[link text]</span> <span class="comment">[additional options]</span> %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
 
-<p>Specify additional options in <code>option:value</code> format, e.g. <code>line_number:false first_line:5</code>.</p>
+<p>Specify additional options in <code>option:value</code> format, e.g. <code>line_number:false</code> <code>first_line:5</code>.</p>
 <table>
 <thead>
 <tr>
@@ -4005,19 +4001,10 @@
 
 
 <h2 id="文章摘要和截断"><a href="#文章摘要和截断" class="headerlink" title="文章摘要和截断"></a>文章摘要和截断</h2><p>在文章中使用 <code>&lt;!-- more --&gt;</code>，那么 <code>&lt;!-- more --&gt;</code> 之前的文字将会被视为摘要。首页中将只出现这部分文字，同时这部分文字也会出现在正文之中。</p>
-<p>例如：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br><span class="line"><span class="comment">&lt;!-- more --&gt;</span></span><br><span class="line">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span><br></pre></td></tr></table></figure>
-
-<p>首页中将只会出现</p>
-<figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed <span class="keyword">do</span> eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br></pre></td></tr></table></figure>
-
-<p>正文中则会出现</p>
-<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed <span class="keyword">do</span> eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br><span class="line"></span><br><span class="line">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <span class="keyword">ex</span> ea commodo consequat. Duis aute irure dolor <span class="keyword">in</span> reprehenderit <span class="keyword">in</span> voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt <span class="keyword">in</span> culpa <span class="keyword">qui</span> officia deserunt mollit anim id <span class="keyword">est</span> laborum.</span><br></pre></td></tr></table></figure>
-
 <p><strong>注意:</strong> 摘要可能会被 Front Matter 中的 <code>excerpt</code> 覆盖。</p>
 <hr>
 <p><strong><em>首页：</em></strong> <a href="https://wwyyqblog.work" target="_blank" rel="external nofollow noopener noreferrer">wwyyqblog.work</a></p>
-<p><img src alt="logo"></p>
+<p><img src="C:%5CUsers%5C13122%5Cblog%5Cthemes%5Cnext%5Csource%5Cimages%5Cmylogo.png" alt="logo"></p>
 ]]></content>
       <categories>
         <category>前端</category>
@@ -4028,8 +4015,8 @@
   </entry>
   <entry>
     <title>Front-matter</title>
-    <url>/archives/29d51c84.html</url>
-    <content><![CDATA[<h1 id="2-Front-matter"><a href="#2-Front-matter" class="headerlink" title="2.Front-matter"></a>2.Front-matter</h1><p>Front-matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量，举例来说：</p>
+    <url>/ycy-ww.github.io/archives/29d51c84.html</url>
+    <content><![CDATA[<h1 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h1><p>Front-matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量，举例来说：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hello</span> <span class="string">World</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2013</span><span class="string">/7/13</span> <span class="number">20</span><span class="string">:46:25</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
 
 <p>以下是预先定义的参数，您可在模板中使用这些参数值并加以利用。</p>
@@ -4133,8 +4120,8 @@
   </entry>
   <entry>
     <title>写作</title>
-    <url>/archives/f9cb768.html</url>
-    <content><![CDATA[<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><h2 id="1-写作"><a href="#1-写作" class="headerlink" title="1.写作"></a>1.写作</h2><p>你可以执行下列命令来创建一篇新文章或者新的页面。</p>
+    <url>/ycy-ww.github.io/archives/f9cb768.html</url>
+    <content><![CDATA[<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><p>你可以执行下列命令来创建一篇新文章或者新的页面。</p>
 <figure class="highlight gauss"><table><tr><td class="code"><pre><span class="line">$ hexo <span class="keyword">new</span> [layout] &lt;<span class="built_in">title</span>&gt;</span><br></pre></td></tr></table></figure>
 
 <p>您可以在命令中指定文章的布局（layout），默认为 <code>post</code>，可以通过修改 <code>_config.yml</code> 中的 <code>default_layout</code> 参数来指定默认布局。</p>
@@ -4241,9 +4228,9 @@
       </tags>
   </entry>
   <entry>
-    <title>指令</title>
-    <url>/archives/81ac8ad8.html</url>
-    <content><![CDATA[<h1 id="2-指令"><a href="#2-指令" class="headerlink" title="2.指令"></a>2.指令</h1><hr>
+    <title>Hexo指令</title>
+    <url>/ycy-ww.github.io/archives/81ac8ad8.html</url>
+    <content><![CDATA[<h1 id="Hexo指令"><a href="#Hexo指令" class="headerlink" title="Hexo指令"></a>Hexo指令</h1><hr>
 <p><strong>init</strong></p>
 <figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo init [folder]</span><br></pre></td></tr></table></figure>
 
@@ -4413,12 +4400,12 @@
   </entry>
   <entry>
     <title>Hexo 搭建博客优化指南</title>
-    <url>/archives/275cc748.html</url>
+    <url>/ycy-ww.github.io/archives/275cc748.html</url>
     <content><![CDATA[<h1 id="Hexo-搭建博客之优化指南"><a href="#Hexo-搭建博客之优化指南" class="headerlink" title="Hexo 搭建博客之优化指南"></a>Hexo 搭建博客之优化指南</h1><h2 id="1-看懂站点配置文件"><a href="#1-看懂站点配置文件" class="headerlink" title="1.看懂站点配置文件"></a>1.看懂站点配置文件</h2><p><strong>package.json</strong></p>
 <p>应用程序的信息。<a href="https://ejs.co/" target="_blank" rel="external nofollow noopener noreferrer">EJS</a>, <a href="http://learnboost.github.io/stylus/" target="_blank" rel="external nofollow noopener noreferrer">Stylus</a> 和 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="external nofollow noopener noreferrer">Markdown</a> renderer 已默认安装，您可以自由移除。</p>
 <p><strong>scaffolds</strong></p>
-<p><a href="https://hexo.io/zh-cn/docs/writing" target="_blank" rel="external nofollow noopener noreferrer">模版</a> 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</p>
-<p>Hexo的模板是指在新建的文章文件中默认填充的内容。例如，如果您修改scaffold/post.md中的Front-matter内容，那么每次新建一篇文章时都会包含这个修改。</p>
+<p><a href="https://hexo.io/zh-cn/docs/writing" target="_blank" rel="external nofollow noopener noreferrer">模版</a> 文件夹。当您新建文章时，Hexo 会根据 scaffolds 来建立文件。</p>
+<p>Hexo的模板是指在新建的文章文件中默认填充的内容。例如，如果您修改scaffolds/post.md中的Front-matter内容，那么每次新建一篇文章时都会包含这个修改。</p>
 <p><strong>source</strong></p>
 <p>资源文件夹是存放用户资源的地方。除 <code>_posts</code> 文件夹之外，开头命名为 <code>_</code> (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 <code>public</code> 文件夹，而其他文件会被拷贝过去。</p>
 <blockquote>
@@ -4713,7 +4700,7 @@
 </tbody></table>
 <p>列表中的每一项都必须用单引号或双引号包裹起来。</p>
 <p><strong>使用代替配置文件</strong></p>
-<p>可以在 hexo-cli 中使用 <code>--config</code> 参数来指定自定义配置文件的路径。你可以使用一个 YAML 或 JSON 文件的路径，也可以使用逗号分隔（无空格）的多个 YAML 或 JSON 文件的路径。例如：</p>
+<p>可以在 *<em>hexo-cli *</em>中使用 <code>--config</code> 参数来指定自定义配置文件的路径。你可以使用一个 YAML 或 JSON 文件的路径，也可以使用逗号分隔（无空格）的多个 YAML 或 JSON 文件的路径。例如：</p>
 <figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line"><span class="comment"># use 'custom.yml' in place of '_config.yml'</span></span><br><span class="line">$ hexo<span class="built_in"> server </span>--config custom.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># use 'custom.yml' &amp; 'custom2.json', prioritizing 'custom3.yml', then 'custom2.json'</span></span><br><span class="line">$ hexo generate --config custom.yml,custom2.json,custom3.yml</span><br></pre></td></tr></table></figure>
 
 
@@ -4736,13 +4723,13 @@
   </entry>
   <entry>
     <title>Markdown教程</title>
-    <url>/archives/96be88e3.html</url>
+    <url>/ycy-ww.github.io/archives/96be88e3.html</url>
     <content><![CDATA[<h1 id="Markdown-教程"><a href="#Markdown-教程" class="headerlink" title="Markdown 教程"></a>Markdown 教程</h1><p><strong>Markdown 标题</strong></p>
 <p>Markdown 标题有两种格式。</p>
 <p><strong>1、使用 = 和 - 标记一级和二级标题</strong></p>
 <p>= 和 - 标记语法格式如下：</p>
 <p>我展示的是一级标题 ============  我展示的是二级标题 —————–</p>
-<p><strong>使用 # 号标记</strong></p>
+<p><strong>2、使用 # 号标记</strong></p>
 <p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。</p>
 <p><strong>Markdown 段落</strong></p>
 <p>Markdown 段落没有特殊的格式，直接编写文字就好，<strong>段落的换行是使用两个以上空格加上回车</strong>。</p>
@@ -4797,10 +4784,6 @@
 </ul>
 </li>
 </ol>
-<p>有序列表使用数字并加上 . 号来表示，如：</p>
-<ol>
-<li>第一项 2. 第二项 3. 第三项</li>
-</ol>
 <p><strong>列表嵌套</strong></p>
 <p>列表嵌套只需在子列表中的选项添加四个空格即可：</p>
 <ol>
@@ -4845,7 +4828,7 @@
 <p>&lt;<a href="https://www.wwyyqblog.work&gt;" target="_blank" rel="noopener">https://www.wwyyqblog.work&gt;</a></p>
 <p><strong>高级链接</strong></p>
 <p>链接也可以用变量来代替，文档末尾附带变量地址： 这个链接用 1 作为网址变量 [Google][1] 这个链接用 ycy-ww 作为网址变量[ycy-ww][ycy-ww] 然后在文档的结尾为变量赋值（网址）    </p>
-<p>[1]: <a href="http://www.google.com/" target="_blank" rel="external nofollow noopener noreferrer">http://www.google.com/</a>            [ycy-ww]: <a href="http://www.wwyyqblog.work/">http://www.wwyyqblog.work/</a></p>
+<p>[1]: <a href="http://www.google.com/" target="_blank" rel="external nofollow noopener noreferrer">http://www.google.com/</a>            [ycy-ww]: <a href="http://www.wwyyqblog.work/" target="_blank" rel="noopener">http://www.wwyyqblog.work/</a></p>
 <p><strong>Markdown 图片</strong></p>
 <p>Markdown 图片语法格式如下：</p>
 <p>![alt 属性文本](图片地址)</p>
@@ -4917,7 +4900,7 @@
 <p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：</p>
 <p>$$ \mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}  \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \ \frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \ \frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \ \end{vmatrix} $$tep1}{\style{visibility:hidden}{(x+1)(x+1)}} $$</p>
 <hr>
-<p><strong><em>转载标明出处:</em></strong> <em><a href="http://www.wwyyqblog.work">www.wwyyqblog.work</a></em>                            </p>
+<p><strong><em>转载标明出处:</em></strong> <em><a href="http://www.wwyyqblog.work" target="_blank" rel="noopener">www.wwyyqblog.work</a></em>                            </p>
 <p><kbd>ycy-ww 出品</kbd></p>
 ]]></content>
       <categories>

@@ -3,11 +3,11 @@
   <title>ycy-ww</title>
   
   <subtitle>Fighting for myself!</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/ycy-ww.github.io/atom.xml" rel="self"/>
   
-  <link href="https://www.wwyyqblog.work/"/>
+  <link href="https://ycy-ww.github,io/ycy-ww.github.io/"/>
   <updated>2020-03-03T16:51:58.167Z</updated>
-  <id>https://www.wwyyqblog.work/</id>
+  <id>https://ycy-ww.github,io/ycy-ww.github.io/</id>
   
   <author>
     <name>ycy-ww</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>ECS-ECS实例创建</title>
-    <link href="https://www.wwyyqblog.work/archives/2287084e.html"/>
-    <id>https://www.wwyyqblog.work/archives/2287084e.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/2287084e.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/2287084e.html</id>
     <published>2020-03-03T16:51:58.167Z</published>
     <updated>2020-03-03T16:51:58.167Z</updated>
     
@@ -64,19 +64,19 @@
     </summary>
     
     
-      <category term="云服务器 ECS" scheme="https://www.wwyyqblog.work/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/"/>
+      <category term="云服务器 ECS" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/"/>
     
     
-      <category term="云服务器" scheme="https://www.wwyyqblog.work/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="云服务器" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-      <category term="ECS" scheme="https://www.wwyyqblog.work/tags/ECS/"/>
+      <category term="ECS" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/ECS/"/>
     
   </entry>
   
   <entry>
     <title>ECS-使用须知</title>
-    <link href="https://www.wwyyqblog.work/archives/a73d9697.html"/>
-    <id>https://www.wwyyqblog.work/archives/a73d9697.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/a73d9697.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/a73d9697.html</id>
     <published>2020-03-03T15:19:00.559Z</published>
     <updated>2020-03-03T15:19:00.559Z</updated>
     
@@ -95,19 +95,19 @@
     </summary>
     
     
-      <category term="云服务器 ECS" scheme="https://www.wwyyqblog.work/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/"/>
+      <category term="云服务器 ECS" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/"/>
     
     
-      <category term="云服务器" scheme="https://www.wwyyqblog.work/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="云服务器" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-      <category term="ECS" scheme="https://www.wwyyqblog.work/tags/ECS/"/>
+      <category term="ECS" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/ECS/"/>
     
   </entry>
   
   <entry>
     <title>ECS-概念</title>
-    <link href="https://www.wwyyqblog.work/archives/6903c0f.html"/>
-    <id>https://www.wwyyqblog.work/archives/6903c0f.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/6903c0f.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/6903c0f.html</id>
     <published>2020-03-03T14:25:35.046Z</published>
     <updated>2020-03-03T14:25:35.046Z</updated>
     
@@ -168,19 +168,19 @@
     </summary>
     
     
-      <category term="云服务器 ECS" scheme="https://www.wwyyqblog.work/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/"/>
+      <category term="云服务器 ECS" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/"/>
     
     
-      <category term="云服务器" scheme="https://www.wwyyqblog.work/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="云服务器" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-      <category term="ECS" scheme="https://www.wwyyqblog.work/tags/ECS/"/>
+      <category term="ECS" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/ECS/"/>
     
   </entry>
   
   <entry>
     <title>JS的历史-实现</title>
-    <link href="https://www.wwyyqblog.work/archives/58a945da.html"/>
-    <id>https://www.wwyyqblog.work/archives/58a945da.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/58a945da.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/58a945da.html</id>
     <published>2020-03-03T10:08:21.437Z</published>
     <updated>2020-03-03T10:08:21.437Z</updated>
     
@@ -295,19 +295,19 @@
     </summary>
     
     
-      <category term="前端" scheme="https://www.wwyyqblog.work/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="JS" scheme="https://www.wwyyqblog.work/tags/JS/"/>
+      <category term="JS" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/JS/"/>
     
-      <category term="历史" scheme="https://www.wwyyqblog.work/tags/%E5%8E%86%E5%8F%B2/"/>
+      <category term="历史" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/%E5%8E%86%E5%8F%B2/"/>
     
   </entry>
   
   <entry>
     <title>JS的历史</title>
-    <link href="https://www.wwyyqblog.work/archives/273d6e7c.html"/>
-    <id>https://www.wwyyqblog.work/archives/273d6e7c.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/273d6e7c.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/273d6e7c.html</id>
     <published>2020-03-03T10:08:19.492Z</published>
     <updated>2020-03-03T10:08:19.492Z</updated>
     
@@ -331,19 +331,19 @@
     </summary>
     
     
-      <category term="前端" scheme="https://www.wwyyqblog.work/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="JS" scheme="https://www.wwyyqblog.work/tags/JS/"/>
+      <category term="JS" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/JS/"/>
     
-      <category term="历史" scheme="https://www.wwyyqblog.work/tags/%E5%8E%86%E5%8F%B2/"/>
+      <category term="历史" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/%E5%8E%86%E5%8F%B2/"/>
     
   </entry>
   
   <entry>
     <title>渠道经理</title>
-    <link href="https://www.wwyyqblog.work/archives/4712f55d.html"/>
-    <id>https://www.wwyyqblog.work/archives/4712f55d.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/4712f55d.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/4712f55d.html</id>
     <published>2020-03-03T10:04:20.325Z</published>
     <updated>2020-03-03T10:04:20.325Z</updated>
     
@@ -362,19 +362,19 @@
     </summary>
     
     
-      <category term="销售渠道" scheme="https://www.wwyyqblog.work/categories/%E9%94%80%E5%94%AE%E6%B8%A0%E9%81%93/"/>
+      <category term="销售渠道" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E9%94%80%E5%94%AE%E6%B8%A0%E9%81%93/"/>
     
     
-      <category term="渠道" scheme="https://www.wwyyqblog.work/tags/%E6%B8%A0%E9%81%93/"/>
+      <category term="渠道" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/%E6%B8%A0%E9%81%93/"/>
     
-      <category term="销售" scheme="https://www.wwyyqblog.work/tags/%E9%94%80%E5%94%AE/"/>
+      <category term="销售" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/%E9%94%80%E5%94%AE/"/>
     
   </entry>
   
   <entry>
     <title>市场营销</title>
-    <link href="https://www.wwyyqblog.work/archives/2fd2f140.html"/>
-    <id>https://www.wwyyqblog.work/archives/2fd2f140.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/2fd2f140.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/2fd2f140.html</id>
     <published>2020-03-03T09:39:54.794Z</published>
     <updated>2020-03-03T09:39:54.794Z</updated>
     
@@ -465,19 +465,19 @@
     </summary>
     
     
-      <category term="市场营销" scheme="https://www.wwyyqblog.work/categories/%E5%B8%82%E5%9C%BA%E8%90%A5%E9%94%80/"/>
+      <category term="市场营销" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E5%B8%82%E5%9C%BA%E8%90%A5%E9%94%80/"/>
     
     
-      <category term="营销" scheme="https://www.wwyyqblog.work/tags/%E8%90%A5%E9%94%80/"/>
+      <category term="营销" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/%E8%90%A5%E9%94%80/"/>
     
-      <category term="客户" scheme="https://www.wwyyqblog.work/tags/%E5%AE%A2%E6%88%B7/"/>
+      <category term="客户" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/%E5%AE%A2%E6%88%B7/"/>
     
   </entry>
   
   <entry>
     <title>Eclipse导入jar包</title>
-    <link href="https://www.wwyyqblog.work/archives/14d86ed1.html"/>
-    <id>https://www.wwyyqblog.work/archives/14d86ed1.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/14d86ed1.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/14d86ed1.html</id>
     <published>2020-03-02T06:21:31.567Z</published>
     <updated>2020-03-02T06:21:31.567Z</updated>
     
@@ -494,19 +494,19 @@
     </summary>
     
     
-      <category term="Java" scheme="https://www.wwyyqblog.work/categories/Java/"/>
+      <category term="Java" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/Java/"/>
     
     
-      <category term="Eclipse" scheme="https://www.wwyyqblog.work/tags/Eclipse/"/>
+      <category term="Eclipse" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/Eclipse/"/>
     
-      <category term="jar 包" scheme="https://www.wwyyqblog.work/tags/jar-%E5%8C%85/"/>
+      <category term="jar 包" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/jar-%E5%8C%85/"/>
     
   </entry>
   
   <entry>
     <title>公众号开发-1</title>
-    <link href="https://www.wwyyqblog.work/archives/e5c0af90.html"/>
-    <id>https://www.wwyyqblog.work/archives/e5c0af90.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/e5c0af90.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/e5c0af90.html</id>
     <published>2020-03-01T15:43:52.536Z</published>
     <updated>2020-03-01T15:43:52.536Z</updated>
     
@@ -525,21 +525,21 @@
     </summary>
     
     
-      <category term="微信公众号开发" scheme="https://www.wwyyqblog.work/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/"/>
+      <category term="微信公众号开发" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/"/>
     
     
-      <category term="Eclipse" scheme="https://www.wwyyqblog.work/tags/Eclipse/"/>
+      <category term="Eclipse" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/Eclipse/"/>
     
-      <category term="Java" scheme="https://www.wwyyqblog.work/tags/Java/"/>
+      <category term="Java" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/Java/"/>
     
-      <category term="XML" scheme="https://www.wwyyqblog.work/tags/XML/"/>
+      <category term="XML" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/XML/"/>
     
   </entry>
   
   <entry>
     <title>eclipse如何配置tomcat</title>
-    <link href="https://www.wwyyqblog.work/archives/78399ede.html"/>
-    <id>https://www.wwyyqblog.work/archives/78399ede.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/78399ede.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/78399ede.html</id>
     <published>2020-03-01T07:01:16.205Z</published>
     <updated>2020-03-01T07:01:16.205Z</updated>
     
@@ -567,19 +567,19 @@
     </summary>
     
     
-      <category term="前端" scheme="https://www.wwyyqblog.work/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="eclipse" scheme="https://www.wwyyqblog.work/tags/eclipse/"/>
+      <category term="eclipse" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/eclipse/"/>
     
-      <category term="tomcat" scheme="https://www.wwyyqblog.work/tags/tomcat/"/>
+      <category term="tomcat" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/tomcat/"/>
     
   </entry>
   
   <entry>
     <title>JS 使用&amp;&amp;输出</title>
-    <link href="https://www.wwyyqblog.work/archives/3f9a76aa.html"/>
-    <id>https://www.wwyyqblog.work/archives/3f9a76aa.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/3f9a76aa.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/3f9a76aa.html</id>
     <published>2020-02-29T16:15:24.264Z</published>
     <updated>2020-02-29T16:15:24.264Z</updated>
     
@@ -624,17 +624,17 @@
     </summary>
     
     
-      <category term="前端" scheme="https://www.wwyyqblog.work/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="JS" scheme="https://www.wwyyqblog.work/tags/JS/"/>
+      <category term="JS" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/JS/"/>
     
   </entry>
   
   <entry>
     <title>TCP/IP 寻址&amp;邮件</title>
-    <link href="https://www.wwyyqblog.work/archives/ba97f213.html"/>
-    <id>https://www.wwyyqblog.work/archives/ba97f213.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/ba97f213.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/ba97f213.html</id>
     <published>2020-02-29T15:06:34.069Z</published>
     <updated>2020-02-29T15:06:34.069Z</updated>
     
@@ -666,17 +666,17 @@
     </summary>
     
     
-      <category term="计算机网络" scheme="https://www.wwyyqblog.work/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
     
-      <category term="TCP/IP" scheme="https://www.wwyyqblog.work/tags/TCP-IP/"/>
+      <category term="TCP/IP" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/TCP-IP/"/>
     
   </entry>
   
   <entry>
     <title>TCP/IP 简介</title>
-    <link href="https://www.wwyyqblog.work/archives/55476d4b.html"/>
-    <id>https://www.wwyyqblog.work/archives/55476d4b.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/55476d4b.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/55476d4b.html</id>
     <published>2020-02-29T14:32:40.161Z</published>
     <updated>2020-02-29T14:32:40.161Z</updated>
     
@@ -692,17 +692,17 @@
     </summary>
     
     
-      <category term="计算机网络" scheme="https://www.wwyyqblog.work/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
     
-      <category term="TCP/IP" scheme="https://www.wwyyqblog.work/tags/TCP-IP/"/>
+      <category term="TCP/IP" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/TCP-IP/"/>
     
   </entry>
   
   <entry>
     <title>next config-2</title>
-    <link href="https://www.wwyyqblog.work/archives/967f8653.html"/>
-    <id>https://www.wwyyqblog.work/archives/967f8653.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/967f8653.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/967f8653.html</id>
     <published>2020-02-29T11:38:42.974Z</published>
     <updated>2020-02-29T11:38:42.974Z</updated>
     
@@ -718,21 +718,21 @@
     </summary>
     
     
-      <category term="前端" scheme="https://www.wwyyqblog.work/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="next" scheme="https://www.wwyyqblog.work/tags/next/"/>
+      <category term="next" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/next/"/>
     
   </entry>
   
   <entry>
     <title>eclipse-插件安装 &amp;&amp; 镜像站</title>
-    <link href="https://www.wwyyqblog.work/archives/d66d780d.html"/>
-    <id>https://www.wwyyqblog.work/archives/d66d780d.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/d66d780d.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/d66d780d.html</id>
     <published>2020-02-29T11:32:51.537Z</published>
     <updated>2020-02-29T11:32:51.537Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="eclipse-插件安装-——-web项目"><a href="#eclipse-插件安装-——-web项目" class="headerlink" title="eclipse 插件安装 —— web项目"></a>eclipse 插件安装 —— web项目</h1><p>要导入Dynamic Web Project项目，就要为当前的eclipse安装Java EE开发插件。</p><p><strong>步骤如下：</strong></p><ol><li><p>找到菜单栏中的HELP按钮，点击下图的Install New Software选项。</p></li><li><p>点击All available Sites按钮，这时候会稍微等待一段时间，之后会出现下面的一系列选项，勾选对应的选项，点击NEXT按钮</p></li><li><p>依次点击“Next ”知道你看到 “ Review licences”的窗口。在这个窗口选择 “I accept the terms of the licence agreement” 并且点击“Finish”。</p></li><li><p>安装完插件之后, Eclipse会要求你重启eclipse，选择“yes”</p></li><li><p>重启eclipse之后, 打开新建项目的面板，就可以看到 Web文件夹 和 “Dynamic<br>Web Project” 选项了</p></li></ol><hr><p><strong>创建web项目：</strong></p><ol><li>输入项目名称，选择运行时环境（中间件环境），选择web相应的版本</li></ol><p><img src="https://img-blog.csdn.net/20180928212317161?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4ODAzOTc4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="参阅"></p><ol start="2"><li>点击Finish。此时如果发现java web工程缺少web.xml文件（有web.xml文件请忽略这一步），那么右键项目名称-&gt;Java EE Tools-&gt;Generate Deployment descriptor stub</li><li>最后项目成功创建</li></ol><a id="more"></a><h1 id="eclipse下载插件速度很慢解决方案"><a href="#eclipse下载插件速度很慢解决方案" class="headerlink" title="eclipse下载插件速度很慢解决方案"></a>eclipse下载插件速度很慢解决方案</h1><p>将默认网站修改为国内镜像站，如下：</p><p>推荐使用：<a href="http://mirrors.ustc.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.ustc.edu.cn/</a></p><h2 id="一、站点版"><a href="#一、站点版" class="headerlink" title="一、站点版"></a>一、站点版</h2><p>（一）、企业站<br>1.搜狐：<a href="http://mirrors.sohu.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.sohu.com/</a><br>2.网易：<a href="http://mirrors.163.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.163.com/</a><br>3.阿里云：<a href="http://mirrors.aliyun.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.aliyun.com/</a><br>4.腾讯：<a href="http://android-mirror.bugly.qq.com:8080/（仅针对APP开发的软件，限流，不推荐）" target="_blank" rel="external nofollow noopener noreferrer">http://android-mirror.bugly.qq.com:8080/（仅针对APP开发的软件，限流，不推荐）</a></p><p>（二）、教育站<br>1.上海交通大学：<a href="http://ftp.sjtu.edu.cn/html/resources.xml（部分移动运营商出口状况不佳，无法访问）" target="_blank" rel="external nofollow noopener noreferrer">http://ftp.sjtu.edu.cn/html/resources.xml（部分移动运营商出口状况不佳，无法访问）</a><br>2.华中科技大学：<a href="http://mirror.hust.edu.cn/（当前已用容量估计：4.83T）" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.hust.edu.cn/（当前已用容量估计：4.83T）</a><br>3.清华大学：<a href="http://mirrors.tuna.tsinghua.edu.cn/（当前已用容量估计：9.8T）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.tuna.tsinghua.edu.cn/（当前已用容量估计：9.8T）</a><br>4.北京理工大学：<a href="http://mirror.bit.edu.cn/web/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.bit.edu.cn/web/</a><br>5.兰州大学：<a href="http://mirror.lzu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.lzu.edu.cn/</a><br>6.中国科技大学：<a href="http://mirrors.ustc.edu.cn/（当前已用容量估计：21.32T）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.ustc.edu.cn/（当前已用容量估计：21.32T）</a><br>7.大连东软信息学院：<a href="http://mirrors.neusoft.edu.cn/（当前已用容量估计：2.5T）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.neusoft.edu.cn/（当前已用容量估计：2.5T）</a><br>8.东北大学：<a href="http://mirror.neu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.neu.edu.cn/</a><br>9.大连理工大学：<a href="http://mirror.dlut.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.dlut.edu.cn/</a><br>10.哈尔滨工业大学：<a href="http://run.hit.edu.cn/html/（部分联通运营商出口状况不佳，无法访问）" target="_blank" rel="external nofollow noopener noreferrer">http://run.hit.edu.cn/html/（部分联通运营商出口状况不佳，无法访问）</a><br>11.北京交通大学：<a href="http://mirror.bjtu.edu.cn/cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.bjtu.edu.cn/cn/</a><br>12.天津大学：<a href="http://mirror.tju.edu.cn（无法访问，ping超时）" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.tju.edu.cn（无法访问，ping超时）</a><br>13.中国地质大学：<a href="http://mirrors.cug.edu.cn/（当前已用容量估计：2.3T）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.cug.edu.cn/（当前已用容量估计：2.3T）</a><br>14.浙江大学：<a href="http://mirrors.zju.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.zju.edu.cn/</a><br>15.厦门大学：<a href="http://mirrors.xmu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.xmu.edu.cn/</a><br>16.中山大学：<a href="http://mirror.sysu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.sysu.edu.cn/</a><br>17.重庆大学：<a href="http://mirrors.cqu.edu.cn/（当前已用容量估计：3.93T）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.cqu.edu.cn/（当前已用容量估计：3.93T）</a><br>18.北京化工大学：<a href="http://ubuntu.buct.edu.cn/（Android" target="_blank" rel="external nofollow noopener noreferrer">http://ubuntu.buct.edu.cn/（Android</a> SDK镜像仅供校内使用，当前已用容量估计：1.72T）<br>19.南阳理工学院：<a href="http://mirror.nyist.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.nyist.edu.cn/</a><br>20.中国科学院：<a href="http://www.opencas.org/mirrors/" target="_blank" rel="external nofollow noopener noreferrer">http://www.opencas.org/mirrors/</a><br>21.电子科技大学：<a href="http://ubuntu.uestc.edu.cn/（无法访问，ping超时）" target="_blank" rel="external nofollow noopener noreferrer">http://ubuntu.uestc.edu.cn/（无法访问，ping超时）</a><br>22.电子科技大学星辰工作室：<a href="http://mirrors.stuhome.net/（当前已用容量估计：1.08T）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.stuhome.net/（当前已用容量估计：1.08T）</a><br>23.西北农林科技大学：<a href="http://mirrors.nwsuaf.edu.cn/（只做CentOS镜像，当前已用容量估计：140GB）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.nwsuaf.edu.cn/（只做CentOS镜像，当前已用容量估计：140GB）</a></p><p>（三）、其他<br>1.首都在线科技股份有限公司（英文名Capital Online Data Service）：<a href="http://mirrors.yun-idc.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.yun-idc.com/</a><br>2.中国电信天翼云：<a href="http://mirrors.ctyun.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.ctyun.cn/</a><br>3.noc.im：<a href="http://mirrors.noc.im/（当前已用容量估计：3.74T）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.noc.im/（当前已用容量估计：3.74T）</a><br>4.常州贝特康姆软件技术有限公司：<a href="http://centos.bitcomm.cn/（只做CentOS镜像，当前已用容量估计：140GB）" target="_blank" rel="external nofollow noopener noreferrer">http://centos.bitcomm.cn/（只做CentOS镜像，当前已用容量估计：140GB）</a><br>5.公云PubYun（母公司为贝特康姆）：<a href="http://mirrors.pubyun.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.pubyun.com/</a><br>6.Linux运维派：<a href="http://mirrors.skyshe.cn/（使用阿里云服务器，界面使用浙江大学的模板，首页维护，内容可访问）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.skyshe.cn/（使用阿里云服务器，界面使用浙江大学的模板，首页维护，内容可访问）</a><br>7.中国互联网络信息中心：<a href="http://mirrors.cnnic.cn/（只做Apache镜像，当前已用容量估计：120GB）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.cnnic.cn/（只做Apache镜像，当前已用容量估计：120GB）</a><br>8.Fayea工作室：<a href="http://apache.fayea.com/（只做Apache镜像，当前已用容量估计：120GB）" target="_blank" rel="external nofollow noopener noreferrer">http://apache.fayea.com/（只做Apache镜像，当前已用容量估计：120GB）</a></p><hr><h2 id="二、软件版"><a href="#二、软件版" class="headerlink" title="二、软件版"></a>二、软件版</h2><p>（一）、操作系统类<br>1.Ubuntu<br>阿里云：<a href="http://mirrors.aliyun.com/ubuntu-releases/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.aliyun.com/ubuntu-releases/</a><br>网易：<a href="http://mirrors.163.com/ubuntu-releases/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.163.com/ubuntu-releases/</a><br>首都在线科技股份有限公司：<a href="http://mirrors.yun-idc.com/ubuntu-releases/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.yun-idc.com/ubuntu-releases/</a></p><p>2.centos<br>网易：<a href="http://mirrors.163.com/centos/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.163.com/centos/</a><br>搜狐：<a href="http://mirrors.sohu.com/centos/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.sohu.com/centos/</a><br>阿里云：<a href="http://mirrors.aliyun.com/centos/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.aliyun.com/centos/</a></p><p>（二）、服务器类<br>1.tomcat、Apache<br>中国互联网络信息中心：<a href="http://mirrors.cnnic.cn/apache/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.cnnic.cn/apache/</a><br>华中科技大学：<a href="http://mirrors.hust.edu.cn/apache/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.hust.edu.cn/apache/</a><br>北京理工大学：<a href="http://mirror.bit.edu.cn/apache/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.bit.edu.cn/apache/</a></p><p>2.MySQL<br>北京理工大学：<a href="http://mirror.bit.edu.cn/mysql/Downloads/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.bit.edu.cn/mysql/Downloads/</a><br>中国电信天翼云：<a href="http://mirrors.ctyun.cn/Mysql/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.ctyun.cn/Mysql/</a></p><p>3.PostgreSQL<br>浙江大学：<a href="http://mirrors.zju.edu.cn/postgresql/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.zju.edu.cn/postgresql/</a></p><p>4.MariaDB<br>中国电信天翼云：<a href="http://mirrors.ctyun.cn/MariaDB/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.ctyun.cn/MariaDB/</a></p><p>5.VideoLAN<br>中国科技大学：<a href="http://mirrors.ustc.edu.cn/videolan-ftp/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.ustc.edu.cn/videolan-ftp/</a></p><p>（三）、开发工具类<br>1.eclipse<br>中国科技大学：<a href="http://mirrors.ustc.edu.cn/eclipse/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.ustc.edu.cn/eclipse/</a><br>中国科学院：<a href="http://mirrors.opencas.cn/eclipse/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.opencas.cn/eclipse/</a><br>东北大学：<a href="http://ftp.neu.edu.cn/mirrors/eclipse/，http://mirror.neu.edu.cn/eclipse/" target="_blank" rel="external nofollow noopener noreferrer">http://ftp.neu.edu.cn/mirrors/eclipse/，http://mirror.neu.edu.cn/eclipse/</a></p><p>2.安卓SDK<br>中国科学院：<a href="http://mirrors.opencas.ac.cn/android/repository/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.opencas.ac.cn/android/repository/</a><br>南洋理工学院：<a href="http://mirror.nyist.edu.cn/android/repository/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.nyist.edu.cn/android/repository/</a><br>中国科学院：<a href="http://mirrors.opencas.cn/android/repository/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.opencas.cn/android/repository/</a></p><hr><h2 id="三、官方镜像列表状态地址"><a href="#三、官方镜像列表状态地址" class="headerlink" title="三、官方镜像列表状态地址"></a>三、官方镜像列表状态地址</h2><p>CentOS：<a href="http://mirror-status.centos.org/#cn" target="_blank" rel="external nofollow noopener noreferrer">http://mirror-status.centos.org/#cn</a><br>Archlinux：<a href="https://www.archlinux.org/mirrors/status/" target="_blank" rel="external nofollow noopener noreferrer">https://www.archlinux.org/mirrors/status/</a><br>Ubuntu：<a href="https://launchpad.net/ubuntu/+cdmirrors" target="_blank" rel="external nofollow noopener noreferrer">https://launchpad.net/ubuntu/+cdmirrors</a><br>Debian：<a href="http://mirror.debian.org/status.html" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.debian.org/status.html</a><br>Fedora Linux/Fedora EPEL：<a href="https://admin.fedoraproject.org/mirrormanager/mirrors" target="_blank" rel="external nofollow noopener noreferrer">https://admin.fedoraproject.org/mirrormanager/mirrors</a><br>Apache：<a href="http://www.apache.org/mirrors/#cn" target="_blank" rel="external nofollow noopener noreferrer">http://www.apache.org/mirrors/#cn</a></p><p>Cygwin：<a href="https://www.cygwin.com/mirrors.html" target="_blank" rel="external nofollow noopener noreferrer">https://www.cygwin.com/mirrors.html</a></p><hr><p>具体配置中，我建议您使用<strong>大企业</strong>的镜像。大学的镜像有的只是内部使用，而且未必速度快的像您所期待的那样。 </p><blockquote><p>同时，我建议您使用某些加速插件，比如RHEL系列的yum-plugin-fastestmirror，apt-fast，axel，netselect-apt，apt-spy等等。<br>如果您是教育网用户，如果本校没有源，请选择清华大学源来进行配置。毕竟教育网骨干在此。</p></blockquote><hr><h3 id="1-公司类"><a href="#1-公司类" class="headerlink" title="1.公司类"></a>1.公司类</h3><p>搜狐开源镜像站：<a href="http://mirrors.sohu.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.sohu.com/</a><br>网易开源镜像站：<a href="http://mirrors.163.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.163.com/</a><br>开源中国：<a href="http://mirrors.oschina.net/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.oschina.net/</a><br>首都在线科技股份有限公司：<a href="http://mirrors.yun-idc.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.yun-idc.com/</a><br>阿里云开源镜像：<a href="http://mirrors.aliyun.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.aliyun.com/</a><br>LUPA：<a href="http://mirror.lupaworld.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.lupaworld.com/</a><br>常州贝特康姆软件技术有限公司(原cn99）：<a href="http://centos.bitcomm.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://centos.bitcomm.cn/</a></p><h3 id="2-大学类"><a href="#2-大学类" class="headerlink" title="2.大学类"></a>2.大学类</h3><p>中山大学镜像：<a href="http://mirror.sysu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.sysu.edu.cn/</a><br>山东理工大学：<a href="http://mirrors.sdutlinux.org/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.sdutlinux.org/</a><br>哈尔滨工业大学：<a href="http://run.hit.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://run.hit.edu.cn/</a><br>中国地质大学：<a href="http://cugbteam.org/" target="_blank" rel="external nofollow noopener noreferrer">http://cugbteam.org/</a><br>大连理工大学：<a href="http://mirror.dlut.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.dlut.edu.cn/</a></p><p>天津大学：<a href="http://mirror.tju.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.tju.edu.cn/</a><br>西南大学：<a href="http://linux.swu.edu.cn/swudownload/Distributions/" target="_blank" rel="external nofollow noopener noreferrer">http://linux.swu.edu.cn/swudownload/Distributions/</a><br>青岛大学：<a href="http://mirror.qdu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.qdu.edu.cn/</a></p><p>浙江大学：<a href="http://mirrors.zju.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.zju.edu.cn/</a><br>兰州大学：<a href="http://mirror.lzu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.lzu.edu.cn/</a></p><p>厦门大学：<a href="http://mirrors.xmu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.xmu.edu.cn/</a><br>中国科学技术大学：<br><a href="http://mirrors.ustc.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.ustc.edu.cn/</a> (IPv4+IPv6)<br><a href="http://mirrors4.ustc.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors4.ustc.edu.cn/</a><br><a href="http://mirrors6.ustc.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors6.ustc.edu.cn/</a><br>西南大学：<a href="http://linux.swu.edu.cn/swudownload/Distributions/" target="_blank" rel="external nofollow noopener noreferrer">http://linux.swu.edu.cn/swudownload/Distributions/</a><br>东北大学：<br><a href="http://mirror.neu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.neu.edu.cn/</a> (IPv4 only)<br><a href="http://mirror.neu6.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.neu6.edu.cn/</a> (IPv6 only)<br>电子科技大学：<a href="http://ubuntu.uestc.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://ubuntu.uestc.edu.cn/</a><br>青岛大学：<a href="http://mirror.qdu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.qdu.edu.cn/</a><br>重庆大学：<a href="http://mirrors.cqu.edu.cn" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.cqu.edu.cn</a></p><p>北京理工大学：<br><a href="http://mirror.bit.edu.cn" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.bit.edu.cn</a> (IPv4 only)<br><a href="http://mirror.bit6.edu.cn" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.bit6.edu.cn</a> (IPv6 only)<br>北京交通大学：<br><a href="http://mirror.bjtu.edu.cn" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.bjtu.edu.cn</a> (IPv4 only)<br><a href="http://mirror6.bjtu.edu.cn" target="_blank" rel="external nofollow noopener noreferrer">http://mirror6.bjtu.edu.cn</a> (IPv6 only)<br><a href="http://debian.bjtu.edu.cn" target="_blank" rel="external nofollow noopener noreferrer">http://debian.bjtu.edu.cn</a> (IPv4+IPv6)<br>上海交通大学：<br><a href="http://ftp.sjtu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://ftp.sjtu.edu.cn/</a> (IPv4 only)<br><a href="http://ftp6.sjtu.edu.cn" target="_blank" rel="external nofollow noopener noreferrer">http://ftp6.sjtu.edu.cn</a> (IPv6 only)<br>清华大学：<br><a href="http://mirrors.tuna.tsinghua.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.tuna.tsinghua.edu.cn/</a> (IPv4+IPv6)<br><a href="http://mirrors.6.tuna.tsinghua.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.6.tuna.tsinghua.edu.cn/</a> (IPv6 only)<br><a href="http://mirrors.4.tuna.tsinghua.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.4.tuna.tsinghua.edu.cn/</a> (IPv4 only)<br>中国科学技术大学：<br><a href="http://mirrors.ustc.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.ustc.edu.cn/</a> (IPv4+IPv6)<br><a href="http://mirrors4.ustc.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors4.ustc.edu.cn/</a><br><a href="http://mirrors6.ustc.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors6.ustc.edu.cn/</a><br>东北大学：<br><a href="http://mirror.neu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.neu.edu.cn/</a> (IPv4 only)<br><a href="http://mirror.neu6.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.neu6.edu.cn/</a> (IPv6 only)<br>华中科技大学：<br><a href="http://mirrors.hust.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.hust.edu.cn/</a><br><a href="http://mirrors.hustunique.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.hustunique.com/</a><br>电子科技大学：<a href="http://ubuntu.uestc.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://ubuntu.uestc.edu.cn/</a></p><h3 id="PyPi-镜像"><a href="#PyPi-镜像" class="headerlink" title="PyPi 镜像"></a>PyPi 镜像</h3><p>豆瓣：<a href="http://pypi.douban.com/" target="_blank" rel="external nofollow noopener noreferrer">http://pypi.douban.com/</a><br>山东理工大学：<a href="http://pypi.sdutlinux.org/" target="_blank" rel="external nofollow noopener noreferrer">http://pypi.sdutlinux.org/</a><br>中山大学：<a href="http://mirror.sysu.edu.cn/pypi/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.sysu.edu.cn/pypi/</a><br>V2EX：<a href="http://pypi.v2ex.com/simple/" target="_blank" rel="external nofollow noopener noreferrer">http://pypi.v2ex.com/simple/</a></p><h3 id="RubyGems-镜像"><a href="#RubyGems-镜像" class="headerlink" title="RubyGems 镜像"></a>RubyGems 镜像</h3><p>中山大学：<a href="http://mirror.sysu.edu.cn/rubygems/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.sysu.edu.cn/rubygems/</a><br>山东理工大学：<a href="http://ruby.sdutlinux.org/" target="_blank" rel="external nofollow noopener noreferrer">http://ruby.sdutlinux.org/</a><br>淘宝网：<a href="http://ruby.taobao.org/" target="_blank" rel="external nofollow noopener noreferrer">http://ruby.taobao.org/</a></p><h3 id="npm-镜像"><a href="#npm-镜像" class="headerlink" title="npm 镜像"></a>npm 镜像</h3><p>cnpm：<a href="http://npm.taobao.org/" target="_blank" rel="external nofollow noopener noreferrer">http://npm.taobao.org/</a></p><p>cnpmjs：<a href="http://cnpmjs.org/" target="_blank" rel="external nofollow noopener noreferrer">http://cnpmjs.org/</a></p><hr><p><strong><em>转载标明出处:</em></strong> <em><a href="http://www.wwyyqblog.work">www.wwyyqblog.work</a></em>                            </p><p><kbd>ycy-ww 出品</kbd></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="eclipse-插件安装-——-web项目"><a href="#eclipse-插件安装-——-web项目" class="headerlink" title="eclipse 插件安装 —— web项目"></a>eclipse 插件安装 —— web项目</h1><p>要导入Dynamic Web Project项目，就要为当前的eclipse安装Java EE开发插件。</p><p><strong>步骤如下：</strong></p><ol><li><p>找到菜单栏中的HELP按钮，点击下图的Install New Software选项。</p></li><li><p>点击All available Sites按钮，这时候会稍微等待一段时间，之后会出现下面的一系列选项，勾选对应的选项，点击NEXT按钮</p></li><li><p>依次点击“Next ”知道你看到 “ Review licences”的窗口。在这个窗口选择 “I accept the terms of the licence agreement” 并且点击“Finish”。</p></li><li><p>安装完插件之后, Eclipse会要求你重启eclipse，选择“yes”</p></li><li><p>重启eclipse之后, 打开新建项目的面板，就可以看到 Web文件夹 和 “Dynamic<br>Web Project” 选项了</p></li></ol><hr><p><strong>创建web项目：</strong></p><ol><li>输入项目名称，选择运行时环境（中间件环境），选择web相应的版本</li></ol><p><img src="https://img-blog.csdn.net/20180928212317161?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4ODAzOTc4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="参阅"></p><ol start="2"><li>点击Finish。此时如果发现java web工程缺少web.xml文件（有web.xml文件请忽略这一步），那么右键项目名称-&gt;Java EE Tools-&gt;Generate Deployment descriptor stub</li><li>最后项目成功创建</li></ol><a id="more"></a><h1 id="eclipse下载插件速度很慢解决方案"><a href="#eclipse下载插件速度很慢解决方案" class="headerlink" title="eclipse下载插件速度很慢解决方案"></a>eclipse下载插件速度很慢解决方案</h1><p>将默认网站修改为国内镜像站，如下：</p><p>推荐使用：<a href="http://mirrors.ustc.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.ustc.edu.cn/</a></p><h2 id="一、站点版"><a href="#一、站点版" class="headerlink" title="一、站点版"></a>一、站点版</h2><p>（一）、企业站<br>1.搜狐：<a href="http://mirrors.sohu.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.sohu.com/</a><br>2.网易：<a href="http://mirrors.163.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.163.com/</a><br>3.阿里云：<a href="http://mirrors.aliyun.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.aliyun.com/</a><br>4.腾讯：<a href="http://android-mirror.bugly.qq.com:8080/（仅针对APP开发的软件，限流，不推荐）" target="_blank" rel="external nofollow noopener noreferrer">http://android-mirror.bugly.qq.com:8080/（仅针对APP开发的软件，限流，不推荐）</a></p><p>（二）、教育站<br>1.上海交通大学：<a href="http://ftp.sjtu.edu.cn/html/resources.xml（部分移动运营商出口状况不佳，无法访问）" target="_blank" rel="external nofollow noopener noreferrer">http://ftp.sjtu.edu.cn/html/resources.xml（部分移动运营商出口状况不佳，无法访问）</a><br>2.华中科技大学：<a href="http://mirror.hust.edu.cn/（当前已用容量估计：4.83T）" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.hust.edu.cn/（当前已用容量估计：4.83T）</a><br>3.清华大学：<a href="http://mirrors.tuna.tsinghua.edu.cn/（当前已用容量估计：9.8T）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.tuna.tsinghua.edu.cn/（当前已用容量估计：9.8T）</a><br>4.北京理工大学：<a href="http://mirror.bit.edu.cn/web/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.bit.edu.cn/web/</a><br>5.兰州大学：<a href="http://mirror.lzu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.lzu.edu.cn/</a><br>6.中国科技大学：<a href="http://mirrors.ustc.edu.cn/（当前已用容量估计：21.32T）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.ustc.edu.cn/（当前已用容量估计：21.32T）</a><br>7.大连东软信息学院：<a href="http://mirrors.neusoft.edu.cn/（当前已用容量估计：2.5T）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.neusoft.edu.cn/（当前已用容量估计：2.5T）</a><br>8.东北大学：<a href="http://mirror.neu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.neu.edu.cn/</a><br>9.大连理工大学：<a href="http://mirror.dlut.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.dlut.edu.cn/</a><br>10.哈尔滨工业大学：<a href="http://run.hit.edu.cn/html/（部分联通运营商出口状况不佳，无法访问）" target="_blank" rel="external nofollow noopener noreferrer">http://run.hit.edu.cn/html/（部分联通运营商出口状况不佳，无法访问）</a><br>11.北京交通大学：<a href="http://mirror.bjtu.edu.cn/cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.bjtu.edu.cn/cn/</a><br>12.天津大学：<a href="http://mirror.tju.edu.cn（无法访问，ping超时）" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.tju.edu.cn（无法访问，ping超时）</a><br>13.中国地质大学：<a href="http://mirrors.cug.edu.cn/（当前已用容量估计：2.3T）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.cug.edu.cn/（当前已用容量估计：2.3T）</a><br>14.浙江大学：<a href="http://mirrors.zju.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.zju.edu.cn/</a><br>15.厦门大学：<a href="http://mirrors.xmu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.xmu.edu.cn/</a><br>16.中山大学：<a href="http://mirror.sysu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.sysu.edu.cn/</a><br>17.重庆大学：<a href="http://mirrors.cqu.edu.cn/（当前已用容量估计：3.93T）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.cqu.edu.cn/（当前已用容量估计：3.93T）</a><br>18.北京化工大学：<a href="http://ubuntu.buct.edu.cn/（Android" target="_blank" rel="external nofollow noopener noreferrer">http://ubuntu.buct.edu.cn/（Android</a> SDK镜像仅供校内使用，当前已用容量估计：1.72T）<br>19.南阳理工学院：<a href="http://mirror.nyist.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.nyist.edu.cn/</a><br>20.中国科学院：<a href="http://www.opencas.org/mirrors/" target="_blank" rel="external nofollow noopener noreferrer">http://www.opencas.org/mirrors/</a><br>21.电子科技大学：<a href="http://ubuntu.uestc.edu.cn/（无法访问，ping超时）" target="_blank" rel="external nofollow noopener noreferrer">http://ubuntu.uestc.edu.cn/（无法访问，ping超时）</a><br>22.电子科技大学星辰工作室：<a href="http://mirrors.stuhome.net/（当前已用容量估计：1.08T）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.stuhome.net/（当前已用容量估计：1.08T）</a><br>23.西北农林科技大学：<a href="http://mirrors.nwsuaf.edu.cn/（只做CentOS镜像，当前已用容量估计：140GB）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.nwsuaf.edu.cn/（只做CentOS镜像，当前已用容量估计：140GB）</a></p><p>（三）、其他<br>1.首都在线科技股份有限公司（英文名Capital Online Data Service）：<a href="http://mirrors.yun-idc.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.yun-idc.com/</a><br>2.中国电信天翼云：<a href="http://mirrors.ctyun.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.ctyun.cn/</a><br>3.noc.im：<a href="http://mirrors.noc.im/（当前已用容量估计：3.74T）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.noc.im/（当前已用容量估计：3.74T）</a><br>4.常州贝特康姆软件技术有限公司：<a href="http://centos.bitcomm.cn/（只做CentOS镜像，当前已用容量估计：140GB）" target="_blank" rel="external nofollow noopener noreferrer">http://centos.bitcomm.cn/（只做CentOS镜像，当前已用容量估计：140GB）</a><br>5.公云PubYun（母公司为贝特康姆）：<a href="http://mirrors.pubyun.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.pubyun.com/</a><br>6.Linux运维派：<a href="http://mirrors.skyshe.cn/（使用阿里云服务器，界面使用浙江大学的模板，首页维护，内容可访问）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.skyshe.cn/（使用阿里云服务器，界面使用浙江大学的模板，首页维护，内容可访问）</a><br>7.中国互联网络信息中心：<a href="http://mirrors.cnnic.cn/（只做Apache镜像，当前已用容量估计：120GB）" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.cnnic.cn/（只做Apache镜像，当前已用容量估计：120GB）</a><br>8.Fayea工作室：<a href="http://apache.fayea.com/（只做Apache镜像，当前已用容量估计：120GB）" target="_blank" rel="external nofollow noopener noreferrer">http://apache.fayea.com/（只做Apache镜像，当前已用容量估计：120GB）</a></p><hr><h2 id="二、软件版"><a href="#二、软件版" class="headerlink" title="二、软件版"></a>二、软件版</h2><p>（一）、操作系统类<br>1.Ubuntu<br>阿里云：<a href="http://mirrors.aliyun.com/ubuntu-releases/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.aliyun.com/ubuntu-releases/</a><br>网易：<a href="http://mirrors.163.com/ubuntu-releases/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.163.com/ubuntu-releases/</a><br>首都在线科技股份有限公司：<a href="http://mirrors.yun-idc.com/ubuntu-releases/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.yun-idc.com/ubuntu-releases/</a></p><p>2.centos<br>网易：<a href="http://mirrors.163.com/centos/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.163.com/centos/</a><br>搜狐：<a href="http://mirrors.sohu.com/centos/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.sohu.com/centos/</a><br>阿里云：<a href="http://mirrors.aliyun.com/centos/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.aliyun.com/centos/</a></p><p>（二）、服务器类<br>1.tomcat、Apache<br>中国互联网络信息中心：<a href="http://mirrors.cnnic.cn/apache/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.cnnic.cn/apache/</a><br>华中科技大学：<a href="http://mirrors.hust.edu.cn/apache/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.hust.edu.cn/apache/</a><br>北京理工大学：<a href="http://mirror.bit.edu.cn/apache/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.bit.edu.cn/apache/</a></p><p>2.MySQL<br>北京理工大学：<a href="http://mirror.bit.edu.cn/mysql/Downloads/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.bit.edu.cn/mysql/Downloads/</a><br>中国电信天翼云：<a href="http://mirrors.ctyun.cn/Mysql/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.ctyun.cn/Mysql/</a></p><p>3.PostgreSQL<br>浙江大学：<a href="http://mirrors.zju.edu.cn/postgresql/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.zju.edu.cn/postgresql/</a></p><p>4.MariaDB<br>中国电信天翼云：<a href="http://mirrors.ctyun.cn/MariaDB/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.ctyun.cn/MariaDB/</a></p><p>5.VideoLAN<br>中国科技大学：<a href="http://mirrors.ustc.edu.cn/videolan-ftp/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.ustc.edu.cn/videolan-ftp/</a></p><p>（三）、开发工具类<br>1.eclipse<br>中国科技大学：<a href="http://mirrors.ustc.edu.cn/eclipse/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.ustc.edu.cn/eclipse/</a><br>中国科学院：<a href="http://mirrors.opencas.cn/eclipse/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.opencas.cn/eclipse/</a><br>东北大学：<a href="http://ftp.neu.edu.cn/mirrors/eclipse/，http://mirror.neu.edu.cn/eclipse/" target="_blank" rel="external nofollow noopener noreferrer">http://ftp.neu.edu.cn/mirrors/eclipse/，http://mirror.neu.edu.cn/eclipse/</a></p><p>2.安卓SDK<br>中国科学院：<a href="http://mirrors.opencas.ac.cn/android/repository/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.opencas.ac.cn/android/repository/</a><br>南洋理工学院：<a href="http://mirror.nyist.edu.cn/android/repository/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.nyist.edu.cn/android/repository/</a><br>中国科学院：<a href="http://mirrors.opencas.cn/android/repository/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.opencas.cn/android/repository/</a></p><hr><h2 id="三、官方镜像列表状态地址"><a href="#三、官方镜像列表状态地址" class="headerlink" title="三、官方镜像列表状态地址"></a>三、官方镜像列表状态地址</h2><p>CentOS：<a href="http://mirror-status.centos.org/#cn" target="_blank" rel="external nofollow noopener noreferrer">http://mirror-status.centos.org/#cn</a><br>Archlinux：<a href="https://www.archlinux.org/mirrors/status/" target="_blank" rel="external nofollow noopener noreferrer">https://www.archlinux.org/mirrors/status/</a><br>Ubuntu：<a href="https://launchpad.net/ubuntu/+cdmirrors" target="_blank" rel="external nofollow noopener noreferrer">https://launchpad.net/ubuntu/+cdmirrors</a><br>Debian：<a href="http://mirror.debian.org/status.html" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.debian.org/status.html</a><br>Fedora Linux/Fedora EPEL：<a href="https://admin.fedoraproject.org/mirrormanager/mirrors" target="_blank" rel="external nofollow noopener noreferrer">https://admin.fedoraproject.org/mirrormanager/mirrors</a><br>Apache：<a href="http://www.apache.org/mirrors/#cn" target="_blank" rel="external nofollow noopener noreferrer">http://www.apache.org/mirrors/#cn</a></p><p>Cygwin：<a href="https://www.cygwin.com/mirrors.html" target="_blank" rel="external nofollow noopener noreferrer">https://www.cygwin.com/mirrors.html</a></p><hr><p>具体配置中，我建议您使用<strong>大企业</strong>的镜像。大学的镜像有的只是内部使用，而且未必速度快的像您所期待的那样。 </p><blockquote><p>同时，我建议您使用某些加速插件，比如RHEL系列的yum-plugin-fastestmirror，apt-fast，axel，netselect-apt，apt-spy等等。<br>如果您是教育网用户，如果本校没有源，请选择清华大学源来进行配置。毕竟教育网骨干在此。</p></blockquote><hr><h3 id="1-公司类"><a href="#1-公司类" class="headerlink" title="1.公司类"></a>1.公司类</h3><p>搜狐开源镜像站：<a href="http://mirrors.sohu.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.sohu.com/</a><br>网易开源镜像站：<a href="http://mirrors.163.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.163.com/</a><br>开源中国：<a href="http://mirrors.oschina.net/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.oschina.net/</a><br>首都在线科技股份有限公司：<a href="http://mirrors.yun-idc.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.yun-idc.com/</a><br>阿里云开源镜像：<a href="http://mirrors.aliyun.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.aliyun.com/</a><br>LUPA：<a href="http://mirror.lupaworld.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.lupaworld.com/</a><br>常州贝特康姆软件技术有限公司(原cn99）：<a href="http://centos.bitcomm.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://centos.bitcomm.cn/</a></p><h3 id="2-大学类"><a href="#2-大学类" class="headerlink" title="2.大学类"></a>2.大学类</h3><p>中山大学镜像：<a href="http://mirror.sysu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.sysu.edu.cn/</a><br>山东理工大学：<a href="http://mirrors.sdutlinux.org/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.sdutlinux.org/</a><br>哈尔滨工业大学：<a href="http://run.hit.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://run.hit.edu.cn/</a><br>中国地质大学：<a href="http://cugbteam.org/" target="_blank" rel="external nofollow noopener noreferrer">http://cugbteam.org/</a><br>大连理工大学：<a href="http://mirror.dlut.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.dlut.edu.cn/</a></p><p>天津大学：<a href="http://mirror.tju.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.tju.edu.cn/</a><br>西南大学：<a href="http://linux.swu.edu.cn/swudownload/Distributions/" target="_blank" rel="external nofollow noopener noreferrer">http://linux.swu.edu.cn/swudownload/Distributions/</a><br>青岛大学：<a href="http://mirror.qdu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.qdu.edu.cn/</a></p><p>浙江大学：<a href="http://mirrors.zju.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.zju.edu.cn/</a><br>兰州大学：<a href="http://mirror.lzu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.lzu.edu.cn/</a></p><p>厦门大学：<a href="http://mirrors.xmu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.xmu.edu.cn/</a><br>中国科学技术大学：<br><a href="http://mirrors.ustc.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.ustc.edu.cn/</a> (IPv4+IPv6)<br><a href="http://mirrors4.ustc.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors4.ustc.edu.cn/</a><br><a href="http://mirrors6.ustc.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors6.ustc.edu.cn/</a><br>西南大学：<a href="http://linux.swu.edu.cn/swudownload/Distributions/" target="_blank" rel="external nofollow noopener noreferrer">http://linux.swu.edu.cn/swudownload/Distributions/</a><br>东北大学：<br><a href="http://mirror.neu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.neu.edu.cn/</a> (IPv4 only)<br><a href="http://mirror.neu6.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.neu6.edu.cn/</a> (IPv6 only)<br>电子科技大学：<a href="http://ubuntu.uestc.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://ubuntu.uestc.edu.cn/</a><br>青岛大学：<a href="http://mirror.qdu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.qdu.edu.cn/</a><br>重庆大学：<a href="http://mirrors.cqu.edu.cn" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.cqu.edu.cn</a></p><p>北京理工大学：<br><a href="http://mirror.bit.edu.cn" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.bit.edu.cn</a> (IPv4 only)<br><a href="http://mirror.bit6.edu.cn" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.bit6.edu.cn</a> (IPv6 only)<br>北京交通大学：<br><a href="http://mirror.bjtu.edu.cn" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.bjtu.edu.cn</a> (IPv4 only)<br><a href="http://mirror6.bjtu.edu.cn" target="_blank" rel="external nofollow noopener noreferrer">http://mirror6.bjtu.edu.cn</a> (IPv6 only)<br><a href="http://debian.bjtu.edu.cn" target="_blank" rel="external nofollow noopener noreferrer">http://debian.bjtu.edu.cn</a> (IPv4+IPv6)<br>上海交通大学：<br><a href="http://ftp.sjtu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://ftp.sjtu.edu.cn/</a> (IPv4 only)<br><a href="http://ftp6.sjtu.edu.cn" target="_blank" rel="external nofollow noopener noreferrer">http://ftp6.sjtu.edu.cn</a> (IPv6 only)<br>清华大学：<br><a href="http://mirrors.tuna.tsinghua.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.tuna.tsinghua.edu.cn/</a> (IPv4+IPv6)<br><a href="http://mirrors.6.tuna.tsinghua.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.6.tuna.tsinghua.edu.cn/</a> (IPv6 only)<br><a href="http://mirrors.4.tuna.tsinghua.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.4.tuna.tsinghua.edu.cn/</a> (IPv4 only)<br>中国科学技术大学：<br><a href="http://mirrors.ustc.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.ustc.edu.cn/</a> (IPv4+IPv6)<br><a href="http://mirrors4.ustc.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors4.ustc.edu.cn/</a><br><a href="http://mirrors6.ustc.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors6.ustc.edu.cn/</a><br>东北大学：<br><a href="http://mirror.neu.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.neu.edu.cn/</a> (IPv4 only)<br><a href="http://mirror.neu6.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.neu6.edu.cn/</a> (IPv6 only)<br>华中科技大学：<br><a href="http://mirrors.hust.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.hust.edu.cn/</a><br><a href="http://mirrors.hustunique.com/" target="_blank" rel="external nofollow noopener noreferrer">http://mirrors.hustunique.com/</a><br>电子科技大学：<a href="http://ubuntu.uestc.edu.cn/" target="_blank" rel="external nofollow noopener noreferrer">http://ubuntu.uestc.edu.cn/</a></p><h3 id="PyPi-镜像"><a href="#PyPi-镜像" class="headerlink" title="PyPi 镜像"></a>PyPi 镜像</h3><p>豆瓣：<a href="http://pypi.douban.com/" target="_blank" rel="external nofollow noopener noreferrer">http://pypi.douban.com/</a><br>山东理工大学：<a href="http://pypi.sdutlinux.org/" target="_blank" rel="external nofollow noopener noreferrer">http://pypi.sdutlinux.org/</a><br>中山大学：<a href="http://mirror.sysu.edu.cn/pypi/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.sysu.edu.cn/pypi/</a><br>V2EX：<a href="http://pypi.v2ex.com/simple/" target="_blank" rel="external nofollow noopener noreferrer">http://pypi.v2ex.com/simple/</a></p><h3 id="RubyGems-镜像"><a href="#RubyGems-镜像" class="headerlink" title="RubyGems 镜像"></a>RubyGems 镜像</h3><p>中山大学：<a href="http://mirror.sysu.edu.cn/rubygems/" target="_blank" rel="external nofollow noopener noreferrer">http://mirror.sysu.edu.cn/rubygems/</a><br>山东理工大学：<a href="http://ruby.sdutlinux.org/" target="_blank" rel="external nofollow noopener noreferrer">http://ruby.sdutlinux.org/</a><br>淘宝网：<a href="http://ruby.taobao.org/" target="_blank" rel="external nofollow noopener noreferrer">http://ruby.taobao.org/</a></p><h3 id="npm-镜像"><a href="#npm-镜像" class="headerlink" title="npm 镜像"></a>npm 镜像</h3><p>cnpm：<a href="http://npm.taobao.org/" target="_blank" rel="external nofollow noopener noreferrer">http://npm.taobao.org/</a></p><p>cnpmjs：<a href="http://cnpmjs.org/" target="_blank" rel="external nofollow noopener noreferrer">http://cnpmjs.org/</a></p><hr><p><strong><em>转载标明出处:</em></strong> <em><a href="http://www.wwyyqblog.work" target="_blank" rel="noopener">www.wwyyqblog.work</a></em>                            </p><p><kbd>ycy-ww 出品</kbd></p>]]></content>
     
     <summary type="html">
     
@@ -764,21 +764,21 @@
     </summary>
     
     
-      <category term="前端" scheme="https://www.wwyyqblog.work/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="eclipse" scheme="https://www.wwyyqblog.work/tags/eclipse/"/>
+      <category term="eclipse" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/eclipse/"/>
     
-      <category term="安装" scheme="https://www.wwyyqblog.work/tags/%E5%AE%89%E8%A3%85/"/>
+      <category term="安装" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/%E5%AE%89%E8%A3%85/"/>
     
-      <category term="源镜像" scheme="https://www.wwyyqblog.work/tags/%E6%BA%90%E9%95%9C%E5%83%8F/"/>
+      <category term="源镜像" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/%E6%BA%90%E9%95%9C%E5%83%8F/"/>
     
   </entry>
   
   <entry>
     <title>next-config summary</title>
-    <link href="https://www.wwyyqblog.work/archives/c40f80fb.html"/>
-    <id>https://www.wwyyqblog.work/archives/c40f80fb.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/c40f80fb.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/c40f80fb.html</id>
     <published>2020-02-29T06:30:31.653Z</published>
     <updated>2020-02-29T06:30:31.653Z</updated>
     
@@ -814,17 +814,17 @@
     </summary>
     
     
-      <category term="前端" scheme="https://www.wwyyqblog.work/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="next" scheme="https://www.wwyyqblog.work/tags/next/"/>
+      <category term="next" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/next/"/>
     
   </entry>
   
   <entry>
     <title>next-config summary</title>
-    <link href="https://www.wwyyqblog.work/archives/c40f80fb.html"/>
-    <id>https://www.wwyyqblog.work/archives/c40f80fb.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/c40f80fb.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/c40f80fb.html</id>
     <published>2020-02-28T16:05:03.130Z</published>
     <updated>2020-02-28T16:05:03.130Z</updated>
     
@@ -875,17 +875,17 @@
     </summary>
     
     
-      <category term="前端" scheme="https://www.wwyyqblog.work/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="next" scheme="https://www.wwyyqblog.work/tags/next/"/>
+      <category term="next" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/next/"/>
     
   </entry>
   
   <entry>
     <title>next config</title>
-    <link href="https://www.wwyyqblog.work/archives/977f8a02.html"/>
-    <id>https://www.wwyyqblog.work/archives/977f8a02.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/977f8a02.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/977f8a02.html</id>
     <published>2020-02-28T13:12:10.021Z</published>
     <updated>2020-02-28T13:12:10.021Z</updated>
     
@@ -958,17 +958,17 @@
     </summary>
     
     
-      <category term="前端" scheme="https://www.wwyyqblog.work/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="next" scheme="https://www.wwyyqblog.work/tags/next/"/>
+      <category term="next" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/next/"/>
     
   </entry>
   
   <entry>
     <title>辅助函数2</title>
-    <link href="https://www.wwyyqblog.work/archives/69913370.html"/>
-    <id>https://www.wwyyqblog.work/archives/69913370.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/69913370.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/69913370.html</id>
     <published>2020-02-28T07:03:05.098Z</published>
     <updated>2020-02-28T07:03:05.098Z</updated>
     
@@ -1001,17 +1001,17 @@
     </summary>
     
     
-      <category term="前端" scheme="https://www.wwyyqblog.work/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="hexo" scheme="https://www.wwyyqblog.work/tags/hexo/"/>
+      <category term="hexo" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>辅助函数3</title>
-    <link href="https://www.wwyyqblog.work/archives/1e9603e6.html"/>
-    <id>https://www.wwyyqblog.work/archives/1e9603e6.html</id>
+    <link href="https://ycy-ww.github,io/ycy-ww.github.io/archives/1e9603e6.html"/>
+    <id>https://ycy-ww.github,io/ycy-ww.github.io/archives/1e9603e6.html</id>
     <published>2020-02-28T07:01:33.213Z</published>
     <updated>2020-02-28T07:01:33.213Z</updated>
     
@@ -1078,10 +1078,10 @@
     </summary>
     
     
-      <category term="前端" scheme="https://www.wwyyqblog.work/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://ycy-ww.github,io/ycy-ww.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="hexo" scheme="https://www.wwyyqblog.work/tags/hexo/"/>
+      <category term="hexo" scheme="https://ycy-ww.github,io/ycy-ww.github.io/tags/hexo/"/>
     
   </entry>
   
