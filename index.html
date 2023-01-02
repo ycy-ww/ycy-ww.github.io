@@ -1,0 +1,450 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Wesley_blog - 知识记录与分享的乐趣</title><meta name="author" content="Wesley"><meta name="copyright" content="Wesley"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="个人博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wesley_blog">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Wesley_blog">
+<meta property="og:description" content="个人博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/avatar.jfif">
+<meta property="article:author" content="Wesley">
+<meta property="article:tag" content="博客, Wesley">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/avatar.jfif"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Wesley","link":"链接: ","source":"来源: Wesley_blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Wesley_blog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2023-01-02 20:24:34'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Wesley_blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jfif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">83</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">38</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archive/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tag/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/category/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movie/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/indexbg.webp')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Wesley_blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archive/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tag/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/category/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movie/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Wesley_blog</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/ycy-ww" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://space.bilibili.com/40657050" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili"></i></a><a class="social-icon" href="mailto:1312286880@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="http://weixin.qq.com/r/lT9QVQzEHsRiKEg2b2oR" target="_blank" title="Wechat"><i class="fa-brands fa-weixin"></i></a><a class="social-icon" href="https://weibo.com/6575206909" target="_blank" title="Weibo"><i class="fa-brands fa-weibo"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91-1/" title="公众号开发-1"><img class="post_bg" src="/img/postcover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="公众号开发-1"></a></div><div class="recent-post-info"><a class="article-title" href="/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91-1/" title="公众号开发-1">公众号开发-1</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-29T06:23:20.684Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-03-02T05:25:20.946Z" title="更新于 2020-03-02 13:25:20">2020-03-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/">微信公众号开发</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Eclipse/">Eclipse</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/Java/">Java</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/XML/">XML</a></span></div><div class="content">微信公众平台测试号的开发流程
+接入
+
+/***参数		   描述signature	微信加密签名，signature结合了开发者填写的token参数和请求中的timestamp参数、nonce参数。timestamp	时间戳nonce		随机数echostr		随机字符串*/	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;		String signature = request.getParameter(&quot;signature&quot;);		String timestamp = request.getParameter(&quot;timestamp&quot;);		String nonce = request.getParameter(&quot;nonce&quot;);		String echostr = request.getParameter(&quot;echost ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B04/" title="辅助函数4"><img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数4"></a></div><div class="recent-post-info"><a class="article-title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B04/" title="辅助函数4">辅助函数4</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-29T06:23:20.683Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-02-28T09:09:29.046Z" title="更新于 2020-02-28 17:09:29">2020-02-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/hexo/">hexo</a></span></div><div class="content">辅助函数 4其他paginator插入分页链接。
+&lt;%- paginator(options) %&gt;
+
+
+
+
+参数
+描述
+默认值
+
+
+
+base
+基础网址
+&#x2F;
+
+
+format
+网址格式
+page&#x2F;%d&#x2F;
+
+
+total
+分页总数
+1
+
+
+current
+目前页数
+0
+
+
+prev_text
+上一页链接的文字。仅在 prev_next 设定开启时才有用。
+Prev
+
+
+next_text
+下一页链接的文字。仅在 prev_next 设定开启时才有用。
+Next
+
+
+space
+空白文字
+…
+
+
+prev_next
+显示上一页和下一页的链接
+true
+
+
+end_size
+显示于两侧的页数
+1
+
+
+mid_size
+显示于中间的页数
+2
+
+
+show_all
+显示所有页数。如果开启此参数的话，end_size 和 mid_size 就没用了。
+false
+
+
+escape
+Escape HTML tags
+true
+
+
+Examples:
+&lt;%- paginator(&#123;    prev_text: &#x27;&lt;&#x27; ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B03/" title="辅助函数3"><img class="post_bg" src="/img/postcover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数3"></a></div><div class="recent-post-info"><a class="article-title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B03/" title="辅助函数3">辅助函数3</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-29T06:23:20.682Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-02-28T08:42:02.556Z" title="更新于 2020-02-28 16:42:02">2020-02-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/hexo/">hexo</a></span></div><div class="content">辅助函数 3模板partial载入其他模板文件，您可在 locals 设定区域变量。
+&lt;%- partial(layout, [locals], [options]) %&gt;
+
+
+
+
+参数
+描述
+默认值
+
+
+
+cache
+缓存（使用 Fragment cache）
+false
+
+
+only
+限制局部变量。在模板中只能使用 locals 中设定的变量。
+false
+
+
+fragment_cache局部缓存。它储存局部内容，下次使用时就能直接使用缓存。
+&lt;%- fragment_cache(id, fn);
+
+示例：
+&lt;%- fragment_cache(&#x27;header&#x27;, function()&#123;    return &#x27;&lt;header&gt;&lt;/header&gt;&#x27;;&#125;) %&gt;
+
+
+
+
+
+日期与时间date插入格式化的日期。date 可以是 UNIX 时间、ISO 字符串、Date 对象或 Moment.js 对象。format 默认为 date_format 配置信息。
+&lt;%- d ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B02/" title="辅助函数2"><img class="post_bg" src="/img/postcover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数2"></a></div><div class="recent-post-info"><a class="article-title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B02/" title="辅助函数2">辅助函数2</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-29T06:23:20.680Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-02-28T07:47:29.326Z" title="更新于 2020-02-28 15:47:29">2020-02-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/hexo/">hexo</a></span></div><div class="content">辅助函数 2条件函数is_current检查 path 是否符合目前页面的网址。开启 strict 选项启用严格比对。
+&lt;%- is_current(path, [strict]) %&gt;
+
+is_home&lt;%- is_home() %&gt;
+
+is_post检查当前页面是否为文章。
+&lt;%- is_post() %&gt;
+
+is_page&lt;%- is_page() %&gt;
+
+is_archive&lt;%- is_archive() %&gt;
+
+is_year检查当前页面是否为年度归档页面。
+&lt;%- is_year() %&gt;
+
+is_month&lt;%- is_month() %&gt;
+
+is_category如果给定一个字符串作为参数，将会检查目前是否为指定分类。
+&lt;%- is_category() %&gt;&lt;%- is_category(&#x27;hobby&#x27;) %&gt;
+
+is_tag&lt;%- is_tag() %&gt;&lt;%- is_tag(&#x27;hobby&#x27;) %&gt ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0/" title="辅助函数"><img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数"></a></div><div class="recent-post-info"><a class="article-title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0/" title="辅助函数">辅助函数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-29T06:23:20.679Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-01T06:36:18.048Z" title="更新于 2020-12-01 14:36:18">2020-12-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/hexo/">hexo</a></span></div><div class="content">辅助函数（Helpers）辅助函数帮助您在模版中快速插入内容。辅助函数不能在源文件中使用。
+网址url_for在路径前加上根路径，从 Hexo 2.7 开始您应该使用此函数而不是 config.root + path。
+&lt;%- url_for(path, [option]) %&gt;
+
+
+
+
+参数
+描述
+默认值
+
+
+
+relative
+是否输出相对链接
+config.relative_link 的值
+
+
+示例：
+_config.ymlroot: /blog/
+
+&lt;%- url_for(&#x27;/a/path&#x27;) %&gt;// /blog/a/path
+
+是否输出相对链接，默认遵循配置文件中 relative_link 的值
+&lt;%- url_for(&#x27;/css/style.css&#x27;) %&gt;// ../../css/style.css/* 覆盖配置  * 即使配置文件中启用了 relative_link，你也可以使用 relative 参数禁用相对链接输出，反之亦然  */&lt;%- url_for(&#x27;/css/st ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/%E5%89%8D%E7%AB%AF/%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="服务器-生成器"><img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="服务器-生成器"></a></div><div class="recent-post-info"><a class="article-title" href="/%E5%89%8D%E7%AB%AF/%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="服务器-生成器">服务器-生成器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-29T06:23:20.678Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-02-27T09:29:39.018Z" title="更新于 2020-02-27 17:29:39">2020-02-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/hexo/">hexo</a></span></div><div class="content">6.服务器hexo-server如果您想要更改端口，或是在执行时遇到了 EADDRINUSE 错误，可以在执行时使用 -p 选项指定其他端口
+静态模式在静态模式下，服务器只处理 public 文件夹内的文件，而不会处理文件变动，在执行时，您应该先自行执行 hexo generate，此模式通常用于生产环境（production mode）下。
+$ hexo server -s
+
+
+
+自定义 IP服务器默认运行在 0.0.0.0，您可以覆盖默认的 IP 设置，如下：
+$ hexo server -i 192.168.1.1
+
+指定这个参数后，您就只能通过该IP才能访问站点。
+例如：
+
+对于一台使用无线网络的笔记本电脑，除了指向本机的127.0.0.1外，通常还有一个192.168.*.*的局域网IP，如果像上面那样使用-i参数，就不能用127.0.0.1来访问站点了。
+
+对于有公网IP的主机，如果您指定一个局域网IP作为-i参数的值，那么就无法通过公网来访问站点。
+
+
+
+生成文件监视文件变动Hexo 能够监视文件变动并立即重新生成静态文件，在生成时会比对文件的 SHA1 checksum ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/%E5%89%8D%E7%AB%AF/%E6%8F%92%E4%BB%B6/" title="插件"><img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="插件"></a></div><div class="recent-post-info"><a class="article-title" href="/%E5%89%8D%E7%AB%AF/%E6%8F%92%E4%BB%B6/" title="插件">插件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-29T06:23:20.676Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-01T04:24:37.398Z" title="更新于 2020-12-01 12:24:37">2020-12-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/hexo/">hexo</a></span></div><div class="content">插件Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心模块的源码。在 Hexo 中有两种形式的插件：
+脚本（Scripts）如果您的代码很简单，建议您编写脚本，您只需要把 JavaScript 文件放到 scripts 文件夹，在启动时就会自动载入。
+插件（Packages）如果您的代码较复杂，或是您想要
+发布到 NPM 上，建议您编写插件。首先，在 node_modules 文件夹中建立文件夹，文件夹名称开头必须为 hexo-，如此一来 Hexo 才会在启动时载入，否则 Hexo 将会忽略它。
+文件夹内至少要包含 2 个文件：一个是主程序，另一个是 package.json，描述插件的用途和所依赖的插件。
+.├── index.js└── package.json
+
+package.json 中至少要包含 name, version, main 属性，例如：
+package.json&#123;     &quot;name&quot;: &quot;hexo-my-plugin&quot;,     &quot;version&quot;: &quot;0.0.1&quo ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/%E5%89%8D%E7%AB%AF/%E9%83%A8%E7%BD%B2/" title="部署"><img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="部署"></a></div><div class="recent-post-info"><a class="article-title" href="/%E5%89%8D%E7%AB%AF/%E9%83%A8%E7%BD%B2/" title="部署">部署</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-29T06:23:20.675Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-01T01:14:10.415Z" title="更新于 2020-12-01 09:14:10">2020-12-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/hexo/">hexo</a></span></div><div class="content">7.部署Project page如果你更希望你的站点部署在 &lt;你的 GitHub 用户名&gt;.github.io 的子目录中，你的 repository 需要直接命名为子目录的名字，这样你的站点可以通过 https://&lt;你的 GitHub 用户名&gt;.github.io/&lt;repository 的名字&gt; 访问。              你需要检查你的 Hexo 配置文件，将 url 修改为 https://&lt;你的 GitHub 用户名&gt;.github.io/&lt;repository 的名字&gt;、将 root 的值修改为 /&lt;repository 的名字&gt;/
+您可同时使用多个 deployer，Hexo 会依照顺序执行每个 deployer。
+deploy:- type: git    repo:- type: heroku    repo:
+
+
+
+
+缩进
+
+
+YAML依靠缩进来确定元素间的从属关系。因此，请确保每个deployer的缩进长度相同，并且使用空格缩进。
+
+Git
+安装 hexo-deployer-git
+
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/%E5%89%8D%E7%AB%AF/%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6%EF%BC%88Tag%20Plugins%EF%BC%89/" title="标签插件"><img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="标签插件"></a></div><div class="recent-post-info"><a class="article-title" href="/%E5%89%8D%E7%AB%AF/%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6%EF%BC%88Tag%20Plugins%EF%BC%89/" title="标签插件">标签插件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-29T06:23:20.673Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-01T04:41:35.368Z" title="更新于 2020-12-01 12:41:35">2020-12-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/hexo/">hexo</a></span></div><div class="content">标签插件（Tag Plugins）标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。
+引用块在文章中插入引言，可包含作者、来源和标题。
+别号： quote
+&#123;% blockquote [author[, source]] [link] [source_link_title] %&#125;content&#123;% endblockquote %&#125;
+
+
+
+样例
+没有提供参数，则只输出普通的 blockquote
+&#123;% blockquote %&#125;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.&#123;% endblockquote ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/%E5%89%8D%E7%AB%AF/%E5%8F%98%E9%87%8F/" title="变量"><img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="变量"></a></div><div class="recent-post-info"><a class="article-title" href="/%E5%89%8D%E7%AB%AF/%E5%8F%98%E9%87%8F/" title="变量">变量</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-29T06:23:20.672Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-02-27T16:07:17.547Z" title="更新于 2020-02-28 00:07:17">2020-02-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/hexo/">hexo</a></span></div><div class="content">变量全局变量
+
+
+变量
+描述
+类型
+
+
+
+site
+网站变量
+object; 见 网站变量
+
+
+page
+针对该页面的内容以及 front-matter 中自定义的变量。
+object; 见 页面变量
+
+
+config
+网站配置
+object (站点的配置文件)
+
+
+theme
+主题配置。继承自网站配置。
+object (主题配置文件)
+
+
+_ (单下划线)
+Lodash 函数库
+Lodash 文档
+
+
+path
+当前页面的路径（不含根路径）
+string
+
+
+url
+当前页面的完整网址
+string
+
+
+env
+环境变量
+???
+
+
+网站变量
+
+
+变量
+描述
+类型
+
+
+
+site.posts
+所有文章
+array of post objects
+
+
+site.pages
+所有分页
+array of page objects
+
+
+site.categories
+所有分类
+object，包含了站点全部的分类
+
+
+site.tags
+所有标签
+array，包含了站点全部的标签
+
+
+
+
+
+
+页面变量页面（page）
+
+
+
+变量
+描述
+类型
+
+
+
+page.title
+页面标题
+string
+ ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/#content-inner">9</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jfif" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Wesley</div><div class="author-info__description">个人博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">83</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">38</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/ycy-ww" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://space.bilibili.com/40657050" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili"></i></a><a class="social-icon" href="mailto:1312286880@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="http://weixin.qq.com/r/lT9QVQzEHsRiKEg2b2oR" target="_blank" title="Wechat"><i class="fa-brands fa-weixin"></i></a><a class="social-icon" href="https://weibo.com/6575206909" target="_blank" title="Weibo"><i class="fa-brands fa-weibo"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91-1/" title="公众号开发-1"><img src="/img/postcover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="公众号开发-1"/></a><div class="content"><a class="title" href="/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91-1/" title="公众号开发-1">公众号开发-1</a><time datetime="2022-12-29T06:23:20.684Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B04/" title="辅助函数4"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数4"/></a><div class="content"><a class="title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B04/" title="辅助函数4">辅助函数4</a><time datetime="2022-12-29T06:23:20.683Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B03/" title="辅助函数3"><img src="/img/postcover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数3"/></a><div class="content"><a class="title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B03/" title="辅助函数3">辅助函数3</a><time datetime="2022-12-29T06:23:20.682Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B02/" title="辅助函数2"><img src="/img/postcover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数2"/></a><div class="content"><a class="title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B02/" title="辅助函数2">辅助函数2</a><time datetime="2022-12-29T06:23:20.680Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0/" title="辅助函数"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数"/></a><div class="content"><a class="title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0/" title="辅助函数">辅助函数</a><time datetime="2022-12-29T06:23:20.679Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Finance/"><span class="card-category-list-name">Finance</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/HR/"><span class="card-category-list-name">HR</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Haier/"><span class="card-category-list-name">Haier</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java/"><span class="card-category-list-name">Java</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Life/"><span class="card-category-list-name">Life</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Next/"><span class="card-category-list-name">Next</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/finance/"><span class="card-category-list-name">finance</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/"><span class="card-category-list-name">云服务器 ECS</span><span class="card-category-list-count">3</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/1169/" style="font-size: 1.1em; color: #999">1169</a> <a href="/tags/690/" style="font-size: 1.1em; color: #999">690</a> <a href="/tags/ECS/" style="font-size: 1.3em; color: #99a1ac">ECS</a> <a href="/tags/Eclipse/" style="font-size: 1.2em; color: #999da3">Eclipse</a> <a href="/tags/HR/" style="font-size: 1.1em; color: #999">HR</a> <a href="/tags/HRBP/" style="font-size: 1.1em; color: #999">HRBP</a> <a href="/tags/JS/" style="font-size: 1.3em; color: #99a1ac">JS</a> <a href="/tags/Java/" style="font-size: 1.1em; color: #999">Java</a> <a href="/tags/TCP-IP/" style="font-size: 1.2em; color: #999da3">TCP/IP</a> <a href="/tags/XML/" style="font-size: 1.1em; color: #999">XML</a> <a href="/tags/bugs/" style="font-size: 1.4em; color: #99a5b6">bugs</a> <a href="/tags/configure/" style="font-size: 1.1em; color: #999">configure</a> <a href="/tags/eclipse/" style="font-size: 1.2em; color: #999da3">eclipse</a> <a href="/tags/finance/" style="font-size: 1.1em; color: #999">finance</a> <a href="/tags/hexo/" style="font-size: 1.5em; color: #99a9bf">hexo</a> <a href="/tags/jar-%E5%8C%85/" style="font-size: 1.1em; color: #999">jar 包</a> <a href="/tags/markdown/" style="font-size: 1.1em; color: #999">markdown</a> <a href="/tags/me/" style="font-size: 1.1em; color: #999">me</a> <a href="/tags/mind/" style="font-size: 1.1em; color: #999">mind</a> <a href="/tags/next/" style="font-size: 1.4em; color: #99a5b6">next</a> <a href="/tags/summary/" style="font-size: 1.2em; color: #999da3">summary</a> <a href="/tags/tomcat/" style="font-size: 1.1em; color: #999">tomcat</a> <a href="/tags/%E4%B8%9A%E5%8A%A1/" style="font-size: 1.1em; color: #999">业务</a> <a href="/tags/%E4%B8%AD%E5%8F%B0/" style="font-size: 1.1em; color: #999">中台</a> <a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 1.3em; color: #99a1ac">云服务器</a> <a href="/tags/%E4%BA%A7%E5%93%81/" style="font-size: 1.1em; color: #999">产品</a> <a href="/tags/%E4%BA%BA%E5%A3%B0/" style="font-size: 1.1em; color: #999">人声</a> <a href="/tags/%E4%BC%B4%E5%A5%8F/" style="font-size: 1.1em; color: #999">伴奏</a> <a href="/tags/%E5%8E%86%E5%8F%B2/" style="font-size: 1.2em; color: #999da3">历史</a> <a href="/tags/%E5%A4%8D%E7%9B%98%E3%80%81%E6%8C%87%E6%95%B0/" style="font-size: 1.1em; color: #999">复盘、指数</a> <a href="/tags/%E5%AE%89%E8%A3%85/" style="font-size: 1.1em; color: #999">安装</a> <a href="/tags/%E5%AE%A2%E6%88%B7/" style="font-size: 1.1em; color: #999">客户</a> <a href="/tags/%E5%BA%84%E8%82%A1/" style="font-size: 1.1em; color: #999">庄股</a> <a href="/tags/%E6%B8%A0%E9%81%93/" style="font-size: 1.1em; color: #999">渠道</a> <a href="/tags/%E6%BA%90%E9%95%9C%E5%83%8F/" style="font-size: 1.1em; color: #999">源镜像</a> <a href="/tags/%E8%90%A5%E9%94%80/" style="font-size: 1.1em; color: #999">营销</a> <a href="/tags/%E8%B4%A2%E5%8A%A1%E6%8A%A5%E8%A1%A8/" style="font-size: 1.1em; color: #999">财务报表</a> <a href="/tags/%E9%94%80%E5%94%AE/" style="font-size: 1.1em; color: #999">销售</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/12/"><span class="card-archive-list-date">十二月 2022</span><span class="card-archive-list-count">82</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/03/"><span class="card-archive-list-date">三月 2020</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">83</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">257.8k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-01-02T12:24:33.950Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Wesley</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

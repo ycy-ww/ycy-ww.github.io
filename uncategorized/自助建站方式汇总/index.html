@@ -1,0 +1,357 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Wesley_blog | Wesley_blog</title><meta name="author" content="Wesley"><meta name="copyright" content="Wesley"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="自助建站方式汇总   网站类型 部署方式 说明    WordPress 云市场镜像搭建WordPress 使用ROS搭建WordPress手动搭建WordPress（CentOS 7）手动搭建WordPress（Windows） WordPress是一款常用的搭建个人博客网站的软件。您可以使用WordPress架设自己的网站，也可以搭建内容管理系统CMS（Content Management S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Wesley_blog">
+<meta property="og:url" content="http://example.com/uncategorized/%E8%87%AA%E5%8A%A9%E5%BB%BA%E7%AB%99%E6%96%B9%E5%BC%8F%E6%B1%87%E6%80%BB/index.html">
+<meta property="og:site_name" content="Wesley_blog">
+<meta property="og:description" content="自助建站方式汇总   网站类型 部署方式 说明    WordPress 云市场镜像搭建WordPress 使用ROS搭建WordPress手动搭建WordPress（CentOS 7）手动搭建WordPress（Windows） WordPress是一款常用的搭建个人博客网站的软件。您可以使用WordPress架设自己的网站，也可以搭建内容管理系统CMS（Content Management S">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/postcover.webp">
+<meta property="article:published_time" content="2022-12-29T06:10:53.217Z">
+<meta property="article:modified_time" content="2020-03-04T16:26:48.651Z">
+<meta property="article:author" content="Wesley">
+<meta property="article:tag" content="博客, Wesley">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/postcover.webp"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/uncategorized/%E8%87%AA%E5%8A%A9%E5%BB%BA%E7%AB%99%E6%96%B9%E5%BC%8F%E6%B1%87%E6%80%BB/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Wesley","link":"链接: ","source":"来源: Wesley_blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Wesley_blog',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2020-03-05 00:26:48'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Wesley_blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jfif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">83</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">38</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archive/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tag/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/category/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movie/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/postcover.webp')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Wesley_blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archive/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tag/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/category/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movie/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-29T06:10:53.217Z" title="发表于 2022-12-29 14:10:53">2022-12-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-03-04T16:26:48.651Z" title="更新于 2020-03-05 00:26:48">2020-03-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="自助建站方式汇总"><a href="#自助建站方式汇总" class="headerlink" title="自助建站方式汇总"></a>自助建站方式汇总</h1><table>
+<thead>
+<tr>
+<th align="left">网站类型</th>
+<th align="left">部署方式</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">WordPress</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/150522.html#task-2384676">云市场镜像搭建WordPress</a> <a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/51137.html#concept-51137-zh">使用ROS搭建WordPress</a><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/151691.html#task-2384687">手动搭建WordPress（CentOS 7）</a><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/151699.html#task-2384693">手动搭建WordPress（Windows）</a></td>
+<td align="left">WordPress是一款常用的搭建个人博客网站的软件。您可以使用WordPress架设自己的网站，也可以搭建内容管理系统CMS（Content Management System）。使用镜像或资源编排服务ROS（Resource Orchestration Service）模板部署WordPress解决了空间和程序的问题，降低了建站的门槛，即买即用。ROS通过一个JSON格式的模板文件，创建一组阿里云资源。您也可以手动搭建WordPress。</td>
+</tr>
+<tr>
+<td align="left">LNMP 环境</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/53077.html#concept-53077-zh">ROS模板部署</a>  <a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/25427.html#concept-25427-zh">镜像部署</a>  <a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/50700.html#concept-rqy-ww2-2fb">手动部署（CentOS6）</a>  <a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/97251.html#concept-fnh-v3x-5fb">手动部署（CentOS7）</a></td>
+<td align="left">LNMP分别代表Linux、Nginx、MySQL和PHP。使用镜像和资源编排服务ROS模板可以帮您省时省力地部署LNMP环境。如果您熟悉Linux操作系统，希望满足个性化部署的要求，您也可以选择手动部署。</td>
+</tr>
+<tr>
+<td align="left">Java Web环境</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/52806.html#concept-52806-zh">镜像部署</a></td>
+<td align="left">Tomcat是开源且免费的Java Web服务器，常用作Web开发工具，可以托管由Servlet、JSP 页面（动态内容）、HTML 页面、JS、Stylesheet、图片（静态内容）组成的Java Web应用程序。适合新手，利用<a target="_blank" rel="noopener" href="https://market.aliyun.com/software">云市场</a>丰富的<a target="_blank" rel="noopener" href="https://market.aliyun.com/products/53400005/cmjj016483.html">JAVA 镜像</a>资源快捷部署环境。</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/51376.html#task-1681430">手动部署Java Web环境</a></td>
+<td align="left">如果您熟悉Linux命令，可以在ECS上个性化地部署Java web项目。</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/96088.html#concept-ak3-zpd-sfb">插件部署</a></td>
+<td align="left">Alibaba Cloud Toolkit for Eclipse，简称Cloud Toolkit，是一款免费的IDE插件。当您在本地完成应用程序的开发、调试及测试后，即可通过该插件轻松将应用程序部署到ECS实例。</td>
+</tr>
+<tr>
+<td align="left">Node.js（CentOS）</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/50775.html#concept-50775-zh">手动部署</a></td>
+<td align="left">Node.js是一个基于Chrome V8引擎的JavaScript运行环境，用来方便、快速地搭建易于扩展的网络应用。Node.js使用了一个事件驱动、非阻塞式I&#x2F;O的模型，轻量又高效，非常适合在分布式设备运行的数据密集型实时应用。Node.js的包管理器npm，是全球最大的开源库生态系统。</td>
+</tr>
+<tr>
+<td align="left">Magento电子商务网站</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/50704.html#concept-jny-5rl-2fb">手动部署</a></td>
+<td align="left">Magento是一款开源电商网站框架，其丰富的模块化架构体系及拓展功能可为大中型站点提供解决方案。</td>
+</tr>
+<tr>
+<td align="left">Web环境（Windows）</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/43245.html#concept-dt2-ghm-2fb">镜像部署</a></td>
+<td align="left">使用阿里云镜像，您可以在Windows操作系统中一键部署Web环境，包括安装IIS 组件（不包括FTP组件）、PHP环境、重定向Rewrite、MySQL和PHPWind。</td>
+</tr>
+<tr>
+<td align="left">ThinkPHP框架</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/52954.html#concept-52954-zh">镜像部署</a></td>
+<td align="left">ThinkPHP是一款免费、开源、快速、简单、面向对象的轻量级PHP开发框架，遵循Apache2开源协议，为了敏捷Web应用开发和简化企业应用开发而诞生。</td>
+</tr>
+<tr>
+<td align="left">PHPWind论坛</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/53855.html#concept-53855-zh">镜像部署</a></td>
+<td align="left">PHPWind是一款采用PHP+MySQL方式运行的开源社区程序，轻架构、高效率、简易开发，能够实现快速搭建并轻松管理社区站点的功能。</td>
+</tr>
+<tr>
+<td align="left">GitLab</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/52857.html#concept-myh-s5s-2fb">镜像部署和手动部署</a></td>
+<td align="left">GitLab通过Ruby on Rails，实现自托管的Git项目仓库，可通过Web界面轻松访问公开或者私人项目。</td>
+</tr>
+<tr>
+<td align="left">使用AMH搭建PHP环境</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/53319.html#concept-qnl-rzs-2fb">镜像和手动部署</a></td>
+<td align="left">AMH是一套通过Web控制和管理服务器的Linux服务器管理系统以及虚拟主机管理系统。</td>
+</tr>
+<tr>
+<td align="left">Microsoft SharePoint 2016</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/53610.html#concept-pmz-5gt-2fb">手动部署</a></td>
+<td align="left">Microsoft SharePoint是Microsoft SharePoint Portal Server的简称。SharePoint Portal Server是一个门户站点，使得企业能够开发出智能的门户站点，该站点能够无缝连接到团队和知识，使人们能够更好地利用业务流程中的相关信息，更有效地开展工作。</td>
+</tr>
+<tr>
+<td align="left">Drupal内容管理框架</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/51375.html#concept-lqz-2p1-ffb">镜像部署</a></td>
+<td align="left">Drupal是一款采用PHP语言编写的开源内容管理框架（CMF），由内容管理系统（CMS）和PHP开发框架（Framework）共同构成。如果您熟悉ECS、 Linux系统，刚开始使用ECS实例建站，可以使用镜像快速搭建Drupal环境。</td>
+</tr>
+<tr>
+<td align="left">Docker（CentOS7）</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/51853.html#concept-zmh-cpt-2fb">手动部署</a></td>
+<td align="left">Docker是一个开源工具，能将一个Web应用封装在一个轻量级、便携且独立的容器里，几乎可以运行在任何服务环境下。适用于熟悉Linux系统，刚开始使用ECS实例的开发者。</td>
+</tr>
+<tr>
+<td align="left">LAMP 环境</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/50774.html#concept-vm4-crt-2fb">手动部署</a></td>
+<td align="left">LAMP指Linux、Apache、MySQL和PHP，是一组常用来搭建动态网站或者服务器的开源软件。它们本身都是各自独立的程序，但是因为常被放在一起使用，拥有了越来越高的兼容度，共同组成了一个强大的Web应用程序平台。</td>
+</tr>
+<tr>
+<td align="left">常用数据库（Oracle、MySQL和SQL Server）</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/53822.html#concept-zr2-x5t-2fb">镜像和手动部署</a></td>
+<td align="left">使用阿里云镜像，您可以方便、快捷地部署Oracle、MySQL、SQL Server等常用数据库。如果您熟悉ECS和数据库，也可以手动部署数据库。</td>
+</tr>
+<tr>
+<td align="left">WDlinux Control Panel（WDCP）</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/52826.html#concept-bxm-sb5-2fb">镜像部署</a></td>
+<td align="left">WDCP（WDlinux Control Panel）是一套通过Web控制和管理服务器的Linux服务器管理系统以及虚拟主机管理系统。</td>
+</tr>
+<tr>
+<td align="left">RabbitMQ</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/53100.html#concept-th4-cr1-ffb">手动部署</a></td>
+<td align="left">RabbitMQ是AMQP的一个开源实现，支持：Python、Ruby、.NET、Java、JMS、C、PHP、ActionScript、XMPP、STOMP、AJAX等多种客户端。用于在分布式系统中存储转发消息，具有较好的易用性、扩展性和高可用性。</td>
+</tr>
+<tr>
+<td align="left">PostgreSQL主从架构</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/53096.html#concept-gqk-kd5-2fb">手动部署</a></td>
+<td align="left">阿里云版数据库PostgreSQL具有NoSQL兼容、高效查询、插件化管理、安全稳定的特性。如果您熟悉ECS、Linux系统、PostgreSQL，可以手动部署PostgreSQL主从架构。</td>
+</tr>
+<tr>
+<td align="left">Subversion（SVN）版本控制系统</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/52864.html#concept-pqr-4bb-ffb">手动部署</a></td>
+<td align="left">SVN （Subversion）作为一个开源的版本控制系統，能管理随时间改变的数据。</td>
+</tr>
+<tr>
+<td align="left">Joomla基础管理平台</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/53543.html#concept-an2-t25-2fb">镜像部署</a></td>
+<td align="left">Joomla是一套知名的内容管理系统，采用PHP加MySQL的方式开发软件系统。</td>
+</tr>
+<tr>
+<td align="left">Ghost博客（CentOS 7）</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/50604.html#concept-npp-vh1-ffb">手动部署</a></td>
+<td align="left">Ghost是一个免费的开源博客平台，使用JavaScript编写，基于Node.js，旨在简化个人博客和在线出版物的在线发布过程。此外，将来随着业务的扩展，您可以利用阿里云强大的产品平台，平滑地横向和纵向扩展服务容量。</td>
+</tr>
+<tr>
+<td align="left">Moodle课程管理系统</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/54569.html#concept-htd-qfb-ffb">镜像部署</a></td>
+<td align="left">Moodle是一个开源课程管理系统，采用PHP加MySQL的方式运行软件，遵循GNU公共许可协议。Moodle平台界面简单精巧，您可以根据需要随时调整界面、增减内容。</td>
+</tr>
+<tr>
+<td align="left">FTP站点</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/92046.html#concept-kmr-213-ffb">手动部署（Windows）</a></td>
+<td align="left">在Windows操作系统下搭建FTP服务器（File Transfer Protocol Server）以提供文件存储和访问服务。</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/92048.html#concept-ww3-123-ffb">手动部署（Linux）</a></td>
+<td align="left">在ECS实例上安装vsftpd，它是Linux下的一款小巧轻快、安全易用的FTP服务器软件。</td>
+</tr>
+</tbody></table>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a target="_blank" rel="noopener" href="https://space.bilibili.com/40657050">Wesley</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/uncategorized/%E8%87%AA%E5%8A%A9%E5%BB%BA%E7%AB%99%E6%96%B9%E5%BC%8F%E6%B1%87%E6%80%BB/">http://example.com/uncategorized/%E8%87%AA%E5%8A%A9%E5%BB%BA%E7%AB%99%E6%96%B9%E5%BC%8F%E6%B1%87%E6%80%BB/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Wesley_blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/postcover.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="Wechat"/></a><div class="post-qr-code-desc">Wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/uncategorized/%E5%AE%89%E5%85%A8%E7%BB%84%E5%BA%94%E7%94%A8%E6%A1%88%E4%BE%8B/"><img class="prev-cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/uncategorized/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E4%B8%8A%E6%90%AD%E5%BB%BA%E7%A7%81%E4%BA%BAGit%E4%BB%93%E5%BA%93/"><img class="next-cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Livere</span><span class="switch-btn"></span><span class="second-comment">Twikoo</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city"></div></div><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jfif" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Wesley</div><div class="author-info__description">个人博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">83</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">38</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/ycy-ww" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://space.bilibili.com/40657050" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili"></i></a><a class="social-icon" href="mailto:1312286880@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="http://weixin.qq.com/r/lT9QVQzEHsRiKEg2b2oR" target="_blank" title="Wechat"><i class="fa-brands fa-weixin"></i></a><a class="social-icon" href="https://weibo.com/6575206909" target="_blank" title="Weibo"><i class="fa-brands fa-weibo"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E5%8A%A9%E5%BB%BA%E7%AB%99%E6%96%B9%E5%BC%8F%E6%B1%87%E6%80%BB"><span class="toc-number">1.</span> <span class="toc-text">自助建站方式汇总</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91-1/" title="公众号开发-1"><img src="/img/postcover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="公众号开发-1"/></a><div class="content"><a class="title" href="/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91-1/" title="公众号开发-1">公众号开发-1</a><time datetime="2022-12-29T06:23:20.684Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B04/" title="辅助函数4"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数4"/></a><div class="content"><a class="title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B04/" title="辅助函数4">辅助函数4</a><time datetime="2022-12-29T06:23:20.683Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B03/" title="辅助函数3"><img src="/img/postcover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数3"/></a><div class="content"><a class="title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B03/" title="辅助函数3">辅助函数3</a><time datetime="2022-12-29T06:23:20.682Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B02/" title="辅助函数2"><img src="/img/postcover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数2"/></a><div class="content"><a class="title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B02/" title="辅助函数2">辅助函数2</a><time datetime="2022-12-29T06:23:20.680Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0/" title="辅助函数"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数"/></a><div class="content"><a class="title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0/" title="辅助函数">辅助函数</a><time datetime="2022-12-29T06:23:20.679Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Wesley</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !true) {
+  if (true) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: '',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: '',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Livere' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
