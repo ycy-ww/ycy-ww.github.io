@@ -1,18 +1,25 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>ECS-概念 | Wesley_blog</title><meta name="author" content="Wesley"><meta name="copyright" content="Wesley"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="云服务器 ECS云服务器ECS（Elastic Compute Service）是一种简单高效、处理能力可弹性伸缩的计算服务。帮助您构建更稳定、安全的应用，提升运维效率，降低IT成本，使您更专注于核心业务创新。 产品架构云服务器ECS主要包含以下功能组件：  实例：等同于一台虚拟服务器，内含CPU、内存、操作系统、网络配置、磁盘等基础的计算组件。 镜像：提供实例的操作系统、初始化应用数据及预装的软">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>ECS-概念 | Wesley_blog</title><meta name="author" content="Wesley"><meta name="copyright" content="Wesley"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="云服务器 ECS 云服务器ECS（Elastic Compute Service）是一种简单高效、处理能力可弹性伸缩的计算服务。帮助您构建更稳定、安全的应用，提升运维效率，降低IT成本，使您更专注于核心业务创新。 产品架构 云服务器ECS主要包含以下功能组件：  实例：等同于一台虚拟服务器，内含CPU、内存、操作系统、网络配置、磁盘等基础的计算组件。 镜像：提供实例的操作系统、初始化应用数据及预装">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ECS-概念">
 <meta property="og:url" content="http://example.com/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/ECS-%E6%A6%82%E5%BF%B5/index.html">
 <meta property="og:site_name" content="Wesley_blog">
-<meta property="og:description" content="云服务器 ECS云服务器ECS（Elastic Compute Service）是一种简单高效、处理能力可弹性伸缩的计算服务。帮助您构建更稳定、安全的应用，提升运维效率，降低IT成本，使您更专注于核心业务创新。 产品架构云服务器ECS主要包含以下功能组件：  实例：等同于一台虚拟服务器，内含CPU、内存、操作系统、网络配置、磁盘等基础的计算组件。 镜像：提供实例的操作系统、初始化应用数据及预装的软">
+<meta property="og:description" content="云服务器 ECS 云服务器ECS（Elastic Compute Service）是一种简单高效、处理能力可弹性伸缩的计算服务。帮助您构建更稳定、安全的应用，提升运维效率，降低IT成本，使您更专注于核心业务创新。 产品架构 云服务器ECS主要包含以下功能组件：  实例：等同于一台虚拟服务器，内含CPU、内存、操作系统、网络配置、磁盘等基础的计算组件。 镜像：提供实例的操作系统、初始化应用数据及预装">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
+<meta property="og:image" content="http://example.com/img/postcover.webp">
 <meta property="article:published_time" content="2022-12-29T06:23:20.646Z">
 <meta property="article:modified_time" content="2020-03-03T16:58:11.807Z">
 <meta property="article:author" content="Wesley">
 <meta property="article:tag" content="云服务器">
 <meta property="article:tag" content="ECS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/ECS-%E6%A6%82%E5%BF%B5/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="http://example.com/img/postcover.webp"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/ECS-%E6%A6%82%E5%BF%B5/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?<script> var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?7349ba942c614294dfdb452f7c88d9c6"; var s = document.getElementsByTagName("script")[0];  s.parentNode.insertBefore(hm, s); })(); </script>";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
@@ -163,25 +170,30 @@
     }
     detectApple()
     })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Wesley_blog" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jfif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">83</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">38</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">17</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archive/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tag/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/category/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movie/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Wesley_blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archive/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tag/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/category/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movie/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">ECS-概念</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-29T06:23:20.646Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-03-03T16:58:11.807Z" title="更新于 2020-03-04 00:58:11">2020-03-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/">云服务器 ECS</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="ECS-概念"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="云服务器-ECS"><a href="#云服务器-ECS" class="headerlink" title="云服务器 ECS"></a>云服务器 ECS</h1><p>云服务器ECS（Elastic Compute Service）是一种简单高效、处理能力可弹性伸缩的计算服务。帮助您构建更稳定、安全的应用，提升运维效率，降低IT成本，使您更专注于核心业务创新。</p>
-<h2 id="产品架构"><a href="#产品架构" class="headerlink" title="产品架构"></a>产品架构</h2><p>云服务器ECS主要包含以下功能组件：</p>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jfif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">82</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">38</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">17</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archive/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tag/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/category/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movie/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/postcover.webp')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Wesley_blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archive/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tag/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/category/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movie/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">ECS-概念</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-29T06:23:20.646Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-03-03T16:58:11.807Z" title="更新于 2020-03-04 00:58:11">2020-03-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/">云服务器 ECS</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="ECS-概念"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>云服务器 ECS</h1>
+<p>云服务器ECS（Elastic Compute Service）是一种简单高效、处理能力可弹性伸缩的计算服务。帮助您构建更稳定、安全的应用，提升运维效率，降低IT成本，使您更专注于核心业务创新。</p>
+<h2 id="产品架构">产品架构</h2>
+<p>云服务器ECS主要包含以下功能组件：</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/25374.html#concept-i1k-fv2-5db">实例</a>：等同于一台虚拟服务器，内含CPU、内存、操作系统、网络配置、磁盘等基础的计算组件。</li>
 <li><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/25389.html#concept-qql-3zb-wdb">镜像</a>：提供实例的操作系统、初始化应用数据及预装的软件。操作系统支持多种Linux发行版和多种Windows Server版本。</li>
 <li><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/63136.html#concept-pl4-tzb-wdb">块存储</a>：块设备类型产品，具备高性能和低时延的特性。提供基于分布式存储架构的云盘、共享块存储以及基于物理机本地存储的本地盘。</li>
 <li><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/25391.html#concept-qft-2zw-ydb">快照</a>：某一时间点一块云盘或共享块存储的数据状态文件。常用于数据备份、数据恢复和制作自定义镜像等。</li>
 <li><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/25387.html#concept-o2y-mqw-ydb">安全组</a>：由同一地域内具有相同保护需求并相互信任的实例组成，是一种虚拟防火墙，用于设置实例的网络访问控制。</li>
-<li>网络<ul>
+<li>网络
+<ul>
 <li><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/34217.html#concept-kbk-cpz-ndb">专有网络（Virtual Private Cloud）</a>：逻辑上彻底隔离的云上私有网络。您可以自行分配私网IP地址范围、配置路由表和网关等。</li>
 <li>经典网络：所有经典网络类型实例都建立在一个共用的基础网络上。由阿里云统一规划和管理网络配置。</li>
 </ul>
 </li>
 </ul>
-<p><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3723062851/p44516.jpg"></p>
-<h2 id="管理工具"><a href="#管理工具" class="headerlink" title="管理工具"></a>管理工具</h2><p>您可以在任何地域下，通过阿里云提供的以下途径创建、使用或者释放云服务器ECS：</p>
+<p><img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3723062851/p44516.jpg" alt=""></p>
+<h2 id="管理工具">管理工具</h2>
+<p>您可以在任何地域下，通过阿里云提供的以下途径创建、使用或者释放云服务器ECS：</p>
 <ul>
-<li><strong>ECS管理控制台：</strong>具有交互式操作的Web服务页面。关于管理控制台的操作，请参见<a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/25429.html?spm=a2c4g.11186623.2.26.252450bffRwdmG#concept-q3w-45w-wdb">常用操作导航</a>。</li>
-<li><strong>ECS API：</strong>支持GET和POST请求的RPC风格API,以下为调用云服务器ECS API的常用开发者工具：<ul>
+<li>**ECS管理控制台：**具有交互式操作的Web服务页面。关于管理控制台的操作，请参见<a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/25429.html?spm=a2c4g.11186623.2.26.252450bffRwdmG#concept-q3w-45w-wdb">常用操作导航</a>。</li>
+<li>**ECS API：**支持GET和POST请求的RPC风格API,以下为调用云服务器ECS API的常用开发者工具：
+<ul>
 <li><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/110244.html?spm=a2c4g.11186623.2.28.252450bffRwdmG#concept-rc3-qrc-bhb">命令行工具CLI</a>：基于阿里云API建立的灵活且易于扩展的管理工具。您可基于命令行工具封装阿里云的原生API，扩展出您需要的功能。</li>
 <li><a target="_blank" rel="noopener" href="https://api.aliyun.com/?spm=a2c4g.11186623.2.29.252450bffRwdmG">OpenAPI Explorer</a>：提供快速检索接口、在线调用API和动态生成SDK示例代码等服务。</li>
 <li><a target="_blank" rel="noopener" href="https://develop.aliyun.com/tools/sdk?spm=a2c4g.11186623.2.30.252450bffRwdmG#/java">阿里云SDK</a>：提供Java、Python、PHP等多种编程语言的SDK。</li>
@@ -193,18 +205,23 @@
 <li>阿里云App：移动端类型的管理工具。</li>
 <li><a target="_blank" rel="noopener" href="https://help.aliyun.com/product/29966.html?spm=a2c4g.11186623.2.34.252450bffRwdmG">Alibaba Cloud Toolkit</a>：阿里云针对IDE平台为开发者提供的一款插件，用于帮助您高效开发并部署适合在云端运行的应用</li>
 </ul>
-<h2 id="部署建议"><a href="#部署建议" class="headerlink" title="部署建议"></a>部署建议</h2><p>您可以从以下维度考虑如何启动并使用云服务器ECS：</p>
+<h2 id="部署建议">部署建议</h2>
+<p>您可以从以下维度考虑如何启动并使用云服务器ECS：</p>
 <ul>
-<li><p>地域和可用区</p>
+<li>
+<p>地域和可用区</p>
 <p>地域指阿里云的数据中心，地域和可用区决定了ECS实例所在的物理位置。一旦成功创建实例后，其元数据（仅专有网络VPC类型ECS实例支持获取元数据）将确定下来，并无法更换地域。您可以从用户地理位置、阿里云产品发布情况、应用可用性、以及是否需要内网通信等因素选择地域和可用区。例如，如果您同时需要通过阿里云内网使用云数据库RDS，RDS实例和ECS实例必须处于同一地域中。</p>
 </li>
-<li><p>高可用性</p>
+<li>
+<p>高可用性</p>
 <p>为保证业务处理的正确性和服务不中断，建议您通过快照实现数据备份，通过跨可用区、部署集、负载均衡（Server Load Balancer）等实现应用容灾。</p>
 </li>
-<li><p>网络规划</p>
+<li>
+<p>网络规划</p>
 <p>阿里云推荐您使用专有网络VPC，可自行规划私网IP，全面支持新功能和新型实例规格。此外，专有网络VPC支持多业务系统隔离和多地域部署系统的使用场景。</p>
 </li>
-<li><p>安全方案</p>
+<li>
+<p>安全方案</p>
 <p>您可以使用云服务器ECS的安全组，控制ECS实例的出入网访问策略以及端口监听状态。对于部署在云服务器ECS上的应用，阿里云为您提供了免费的DDoS基础防护和基础安全服务</p>
 <ul>
 <li>通过DDoS高防IP保障源站的稳定可靠。</li>
@@ -213,153 +230,168 @@
 </li>
 </ul>
 <span id="more"></span>
-
 <hr>
-<h1 id="产品优势"><a href="#产品优势" class="headerlink" title="产品优势"></a>产品优势</h1><p>与普通的IDC（Integrated Data Center）机房或服务器厂商相比，阿里云提供的云服务器ECS具有高可用性、安全性和弹性的优势。</p>
-<h2 id="与普通IDC对比优势"><a href="#与普通IDC对比优势" class="headerlink" title="与普通IDC对比优势"></a>与普通IDC对比优势</h2><p>云服务器ECS与普通IDC的优势对比如下表所示。</p>
+<h1>产品优势</h1>
+<p>与普通的IDC（Integrated Data Center）机房或服务器厂商相比，阿里云提供的云服务器ECS具有高可用性、安全性和弹性的优势。</p>
+<h2 id="与普通IDC对比优势">与普通IDC对比优势</h2>
+<p>云服务器ECS与普通IDC的优势对比如下表所示。</p>
 <table>
 <thead>
 <tr>
-<th align="left">对比项</th>
-<th align="left">云服务器ECS</th>
-<th align="left">普通IDC</th>
+<th style="text-align:left">对比项</th>
+<th style="text-align:left">云服务器ECS</th>
+<th style="text-align:left">普通IDC</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">机房部署</td>
-<td align="left">阿里云自主研发的直流电服务器，绿色机房设计，PUE（Power Usage Effectiveness，电源利用效率）值低</td>
-<td align="left">传统交流电服务器设计，PUE值高</td>
+<tbody>
+<tr>
+<td style="text-align:left">机房部署</td>
+<td style="text-align:left">阿里云自主研发的直流电服务器，绿色机房设计，PUE（Power Usage Effectiveness，电源利用效率）值低</td>
+<td style="text-align:left">传统交流电服务器设计，PUE值高</td>
 </tr>
 <tr>
-<td align="left">骨干机房，出口带宽大，独享带宽</td>
-<td align="left">机房质量参差不齐，用户选择困难，以共享带宽为主</td>
-<td align="left"></td>
+<td style="text-align:left">骨干机房，出口带宽大，独享带宽</td>
+<td style="text-align:left">机房质量参差不齐，用户选择困难，以共享带宽为主</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td align="left">BGP（Border Gateway Protocol，边界网关协议）多线机房，全国访问流畅均衡</td>
-<td align="left">以单线和双线为主</td>
-<td align="left"></td>
+<td style="text-align:left">BGP（Border Gateway Protocol，边界网关协议）多线机房，全国访问流畅均衡</td>
+<td style="text-align:left">以单线和双线为主</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td align="left">操作易用</td>
-<td align="left">内置主流的操作系统，Windows正版激活</td>
-<td align="left">需用户自备操作系统，自行安装</td>
+<td style="text-align:left">操作易用</td>
+<td style="text-align:left">内置主流的操作系统，Windows正版激活</td>
+<td style="text-align:left">需用户自备操作系统，自行安装</td>
 </tr>
 <tr>
-<td align="left">可在线更换操作系统</td>
-<td align="left">无法在线更换操作系统，需要用户重装</td>
-<td align="left"></td>
+<td style="text-align:left">可在线更换操作系统</td>
+<td style="text-align:left">无法在线更换操作系统，需要用户重装</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td align="left">Web在线管理，简单方便</td>
-<td align="left">没有在线管理工具，维护困难</td>
-<td align="left"></td>
+<td style="text-align:left">Web在线管理，简单方便</td>
+<td style="text-align:left">没有在线管理工具，维护困难</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td align="left">手机验证密码设置，安全方便</td>
-<td align="left">重置密码麻烦，且被破解的风险大</td>
-<td align="left"></td>
+<td style="text-align:left">手机验证密码设置，安全方便</td>
+<td style="text-align:left">重置密码麻烦，且被破解的风险大</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td align="left">容灾备份</td>
-<td align="left">三副本数据设计，单份损坏可在短时间内快速恢复</td>
-<td align="left">用户自行搭建，使用普通存储设备，价格高昂</td>
+<td style="text-align:left">容灾备份</td>
+<td style="text-align:left">三副本数据设计，单份损坏可在短时间内快速恢复</td>
+<td style="text-align:left">用户自行搭建，使用普通存储设备，价格高昂</td>
 </tr>
 <tr>
-<td align="left">用户自定义快照</td>
-<td align="left">没有提供快照功能，无法做到自动故障恢复</td>
-<td align="left"></td>
+<td style="text-align:left">用户自定义快照</td>
+<td style="text-align:left">没有提供快照功能，无法做到自动故障恢复</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td align="left">硬件故障事故中可快速自动恢复</td>
-<td align="left">数据损坏需用户修复</td>
-<td align="left"></td>
+<td style="text-align:left">硬件故障事故中可快速自动恢复</td>
+<td style="text-align:left">数据损坏需用户修复</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td align="left">安全可靠</td>
-<td align="left">有效阻止MAC欺骗和ARP攻击</td>
-<td align="left">很难阻止MAC欺骗和ARP攻击</td>
+<td style="text-align:left">安全可靠</td>
+<td style="text-align:left">有效阻止MAC欺骗和ARP攻击</td>
+<td style="text-align:left">很难阻止MAC欺骗和ARP攻击</td>
 </tr>
 <tr>
-<td align="left">有效防护DDoS攻击，可进行流量清洗和黑洞</td>
-<td align="left">清洗和黑洞设备需要另外购买，价格昂贵</td>
-<td align="left"></td>
+<td style="text-align:left">有效防护DDoS攻击，可进行流量清洗和黑洞</td>
+<td style="text-align:left">清洗和黑洞设备需要另外购买，价格昂贵</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td align="left">端口入侵扫描、挂马扫描、漏洞扫描等附加服务</td>
-<td align="left">普遍存在漏洞挂马和端口扫描等问题</td>
-<td align="left"></td>
+<td style="text-align:left">端口入侵扫描、挂马扫描、漏洞扫描等附加服务</td>
+<td style="text-align:left">普遍存在漏洞挂马和端口扫描等问题</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td align="left">灵活扩展</td>
-<td align="left">开通云服务器非常灵活，可以在线升级配置</td>
-<td align="left">服务器交付周期长</td>
+<td style="text-align:left">灵活扩展</td>
+<td style="text-align:left">开通云服务器非常灵活，可以在线升级配置</td>
+<td style="text-align:left">服务器交付周期长</td>
 </tr>
 <tr>
-<td align="left">带宽升降自由</td>
-<td align="left">带宽一次性购买，无法自由升降</td>
-<td align="left"></td>
+<td style="text-align:left">带宽升降自由</td>
+<td style="text-align:left">带宽一次性购买，无法自由升降</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td align="left">在线使用负载均衡，轻松扩展应用</td>
-<td align="left">硬件负载均衡，价格昂贵，设置也非常麻烦</td>
-<td align="left"></td>
+<td style="text-align:left">在线使用负载均衡，轻松扩展应用</td>
+<td style="text-align:left">硬件负载均衡，价格昂贵，设置也非常麻烦</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td align="left">节约成本</td>
-<td align="left">使用成本门槛低</td>
-<td align="left">使用成本门槛高</td>
+<td style="text-align:left">节约成本</td>
+<td style="text-align:left">使用成本门槛低</td>
+<td style="text-align:left">使用成本门槛高</td>
 </tr>
 <tr>
-<td align="left">无需一次性大投入</td>
-<td align="left">一次性投入巨大，闲置浪费严重</td>
-<td align="left"></td>
+<td style="text-align:left">无需一次性大投入</td>
+<td style="text-align:left">一次性投入巨大，闲置浪费严重</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td align="left">按需购买，弹性付费，灵活应对业务变化</td>
-<td align="left">无法按需购买，必须为业务峰值满配</td>
-<td align="left"></td>
+<td style="text-align:left">按需购买，弹性付费，灵活应对业务变化</td>
+<td style="text-align:left">无法按需购买，必须为业务峰值满配</td>
+<td style="text-align:left"></td>
 </tr>
-</tbody></table>
-<h2 id="高可用性"><a href="#高可用性" class="headerlink" title="高可用性"></a>高可用性</h2><p>阿里云使用更严格的IDC标准、服务器准入标准以及运维标准，保证云计算基础框架的高可用性、数据的可靠性以及云服务器的高可用性。</p>
+</tbody>
+</table>
+<h2 id="高可用性">高可用性</h2>
+<p>阿里云使用更严格的IDC标准、服务器准入标准以及运维标准，保证云计算基础框架的高可用性、数据的可靠性以及云服务器的高可用性。</p>
 <p>阿里云提供的每个地域都存在多可用区。当您需要更高的可用性时，可以利用多可用区部署方案搭建主备服务或者双活服务。对于面向金融领域的两地三中心的解决方案，您也可以通过多地域和多可用区搭建出更高的可用性服务。</p>
-<h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><p>在网络建设方面，推荐您使用阿里云专有网络VPC。专有网络提供了稳定、安全、快速交付、自主可控的网络环境。</p>
+<h2 id="安全性">安全性</h2>
+<p>在网络建设方面，推荐您使用阿里云专有网络VPC。专有网络提供了稳定、安全、快速交付、自主可控的网络环境。</p>
 <ul>
-<li><p>丰富的网络产品体系</p>
+<li>
+<p>丰富的网络产品体系</p>
 </li>
-<li><p>与自建的IDC机房互连</p>
+<li>
+<p>与自建的IDC机房互连</p>
 <p>阿里云专有网络可以建立高速通道到您原有的IDC机房，形成混合云的架构。</p>
 </li>
-<li><p>专有网络的稳定性</p>
+<li>
+<p>专有网络的稳定性</p>
 </li>
-<li><p>专有网络的安全性</p>
+<li>
+<p>专有网络的安全性</p>
 <p>面对互联网上不断的攻击流量，专有网络天然具备流量隔离以及攻击隔离的功能。</p>
 </li>
 </ul>
-<h2 id="弹性"><a href="#弹性" class="headerlink" title="弹性"></a>弹性</h2><p>云计算最大的优势在于弹性与灵活性。</p>
+<h2 id="弹性">弹性</h2>
+<p>云计算最大的优势在于弹性与灵活性。</p>
 <p>阿里云的弹性体现在计算的弹性、存储的弹性、网络的弹性以及您对于业务架构重新规划的弹性。</p>
 <ul>
-<li><p>计算弹性</p>
+<li>
+<p>计算弹性</p>
 <ul>
-<li><p>纵向的弹性。</p>
+<li>
+<p>纵向的弹性。</p>
 <p>即单台云服务器ECS的配置变更。普通IDC模式下，很难做到对单台服务器进行变更配置。而对于阿里云，当您购买了云服务器ECS或者存储的容量后，可以根据业务量的增减自由变更配置。</p>
 </li>
-<li><p>横向的弹性。</p>
+<li>
+<p>横向的弹性。</p>
 <p>对于游戏应用或直播平台出现的高峰期，若在普通的IDC模式下，您根本无法立即准备资源；而云计算却可以使用弹性的方式帮助您度过这样的高峰。当业务高峰消失时，您可以将多余的资源释放掉，以减少业务成本。利用横向的扩展和缩减，配合阿里云的弹性伸缩，完全可以做到定时定量的伸缩，或者按照业务的负载进行伸缩。</p>
 </li>
 </ul>
 </li>
-<li><p>存储弹性</p>
+<li>
+<p>存储弹性</p>
 <p>当数据量增多时，对于普通的IDC方案，您只能不断增加服务器，而这样扩展的服务器数量是有限的。阿里云为您提供海量的存储，您可以按需购买，为存储提供最大保障。</p>
 </li>
-<li><p>网络弹性</p>
+<li>
+<p>网络弹性</p>
 <p>阿里云的专有网络VPC的网络配置与普通IDC机房配置可以是完全相同的，并且可以拥有更灵活的拓展性。在阿里云，您可以实现各个可用区（机房）之间的互联互通、安全域隔离以及灵活的网络配置和规划。</p>
 </li>
 </ul>
 <hr>
-<p><em><strong>首页：</strong></em> <a target="_blank" rel="noopener" href="https://wwyyqblog.work/">wwyyqblog.work</a></p>
-<p><img src="/" alt="logo"></p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a target="_blank" rel="noopener" href="https://space.bilibili.com/40657050">Wesley</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/ECS-%E6%A6%82%E5%BF%B5/">http://example.com/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/ECS-%E6%A6%82%E5%BF%B5/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Wesley_blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/">云服务器</a><a class="post-meta__tags" href="/tags/ECS/">ECS</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="Wechat"/></a><div class="post-qr-code-desc">Wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/ECS-ECS%E5%AE%9E%E4%BE%8B%E5%88%9B%E5%BB%BA/"><img class="prev-cover" src="/img/postcover.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">ECS-ECS实例创建</div></div></a></div><div class="next-post pull-right"><a href="/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/ECS-%E4%BD%BF%E7%94%A8%E9%A1%BB%E7%9F%A5/"><img class="next-cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">ECS-使用须知</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/ECS-ECS%E5%AE%9E%E4%BE%8B%E5%88%9B%E5%BB%BA/" title="ECS-ECS实例创建"><img class="cover" src="/img/postcover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-29</div><div class="title">ECS-ECS实例创建</div></div></a></div><div><a href="/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/ECS-%E4%BD%BF%E7%94%A8%E9%A1%BB%E7%9F%A5/" title="ECS-使用须知"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-29</div><div class="title">ECS-使用须知</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jfif" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Wesley</div><div class="author-info__description">子非鱼</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">83</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">38</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">17</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ycy-ww/ycy-ww.github.io"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/ycy-ww" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://space.bilibili.com/40657050" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili"></i></a><a class="social-icon" href="mailto:1312286880@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="http://weixin.qq.com/r/lT9QVQzEHsRiKEg2b2oR" target="_blank" title="Wechat"><i class="fa-brands fa-weixin"></i></a><a class="social-icon" href="https://weibo.com/6575206909" target="_blank" title="Weibo"><i class="fa-brands fa-weibo"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">知识记录与分享的乐趣</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS"><span class="toc-number">1.</span> <span class="toc-text">云服务器 ECS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%A7%E5%93%81%E6%9E%B6%E6%9E%84"><span class="toc-number">1.1.</span> <span class="toc-text">产品架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7"><span class="toc-number">1.2.</span> <span class="toc-text">管理工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.3.</span> <span class="toc-text">部署建议</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%A7%E5%93%81%E4%BC%98%E5%8A%BF"><span class="toc-number">2.</span> <span class="toc-text">产品优势</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8E%E6%99%AE%E9%80%9AIDC%E5%AF%B9%E6%AF%94%E4%BC%98%E5%8A%BF"><span class="toc-number">2.1.</span> <span class="toc-text">与普通IDC对比优势</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7"><span class="toc-number">2.2.</span> <span class="toc-text">高可用性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E6%80%A7"><span class="toc-number">2.3.</span> <span class="toc-text">安全性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%B9%E6%80%A7"><span class="toc-number">2.4.</span> <span class="toc-text">弹性</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91-1/" title="公众号开发-1"><img src="/img/postcover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="公众号开发-1"/></a><div class="content"><a class="title" href="/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91-1/" title="公众号开发-1">公众号开发-1</a><time datetime="2022-12-29T06:23:20.684Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B04/" title="辅助函数4"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数4"/></a><div class="content"><a class="title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B04/" title="辅助函数4">辅助函数4</a><time datetime="2022-12-29T06:23:20.683Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B03/" title="辅助函数3"><img src="/img/postcover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数3"/></a><div class="content"><a class="title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B03/" title="辅助函数3">辅助函数3</a><time datetime="2022-12-29T06:23:20.682Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B02/" title="辅助函数2"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数2"/></a><div class="content"><a class="title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B02/" title="辅助函数2">辅助函数2</a><time datetime="2022-12-29T06:23:20.680Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0/" title="辅助函数"><img src="/img/postcover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数"/></a><div class="content"><a class="title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0/" title="辅助函数">辅助函数</a><time datetime="2022-12-29T06:23:20.679Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Wesley</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://ycy-ww.github.io/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+<p><em><strong>首页：</strong></em> <a target="_blank" rel="noopener" href="https://wwyyqblog.work">wwyyqblog.work</a></p>
+<p><img src="" alt="logo"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a target="_blank" rel="noopener" href="https://space.bilibili.com/40657050">Wesley</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/ECS-%E6%A6%82%E5%BF%B5/">http://example.com/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/ECS-%E6%A6%82%E5%BF%B5/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Wesley_blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/">云服务器</a><a class="post-meta__tags" href="/tags/ECS/">ECS</a></div><div class="post_share"><div class="social-share" data-image="/img/postcover.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="Wechat"/></a><div class="post-qr-code-desc">Wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/ECS-ECS%E5%AE%9E%E4%BE%8B%E5%88%9B%E5%BB%BA/"><img class="prev-cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">ECS-ECS实例创建</div></div></a></div><div class="next-post pull-right"><a href="/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/ECS-%E4%BD%BF%E7%94%A8%E9%A1%BB%E7%9F%A5/"><img class="next-cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">ECS-使用须知</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/ECS-ECS%E5%AE%9E%E4%BE%8B%E5%88%9B%E5%BB%BA/" title="ECS-ECS实例创建"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-29</div><div class="title">ECS-ECS实例创建</div></div></a></div><div><a href="/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS/ECS-%E4%BD%BF%E7%94%A8%E9%A1%BB%E7%9F%A5/" title="ECS-使用须知"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-29</div><div class="title">ECS-使用须知</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jfif" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Wesley</div><div class="author-info__description">子非鱼</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">82</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">38</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">17</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ycy-ww/ycy-ww.github.io"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/ycy-ww" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://space.bilibili.com/40657050" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili"></i></a><a class="social-icon" href="mailto:1312286880@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="http://weixin.qq.com/r/lT9QVQzEHsRiKEg2b2oR" target="_blank" title="Wechat"><i class="fa-brands fa-weixin"></i></a><a class="social-icon" href="https://weibo.com/6575206909" target="_blank" title="Weibo"><i class="fa-brands fa-weibo"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">知识记录与分享的乐趣</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">云服务器 ECS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%A7%E5%93%81%E6%9E%B6%E6%9E%84"><span class="toc-number">1.1.</span> <span class="toc-text">产品架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7"><span class="toc-number">1.2.</span> <span class="toc-text">管理工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.3.</span> <span class="toc-text">部署建议</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">产品优势</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8E%E6%99%AE%E9%80%9AIDC%E5%AF%B9%E6%AF%94%E4%BC%98%E5%8A%BF"><span class="toc-number">2.1.</span> <span class="toc-text">与普通IDC对比优势</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7"><span class="toc-number">2.2.</span> <span class="toc-text">高可用性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E6%80%A7"><span class="toc-number">2.3.</span> <span class="toc-text">安全性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%B9%E6%80%A7"><span class="toc-number">2.4.</span> <span class="toc-text">弹性</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91-1/" title="公众号开发-1"><img src="/img/postcover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="公众号开发-1"/></a><div class="content"><a class="title" href="/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91-1/" title="公众号开发-1">公众号开发-1</a><time datetime="2022-12-29T06:23:20.684Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B04/" title="辅助函数4"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数4"/></a><div class="content"><a class="title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B04/" title="辅助函数4">辅助函数4</a><time datetime="2022-12-29T06:23:20.683Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B03/" title="辅助函数3"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数3"/></a><div class="content"><a class="title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B03/" title="辅助函数3">辅助函数3</a><time datetime="2022-12-29T06:23:20.682Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B02/" title="辅助函数2"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数2"/></a><div class="content"><a class="title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B02/" title="辅助函数2">辅助函数2</a><time datetime="2022-12-29T06:23:20.680Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0/" title="辅助函数"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辅助函数"/></a><div class="content"><a class="title" href="/%E5%89%8D%E7%AB%AF/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0/" title="辅助函数">辅助函数</a><time datetime="2022-12-29T06:23:20.679Z" title="发表于 2022-12-29 14:23:20">2022-12-29</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Wesley</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://ycy-ww.github.io/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
   const init = () => {
     twikoo.init(Object.assign({
       el: '#twikoo-wrap',
